@@ -1,0 +1,125 @@
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,comment = NA)
+library(readr)
+```
+
+```{r}
+library(readr)
+```
+
+# File Suffix
+```{r readr,attr.source='.numberLines'}
+# read files from 'data' folder
+project_files <- list.files("data/")
+project_files
+
+```
+
+```{r block2,attr.source='.numberLines'}
+suffix <- "_Data.csv"
+project_files <- gsub(suffix,"",project_files)
+project_files
+
+```
+
+```{r products}
+# Products
+products <- read_csv("data/Product_Data.csv")
+```
+
+```{r promotions}
+# Promotions
+promotions <- read_csv("data/Promotion_Data.csv")
+```
+
+```{r colnames}
+colnames(products)
+colnames(promotions)
+```
+
+# Number of rows and columns in the dataset
+```{r loop,message=FALSE,warning=FALSE,attr.source='.numberLines'}
+
+all_files <- list.files("data/")
+
+for (variable in all_files) {
+  this_filepath <- paste0("data/",variable)
+  this_file_contents <- readr::read_csv(this_filepath)
+  
+  number_of_rows <- nrow(this_file_contents)
+  number_of_columns <- ncol(this_file_contents)
+  
+  print(paste0("The file: ",variable,
+              " has: ",
+              format(number_of_rows,big.mark = ","),
+              " rows and ",
+              number_of_columns," columns"))
+}
+```
+
+## Check if the first column of each file is a primary 
+```{r checkprimary,message=FALSE,warning=FALSE,attr.source='.numberLines'}
+
+for (variable in all_files) {
+  this_filepath <- paste0("data/",variable)
+  this_file_contents <- readr::read_csv(this_filepath)
+  number_of_rows <- nrow(this_file_contents)
+  
+  print(paste0("Checking for: ",variable))
+  
+  print(paste0(" is ",nrow(unique(this_file_contents[,1]))==number_of_rows))
+}
+
+```
+
+# Creating Database
+```{r loadsqlite,warning=FALSE,error=FALSE,message=FALSE,attr.source='.numberLines'}
+# Load the library
+library(RSQLite)
+
+#setup the connection
+connection <- RSQLite::dbConnect(RSQLite::SQLite(),"emcommerce.db")
+
+for (variable in all_files) {
+  this_filepath <- paste0("data/",variable)
+  this_file_contents <- readr::read_csv(this_filepath)
+
+  table_name <- gsub(".csv","",variable)
+  #Remove prefix and suffix 
+  table_name <- gsub("_Data","",table_name)
+  # table_name <- variable
+  
+  RSQLite::dbWriteTable(connection,table_name,this_file_contents,overwrite=TRUE)
+  
+}
+```
+
+
+```{r listtables}
+# Get a list of tables from the database that we already 
+# created
+RSQLite::dbListTables(connection)
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Disconnect
+```{r disconnect}
+# Disconnect from the database using the connection variable that we setup 
+# before
+RSQLite::dbDisconnect(connection)
+
+```
