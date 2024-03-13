@@ -195,12 +195,21 @@ write.csv(order_id, file_path, row.names = FALSE)
 
 # Add foreign keys
 
+Read in all data first
 ```{r}
 promo_data <- read_csv("/cloud/project/Assignment/data/promotion.csv")
 product_data <- read_csv("/cloud/project/Assignment/data/product.csv")
+buyer_data <- read_csv("/cloud/project/Assignment/data/buyer.csv")
+dimension_data <- read_csv("/cloud/project/Assignment/data/dimension.csv")
+order_details_data <- read_csv("/cloud/project/Assignment/data/order_details.csv")
+review_data <- read_csv("/cloud/project/Assignment/data/review.csv")
+shipper_data <- read_csv("/cloud/project/Assignment/data/shipper.csv")
+supplier_data <- read_csv("/cloud/project/Assignment/data/supplier.csv")
+transaction_data <- read_csv("/cloud/project/Assignment/data/transaction.csv")
+```
 
-
-
+Append all foreign keys for the product data.
+```{r}
 # Generate 100 observations from the original promotion data
 promo_indices <- sample(nrow(promo_data), 100)
 promo_data <- promo_data[promo_indices, ]
@@ -210,6 +219,10 @@ promotion_id <- promo_data[sample(1:nrow(promo_data),1000, replace= TRUE),1]
 new_promotion <- promo_data[sample(1:nrow(promo_data),100)]
 
 product_data <- cbind(product_data, promotion_id)
+
+# add dimension_id to product data
+dimension_id <- dimension_data$Dimension_ID
+product_data <- cbind(product_data, dimension_data$Dimension_ID)
 
 ```
 
