@@ -8,6 +8,7 @@ date: "2024-03-01"
 
 # Load necessary library
 library(dplyr)
+library(tidyverse)
 
 # Sample product types and adjectives
 product_types <- c("Laptop", "Smartphone", "Headphones", "Camera", "Smartwatch", "Tablet", "Printer", "Monitor", "Mouse", "Keyboard", "Recorder", "Console", "Nintendo", "Earbuds", "Drone", "VR Headset", "Smart Glasses", "Action Cam", "Fitness Tracker", "eReader", "Smart Speaker", "Router", "Power Bank", "Gaming Chair", "Desk Lamp", "External Hard Drive")
@@ -36,7 +37,7 @@ product_df <- data.frame(
 # Display the first few rows of the dataframe with realistic product names
 head(product_df)
 write.csv(product_df, "product.csv", row.names = FALSE)
-file_path <- "product.csv"
+file_path <- "/cloud/project/Assignment/data/product.csv"
 write.csv(product_df, file_path, row.names = FALSE)
 ```
 
@@ -84,7 +85,7 @@ write.csv(promotion_database, "promotions.csv", row.names = FALSE)
 
 
 
-file_path <- "/cloud/project/data/promotion.csv"
+file_path <- "/cloud/project/Assignment/data/promotion.csv"
 write.csv(promotion_database, file_path, row.names = FALSE)
 
 
@@ -92,11 +93,11 @@ write.csv(promotion_database, file_path, row.names = FALSE)
 
 #Address
 ```{r}
-Address <- read.csv("Address.csv")
+Address <- read.csv("address.csv")
 
 Address$Address_ID <- sprintf("AD%05d", 1:n)
 
-file_path <- "/cloud/project/data/address.csv"
+file_path <- "/cloud/project/Assignment/data/address.csv"
 write.csv(Address, file_path, row.names = FALSE)
 ```
 
@@ -106,7 +107,7 @@ Shipper <- read.csv("Shipper.csv")
 
 Shipper$Shipper_ID <- sprintf("SH%05d", 1:80)
 
-file_path <- "/cloud/project/data/shipper.csv"
+file_path <- "/cloud/project/Assignment/data/shipper.csv"
 write.csv(Shipper, file_path, row.names = FALSE)
 
 ```
@@ -116,7 +117,7 @@ write.csv(Shipper, file_path, row.names = FALSE)
 Dimension <- read.csv("Dimension.csv")
 
 Dimension$Dimension_ID <- sprintf("DM%05d", 1:n)
-file_path <- "/cloud/project/data/dimension.csv"
+file_path <- "/cloud/project/Assignment/data/dimension.csv"
 write.csv(Dimension, file_path, row.names = FALSE)
 ```
 
@@ -128,7 +129,7 @@ Transaction <- read_excel("Transaction_DATA.xlsx")
 
 Transaction$Transaction_ID <-sprintf("TR%05d", 1:n)
 
-file_path <- "/cloud/project/data/transaction.csv"
+file_path <- "/cloud/project/Assignment/data/transaction.csv"
 write.csv(Transaction, file_path, row.names = FALSE)
 ```
 
@@ -138,7 +139,7 @@ Supplier <- read_excel("Supplier_DATA.xlsx")
 
 Supplier$Supplier_ID <- sprintf("SP%05d", 1:n)
 
-file_path <- "/cloud/project/data/supplier.csv"
+file_path <- "/cloud/project/Assignment/data/supplier.csv"
 write.csv(Supplier, file_path, row.names = FALSE)
 
 ```
@@ -148,7 +149,7 @@ write.csv(Supplier, file_path, row.names = FALSE)
 Review <- read_excel("Review_DATA.xlsx")
 Review$Review_ID <- sprintf("RV%05d", 1:n)
 
-file_path <- "/cloud/project/data/review.csv"
+file_path <- "/cloud/project/Assignment/data/review.csv"
 write.csv(Review, file_path, row.names = FALSE)
 ```
 
@@ -157,7 +158,7 @@ write.csv(Review, file_path, row.names = FALSE)
 Buyer <- read.csv("Buyer.csv")
 Buyer$buyer_id <- sprintf("BU%05d", 1:n)
 
-file_path <- "/cloud/project/data/buyer.csv"
+file_path <- "/cloud/project/Assignment/data/buyer.csv"
 write.csv(Buyer, file_path, row.names = FALSE)
 ```
 
@@ -188,7 +189,27 @@ data <- identifiers
 ```{r}
 order_id <- sprintf("OR%05d", 1:n)
 
-file_path <- "/cloud/project/data/order_details.csv"
+file_path <- "/cloud/project/Assignment/data/order_details.csv"
 write.csv(order_id, file_path, row.names = FALSE)
+```
+
+# Add foreign keys
+
+```{r}
+promo_data <- read_csv("/cloud/project/Assignment/data/promotion.csv")
+product_data <- read_csv("/cloud/project/Assignment/data/product.csv")
+
+
+
+# Generate 100 observations from the original promotion data
+promo_indices <- sample(nrow(promo_data), 100)
+promo_data <- promo_data[promo_indices, ]
+
+promotion_id <- promo_data[sample(1:nrow(promo_data),1000, replace= TRUE),1]
+
+new_promotion <- promo_data[sample(1:nrow(promo_data),100)]
+
+product_data <- cbind(product_data, promotion_id)
+
 ```
 
