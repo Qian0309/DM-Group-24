@@ -1,0 +1,194 @@
+---
+title: "test"
+output: html_document
+date: "2024-03-01"
+---
+#product
+```{r}
+
+# Load necessary library
+library(dplyr)
+
+# Sample product types and adjectives
+product_types <- c("Laptop", "Smartphone", "Headphones", "Camera", "Smartwatch", "Tablet", "Printer", "Monitor", "Mouse", "Keyboard", "Recorder", "Console", "Nintendo", "Earbuds", "Drone", "VR Headset", "Smart Glasses", "Action Cam", "Fitness Tracker", "eReader", "Smart Speaker", "Router", "Power Bank", "Gaming Chair", "Desk Lamp", "External Hard Drive")
+adjectives <- c("Ultra", "Compact", "Wireless", "Portable", "Pro", "HD", "Gaming", "Eco", "Mini", "Touch", "Lite", "SD", "SE", "Advanced", "Slim", "Rugged", "High-Speed", "Smart", "Heavy-Duty", "Ultra-Light", "Multi-Function", "Ergonomic", "High-Resolution", "AI-Powered", "Solar", "Waterproof", "Vintage", "Retro", "Sleek", "Noise-Cancelling","High-Performance", "Budget", "Premium", "Foldable", "Magnetic", "Dual-Screen")
+
+# Function to generate product names
+generate_product_names <- function(n) {
+  paste0(sample(adjectives, n, replace = TRUE), " ", sample(product_types, n, replace = TRUE))
+}
+
+# Number of entries
+n <- 1000
+
+# Generating more realistic product names
+product_names <- generate_product_names(n)
+
+# Incorporating these names into the dataset
+product_df <- data.frame(
+  Product_ID = sprintf("PR%05d", 1:n),
+  Product_Name = product_names,
+  Product_Description = sample(c("High quality", "Eco-friendly", "Durable", "Compact design", "Innovative technology", "User-friendly", "Ergonomic", "Sleek and modern", "Versatile use", "Energy efficient"), n, replace = TRUE),
+  Weight = round(runif(n, 0.5, 20.0), 2),
+  Price = round(runif(n, 10, 1000), 2)
+)
+
+# Display the first few rows of the dataframe with realistic product names
+head(product_df)
+write.csv(product_df, "product.csv", row.names = FALSE)
+file_path <- "/cloud/project/data/product.csv"
+write.csv(product_df, file_path, row.names = FALSE)
+```
+
+```{r}
+# Load necessary library
+library(stringi)
+
+generate_promotion_database <- function(n) {
+  set.seed(123) # For reproducibility
+  
+  # Generate promotion_id
+  promotion_ids <- sprintf("PM%05d", 1:n)
+  
+  # Define a list of promotion types
+  promotion_types <- c("Discount", "Buy One Get One", "Free Gift")
+  
+  # Randomly assign promotion types
+  promotion_type <- sample(promotion_types, n, replace = TRUE)
+  
+  # Generate start dates within a year range
+  start_dates <- as.Date("2023-01-01") + sample(0:364, n, replace = TRUE)
+  
+  # Generate end dates ensuring they are after start dates
+  end_dates <- start_dates + sample(1:30, n, replace = TRUE) # Assuming promotions last between 1 to 30 days
+  
+  # Randomly assign status
+  status <- sample(c("active", "not"), n, replace = TRUE)
+  
+  # Combine all columns into a data frame
+  promotions_df <- data.frame(promotion_id = promotion_ids,
+                              promotion_type = promotion_type,
+                              start_date = start_dates,
+                              end_date = end_dates,
+                              status = status)
+  
+  return(promotions_df)
+}
+
+# Generate a database with, for example, 100 entries
+promotion_database <- generate_promotion_database(1000)
+
+# View the first few rows of the database
+head(promotion_database)
+write.csv(promotion_database, "promotions.csv", row.names = FALSE)
+
+
+
+file_path <- "/cloud/project/data/promotion.csv"
+write.csv(promotion_database, file_path, row.names = FALSE)
+
+
+```
+
+#Address
+```{r}
+Address <- read.csv("Address.csv")
+
+Address$Address_ID <- sprintf("AD%05d", 1:n)
+
+file_path <- "/cloud/project/data/address.csv"
+write.csv(Address, file_path, row.names = FALSE)
+```
+
+#shipper
+```{r}
+Shipper <- read.csv("Shipper.csv")
+
+Shipper$Shipper_ID <- sprintf("SH%05d", 1:80)
+
+file_path <- "/cloud/project/data/shipper.csv"
+write.csv(Shipper, file_path, row.names = FALSE)
+
+```
+
+#Dimension
+```{r}
+Dimension <- read.csv("Dimension.csv")
+
+Dimension$Dimension_ID <- sprintf("DM%05d", 1:n)
+file_path <- "/cloud/project/data/dimension.csv"
+write.csv(Dimension, file_path, row.names = FALSE)
+```
+
+#Transaction
+```{r}
+install.packages("readxl")
+library(readxl)
+Transaction <- read_excel("Transaction_DATA.xlsx")
+
+Transaction$Transaction_ID <-sprintf("TR%05d", 1:n)
+
+file_path <- "/cloud/project/data/transaction.csv"
+write.csv(Transaction, file_path, row.names = FALSE)
+```
+
+#supplier
+```{r}
+Supplier <- read_excel("Supplier_DATA.xlsx")
+
+Supplier$Supplier_ID <- sprintf("SP%05d", 1:n)
+
+file_path <- "/cloud/project/data/supplier.csv"
+write.csv(Supplier, file_path, row.names = FALSE)
+
+```
+
+#Review
+```{r}
+Review <- read_excel("Review_DATA.xlsx")
+Review$Review_ID <- sprintf("RV%05d", 1:n)
+
+file_path <- "/cloud/project/data/review.csv"
+write.csv(Review, file_path, row.names = FALSE)
+```
+
+#buyer
+```{r}
+Buyer <- read.csv("Buyer.csv")
+Buyer$buyer_id <- sprintf("BU%05d", 1:n)
+
+file_path <- "/cloud/project/data/buyer.csv"
+write.csv(Buyer, file_path, row.names = FALSE)
+```
+
+```{r}
+generate_identifiers <- function(num_rows, start_index, end_index) {
+  identifiers <- character(num_rows)
+  for (i in 1:num_rows) {
+    if (i <= (end_index - start_index + 1)) {
+      identifiers[i] <- sprintf("SH%05d", i + start_index - 1)
+    } else {
+      identifiers[i] <- sprintf("SH%05d", sample(start_index:end_index, 1))
+    }
+  }
+  return(identifiers)
+}
+
+# Generate identifiers
+identifiers <- generate_identifiers(1000, 1, 80)
+
+# Print first few identifiers as an example
+head(identifiers)
+
+data <- identifiers
+```
+
+
+#order
+```{r}
+order_id <- sprintf("OR%05d", 1:n)
+
+file_path <- "/cloud/project/data/order_details.csv"
+write.csv(order_id, file_path, row.names = FALSE)
+```
+
