@@ -36,7 +36,7 @@ product_df <- data.frame(
 # Display the first few rows of the dataframe with realistic product names
 head(product_df)
 write.csv(product_df, "product.csv", row.names = FALSE)
-file_path <- "/cloud/project/data/product.csv"
+file_path <- "product.csv"
 write.csv(product_df, file_path, row.names = FALSE)
 ```
 
