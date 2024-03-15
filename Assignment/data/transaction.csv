@@ -1,0 +1,1001 @@
+"Transaction_ID","Payment_Type","Payment_amount","Installment_Number"
+"TR00001","Debit Card",642.53,10
+"TR00002","PayPal",980.3,8
+"TR00003","Credit Card",17.18,7
+"TR00004","Credit Card",671.32,0
+"TR00005","Credit Card",137.48,2
+"TR00006","Credit Card",298.99,6
+"TR00007","Credit Card",457.33,12
+"TR00008","PayPal",597.38,1
+"TR00009","Debit Card",244.97,12
+"TR00010","Credit Card",955.27,6
+"TR00011","Credit Card",761.41,4
+"TR00012","Debit Card",196.08,12
+"TR00013","Debit Card",939.2,10
+"TR00014","Cash on Delivery (COD)",639.1,8
+"TR00015","PayPal",396.85,0
+"TR00016","Mobile Wallets",504.74,10
+"TR00017","Bank Transfer",375.97,4
+"TR00018","Credit Card",992.38,4
+"TR00019","Debit Card",193.08,2
+"TR00020","Bank Transfer",490.29,12
+"TR00021","PayPal",403.08,11
+"TR00022","Mobile Wallets",955.28,3
+"TR00023","Bank Transfer",892.18,8
+"TR00024","Bank Transfer",866.64,6
+"TR00025","PayPal",600.86,2
+"TR00026","PayPal",114.88,7
+"TR00027","Debit Card",170.29,7
+"TR00028","Debit Card",196.36,2
+"TR00029","Debit Card",192.94,9
+"TR00030","Credit Card",541.3,11
+"TR00031","Credit Card",226.9,11
+"TR00032","PayPal",344.54,2
+"TR00033","Credit Card",677.99,4
+"TR00034","Credit Card",358.46,5
+"TR00035","PayPal",8.93,2
+"TR00036","Bank Transfer",214.83,11
+"TR00037","Credit Card",436.16,3
+"TR00038","Mobile Wallets",880.88,8
+"TR00039","Credit Card",28.9,7
+"TR00040","PayPal",505.03,7
+"TR00041","Mobile Wallets",127.7,11
+"TR00042","Credit Card",341.99,10
+"TR00043","PayPal",188.46,6
+"TR00044","Mobile Wallets",711.29,4
+"TR00045","PayPal",601.78,2
+"TR00046","Debit Card",880.73,12
+"TR00047","Bank Transfer",396.08,10
+"TR00048","Cash on Delivery (COD)",903.4,6
+"TR00049","Credit Card",742.13,12
+"TR00050","Credit Card",215.72,4
+"TR00051","Cash on Delivery (COD)",248.69,2
+"TR00052","PayPal",862.51,9
+"TR00053","Bank Transfer",329.22,9
+"TR00054","PayPal",234.44,2
+"TR00055","Bank Transfer",779.08,2
+"TR00056","Cash on Delivery (COD)",143.51,0
+"TR00057","Credit Card",536.78,3
+"TR00058","Mobile Wallets",497.98,6
+"TR00059","Credit Card",68.14,9
+"TR00060","Cash on Delivery (COD)",858.46,6
+"TR00061","Debit Card",565.75,4
+"TR00062","PayPal",87.5,2
+"TR00063","Cash on Delivery (COD)",546.09,2
+"TR00064","Debit Card",527.91,10
+"TR00065","PayPal",469.69,2
+"TR00066","Credit Card",584.56,8
+"TR00067","PayPal",220.01,11
+"TR00068","Mobile Wallets",352.4,4
+"TR00069","Mobile Wallets",139.94,3
+"TR00070","Mobile Wallets",773.6,10
+"TR00071","Credit Card",945.17,5
+"TR00072","Mobile Wallets",401.15,8
+"TR00073","PayPal",68.48,9
+"TR00074","Credit Card",270.21,5
+"TR00075","Bank Transfer",230.98,5
+"TR00076","Debit Card",432.66,2
+"TR00077","Credit Card",266.35,6
+"TR00078","Mobile Wallets",20.37,10
+"TR00079","Mobile Wallets",446.4,5
+"TR00080","PayPal",479.52,11
+"TR00081","Bank Transfer",722.61,12
+"TR00082","Bank Transfer",970.54,5
+"TR00083","Bank Transfer",236.09,10
+"TR00084","PayPal",534.35,3
+"TR00085","Credit Card",651.88,7
+"TR00086","Debit Card",733.44,1
+"TR00087","Cash on Delivery (COD)",807.74,6
+"TR00088","Credit Card",298.93,5
+"TR00089","Bank Transfer",76.26,7
+"TR00090","Bank Transfer",520.53,10
+"TR00091","Cash on Delivery (COD)",464.5,11
+"TR00092","Credit Card",260.67,0
+"TR00093","Cash on Delivery (COD)",555.99,0
+"TR00094","Cash on Delivery (COD)",223.71,6
+"TR00095","Cash on Delivery (COD)",328.4,7
+"TR00096","Mobile Wallets",984.57,8
+"TR00097","Bank Transfer",537.6,3
+"TR00098","Debit Card",238.1,5
+"TR00099","Cash on Delivery (COD)",832.46,3
+"TR00100","PayPal",656.39,11
+"TR00101","Credit Card",648.4,8
+"TR00102","Cash on Delivery (COD)",411.93,1
+"TR00103","PayPal",880.98,10
+"TR00104","Bank Transfer",604.01,8
+"TR00105","Debit Card",268.22,2
+"TR00106","Credit Card",955.51,4
+"TR00107","Mobile Wallets",35.38,12
+"TR00108","Credit Card",112.82,0
+"TR00109","PayPal",346.04,0
+"TR00110","PayPal",583.47,8
+"TR00111","Cash on Delivery (COD)",236.86,6
+"TR00112","Mobile Wallets",519.95,12
+"TR00113","Mobile Wallets",223.09,8
+"TR00114","Cash on Delivery (COD)",220.36,6
+"TR00115","Credit Card",600.46,7
+"TR00116","PayPal",460.07,2
+"TR00117","PayPal",474.21,5
+"TR00118","Mobile Wallets",654.81,5
+"TR00119","Bank Transfer",843.33,10
+"TR00120","Cash on Delivery (COD)",666.51,7
+"TR00121","Debit Card",463.83,11
+"TR00122","Cash on Delivery (COD)",207.52,2
+"TR00123","Debit Card",621.03,5
+"TR00124","Credit Card",696.62,5
+"TR00125","Cash on Delivery (COD)",609.09,11
+"TR00126","Credit Card",992.73,5
+"TR00127","Mobile Wallets",934.33,11
+"TR00128","Debit Card",591.69,6
+"TR00129","Credit Card",21.1,12
+"TR00130","Debit Card",602.71,1
+"TR00131","Bank Transfer",356.11,6
+"TR00132","Credit Card",567.45,6
+"TR00133","Bank Transfer",516.16,12
+"TR00134","Debit Card",339.67,4
+"TR00135","PayPal",734.66,4
+"TR00136","Credit Card",863.09,6
+"TR00137","Bank Transfer",172.07,9
+"TR00138","Cash on Delivery (COD)",697.38,1
+"TR00139","Cash on Delivery (COD)",899.39,2
+"TR00140","Credit Card",415.93,2
+"TR00141","Debit Card",844.54,4
+"TR00142","Credit Card",339.66,6
+"TR00143","PayPal",979.96,11
+"TR00144","Mobile Wallets",380.13,9
+"TR00145","Bank Transfer",996.37,7
+"TR00146","Credit Card",25.35,3
+"TR00147","Debit Card",984.52,4
+"TR00148","Debit Card",823.27,1
+"TR00149","Debit Card",921.76,9
+"TR00150","Cash on Delivery (COD)",825.55,6
+"TR00151","Cash on Delivery (COD)",866.19,4
+"TR00152","Debit Card",475.67,9
+"TR00153","Mobile Wallets",26.25,8
+"TR00154","Cash on Delivery (COD)",58.94,9
+"TR00155","Bank Transfer",313.7,6
+"TR00156","Debit Card",944.27,4
+"TR00157","Credit Card",160.72,7
+"TR00158","Cash on Delivery (COD)",605.74,11
+"TR00159","Debit Card",280.68,5
+"TR00160","Credit Card",730.78,2
+"TR00161","Debit Card",526.35,7
+"TR00162","PayPal",509.96,9
+"TR00163","Mobile Wallets",83.65,6
+"TR00164","Cash on Delivery (COD)",835.88,5
+"TR00165","Credit Card",788.27,9
+"TR00166","Mobile Wallets",415.67,11
+"TR00167","Cash on Delivery (COD)",826.46,12
+"TR00168","Bank Transfer",387.28,7
+"TR00169","Bank Transfer",516.1,5
+"TR00170","Debit Card",542.28,0
+"TR00171","PayPal",149.78,11
+"TR00172","Cash on Delivery (COD)",393.63,12
+"TR00173","Cash on Delivery (COD)",874.1,1
+"TR00174","Cash on Delivery (COD)",588.65,2
+"TR00175","Credit Card",491.12,8
+"TR00176","Mobile Wallets",339.86,5
+"TR00177","Bank Transfer",445.28,0
+"TR00178","PayPal",121.95,3
+"TR00179","Bank Transfer",195.02,7
+"TR00180","Mobile Wallets",19.16,3
+"TR00181","Debit Card",364.13,11
+"TR00182","Debit Card",573.34,12
+"TR00183","Debit Card",601.79,7
+"TR00184","PayPal",230.6,7
+"TR00185","Bank Transfer",858.26,1
+"TR00186","Mobile Wallets",125.4,5
+"TR00187","Debit Card",646.18,4
+"TR00188","Debit Card",456.57,2
+"TR00189","PayPal",78.07,11
+"TR00190","PayPal",546.49,10
+"TR00191","Mobile Wallets",822.41,12
+"TR00192","Debit Card",905.49,11
+"TR00193","PayPal",798.76,2
+"TR00194","Credit Card",28.05,4
+"TR00195","PayPal",658.68,5
+"TR00196","Bank Transfer",165.26,9
+"TR00197","Cash on Delivery (COD)",89.51,1
+"TR00198","Cash on Delivery (COD)",280.36,8
+"TR00199","Mobile Wallets",205.81,9
+"TR00200","Cash on Delivery (COD)",800.99,1
+"TR00201","Debit Card",536.39,9
+"TR00202","Mobile Wallets",55.26,11
+"TR00203","PayPal",914.87,2
+"TR00204","Cash on Delivery (COD)",818.93,5
+"TR00205","Mobile Wallets",286.09,10
+"TR00206","PayPal",988.85,3
+"TR00207","Debit Card",743.09,4
+"TR00208","PayPal",40.43,3
+"TR00209","Debit Card",597.2,7
+"TR00210","PayPal",182.12,2
+"TR00211","Debit Card",928.37,11
+"TR00212","PayPal",507.49,1
+"TR00213","Debit Card",447.22,6
+"TR00214","Bank Transfer",200.71,1
+"TR00215","Bank Transfer",962.31,5
+"TR00216","Mobile Wallets",443.85,12
+"TR00217","Mobile Wallets",485.63,5
+"TR00218","Credit Card",302.82,3
+"TR00219","PayPal",352.53,4
+"TR00220","Bank Transfer",498.47,2
+"TR00221","PayPal",674.31,11
+"TR00222","PayPal",200.85,11
+"TR00223","Mobile Wallets",625.31,7
+"TR00224","Credit Card",445.22,5
+"TR00225","Debit Card",157.05,4
+"TR00226","Credit Card",142.99,0
+"TR00227","Credit Card",668.62,6
+"TR00228","Cash on Delivery (COD)",450.76,2
+"TR00229","PayPal",791.81,8
+"TR00230","Bank Transfer",658.59,1
+"TR00231","Cash on Delivery (COD)",191.17,2
+"TR00232","Credit Card",230.24,6
+"TR00233","PayPal",1.72,5
+"TR00234","Cash on Delivery (COD)",394.85,5
+"TR00235","Cash on Delivery (COD)",674.49,3
+"TR00236","PayPal",753.28,10
+"TR00237","PayPal",506.83,4
+"TR00238","PayPal",889.06,1
+"TR00239","Bank Transfer",540.08,9
+"TR00240","Bank Transfer",987,0
+"TR00241","Cash on Delivery (COD)",731.23,9
+"TR00242","Cash on Delivery (COD)",816.36,8
+"TR00243","Debit Card",407.84,1
+"TR00244","Credit Card",480.25,9
+"TR00245","Mobile Wallets",629.95,0
+"TR00246","Cash on Delivery (COD)",586.56,2
+"TR00247","Bank Transfer",285.84,2
+"TR00248","Mobile Wallets",768.39,8
+"TR00249","Credit Card",613.35,1
+"TR00250","PayPal",810.76,11
+"TR00251","Mobile Wallets",911.11,11
+"TR00252","Bank Transfer",959.58,2
+"TR00253","Bank Transfer",939.68,11
+"TR00254","Mobile Wallets",984.97,1
+"TR00255","Credit Card",283.02,3
+"TR00256","Credit Card",212.41,7
+"TR00257","Credit Card",600.13,6
+"TR00258","Cash on Delivery (COD)",10.13,0
+"TR00259","Bank Transfer",461.03,3
+"TR00260","Cash on Delivery (COD)",581.1,2
+"TR00261","Bank Transfer",117.46,5
+"TR00262","Bank Transfer",32.52,11
+"TR00263","Credit Card",272.06,3
+"TR00264","Bank Transfer",160.42,10
+"TR00265","Mobile Wallets",466.44,3
+"TR00266","Credit Card",588.36,4
+"TR00267","PayPal",158.85,8
+"TR00268","Credit Card",456.79,9
+"TR00269","Debit Card",815.6,12
+"TR00270","Debit Card",250.35,9
+"TR00271","PayPal",438.32,7
+"TR00272","PayPal",138.08,9
+"TR00273","Mobile Wallets",741.29,5
+"TR00274","Bank Transfer",323.63,2
+"TR00275","Cash on Delivery (COD)",810.48,2
+"TR00276","PayPal",198.63,11
+"TR00277","Cash on Delivery (COD)",56.43,3
+"TR00278","Cash on Delivery (COD)",391.4,4
+"TR00279","Credit Card",640.35,9
+"TR00280","Debit Card",710.28,3
+"TR00281","Debit Card",793,9
+"TR00282","PayPal",764.88,2
+"TR00283","Mobile Wallets",961.87,0
+"TR00284","Bank Transfer",767.72,3
+"TR00285","Debit Card",942.77,8
+"TR00286","Cash on Delivery (COD)",814.72,5
+"TR00287","Debit Card",417.67,3
+"TR00288","PayPal",385.66,2
+"TR00289","Bank Transfer",823.77,6
+"TR00290","Cash on Delivery (COD)",86.57,4
+"TR00291","Debit Card",124.5,10
+"TR00292","Debit Card",732.93,2
+"TR00293","Cash on Delivery (COD)",771.8,0
+"TR00294","Bank Transfer",502.73,8
+"TR00295","PayPal",22.89,3
+"TR00296","Mobile Wallets",741.44,10
+"TR00297","PayPal",550.61,2
+"TR00298","Cash on Delivery (COD)",173.08,11
+"TR00299","Bank Transfer",733.95,0
+"TR00300","Mobile Wallets",635.24,5
+"TR00301","Bank Transfer",124.18,7
+"TR00302","Credit Card",855.08,1
+"TR00303","Credit Card",980.08,10
+"TR00304","PayPal",204.83,4
+"TR00305","PayPal",644.77,1
+"TR00306","Credit Card",135.59,10
+"TR00307","Mobile Wallets",751.67,4
+"TR00308","Credit Card",826.99,0
+"TR00309","Bank Transfer",874.23,7
+"TR00310","Debit Card",89.4,1
+"TR00311","Cash on Delivery (COD)",801.14,0
+"TR00312","Bank Transfer",931.32,0
+"TR00313","Credit Card",260.04,1
+"TR00314","Credit Card",429.12,1
+"TR00315","Debit Card",757.04,8
+"TR00316","Cash on Delivery (COD)",330.46,6
+"TR00317","Mobile Wallets",566.76,7
+"TR00318","Credit Card",762,3
+"TR00319","PayPal",131.29,0
+"TR00320","Debit Card",916.94,2
+"TR00321","Debit Card",930.44,1
+"TR00322","PayPal",981.34,11
+"TR00323","Credit Card",189.02,12
+"TR00324","Debit Card",824.52,0
+"TR00325","Credit Card",302.71,5
+"TR00326","Bank Transfer",441.09,11
+"TR00327","Mobile Wallets",307.24,6
+"TR00328","Debit Card",313.12,3
+"TR00329","Debit Card",443.95,4
+"TR00330","PayPal",863.87,2
+"TR00331","Bank Transfer",324.68,8
+"TR00332","Credit Card",599.33,3
+"TR00333","Debit Card",55.87,10
+"TR00334","Bank Transfer",825.97,7
+"TR00335","Mobile Wallets",679.76,5
+"TR00336","Cash on Delivery (COD)",439.48,11
+"TR00337","Cash on Delivery (COD)",841.84,1
+"TR00338","Cash on Delivery (COD)",360.81,7
+"TR00339","PayPal",1.19,12
+"TR00340","Cash on Delivery (COD)",689.56,11
+"TR00341","Mobile Wallets",450.17,5
+"TR00342","Bank Transfer",444.53,10
+"TR00343","Bank Transfer",235.73,3
+"TR00344","Debit Card",497.23,2
+"TR00345","PayPal",194.68,10
+"TR00346","Credit Card",810.31,4
+"TR00347","Cash on Delivery (COD)",346.27,8
+"TR00348","Credit Card",579.51,2
+"TR00349","Cash on Delivery (COD)",183.66,6
+"TR00350","PayPal",503.13,10
+"TR00351","Bank Transfer",107.43,0
+"TR00352","PayPal",951.87,3
+"TR00353","Credit Card",399.61,6
+"TR00354","Debit Card",952.23,0
+"TR00355","Cash on Delivery (COD)",450.9,2
+"TR00356","Mobile Wallets",973.91,9
+"TR00357","Mobile Wallets",545.69,1
+"TR00358","Debit Card",759.01,12
+"TR00359","Credit Card",612.33,11
+"TR00360","PayPal",128.96,3
+"TR00361","Mobile Wallets",503.42,8
+"TR00362","Bank Transfer",74.76,1
+"TR00363","Cash on Delivery (COD)",659.85,5
+"TR00364","Bank Transfer",516.15,3
+"TR00365","Bank Transfer",257.28,12
+"TR00366","Credit Card",682.4,7
+"TR00367","Cash on Delivery (COD)",552.48,12
+"TR00368","Cash on Delivery (COD)",159.24,12
+"TR00369","PayPal",17.53,0
+"TR00370","Mobile Wallets",137.43,6
+"TR00371","PayPal",373.43,12
+"TR00372","Credit Card",590.74,12
+"TR00373","PayPal",50.52,2
+"TR00374","Mobile Wallets",618.09,1
+"TR00375","PayPal",280.32,3
+"TR00376","Mobile Wallets",32.69,7
+"TR00377","Credit Card",624.34,11
+"TR00378","Bank Transfer",670.3,3
+"TR00379","Debit Card",836.34,12
+"TR00380","Debit Card",165.72,8
+"TR00381","PayPal",741.07,3
+"TR00382","PayPal",585.44,9
+"TR00383","Credit Card",334.4,12
+"TR00384","Cash on Delivery (COD)",295.15,6
+"TR00385","Bank Transfer",395.52,8
+"TR00386","Credit Card",898.46,8
+"TR00387","PayPal",629.32,5
+"TR00388","Debit Card",712.85,2
+"TR00389","Mobile Wallets",534.33,6
+"TR00390","Bank Transfer",935.6,1
+"TR00391","PayPal",541.35,11
+"TR00392","Cash on Delivery (COD)",637.03,12
+"TR00393","Mobile Wallets",34.71,8
+"TR00394","Cash on Delivery (COD)",166.27,4
+"TR00395","Cash on Delivery (COD)",21.63,12
+"TR00396","Debit Card",883.06,6
+"TR00397","Mobile Wallets",451.11,12
+"TR00398","PayPal",541.09,3
+"TR00399","Bank Transfer",356.94,7
+"TR00400","Mobile Wallets",467.27,11
+"TR00401","Cash on Delivery (COD)",25.75,12
+"TR00402","Cash on Delivery (COD)",29.7,7
+"TR00403","PayPal",494.87,12
+"TR00404","PayPal",677.49,11
+"TR00405","Bank Transfer",45.28,11
+"TR00406","Mobile Wallets",485.76,0
+"TR00407","PayPal",401.47,1
+"TR00408","PayPal",480.16,6
+"TR00409","Credit Card",297.22,8
+"TR00410","Credit Card",825.32,3
+"TR00411","PayPal",889.14,0
+"TR00412","Cash on Delivery (COD)",168.62,11
+"TR00413","Mobile Wallets",529.6,0
+"TR00414","PayPal",265.36,7
+"TR00415","PayPal",565.79,10
+"TR00416","Mobile Wallets",982.31,5
+"TR00417","PayPal",428.99,10
+"TR00418","PayPal",792.18,3
+"TR00419","Credit Card",609.92,7
+"TR00420","Debit Card",710.19,4
+"TR00421","Credit Card",882.82,2
+"TR00422","Cash on Delivery (COD)",560.35,10
+"TR00423","Mobile Wallets",743.97,3
+"TR00424","Debit Card",834.89,9
+"TR00425","Debit Card",939.18,1
+"TR00426","Cash on Delivery (COD)",867.05,8
+"TR00427","Cash on Delivery (COD)",749.82,5
+"TR00428","PayPal",692.08,10
+"TR00429","Credit Card",357.99,11
+"TR00430","PayPal",678.04,12
+"TR00431","Bank Transfer",591.42,4
+"TR00432","Credit Card",226.93,9
+"TR00433","PayPal",889.03,2
+"TR00434","Cash on Delivery (COD)",210.09,8
+"TR00435","Debit Card",332.37,5
+"TR00436","Cash on Delivery (COD)",633.01,4
+"TR00437","PayPal",995.8,0
+"TR00438","Bank Transfer",741.11,7
+"TR00439","PayPal",740.56,9
+"TR00440","Credit Card",454.83,8
+"TR00441","Bank Transfer",76.98,11
+"TR00442","PayPal",298.35,6
+"TR00443","PayPal",978.68,5
+"TR00444","Mobile Wallets",783.04,11
+"TR00445","Credit Card",419.59,6
+"TR00446","Bank Transfer",296.13,1
+"TR00447","Mobile Wallets",674.82,5
+"TR00448","Credit Card",682.39,5
+"TR00449","Credit Card",747.72,1
+"TR00450","Mobile Wallets",439.75,3
+"TR00451","Debit Card",364.52,4
+"TR00452","Cash on Delivery (COD)",958.68,6
+"TR00453","Bank Transfer",114.6,0
+"TR00454","Bank Transfer",728.38,2
+"TR00455","Debit Card",591.9,3
+"TR00456","PayPal",652.73,8
+"TR00457","Debit Card",913.36,9
+"TR00458","Bank Transfer",763.21,3
+"TR00459","Debit Card",326.38,10
+"TR00460","Mobile Wallets",385.22,8
+"TR00461","Cash on Delivery (COD)",902.95,10
+"TR00462","Mobile Wallets",258.76,11
+"TR00463","Bank Transfer",900.35,6
+"TR00464","Bank Transfer",690.72,3
+"TR00465","PayPal",725.8,12
+"TR00466","PayPal",422.91,2
+"TR00467","Cash on Delivery (COD)",290.58,8
+"TR00468","Bank Transfer",140.66,4
+"TR00469","Cash on Delivery (COD)",886.27,5
+"TR00470","Bank Transfer",195.01,1
+"TR00471","Debit Card",745.22,5
+"TR00472","Bank Transfer",70.59,8
+"TR00473","PayPal",489.24,2
+"TR00474","Credit Card",194.27,5
+"TR00475","PayPal",53.91,11
+"TR00476","Mobile Wallets",820.4,11
+"TR00477","Bank Transfer",439.36,12
+"TR00478","Mobile Wallets",345.67,7
+"TR00479","Cash on Delivery (COD)",644.36,9
+"TR00480","Mobile Wallets",921.46,7
+"TR00481","Credit Card",606.78,9
+"TR00482","Mobile Wallets",283.04,3
+"TR00483","Mobile Wallets",307.01,10
+"TR00484","Debit Card",285.07,8
+"TR00485","Cash on Delivery (COD)",247.26,1
+"TR00486","Mobile Wallets",773.58,10
+"TR00487","Credit Card",737.1,3
+"TR00488","Mobile Wallets",381.61,6
+"TR00489","Debit Card",244.94,2
+"TR00490","Cash on Delivery (COD)",541.64,7
+"TR00491","Credit Card",317.57,4
+"TR00492","Bank Transfer",554.65,5
+"TR00493","Credit Card",322.01,3
+"TR00494","Cash on Delivery (COD)",49.69,2
+"TR00495","Bank Transfer",728.37,1
+"TR00496","Bank Transfer",3.14,8
+"TR00497","Bank Transfer",636.96,4
+"TR00498","Debit Card",703.8,11
+"TR00499","PayPal",357.45,3
+"TR00500","Bank Transfer",756.53,1
+"TR00501","Cash on Delivery (COD)",672.29,9
+"TR00502","Bank Transfer",734.27,2
+"TR00503","PayPal",189.88,11
+"TR00504","Mobile Wallets",229.09,8
+"TR00505","Mobile Wallets",291.38,10
+"TR00506","Mobile Wallets",403.46,1
+"TR00507","Bank Transfer",333.04,12
+"TR00508","Mobile Wallets",747.05,1
+"TR00509","Cash on Delivery (COD)",535.24,2
+"TR00510","Cash on Delivery (COD)",364.23,7
+"TR00511","Cash on Delivery (COD)",770.94,3
+"TR00512","PayPal",61.62,0
+"TR00513","PayPal",924.89,10
+"TR00514","Mobile Wallets",753.61,6
+"TR00515","Cash on Delivery (COD)",341.24,4
+"TR00516","Debit Card",989.43,7
+"TR00517","Cash on Delivery (COD)",406.25,8
+"TR00518","Credit Card",973.86,5
+"TR00519","Mobile Wallets",475.57,12
+"TR00520","Debit Card",827.03,7
+"TR00521","PayPal",6.81,8
+"TR00522","Debit Card",104.36,4
+"TR00523","Debit Card",284.11,1
+"TR00524","PayPal",86.42,11
+"TR00525","Cash on Delivery (COD)",612.21,5
+"TR00526","Debit Card",649.14,1
+"TR00527","Bank Transfer",211.21,4
+"TR00528","PayPal",823.13,0
+"TR00529","Cash on Delivery (COD)",95.75,2
+"TR00530","Mobile Wallets",754.72,0
+"TR00531","Bank Transfer",293.3,8
+"TR00532","PayPal",237.61,5
+"TR00533","Cash on Delivery (COD)",307.95,2
+"TR00534","PayPal",212.24,12
+"TR00535","Credit Card",33.93,5
+"TR00536","Cash on Delivery (COD)",831.74,0
+"TR00537","PayPal",617.41,2
+"TR00538","PayPal",903.81,9
+"TR00539","Credit Card",6.01,2
+"TR00540","Credit Card",631.41,5
+"TR00541","Bank Transfer",376.29,4
+"TR00542","Credit Card",457.44,5
+"TR00543","Debit Card",729.08,12
+"TR00544","Debit Card",821.31,1
+"TR00545","Cash on Delivery (COD)",750.95,8
+"TR00546","Debit Card",47.52,6
+"TR00547","Credit Card",677.6,9
+"TR00548","Debit Card",904.49,4
+"TR00549","Cash on Delivery (COD)",936.55,7
+"TR00550","PayPal",161.99,12
+"TR00551","Cash on Delivery (COD)",423.25,7
+"TR00552","Bank Transfer",393.85,5
+"TR00553","PayPal",261.74,9
+"TR00554","Bank Transfer",29.5,7
+"TR00555","Debit Card",747.14,2
+"TR00556","Cash on Delivery (COD)",799.08,9
+"TR00557","PayPal",733.05,8
+"TR00558","Debit Card",669.83,8
+"TR00559","Credit Card",793.94,6
+"TR00560","Cash on Delivery (COD)",468.74,4
+"TR00561","Debit Card",156.5,7
+"TR00562","Mobile Wallets",146.44,4
+"TR00563","Credit Card",698.32,10
+"TR00564","PayPal",210.2,5
+"TR00565","Bank Transfer",133.13,2
+"TR00566","Cash on Delivery (COD)",90.31,7
+"TR00567","Cash on Delivery (COD)",286.18,8
+"TR00568","Debit Card",181.86,7
+"TR00569","Debit Card",344.34,4
+"TR00570","Debit Card",780.41,0
+"TR00571","Debit Card",7.39,6
+"TR00572","Mobile Wallets",998.67,2
+"TR00573","Bank Transfer",564.99,8
+"TR00574","Mobile Wallets",751.57,5
+"TR00575","Debit Card",512.06,8
+"TR00576","Mobile Wallets",811.12,6
+"TR00577","Mobile Wallets",493.48,5
+"TR00578","PayPal",653.75,10
+"TR00579","Credit Card",849.22,12
+"TR00580","Credit Card",979.16,4
+"TR00581","Bank Transfer",751.45,12
+"TR00582","Mobile Wallets",380.38,11
+"TR00583","Cash on Delivery (COD)",81.23,7
+"TR00584","Credit Card",971.74,6
+"TR00585","Credit Card",780.2,8
+"TR00586","Mobile Wallets",22.69,11
+"TR00587","Bank Transfer",759.63,6
+"TR00588","Bank Transfer",276.32,12
+"TR00589","Cash on Delivery (COD)",508.02,4
+"TR00590","Cash on Delivery (COD)",772.23,4
+"TR00591","Cash on Delivery (COD)",562.75,5
+"TR00592","Mobile Wallets",810.62,2
+"TR00593","Mobile Wallets",347.79,6
+"TR00594","Debit Card",2.53,5
+"TR00595","Bank Transfer",979.17,6
+"TR00596","PayPal",511.78,10
+"TR00597","PayPal",132.47,5
+"TR00598","Cash on Delivery (COD)",483.33,1
+"TR00599","Debit Card",70.24,0
+"TR00600","Bank Transfer",880.23,0
+"TR00601","Bank Transfer",223.07,9
+"TR00602","Debit Card",320.46,10
+"TR00603","Mobile Wallets",438.31,5
+"TR00604","Debit Card",325.49,5
+"TR00605","PayPal",461.85,5
+"TR00606","Credit Card",229.54,5
+"TR00607","Mobile Wallets",91.88,10
+"TR00608","Debit Card",428.39,2
+"TR00609","Bank Transfer",388.35,12
+"TR00610","Credit Card",693.77,2
+"TR00611","Bank Transfer",482.08,7
+"TR00612","Bank Transfer",427.44,2
+"TR00613","Cash on Delivery (COD)",531.7,8
+"TR00614","PayPal",974.07,0
+"TR00615","Bank Transfer",756.31,0
+"TR00616","Cash on Delivery (COD)",477.74,11
+"TR00617","PayPal",77.46,0
+"TR00618","PayPal",98.37,6
+"TR00619","Debit Card",936.57,10
+"TR00620","PayPal",346.43,10
+"TR00621","PayPal",676.56,12
+"TR00622","Debit Card",918.31,7
+"TR00623","Debit Card",139.99,12
+"TR00624","PayPal",288.03,10
+"TR00625","Cash on Delivery (COD)",886.95,4
+"TR00626","Mobile Wallets",42.79,10
+"TR00627","Bank Transfer",112.98,6
+"TR00628","Cash on Delivery (COD)",845.36,7
+"TR00629","Cash on Delivery (COD)",419.91,1
+"TR00630","Debit Card",834.49,7
+"TR00631","Cash on Delivery (COD)",728.77,1
+"TR00632","Mobile Wallets",196.59,8
+"TR00633","Credit Card",712.85,4
+"TR00634","Bank Transfer",309.72,8
+"TR00635","Bank Transfer",227.83,12
+"TR00636","Mobile Wallets",40.69,12
+"TR00637","Debit Card",917.38,3
+"TR00638","Debit Card",863.04,7
+"TR00639","Mobile Wallets",805.75,1
+"TR00640","PayPal",766.39,2
+"TR00641","Bank Transfer",280.3,6
+"TR00642","Credit Card",785.76,3
+"TR00643","Bank Transfer",393.45,0
+"TR00644","PayPal",382.87,9
+"TR00645","Credit Card",148.32,3
+"TR00646","Credit Card",175.94,10
+"TR00647","Cash on Delivery (COD)",686.44,1
+"TR00648","Bank Transfer",832.92,3
+"TR00649","Debit Card",424.57,3
+"TR00650","Cash on Delivery (COD)",630.84,3
+"TR00651","Cash on Delivery (COD)",423.11,4
+"TR00652","PayPal",847.34,8
+"TR00653","Credit Card",968.92,3
+"TR00654","Bank Transfer",910.73,5
+"TR00655","Mobile Wallets",207.26,4
+"TR00656","Mobile Wallets",995.04,2
+"TR00657","Cash on Delivery (COD)",178.22,1
+"TR00658","Debit Card",8.92,11
+"TR00659","PayPal",536.18,11
+"TR00660","Cash on Delivery (COD)",377.62,12
+"TR00661","Credit Card",329.52,9
+"TR00662","Cash on Delivery (COD)",249.65,2
+"TR00663","Bank Transfer",625.2,10
+"TR00664","PayPal",515.95,6
+"TR00665","Bank Transfer",498.95,11
+"TR00666","Mobile Wallets",800.57,11
+"TR00667","Debit Card",220.45,9
+"TR00668","Bank Transfer",110.9,8
+"TR00669","Credit Card",694.46,8
+"TR00670","Bank Transfer",831.84,9
+"TR00671","Bank Transfer",94.98,11
+"TR00672","Cash on Delivery (COD)",968.22,2
+"TR00673","Mobile Wallets",155.85,0
+"TR00674","Credit Card",881.18,4
+"TR00675","Bank Transfer",833.2,2
+"TR00676","Credit Card",72.54,5
+"TR00677","Mobile Wallets",27.03,11
+"TR00678","Cash on Delivery (COD)",761.34,0
+"TR00679","Bank Transfer",69,7
+"TR00680","Mobile Wallets",950.33,9
+"TR00681","PayPal",552.87,6
+"TR00682","Bank Transfer",286.99,8
+"TR00683","Credit Card",633.76,7
+"TR00684","PayPal",565.94,7
+"TR00685","PayPal",691.9,10
+"TR00686","Mobile Wallets",196.24,8
+"TR00687","PayPal",485.1,5
+"TR00688","PayPal",820.82,7
+"TR00689","Bank Transfer",768.4,4
+"TR00690","Cash on Delivery (COD)",332.24,11
+"TR00691","Cash on Delivery (COD)",440.29,8
+"TR00692","Debit Card",770.14,5
+"TR00693","Debit Card",976.86,7
+"TR00694","Credit Card",534.87,2
+"TR00695","Mobile Wallets",370.92,6
+"TR00696","Credit Card",279.27,10
+"TR00697","Bank Transfer",264.03,7
+"TR00698","Debit Card",515.81,5
+"TR00699","Mobile Wallets",435.74,4
+"TR00700","Cash on Delivery (COD)",221.52,11
+"TR00701","Debit Card",378.97,8
+"TR00702","Debit Card",716.04,9
+"TR00703","PayPal",990.44,6
+"TR00704","PayPal",739.9,12
+"TR00705","Debit Card",474.45,4
+"TR00706","Mobile Wallets",546.01,0
+"TR00707","Debit Card",874.54,12
+"TR00708","Bank Transfer",354.08,1
+"TR00709","Debit Card",611.77,10
+"TR00710","Mobile Wallets",194.35,3
+"TR00711","Mobile Wallets",180.3,3
+"TR00712","Credit Card",691.56,4
+"TR00713","Cash on Delivery (COD)",912.35,12
+"TR00714","Bank Transfer",751.57,7
+"TR00715","Credit Card",593.72,3
+"TR00716","Cash on Delivery (COD)",28.44,4
+"TR00717","Debit Card",322.45,6
+"TR00718","Mobile Wallets",573.8,9
+"TR00719","Bank Transfer",960.61,1
+"TR00720","PayPal",326.26,9
+"TR00721","Credit Card",302.72,10
+"TR00722","Credit Card",23.86,0
+"TR00723","Credit Card",51.71,9
+"TR00724","Bank Transfer",869.89,7
+"TR00725","Credit Card",885.33,12
+"TR00726","Debit Card",20.34,4
+"TR00727","PayPal",206.47,12
+"TR00728","Cash on Delivery (COD)",268.22,6
+"TR00729","Mobile Wallets",718.96,5
+"TR00730","Debit Card",764.39,10
+"TR00731","Cash on Delivery (COD)",814.66,1
+"TR00732","Mobile Wallets",580.08,0
+"TR00733","Debit Card",383.12,4
+"TR00734","Credit Card",602.96,7
+"TR00735","Cash on Delivery (COD)",163.73,3
+"TR00736","Bank Transfer",813.32,5
+"TR00737","Credit Card",192.62,1
+"TR00738","Mobile Wallets",566.97,5
+"TR00739","PayPal",990.78,12
+"TR00740","Credit Card",166.52,0
+"TR00741","Mobile Wallets",950.3,4
+"TR00742","Cash on Delivery (COD)",485.44,5
+"TR00743","Bank Transfer",784.92,7
+"TR00744","Mobile Wallets",213.66,4
+"TR00745","Cash on Delivery (COD)",597.1,8
+"TR00746","Debit Card",337.39,12
+"TR00747","Mobile Wallets",508.2,5
+"TR00748","Cash on Delivery (COD)",520.95,2
+"TR00749","Credit Card",866.56,5
+"TR00750","Mobile Wallets",715.96,1
+"TR00751","Debit Card",199.59,0
+"TR00752","Cash on Delivery (COD)",732.44,11
+"TR00753","Debit Card",360.78,6
+"TR00754","Mobile Wallets",939.45,2
+"TR00755","Mobile Wallets",528.69,5
+"TR00756","Credit Card",64.22,6
+"TR00757","Credit Card",288.46,10
+"TR00758","Debit Card",686.6,8
+"TR00759","Credit Card",987.16,1
+"TR00760","Mobile Wallets",179.39,8
+"TR00761","Cash on Delivery (COD)",328.21,12
+"TR00762","Bank Transfer",881.35,3
+"TR00763","Credit Card",551.65,3
+"TR00764","Debit Card",640.91,1
+"TR00765","PayPal",235.79,8
+"TR00766","Mobile Wallets",590.87,10
+"TR00767","Cash on Delivery (COD)",312.33,11
+"TR00768","Credit Card",83.44,4
+"TR00769","Cash on Delivery (COD)",76.03,3
+"TR00770","Bank Transfer",956.4,9
+"TR00771","Cash on Delivery (COD)",650.39,8
+"TR00772","Debit Card",707.87,12
+"TR00773","Credit Card",484.88,1
+"TR00774","Debit Card",669.16,9
+"TR00775","PayPal",652.14,5
+"TR00776","Debit Card",146.06,4
+"TR00777","Mobile Wallets",120.05,1
+"TR00778","Mobile Wallets",448.53,10
+"TR00779","Debit Card",59.03,3
+"TR00780","Credit Card",270.02,8
+"TR00781","Bank Transfer",686.12,7
+"TR00782","Cash on Delivery (COD)",226.13,6
+"TR00783","PayPal",283.54,5
+"TR00784","Cash on Delivery (COD)",508.19,11
+"TR00785","Debit Card",396.52,2
+"TR00786","Cash on Delivery (COD)",929.43,0
+"TR00787","Debit Card",129.63,7
+"TR00788","Cash on Delivery (COD)",765.6,5
+"TR00789","Credit Card",119.35,12
+"TR00790","Credit Card",766.43,10
+"TR00791","Bank Transfer",217.68,4
+"TR00792","Bank Transfer",906.69,1
+"TR00793","Debit Card",724.81,12
+"TR00794","PayPal",636.75,2
+"TR00795","Cash on Delivery (COD)",883.25,12
+"TR00796","Debit Card",511.93,5
+"TR00797","Debit Card",713.4,5
+"TR00798","Debit Card",76.3,10
+"TR00799","Mobile Wallets",273.41,11
+"TR00800","Cash on Delivery (COD)",71.68,2
+"TR00801","Credit Card",379.52,10
+"TR00802","PayPal",800.28,4
+"TR00803","Mobile Wallets",573.25,3
+"TR00804","Credit Card",66.04,6
+"TR00805","Mobile Wallets",376.78,12
+"TR00806","Bank Transfer",647.09,2
+"TR00807","PayPal",365.24,10
+"TR00808","Mobile Wallets",322.66,9
+"TR00809","PayPal",846.39,5
+"TR00810","Cash on Delivery (COD)",831.17,5
+"TR00811","Credit Card",335.9,6
+"TR00812","Mobile Wallets",875.77,7
+"TR00813","Debit Card",230.86,8
+"TR00814","PayPal",714.49,10
+"TR00815","Credit Card",907.51,0
+"TR00816","Credit Card",22.45,6
+"TR00817","Mobile Wallets",221.06,10
+"TR00818","Bank Transfer",365.95,11
+"TR00819","Mobile Wallets",30.99,12
+"TR00820","PayPal",308.5,11
+"TR00821","Credit Card",545.08,12
+"TR00822","Bank Transfer",129.16,12
+"TR00823","Mobile Wallets",213.92,12
+"TR00824","Cash on Delivery (COD)",467.4,11
+"TR00825","Credit Card",620.58,0
+"TR00826","Debit Card",917.07,1
+"TR00827","Bank Transfer",982.67,5
+"TR00828","Credit Card",894.43,11
+"TR00829","Cash on Delivery (COD)",743.82,9
+"TR00830","Cash on Delivery (COD)",369.25,4
+"TR00831","PayPal",469.74,11
+"TR00832","Credit Card",790.03,6
+"TR00833","Credit Card",634.63,12
+"TR00834","Debit Card",691.53,6
+"TR00835","Mobile Wallets",75.98,2
+"TR00836","Debit Card",573.77,6
+"TR00837","PayPal",99.25,10
+"TR00838","Cash on Delivery (COD)",845.95,3
+"TR00839","Mobile Wallets",150.48,3
+"TR00840","PayPal",248.86,7
+"TR00841","Mobile Wallets",963.17,4
+"TR00842","Debit Card",360.58,12
+"TR00843","Credit Card",228.45,9
+"TR00844","Debit Card",150.31,3
+"TR00845","PayPal",9.11,7
+"TR00846","Mobile Wallets",645.85,4
+"TR00847","Credit Card",620.25,4
+"TR00848","Cash on Delivery (COD)",813.48,12
+"TR00849","Mobile Wallets",951.47,10
+"TR00850","Debit Card",254.12,5
+"TR00851","Debit Card",306.77,4
+"TR00852","Debit Card",91.42,5
+"TR00853","Mobile Wallets",708.73,7
+"TR00854","Debit Card",488.92,10
+"TR00855","Cash on Delivery (COD)",132.95,12
+"TR00856","Credit Card",901.25,7
+"TR00857","PayPal",616.93,2
+"TR00858","PayPal",707.49,5
+"TR00859","Debit Card",604.23,0
+"TR00860","Credit Card",481.64,7
+"TR00861","Credit Card",284.92,4
+"TR00862","PayPal",118.71,10
+"TR00863","Mobile Wallets",543.04,2
+"TR00864","Cash on Delivery (COD)",711.93,6
+"TR00865","Bank Transfer",560.84,7
+"TR00866","PayPal",50.6,8
+"TR00867","Bank Transfer",643.87,12
+"TR00868","PayPal",964.18,5
+"TR00869","Credit Card",505.09,7
+"TR00870","Credit Card",441.97,8
+"TR00871","Debit Card",614.8,11
+"TR00872","PayPal",394.32,6
+"TR00873","Mobile Wallets",121.34,4
+"TR00874","Cash on Delivery (COD)",898.22,2
+"TR00875","Debit Card",515.3,12
+"TR00876","PayPal",290.35,4
+"TR00877","Bank Transfer",385.62,2
+"TR00878","Debit Card",109.35,7
+"TR00879","Debit Card",713.7,3
+"TR00880","Mobile Wallets",224.88,12
+"TR00881","Credit Card",337.57,5
+"TR00882","Debit Card",511.13,2
+"TR00883","Mobile Wallets",958.56,8
+"TR00884","Credit Card",302.03,12
+"TR00885","Cash on Delivery (COD)",472.11,11
+"TR00886","Mobile Wallets",508.06,11
+"TR00887","Debit Card",266.78,6
+"TR00888","Bank Transfer",828.85,5
+"TR00889","Debit Card",321.2,7
+"TR00890","Credit Card",181.36,10
+"TR00891","PayPal",222.74,2
+"TR00892","Credit Card",789.09,3
+"TR00893","Credit Card",133.51,11
+"TR00894","Bank Transfer",339.83,5
+"TR00895","Credit Card",257.86,5
+"TR00896","PayPal",845.4,4
+"TR00897","Debit Card",8.48,0
+"TR00898","Bank Transfer",705.04,1
+"TR00899","Bank Transfer",977.22,9
+"TR00900","Bank Transfer",940.73,5
+"TR00901","Debit Card",347.91,3
+"TR00902","Debit Card",633.15,0
+"TR00903","Mobile Wallets",513.31,8
+"TR00904","Cash on Delivery (COD)",26.24,0
+"TR00905","PayPal",55.9,0
+"TR00906","Cash on Delivery (COD)",94.53,6
+"TR00907","Credit Card",653.7,2
+"TR00908","Cash on Delivery (COD)",27.12,12
+"TR00909","Bank Transfer",822.75,4
+"TR00910","Mobile Wallets",557.72,8
+"TR00911","PayPal",817.04,0
+"TR00912","Debit Card",789.41,10
+"TR00913","Credit Card",856.77,4
+"TR00914","Cash on Delivery (COD)",218.35,9
+"TR00915","Debit Card",960,3
+"TR00916","Mobile Wallets",279.97,12
+"TR00917","Debit Card",620.48,5
+"TR00918","Credit Card",654.46,1
+"TR00919","Credit Card",142.15,8
+"TR00920","Bank Transfer",734.01,5
+"TR00921","PayPal",592.64,3
+"TR00922","Credit Card",680.21,11
+"TR00923","PayPal",92.47,6
+"TR00924","PayPal",52.42,7
+"TR00925","PayPal",737.17,12
+"TR00926","Bank Transfer",274.82,2
+"TR00927","Debit Card",220.63,10
+"TR00928","Debit Card",655.72,2
+"TR00929","Debit Card",378.81,8
+"TR00930","PayPal",973.13,0
+"TR00931","Debit Card",269.78,2
+"TR00932","Debit Card",20.15,5
+"TR00933","Bank Transfer",539.89,0
+"TR00934","Credit Card",338.81,11
+"TR00935","Debit Card",465.69,4
+"TR00936","PayPal",220.79,10
+"TR00937","PayPal",452.01,1
+"TR00938","Mobile Wallets",416.21,2
+"TR00939","Mobile Wallets",761.34,2
+"TR00940","Mobile Wallets",293.96,6
+"TR00941","Mobile Wallets",630.98,1
+"TR00942","Debit Card",665.39,11
+"TR00943","Credit Card",534.5,7
+"TR00944","Cash on Delivery (COD)",865.9,12
+"TR00945","Mobile Wallets",839.18,6
+"TR00946","Credit Card",593.14,1
+"TR00947","PayPal",422.15,0
+"TR00948","Mobile Wallets",67.85,3
+"TR00949","PayPal",895.69,7
+"TR00950","Debit Card",939.32,9
+"TR00951","Credit Card",176.48,10
+"TR00952","PayPal",99.09,11
+"TR00953","Debit Card",313.96,9
+"TR00954","Mobile Wallets",334.23,3
+"TR00955","Bank Transfer",675.53,12
+"TR00956","Mobile Wallets",395.97,8
+"TR00957","Cash on Delivery (COD)",335.3,4
+"TR00958","Bank Transfer",190.97,12
+"TR00959","Debit Card",832.71,1
+"TR00960","PayPal",475.26,1
+"TR00961","Mobile Wallets",153.27,9
+"TR00962","Bank Transfer",967.44,0
+"TR00963","Debit Card",29,12
+"TR00964","Credit Card",44.91,5
+"TR00965","Debit Card",114.48,8
+"TR00966","Debit Card",418.56,5
+"TR00967","Cash on Delivery (COD)",808.97,11
+"TR00968","Bank Transfer",264.73,8
+"TR00969","Mobile Wallets",479.14,6
+"TR00970","Cash on Delivery (COD)",615.09,0
+"TR00971","Bank Transfer",348.78,4
+"TR00972","Cash on Delivery (COD)",17.27,9
+"TR00973","PayPal",357.36,8
+"TR00974","PayPal",306.13,3
+"TR00975","PayPal",11.22,1
+"TR00976","Mobile Wallets",721.04,8
+"TR00977","Mobile Wallets",82.09,0
+"TR00978","Bank Transfer",432.26,3
+"TR00979","Cash on Delivery (COD)",41.18,11
+"TR00980","Mobile Wallets",361.04,5
+"TR00981","Cash on Delivery (COD)",747.75,11
+"TR00982","PayPal",899.8,1
+"TR00983","Cash on Delivery (COD)",591.93,7
+"TR00984","Bank Transfer",94.51,7
+"TR00985","Mobile Wallets",409.93,2
+"TR00986","Cash on Delivery (COD)",657.57,12
+"TR00987","Bank Transfer",703.34,6
+"TR00988","Cash on Delivery (COD)",94.4,12
+"TR00989","Mobile Wallets",949.63,5
+"TR00990","PayPal",908.66,8
+"TR00991","Bank Transfer",850.49,12
+"TR00992","Mobile Wallets",367.89,1
+"TR00993","Bank Transfer",516.15,2
+"TR00994","Credit Card",99.34,7
+"TR00995","Mobile Wallets",821.93,0
+"TR00996","Credit Card",145.79,2
+"TR00997","Cash on Delivery (COD)",460.63,5
+"TR00998","Debit Card",454.34,12
+"TR00999","PayPal",106.73,2
+"TR01000","Bank Transfer",434.86,3

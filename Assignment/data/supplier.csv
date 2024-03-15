@@ -1,0 +1,1001 @@
+"Supplier_ID","Supplier_Name","Supplier_Type","Contract_Type","Number_of_year_of_association"
+"SP00001","Fay-Rogahn","retailer","C2C",13
+"SP00002","MacGyver LLC","manufacturer","C2C",6
+"SP00003","Becker, Donnelly and Ortiz","distributor","B2C",13
+"SP00004","Walker-Shanahan","manufacturer","B2B",9
+"SP00005","Marquardt and Sons","manufacturer","C2C",11
+"SP00006","Realmix","manufacturer","C2C",24
+"SP00007","Gutmann, Miller and Hudson","manufacturer","C2B",14
+"SP00008","Kassulke, Rohan and Larson","manufacturer","B2B",14
+"SP00009","Hirthe LLC","manufacturer","C2B",8
+"SP00010","Pouros-Hessel","distributor","B2B",20
+"SP00011","Johns, Dickinson and Gislason","retailer","B2C",28
+"SP00012","Schoen, Luettgen and Carroll","distributor","C2C",27
+"SP00013","Bins-McKenzie","manufacturer","C2C",30
+"SP00014","Lubowitz-Torp","manufacturer","C2C",16
+"SP00015","Wuckert, Runolfsdottir and Schultz","manufacturer","B2B",1
+"SP00016","Huel-Champlin","wholesaler","B2B",7
+"SP00017","Bode-Veum","distributor","C2B",9
+"SP00018","Gorczany LLC","manufacturer","B2B",23
+"SP00019","Shields, Hansen and Purdy","distributor","C2B",8
+"SP00020","Bins and Sons","retailer","B2C",22
+"SP00021","Ernser-Paucek","wholesaler","B2C",27
+"SP00022","Brekke-Gutkowski","manufacturer","C2C",16
+"SP00023","Flatley and Sons","distributor","C2C",26
+"SP00024","Hills, Ledner and Sporer","manufacturer","B2B",17
+"SP00025","Little and Sons","wholesaler","C2B",6
+"SP00026","Hilpert, Koss and Towne","wholesaler","B2B",8
+"SP00027","Hegmann-Tillman","manufacturer","C2B",21
+"SP00028","Vinte","distributor","B2C",6
+"SP00029","Okuneva-Heaney","manufacturer","B2C",25
+"SP00030","Reynolds-Kris","wholesaler","C2C",4
+"SP00031","O'Hara-Hessel","manufacturer","B2B",9
+"SP00032","Marvin-Jacobson","manufacturer","B2C",17
+"SP00033","Nicolas, Weissnat and Koepp","manufacturer","C2B",9
+"SP00034","Torphy, Nikolaus and Lesch","manufacturer","B2C",18
+"SP00035","Dickens-Rodriguez","wholesaler","B2C",12
+"SP00036","Rolfson, Abernathy and Cartwright","retailer","C2B",2
+"SP00037","Bauch-Luettgen","manufacturer","C2B",2
+"SP00038","Olson, Marks and Feil","retailer","B2C",23
+"SP00039","Pollich-Farrell","retailer","B2C",8
+"SP00040","Hickle-Connelly","manufacturer","C2B",5
+"SP00041","Lynch LLC","distributor","B2C",6
+"SP00042","Jerde, Ruecker and Fritsch","distributor","B2C",22
+"SP00043","Barrows-Rempel","manufacturer","B2C",14
+"SP00044","Kassulke, Wehner and Welch","retailer","B2C",2
+"SP00045","Zemlak-Weissnat","distributor","C2C",5
+"SP00046","Satterfield, Hilll and Schmeler","wholesaler","B2C",7
+"SP00047","Keebler and Sons","manufacturer","C2B",14
+"SP00048","Bode-Hilpert","manufacturer","B2B",19
+"SP00049","Demivee","manufacturer","B2B",30
+"SP00050","Carter Group","retailer","C2C",17
+"SP00051","Rutherford, Gorczany and Haley","manufacturer","B2C",28
+"SP00052","Volkman, Lakin and Denesik","retailer","B2B",5
+"SP00053","Zemlak Inc","manufacturer","B2C",20
+"SP00054","Gleason, Pfannerstill and Kuvalis","distributor","C2C",16
+"SP00055","Lesch LLC","retailer","B2B",23
+"SP00056","Harber-O'Connell","distributor","C2B",29
+"SP00057","Kassulke, Yundt and McDermott","wholesaler","C2C",20
+"SP00058","Nitzsche-Kshlerin","distributor","C2C",11
+"SP00059","Jacobs-Morar","wholesaler","B2B",28
+"SP00060","Barton, Metz and Yost","wholesaler","C2C",27
+"SP00061","Parisian-Swaniawski","manufacturer","C2B",5
+"SP00062","Jacobi, Rodriguez and Veum","retailer","C2B",23
+"SP00063","Prohaska and Sons","manufacturer","C2C",12
+"SP00064","Satterfield-Stanton","manufacturer","C2C",29
+"SP00065","Kulas, Ankunding and Kuhic","retailer","C2C",15
+"SP00066","Reichel Group","retailer","C2C",4
+"SP00067","VonRueden LLC","manufacturer","B2B",30
+"SP00068","Zboncak and Sons","manufacturer","C2C",4
+"SP00069","Marks and Sons","distributor","C2C",22
+"SP00070","Cummerata-Leffler","retailer","C2C",2
+"SP00071","Kuhic, Lockman and Gutmann","wholesaler","C2B",15
+"SP00072","O'Reilly, Block and Jones","wholesaler","C2C",17
+"SP00073","Lubowitz-Fay","distributor","B2C",3
+"SP00074","Grady Group","manufacturer","B2B",12
+"SP00075","Ziemann and Sons","manufacturer","B2C",7
+"SP00076","Bernhard, Mann and Rohan","manufacturer","C2C",26
+"SP00077","Daniel-Deckow","wholesaler","B2C",23
+"SP00078","Greenfelder Inc","manufacturer","C2B",1
+"SP00079","Wolff, Pollich and Beatty","distributor","C2C",29
+"SP00080","Upton Group","distributor","B2C",30
+"SP00081","Hermiston, Wuckert and Kub","distributor","B2B",29
+"SP00082","Cremin Inc","manufacturer","B2C",4
+"SP00083","Boyle, Kertzmann and Hilll","retailer","C2B",6
+"SP00084","Schuppe Inc","wholesaler","B2B",24
+"SP00085","Franecki-Harris","wholesaler","C2B",8
+"SP00086","Kwimbee","distributor","B2C",15
+"SP00087","Ruecker, Rempel and Feeney","distributor","C2C",13
+"SP00088","Streich-Wehner","distributor","C2B",22
+"SP00089","Reinger-Heathcote","retailer","C2B",6
+"SP00090","Reinger and Sons","distributor","B2C",15
+"SP00091","Gerlach, Mueller and Cremin","distributor","C2C",11
+"SP00092","Cronin, Bayer and Ratke","manufacturer","C2B",9
+"SP00093","Terry, Greenholt and Rath","wholesaler","C2C",17
+"SP00094","Okuneva, Becker and Nitzsche","distributor","C2B",21
+"SP00095","Little Inc","manufacturer","B2B",21
+"SP00096","Skiles, Gulgowski and Bahringer","distributor","C2B",28
+"SP00097","Cole-Murazik","distributor","B2B",8
+"SP00098","Goyette, Welch and Schulist","distributor","C2B",13
+"SP00099","Topiczoom","manufacturer","B2C",7
+"SP00100","Toy, Block and Marquardt","wholesaler","B2B",7
+"SP00101","Kunze Group","manufacturer","B2C",7
+"SP00102","Skiles-Gusikowski","distributor","C2B",28
+"SP00103","Mitchell Group","manufacturer","B2C",10
+"SP00104","Waelchi-Stracke","wholesaler","C2B",26
+"SP00105","Howe-Lueilwitz","wholesaler","B2B",11
+"SP00106","Hessel Group","manufacturer","B2C",11
+"SP00107","Mertz, Fritsch and Witting","wholesaler","B2B",24
+"SP00108","Weissnat LLC","manufacturer","B2B",24
+"SP00109","Barrows Inc","manufacturer","C2C",18
+"SP00110","Price Group","wholesaler","C2B",15
+"SP00111","Zoomcast","retailer","C2C",13
+"SP00112","Batz, Hessel and Dickinson","wholesaler","B2C",16
+"SP00113","Lindgren, Homenick and Waters","retailer","B2B",23
+"SP00114","Feest, Witting and Murray","distributor","B2C",22
+"SP00115","Sauer-Quitzon","wholesaler","B2C",4
+"SP00116","VonRueden, Dickinson and Huels","retailer","B2B",19
+"SP00117","Rice and Sons","retailer","C2C",13
+"SP00118","Anderson Inc","distributor","B2C",30
+"SP00119","Willms Group","manufacturer","B2B",22
+"SP00120","Mills-Kuhic","wholesaler","C2C",10
+"SP00121","Davis, Deckow and Schaden","wholesaler","B2B",1
+"SP00122","Roberts Group","distributor","C2B",4
+"SP00123","Hickle-Sporer","distributor","B2C",8
+"SP00124","Cogibox","retailer","B2C",6
+"SP00125","Parisian LLC","wholesaler","B2C",3
+"SP00126","Paucek, Lynch and Weissnat","manufacturer","C2B",20
+"SP00127","Labadie, Hintz and Kilback","wholesaler","C2B",14
+"SP00128","Schmitt-Crona","distributor","C2B",7
+"SP00129","Stamm, Kuphal and Murphy","retailer","C2B",12
+"SP00130","Collins Group","manufacturer","B2C",28
+"SP00131","Pacocha-Kreiger","manufacturer","B2C",3
+"SP00132","Block Group","retailer","B2C",4
+"SP00133","Walker-Parker","distributor","B2B",23
+"SP00134","Runolfsdottir-Erdman","wholesaler","C2B",25
+"SP00135","Schaefer LLC","distributor","C2B",25
+"SP00136","Kuhic Group","wholesaler","C2C",20
+"SP00137","Breitenberg LLC","retailer","B2C",6
+"SP00138","Deckow, Krajcik and Hickle","distributor","C2C",24
+"SP00139","Mann Group","manufacturer","B2C",25
+"SP00140","Mohr, Adams and Hyatt","manufacturer","C2B",17
+"SP00141","Lemke and Sons","manufacturer","C2B",14
+"SP00142","Waelchi, Little and O'Hara","wholesaler","B2C",11
+"SP00143","Homenick LLC","wholesaler","C2C",5
+"SP00144","Kiehn-Schulist","retailer","C2C",18
+"SP00145","Olson-Strosin","distributor","C2B",1
+"SP00146","Padberg-Will","manufacturer","C2B",15
+"SP00147","Donnelly, Reilly and Harris","manufacturer","B2B",4
+"SP00148","Kris, Daniel and Christiansen","wholesaler","B2C",15
+"SP00149","Armstrong-Turner","distributor","C2B",28
+"SP00150","Jacobson-Wiegand","distributor","B2C",4
+"SP00151","Towne, Runte and Haley","retailer","C2B",30
+"SP00152","Gorczany Inc","distributor","B2B",19
+"SP00153","Brakus-Gusikowski","manufacturer","B2B",25
+"SP00154","Hermiston, Keeling and Zemlak","retailer","B2C",11
+"SP00155","Lehner-Gibson","manufacturer","C2C",12
+"SP00156","Mante and Sons","distributor","C2B",27
+"SP00157","Rohan Inc","manufacturer","C2B",1
+"SP00158","Cremin, Swift and Mueller","manufacturer","C2C",27
+"SP00159","Reichert Group","distributor","C2B",2
+"SP00160","Nikolaus-Hermiston","distributor","B2B",29
+"SP00161","Graham-Upton","distributor","B2B",19
+"SP00162","Weimann Inc","wholesaler","C2B",12
+"SP00163","Hettinger, Zemlak and Mann","wholesaler","C2C",29
+"SP00164","Kihn Group","wholesaler","C2B",5
+"SP00165","Weissnat-Hessel","retailer","B2B",4
+"SP00166","Johnson and Sons","manufacturer","B2B",15
+"SP00167","Kshlerin LLC","wholesaler","C2C",4
+"SP00168","Strosin-Fahey","distributor","B2C",30
+"SP00169","Schamberger and Sons","distributor","C2B",26
+"SP00170","Kassulke, Schuppe and Conn","wholesaler","B2C",19
+"SP00171","Lueilwitz, Collier and Simonis","retailer","B2B",29
+"SP00172","Reichel and Sons","wholesaler","C2C",21
+"SP00173","Wolff-Haag","retailer","C2C",7
+"SP00174","Cartwright Group","retailer","B2B",15
+"SP00175","Gutkowski Group","retailer","C2B",20
+"SP00176","Windler and Sons","retailer","B2C",15
+"SP00177","Bahringer, Yost and Murphy","manufacturer","B2B",20
+"SP00178","Koelpin Group","wholesaler","B2B",8
+"SP00179","Torphy, Wiza and DuBuque","retailer","B2B",8
+"SP00180","Hudson-Schamberger","manufacturer","C2C",6
+"SP00181","Boyle-Kuhic","wholesaler","B2C",3
+"SP00182","Ankunding, Kuhlman and Maggio","wholesaler","C2B",5
+"SP00183","Yakijo","wholesaler","B2B",27
+"SP00184","Kunde, Kertzmann and Hettinger","wholesaler","B2C",10
+"SP00185","Bednar, Streich and Franecki","distributor","C2C",4
+"SP00186","Volkman, Krajcik and Graham","distributor","C2C",5
+"SP00187","Hermiston-Jacobi","distributor","B2B",10
+"SP00188","Kuhlman Inc","retailer","C2B",19
+"SP00189","Gutmann-Kris","retailer","B2C",30
+"SP00190","Larson Group","retailer","B2B",5
+"SP00191","Harris and Sons","manufacturer","C2B",30
+"SP00192","Bechtelar-Christiansen","distributor","B2C",29
+"SP00193","Emard-Parisian","wholesaler","C2C",20
+"SP00194","Lind, Becker and Emmerich","retailer","C2B",25
+"SP00195","Renner-Robel","manufacturer","B2B",5
+"SP00196","Wolf-Romaguera","retailer","B2C",25
+"SP00197","Wisozk-Schneider","manufacturer","C2C",4
+"SP00198","Beatty-Littel","wholesaler","B2B",12
+"SP00199","Lynch Inc","manufacturer","C2C",9
+"SP00200","Lindgren, Russel and Haley","distributor","B2C",15
+"SP00201","Wintheiser-Kling","manufacturer","B2B",14
+"SP00202","Haag, Konopelski and Willms","manufacturer","B2C",5
+"SP00203","Ryan-Muller","wholesaler","B2B",16
+"SP00204","Hermiston-Schmidt","wholesaler","B2B",13
+"SP00205","Erdman Inc","retailer","C2C",12
+"SP00206","Kunde-Von","retailer","B2C",22
+"SP00207","Conroy, Zulauf and Witting","distributor","B2B",6
+"SP00208","Auer, Johnston and Hudson","retailer","B2B",21
+"SP00209","Wiegand-Heller","manufacturer","B2C",22
+"SP00210","Dach-Hoppe","manufacturer","B2B",13
+"SP00211","Daniel and Sons","wholesaler","C2B",13
+"SP00212","Towne-Reilly","manufacturer","C2C",16
+"SP00213","Kutch-Hartmann","wholesaler","B2C",4
+"SP00214","Murazik LLC","wholesaler","B2B",16
+"SP00215","Kertzmann-Shanahan","manufacturer","B2C",10
+"SP00216","Orn, Stehr and Baumbach","wholesaler","C2B",16
+"SP00217","Cummings, Pagac and Simonis","distributor","C2C",16
+"SP00218","Kuvalis, Hessel and Ritchie","manufacturer","C2B",10
+"SP00219","Schuppe, Funk and Heaney","manufacturer","B2B",9
+"SP00220","Greenholt LLC","manufacturer","B2B",14
+"SP00221","Wilkinson-Lesch","manufacturer","C2C",17
+"SP00222","Greenholt-Pollich","manufacturer","B2B",12
+"SP00223","Murray LLC","manufacturer","C2C",12
+"SP00224","Raynor, Barrows and Zemlak","wholesaler","B2C",30
+"SP00225","Davis LLC","distributor","B2B",15
+"SP00226","Grant-Flatley","manufacturer","B2C",13
+"SP00227","Roberts and Sons","wholesaler","B2B",8
+"SP00228","Zieme, Treutel and Walter","wholesaler","B2C",11
+"SP00229","Dibbert-Stamm","distributor","B2B",5
+"SP00230","O'Reilly-Wisoky","retailer","B2B",27
+"SP00231","Wiza LLC","wholesaler","B2C",19
+"SP00232","Fisher, O'Keefe and Walsh","retailer","B2C",25
+"SP00233","Blick-Lakin","retailer","B2B",18
+"SP00234","Hahn, Waters and Fahey","manufacturer","B2B",17
+"SP00235","Roob-Heathcote","wholesaler","C2C",21
+"SP00236","Schroeder-Hegmann","retailer","B2B",15
+"SP00237","Mayer-Bednar","distributor","B2C",28
+"SP00238","Ruecker, Simonis and Klein","wholesaler","B2C",30
+"SP00239","Rath-Kunze","distributor","C2B",11
+"SP00240","Hilll Inc","retailer","C2B",12
+"SP00241","Murray, Bartoletti and Gottlieb","distributor","C2B",8
+"SP00242","Bauch-Wehner","retailer","C2B",6
+"SP00243","Farrell Inc","distributor","C2C",9
+"SP00244","Collins-Farrell","manufacturer","B2B",4
+"SP00245","O'Keefe Inc","wholesaler","B2B",27
+"SP00246","Hand-Cassin","distributor","B2B",18
+"SP00247","Zemlak, Toy and Stroman","distributor","B2C",5
+"SP00248","Hahn Inc","manufacturer","B2B",29
+"SP00249","Harris-Bailey","retailer","B2C",17
+"SP00250","Rohan LLC","distributor","B2B",19
+"SP00251","Doyle Group","manufacturer","B2B",11
+"SP00252","Krajcik, Hilll and Bartell","distributor","B2B",10
+"SP00253","Green, Runolfsson and Thiel","distributor","C2C",26
+"SP00254","Bosco-Shields","retailer","B2B",8
+"SP00255","Nader-Cummings","wholesaler","B2C",15
+"SP00256","Heaney-Schroeder","distributor","B2B",2
+"SP00257","Abbott, Mayert and Simonis","wholesaler","C2B",19
+"SP00258","Quigley Group","retailer","B2C",22
+"SP00259","Senger and Sons","distributor","C2C",21
+"SP00260","Abshire, Kreiger and Jerde","retailer","C2C",16
+"SP00261","Lesch-Erdman","wholesaler","B2C",2
+"SP00262","Prosacco and Sons","distributor","B2B",6
+"SP00263","Sawayn-Ortiz","distributor","C2B",22
+"SP00264","Emard, Howe and Luettgen","distributor","B2C",15
+"SP00265","Hartmann, Kreiger and Gorczany","retailer","B2C",26
+"SP00266","Rempel-Roob","wholesaler","B2B",1
+"SP00267","Jacobson-Skiles","distributor","C2B",23
+"SP00268","Schroeder, Davis and Kreiger","wholesaler","C2B",9
+"SP00269","Dooley, McLaughlin and Brown","manufacturer","C2B",11
+"SP00270","Huels LLC","manufacturer","B2B",19
+"SP00271","Ritchie, Bode and Mueller","manufacturer","C2B",10
+"SP00272","Williamson, Dibbert and Vandervort","distributor","C2C",8
+"SP00273","Jerde-Schmeler","retailer","C2C",26
+"SP00274","Torp, O'Keefe and Okuneva","wholesaler","C2B",22
+"SP00275","Ebert Group","distributor","C2B",14
+"SP00276","Bergstrom, O'Connell and Pollich","manufacturer","B2C",10
+"SP00277","Yundt-Crona","retailer","C2B",2
+"SP00278","Gibson-Dickens","retailer","C2C",30
+"SP00279","Ritchie and Sons","retailer","C2C",9
+"SP00280","Rodriguez, Hane and Treutel","distributor","C2B",7
+"SP00281","Williamson-Turcotte","distributor","C2B",24
+"SP00282","Littel Inc","wholesaler","C2B",19
+"SP00283","Volkman, Koelpin and Dooley","wholesaler","B2C",18
+"SP00284","Collins Inc","manufacturer","B2C",17
+"SP00285","Rosenbaum-Kemmer","retailer","B2B",4
+"SP00286","Lockman-Kiehn","retailer","B2B",23
+"SP00287","Raynor and Sons","distributor","B2B",11
+"SP00288","Schamberger, Homenick and Nicolas","wholesaler","B2B",4
+"SP00289","Moen-Balistreri","wholesaler","B2B",29
+"SP00290","Lakin and Sons","wholesaler","B2C",2
+"SP00291","Roob, Hickle and Brown","wholesaler","B2B",4
+"SP00292","Von-Will","retailer","B2B",27
+"SP00293","McCullough, Harris and Halvorson","wholesaler","B2C",26
+"SP00294","McClure Group","retailer","B2C",11
+"SP00295","Schultz-Lang","distributor","C2C",15
+"SP00296","Lueilwitz and Sons","retailer","C2C",8
+"SP00297","Gleason-Lehner","wholesaler","C2B",10
+"SP00298","Leannon, Anderson and Kihn","manufacturer","B2C",20
+"SP00299","Parisian, Abbott and Rempel","manufacturer","B2B",21
+"SP00300","Franecki and Sons","wholesaler","C2B",24
+"SP00301","Fay-Jerde","wholesaler","C2C",20
+"SP00302","Runolfsson, Swift and Pagac","distributor","C2B",22
+"SP00303","Smitham LLC","distributor","B2C",26
+"SP00304","Murphy-Crist","distributor","B2C",21
+"SP00305","Kuhn, Kuvalis and Deckow","manufacturer","C2B",23
+"SP00306","Lockman LLC","manufacturer","C2B",29
+"SP00307","Considine-Bogisich","wholesaler","C2C",22
+"SP00308","Johnston, Dickinson and Batz","manufacturer","C2C",16
+"SP00309","Schmeler, Hills and McClure","wholesaler","C2B",12
+"SP00310","Schulist-Blanda","retailer","C2C",10
+"SP00311","Rau-McCullough","wholesaler","B2C",6
+"SP00312","Abernathy, Deckow and Kris","wholesaler","C2C",26
+"SP00313","Emmerich Inc","manufacturer","B2B",12
+"SP00314","Rodriguez-Kuhlman","manufacturer","B2C",10
+"SP00315","Bernhard-Von","manufacturer","B2B",30
+"SP00316","Trunyx","distributor","C2B",14
+"SP00317","Zboncak-Mertz","retailer","B2C",24
+"SP00318","Hessel, Schiller and Kunze","retailer","C2B",3
+"SP00319","Kessler-Kutch","wholesaler","B2B",23
+"SP00320","Goldner-Durgan","retailer","C2C",13
+"SP00321","Bode and Sons","distributor","B2B",11
+"SP00322","Larson Inc","distributor","B2B",23
+"SP00323","Padberg, Hammes and Harber","distributor","B2B",24
+"SP00324","Mraz and Sons","manufacturer","C2B",18
+"SP00325","Johns-Funk","manufacturer","C2B",19
+"SP00326","Skiles, Kerluke and Thiel","manufacturer","C2C",23
+"SP00327","Cummerata-Volkman","wholesaler","B2C",7
+"SP00328","Reynolds-Kozey","retailer","C2C",21
+"SP00329","Mymm","retailer","B2B",3
+"SP00330","Gerlach and Sons","retailer","C2C",12
+"SP00331","Towne-Erdman","distributor","C2C",23
+"SP00332","Prohaska, Wuckert and Walter","wholesaler","C2C",15
+"SP00333","Mitchell and Sons","manufacturer","C2C",23
+"SP00334","Kozey-McGlynn","wholesaler","C2C",25
+"SP00335","Lynch, Rutherford and Langworth","manufacturer","B2B",6
+"SP00336","Jakubowski-Wuckert","retailer","B2B",24
+"SP00337","Runte-Mann","wholesaler","B2B",27
+"SP00338","Gleichner-Hills","retailer","B2B",10
+"SP00339","Bosco Inc","wholesaler","C2B",4
+"SP00340","MacGyver, Wuckert and Gulgowski","wholesaler","B2B",14
+"SP00341","Schulist Group","distributor","C2B",29
+"SP00342","Rowe, Haley and Kuhlman","wholesaler","B2C",30
+"SP00343","Macejkovic, Bailey and Effertz","distributor","B2B",20
+"SP00344","Powlowski, Wintheiser and Jerde","distributor","B2C",29
+"SP00345","Russel, Bernhard and Beier","manufacturer","B2B",4
+"SP00346","Kilback-Barton","wholesaler","B2C",14
+"SP00347","Bergnaum and Sons","wholesaler","C2C",4
+"SP00348","Moen Inc","manufacturer","C2B",30
+"SP00349","Lesch Inc","retailer","B2B",3
+"SP00350","Buckridge-Stoltenberg","manufacturer","B2B",11
+"SP00351","Moore Group","retailer","C2B",9
+"SP00352","Prosacco Group","manufacturer","C2C",29
+"SP00353","Ullrich-Hoeger","wholesaler","C2C",26
+"SP00354","Ebert, Champlin and McDermott","distributor","C2C",18
+"SP00355","Zieme LLC","distributor","B2B",2
+"SP00356","Breitenberg, Bauch and Feeney","manufacturer","C2B",5
+"SP00357","Wisozk, Graham and Mosciski","distributor","C2C",25
+"SP00358","Dickinson, Emmerich and Corwin","manufacturer","C2C",20
+"SP00359","Turcotte-Schaden","wholesaler","B2C",25
+"SP00360","Schroeder, McKenzie and Koss","retailer","B2C",13
+"SP00361","Edgepulse","retailer","B2C",14
+"SP00362","McClure, Cassin and Schumm","distributor","C2B",17
+"SP00363","Robel-Hilpert","retailer","B2C",30
+"SP00364","Frami Inc","wholesaler","B2C",29
+"SP00365","Deckow, Schimmel and Bartell","retailer","B2B",9
+"SP00366","Nader, Streich and Ruecker","distributor","C2B",26
+"SP00367","Monahan-Bechtelar","manufacturer","C2B",30
+"SP00368","Fritsch-Price","manufacturer","C2B",18
+"SP00369","Kautzer Group","retailer","B2C",14
+"SP00370","Keebler LLC","wholesaler","B2C",17
+"SP00371","Bartoletti, Larson and Roob","retailer","C2C",16
+"SP00372","Greenfelder, Schowalter and VonRueden","wholesaler","B2B",10
+"SP00373","Bartoletti, Goodwin and Wuckert","distributor","C2B",14
+"SP00374","Ryan LLC","distributor","B2C",17
+"SP00375","Moore, Hills and Beahan","manufacturer","B2C",14
+"SP00376","Jerde, MacGyver and Douglas","wholesaler","C2C",5
+"SP00377","Bernhard Group","distributor","C2B",5
+"SP00378","Ruecker, Yundt and Leffler","distributor","B2C",15
+"SP00379","Gulgowski Inc","wholesaler","C2C",25
+"SP00380","Stracke and Sons","wholesaler","C2B",9
+"SP00381","Kunde-McGlynn","retailer","B2C",17
+"SP00382","Hodkiewicz LLC","wholesaler","C2B",18
+"SP00383","Hintz, Hartmann and Paucek","retailer","C2C",18
+"SP00384","Friesen, Brekke and Prosacco","distributor","C2B",2
+"SP00385","Wiza-Welch","distributor","C2C",10
+"SP00386","Rosenbaum Group","manufacturer","C2C",22
+"SP00387","Wyman Group","retailer","C2C",25
+"SP00388","Langworth Inc","distributor","B2C",5
+"SP00389","Watsica-Hermiston","wholesaler","B2B",15
+"SP00390","Heathcote Group","wholesaler","C2C",19
+"SP00391","O'Keefe-Erdman","distributor","C2C",11
+"SP00392","Mertz-Terry","wholesaler","B2B",1
+"SP00393","Greenfelder Group","manufacturer","B2C",12
+"SP00394","Conroy-Casper","retailer","B2B",17
+"SP00395","O'Reilly-Towne","distributor","B2B",7
+"SP00396","Jakubowski, Jast and Lynch","wholesaler","C2B",23
+"SP00397","Roberts LLC","wholesaler","B2B",21
+"SP00398","Schuppe LLC","manufacturer","B2B",29
+"SP00399","Will, Kris and Koepp","retailer","C2B",29
+"SP00400","Gutmann and Sons","wholesaler","C2C",29
+"SP00401","Hansen-Collins","retailer","C2C",18
+"SP00402","Schowalter, Langosh and Crist","manufacturer","C2C",12
+"SP00403","Bauch, Mayer and Sipes","retailer","B2B",6
+"SP00404","Casper Group","manufacturer","C2C",18
+"SP00405","Barrows-Bechtelar","wholesaler","B2B",8
+"SP00406","Abshire-Dach","distributor","C2B",5
+"SP00407","Carroll, Schmeler and Ryan","manufacturer","C2B",23
+"SP00408","Senger Inc","retailer","B2C",12
+"SP00409","Stark, Lesch and Von","retailer","C2C",21
+"SP00410","Bogisich Inc","retailer","B2B",26
+"SP00411","O'Conner-Kutch","manufacturer","C2C",26
+"SP00412","Bauch Group","retailer","B2B",24
+"SP00413","Stokes and Sons","distributor","C2C",27
+"SP00414","Orn Group","distributor","B2B",10
+"SP00415","Kunde-Wolff","manufacturer","B2C",19
+"SP00416","Rempel-Bauch","wholesaler","B2C",23
+"SP00417","Nicolas-Goyette","distributor","B2C",23
+"SP00418","Walker-Armstrong","retailer","B2B",21
+"SP00419","Lynch, Mueller and Larkin","manufacturer","B2B",11
+"SP00420","Quigley-Dickinson","distributor","C2C",15
+"SP00421","Buckridge Group","manufacturer","C2C",19
+"SP00422","Hane-Morissette","distributor","C2C",12
+"SP00423","Nikolaus-Shanahan","wholesaler","B2B",26
+"SP00424","Hettinger, Stark and Medhurst","wholesaler","C2C",9
+"SP00425","Deckow, Crooks and Orn","distributor","B2B",23
+"SP00426","Feil-Cole","distributor","B2C",13
+"SP00427","Wordtune","manufacturer","B2C",22
+"SP00428","Bahringer-Marks","retailer","C2B",27
+"SP00429","Pacocha, Tromp and Ankunding","distributor","C2C",10
+"SP00430","Bode, Terry and Ledner","manufacturer","B2C",23
+"SP00431","O'Conner, Lang and Heaney","manufacturer","B2B",2
+"SP00432","Abshire Inc","wholesaler","C2C",5
+"SP00433","Purdy, Rau and Russel","wholesaler","B2B",14
+"SP00434","Cremin-Kautzer","manufacturer","C2B",6
+"SP00435","Rodriguez, Mueller and Bradtke","wholesaler","C2B",28
+"SP00436","Dooley Inc","manufacturer","B2B",18
+"SP00437","Hilpert-Botsford","distributor","C2C",2
+"SP00438","Buckridge-Lindgren","distributor","B2C",6
+"SP00439","Orn, Hamill and Turcotte","distributor","C2C",8
+"SP00440","Bogisich, Denesik and Schuster","retailer","C2B",15
+"SP00441","Keebler, Maggio and Trantow","distributor","B2C",7
+"SP00442","Trantow-Mosciski","retailer","C2C",19
+"SP00443","Brakus-Douglas","wholesaler","B2B",25
+"SP00444","Crist and Sons","wholesaler","B2C",13
+"SP00445","Jacobi-Grimes","wholesaler","C2C",28
+"SP00446","Wintheiser LLC","manufacturer","B2C",11
+"SP00447","Schumm and Sons","manufacturer","C2C",13
+"SP00448","Kovacek and Sons","manufacturer","B2C",22
+"SP00449","Paucek-Larson","wholesaler","B2C",4
+"SP00450","Realfire","manufacturer","B2C",23
+"SP00451","Beahan, Huels and Spencer","manufacturer","C2C",18
+"SP00452","Roberts, Erdman and Heaney","distributor","B2C",30
+"SP00453","Larkin-Jaskolski","distributor","C2C",19
+"SP00454","Wuckert LLC","retailer","B2C",22
+"SP00455","Schowalter LLC","distributor","B2C",29
+"SP00456","Gorczany, Schowalter and Rippin","distributor","B2B",29
+"SP00457","McCullough-Crooks","manufacturer","B2C",23
+"SP00458","Wisozk, Ullrich and Witting","manufacturer","C2B",4
+"SP00459","Strosin, Senger and Hauck","retailer","B2B",3
+"SP00460","Huels, Herzog and Runolfsson","retailer","B2C",18
+"SP00461","Moore, Ritchie and Hane","manufacturer","B2C",4
+"SP00462","McKenzie, Kovacek and Daugherty","retailer","C2C",15
+"SP00463","Prosacco LLC","manufacturer","B2B",8
+"SP00464","Koss, Stokes and Lehner","retailer","B2C",18
+"SP00465","Collins, Gibson and Heathcote","wholesaler","B2B",27
+"SP00466","Runolfsson LLC","wholesaler","B2B",12
+"SP00467","Oberbrunner-Howell","distributor","C2B",24
+"SP00468","Hamill, Kulas and Abbott","retailer","C2B",1
+"SP00469","Cartwright-Adams","retailer","B2C",4
+"SP00470","Quitzon-Cormier","distributor","C2B",23
+"SP00471","Waelchi, Schuppe and White","wholesaler","C2C",27
+"SP00472","Kihn Inc","manufacturer","B2C",26
+"SP00473","Oyoloo","wholesaler","B2C",5
+"SP00474","Bergstrom LLC","manufacturer","C2B",20
+"SP00475","Labadie-Rice","wholesaler","C2B",30
+"SP00476","Bradtke-Kohler","retailer","B2B",12
+"SP00477","Bartoletti-Maggio","distributor","B2B",8
+"SP00478","Kirlin, Wilkinson and Jacobs","manufacturer","C2B",19
+"SP00479","Ziemann-Legros","distributor","B2B",1
+"SP00480","Balistreri, Littel and Zieme","distributor","C2C",27
+"SP00481","Boyle, Abernathy and Friesen","manufacturer","B2B",22
+"SP00482","Bosco-Ritchie","manufacturer","C2C",3
+"SP00483","Von-Kuphal","manufacturer","B2C",11
+"SP00484","Larkin-Wehner","retailer","C2C",27
+"SP00485","Hand and Sons","manufacturer","B2C",21
+"SP00486","Langworth Group","wholesaler","B2C",27
+"SP00487","Murazik Inc","wholesaler","B2C",5
+"SP00488","Heathcote, Lind and Funk","manufacturer","B2C",8
+"SP00489","Smith, Willms and O'Hara","manufacturer","B2B",12
+"SP00490","Bins Group","retailer","B2B",11
+"SP00491","Prosacco-Kub","retailer","C2C",5
+"SP00492","Hintz Group","distributor","B2B",2
+"SP00493","Macejkovic and Sons","distributor","C2B",13
+"SP00494","Gottlieb LLC","distributor","B2C",1
+"SP00495","Hamill, Marks and Yundt","manufacturer","B2C",8
+"SP00496","Breitenberg-Metz","wholesaler","C2B",7
+"SP00497","Dicki Inc","retailer","C2B",10
+"SP00498","Donnelly-Nicolas","manufacturer","B2C",2
+"SP00499","Jaskolski-Windler","wholesaler","C2C",6
+"SP00500","Hansen LLC","manufacturer","B2B",25
+"SP00501","Armstrong LLC","distributor","C2B",8
+"SP00502","Zulauf, Goldner and McKenzie","retailer","B2C",17
+"SP00503","Carter, Hilll and Terry","distributor","B2C",2
+"SP00504","Aufderhar LLC","manufacturer","B2C",28
+"SP00505","Koss-Leffler","wholesaler","C2B",22
+"SP00506","Reynolds, Schultz and Runolfsdottir","retailer","C2C",26
+"SP00507","Carter, Rutherford and Larson","retailer","B2C",3
+"SP00508","Wunsch and Sons","retailer","C2C",24
+"SP00509","Lowe-Vandervort","distributor","B2C",11
+"SP00510","Terry Inc","distributor","B2B",1
+"SP00511","Torphy Group","distributor","C2C",2
+"SP00512","Jacobi, Friesen and Kunde","manufacturer","B2C",30
+"SP00513","Schoen and Sons","manufacturer","B2C",9
+"SP00514","Parisian Inc","retailer","B2B",16
+"SP00515","Torphy, Brakus and Skiles","manufacturer","B2B",2
+"SP00516","Wuckert, Labadie and Heaney","manufacturer","C2C",5
+"SP00517","Ward and Sons","distributor","C2C",17
+"SP00518","Kunde-Jacobson","wholesaler","B2B",23
+"SP00519","Beier-West","distributor","B2B",22
+"SP00520","Twitternation","distributor","B2C",1
+"SP00521","Upton-Wilkinson","distributor","C2B",29
+"SP00522","Weissnat, Medhurst and Greenholt","retailer","C2C",15
+"SP00523","Mante, Kilback and Hahn","distributor","C2B",5
+"SP00524","Kuvalis and Sons","wholesaler","C2B",15
+"SP00525","Moore-Schuppe","wholesaler","C2C",30
+"SP00526","Hettinger LLC","distributor","B2C",9
+"SP00527","Rodriguez Inc","retailer","C2B",21
+"SP00528","Blick Group","distributor","C2C",16
+"SP00529","Kessler, Barrows and Fadel","retailer","B2C",6
+"SP00530","Cummerata Inc","distributor","C2C",18
+"SP00531","Mitchell, Muller and Kulas","distributor","B2C",26
+"SP00532","Deckow, Smitham and Goodwin","wholesaler","C2B",8
+"SP00533","Deckow and Sons","wholesaler","C2C",24
+"SP00534","Armstrong-Ortiz","distributor","C2B",17
+"SP00535","Keeling-Ortiz","distributor","B2C",9
+"SP00536","Parisian-Bashirian","retailer","B2C",19
+"SP00537","McGlynn Group","retailer","C2C",29
+"SP00538","Shuffledrive","distributor","C2C",16
+"SP00539","Larkin, Gulgowski and Smitham","distributor","C2C",20
+"SP00540","Grimes, Barrows and Ferry","retailer","B2B",5
+"SP00541","Sauer-Feeney","retailer","C2B",12
+"SP00542","Schulist and Sons","distributor","C2B",13
+"SP00543","Romaguera and Sons","retailer","B2C",10
+"SP00544","Crooks-Bauch","retailer","C2B",11
+"SP00545","Murazik, Maggio and Christiansen","distributor","B2B",10
+"SP00546","Streich Group","manufacturer","B2B",3
+"SP00547","Kirlin Inc","distributor","B2C",12
+"SP00548","Prohaska, Shanahan and Schoen","retailer","B2B",26
+"SP00549","Labadie and Sons","wholesaler","B2B",14
+"SP00550","Goldner-Goyette","wholesaler","C2C",9
+"SP00551","Dicki-Connelly","wholesaler","C2B",7
+"SP00552","Oba","manufacturer","B2C",13
+"SP00553","Schaden Inc","distributor","C2C",21
+"SP00554","Swift-Bruen","distributor","C2C",4
+"SP00555","Dooley LLC","manufacturer","B2C",13
+"SP00556","Jenkins Group","wholesaler","C2C",19
+"SP00557","Toy-Kassulke","retailer","C2B",21
+"SP00558","Sanford, Sanford and Zieme","retailer","C2B",11
+"SP00559","Sauer-McKenzie","manufacturer","B2B",5
+"SP00560","Beahan Group","manufacturer","C2B",13
+"SP00561","Borer-Breitenberg","wholesaler","C2C",10
+"SP00562","Herzog-VonRueden","manufacturer","B2B",21
+"SP00563","Block, Considine and Greenfelder","distributor","B2B",13
+"SP00564","Beatty-Terry","wholesaler","B2B",17
+"SP00565","Mayert-Rau","distributor","B2C",10
+"SP00566","Davis-Beatty","manufacturer","C2B",17
+"SP00567","Mosciski and Sons","manufacturer","C2C",15
+"SP00568","Fisher, Herman and Towne","retailer","C2B",5
+"SP00569","Brekke-Kovacek","distributor","B2B",25
+"SP00570","Durgan LLC","retailer","C2C",6
+"SP00571","Bradtke-Cartwright","wholesaler","B2C",30
+"SP00572","Welch and Sons","wholesaler","C2B",1
+"SP00573","Kunde-Rau","wholesaler","C2C",19
+"SP00574","Smitham Inc","distributor","C2B",26
+"SP00575","Emmerich-Lakin","manufacturer","C2B",8
+"SP00576","Dooley Group","distributor","B2B",25
+"SP00577","Bogan and Sons","wholesaler","C2B",25
+"SP00578","Krajcik LLC","retailer","B2B",2
+"SP00579","Reinger, Torphy and McLaughlin","wholesaler","C2C",20
+"SP00580","Mertz, Koepp and Windler","distributor","B2C",10
+"SP00581","Okuneva, Waters and Carroll","wholesaler","C2B",25
+"SP00582","Medhurst-Watsica","wholesaler","C2C",4
+"SP00583","Schaden Group","manufacturer","B2B",29
+"SP00584","Schaden-Fisher","distributor","B2B",3
+"SP00585","Kautzer LLC","retailer","B2B",2
+"SP00586","O'Kon LLC","retailer","B2C",22
+"SP00587","Donnelly Inc","distributor","C2B",11
+"SP00588","Kling-Keebler","retailer","B2C",5
+"SP00589","Muller, Marvin and Prohaska","wholesaler","B2B",15
+"SP00590","Vandervort, Conn and Leannon","wholesaler","B2B",29
+"SP00591","Beahan LLC","distributor","C2B",9
+"SP00592","Schmitt, Toy and Blanda","distributor","B2B",30
+"SP00593","Streich-Nader","distributor","C2B",25
+"SP00594","Raynor LLC","retailer","B2C",3
+"SP00595","Muller-Zulauf","wholesaler","B2C",17
+"SP00596","Wilkinson, Kassulke and Mohr","distributor","B2B",15
+"SP00597","Schmitt LLC","wholesaler","B2C",5
+"SP00598","Sipes Inc","manufacturer","B2B",15
+"SP00599","Fahey, Wyman and Bradtke","wholesaler","B2C",7
+"SP00600","Olson-Lang","distributor","B2B",28
+"SP00601","Wisoky-DuBuque","manufacturer","B2C",13
+"SP00602","Daugherty, Kuhlman and Johns","distributor","B2C",16
+"SP00603","Mante-Feil","wholesaler","C2C",7
+"SP00604","Gleichner Group","distributor","C2C",25
+"SP00605","Padberg-Moen","wholesaler","B2B",29
+"SP00606","Heathcote-O'Kon","manufacturer","C2C",22
+"SP00607","Langosh, O'Conner and Conn","manufacturer","B2B",1
+"SP00608","Mohr Group","wholesaler","C2B",15
+"SP00609","Kertzmann-Heathcote","manufacturer","B2B",3
+"SP00610","Christiansen-Abbott","distributor","C2C",11
+"SP00611","Ward, Daniel and Yundt","manufacturer","C2C",30
+"SP00612","O'Keefe, Cormier and Cartwright","manufacturer","C2C",23
+"SP00613","Deckow Group","manufacturer","C2B",4
+"SP00614","Dickens, Lehner and Mraz","distributor","B2B",19
+"SP00615","Schmeler-Kessler","distributor","C2C",10
+"SP00616","Carter-Cassin","wholesaler","C2C",12
+"SP00617","Conn Inc","retailer","C2B",22
+"SP00618","Abernathy, Kub and Dach","manufacturer","C2B",19
+"SP00619","Heller LLC","manufacturer","B2B",14
+"SP00620","Daugherty Group","wholesaler","B2B",23
+"SP00621","Frami-Greenholt","manufacturer","C2C",9
+"SP00622","Kemmer-Cremin","retailer","B2B",19
+"SP00623","Feest-Langworth","wholesaler","B2C",29
+"SP00624","Yost LLC","retailer","B2C",26
+"SP00625","Ziemann Inc","wholesaler","C2C",20
+"SP00626","Nolan Group","manufacturer","C2B",18
+"SP00627","Kuhlman, Wunsch and Hilll","distributor","B2B",25
+"SP00628","Maggio-McKenzie","distributor","B2C",13
+"SP00629","Bradtke Group","wholesaler","B2B",30
+"SP00630","Champlin, Mertz and Schimmel","retailer","C2C",26
+"SP00631","Borer-Bashirian","distributor","C2C",8
+"SP00632","Dicki, Gorczany and Emard","retailer","C2B",10
+"SP00633","Huels-Johnston","retailer","C2C",1
+"SP00634","Katz","manufacturer","C2B",4
+"SP00635","Hickle-Weissnat","distributor","B2C",28
+"SP00636","Skinder","retailer","B2B",17
+"SP00637","Keeling, Boyer and Buckridge","manufacturer","C2B",25
+"SP00638","Collier, Effertz and Murazik","wholesaler","B2C",29
+"SP00639","Altenwerth-Nitzsche","distributor","C2C",7
+"SP00640","Dickinson Inc","retailer","B2C",26
+"SP00641","Schaefer, Daugherty and Willms","manufacturer","C2B",21
+"SP00642","Muller, Crona and Kautzer","distributor","C2C",1
+"SP00643","Osinski, Kertzmann and Cremin","manufacturer","B2C",26
+"SP00644","Beatty-Feeney","wholesaler","C2C",1
+"SP00645","Blick, Kuhlman and Beahan","wholesaler","C2C",6
+"SP00646","Connelly, Gislason and O'Reilly","retailer","B2C",27
+"SP00647","Oberbrunner and Sons","wholesaler","B2B",30
+"SP00648","Willms and Sons","retailer","B2B",17
+"SP00649","Carroll-Terry","retailer","B2B",24
+"SP00650","Muxo","retailer","B2B",17
+"SP00651","Leannon, Schamberger and Metz","wholesaler","B2B",20
+"SP00652","Nicolas-Brakus","retailer","C2C",4
+"SP00653","Ondricka Inc","wholesaler","C2C",8
+"SP00654","Torp, Beahan and Lemke","wholesaler","C2B",16
+"SP00655","Emmerich, Howe and Lubowitz","distributor","C2B",22
+"SP00656","Krajcik, Gleichner and Strosin","distributor","B2C",20
+"SP00657","Gerhold-Lockman","wholesaler","C2C",7
+"SP00658","Walter, Tromp and Russel","manufacturer","B2C",4
+"SP00659","King LLC","retailer","B2C",15
+"SP00660","Hilll, Blanda and Weimann","distributor","C2B",1
+"SP00661","Connelly, Turner and Rutherford","wholesaler","B2C",9
+"SP00662","Lebsack, Wyman and O'Keefe","distributor","C2C",10
+"SP00663","Pfannerstill, Tillman and Marvin","distributor","C2C",9
+"SP00664","Balistreri LLC","retailer","C2C",6
+"SP00665","Ferry LLC","wholesaler","B2B",7
+"SP00666","Hodkiewicz, Doyle and Durgan","manufacturer","C2B",3
+"SP00667","Lind Group","retailer","C2B",12
+"SP00668","Effertz-Muller","distributor","B2B",21
+"SP00669","Gutmann-Botsford","distributor","C2C",28
+"SP00670","Bins, Reichel and Weissnat","manufacturer","B2C",16
+"SP00671","Hegmann, Friesen and Hermann","wholesaler","C2B",15
+"SP00672","Nikolaus-Schowalter","distributor","C2C",21
+"SP00673","Mosciski Group","wholesaler","B2C",7
+"SP00674","Gutmann-Rau","manufacturer","C2C",11
+"SP00675","Reinger, Bogan and Langosh","wholesaler","C2B",29
+"SP00676","Lindgren, Legros and Schaefer","distributor","B2B",11
+"SP00677","Spencer, Leffler and Boyle","wholesaler","B2B",6
+"SP00678","Skiles-Blanda","manufacturer","C2C",15
+"SP00679","Reichel, Wolf and Bahringer","retailer","C2C",27
+"SP00680","Ruecker-Flatley","manufacturer","C2B",12
+"SP00681","Ledner-McClure","manufacturer","C2C",27
+"SP00682","Larkin, Daugherty and Stamm","wholesaler","C2B",14
+"SP00683","Dibbert-Runolfsson","distributor","C2C",21
+"SP00684","Ullrich-Barton","distributor","C2C",19
+"SP00685","Vandervort-Daniel","retailer","B2C",18
+"SP00686","Jakubowski, Nitzsche and Medhurst","wholesaler","B2B",6
+"SP00687","Schimmel-Windler","wholesaler","C2C",22
+"SP00688","Buckridge-Okuneva","retailer","B2B",17
+"SP00689","Wilderman, Bernier and Dickinson","distributor","B2C",24
+"SP00690","Anderson-Wolf","manufacturer","B2B",18
+"SP00691","Spencer-Blanda","manufacturer","C2C",21
+"SP00692","Lindgren-Kuvalis","retailer","C2C",4
+"SP00693","Welch-Heaney","wholesaler","B2C",11
+"SP00694","Schneider-Beatty","manufacturer","C2C",18
+"SP00695","Wolff Inc","manufacturer","B2C",18
+"SP00696","Aivee","retailer","C2B",12
+"SP00697","Jerde, Kuhic and Schneider","distributor","C2B",1
+"SP00698","Runte and Sons","distributor","B2C",27
+"SP00699","Pfeffer-Kovacek","retailer","C2C",18
+"SP00700","Keeling-Ondricka","retailer","B2B",2
+"SP00701","Kiehn and Sons","retailer","C2C",7
+"SP00702","Reilly, Predovic and Kassulke","wholesaler","B2C",1
+"SP00703","West, Ryan and Lang","retailer","C2B",6
+"SP00704","Treutel-Champlin","wholesaler","C2C",15
+"SP00705","Christiansen, Schmitt and Hahn","wholesaler","C2C",9
+"SP00706","Steuber-Fisher","retailer","C2B",4
+"SP00707","Feedfish","retailer","C2C",7
+"SP00708","Donnelly, Nader and McDermott","retailer","B2C",26
+"SP00709","Hessel-Willms","distributor","C2B",26
+"SP00710","Hoppe-Stokes","wholesaler","B2B",11
+"SP00711","Hagenes, Bashirian and Mayert","distributor","C2C",29
+"SP00712","Ebert, Mayer and Lockman","manufacturer","C2C",29
+"SP00713","Feest-Krajcik","wholesaler","B2B",24
+"SP00714","Schmitt, Torp and Boyer","manufacturer","C2C",30
+"SP00715","Zulauf, Bartoletti and Lehner","distributor","C2C",30
+"SP00716","Wuckert, Shields and Howe","wholesaler","C2B",21
+"SP00717","Reichel, Lemke and Hintz","manufacturer","B2C",2
+"SP00718","Berge LLC","manufacturer","B2C",6
+"SP00719","Hessel and Sons","distributor","B2B",13
+"SP00720","Hills, Buckridge and Friesen","retailer","B2C",15
+"SP00721","Runolfsdottir-Waelchi","manufacturer","B2C",10
+"SP00722","Kling, Upton and Prosacco","wholesaler","B2B",2
+"SP00723","Friesen LLC","manufacturer","C2B",8
+"SP00724","Cassin-Gorczany","manufacturer","B2B",21
+"SP00725","Tremblay, Corwin and McCullough","distributor","C2C",15
+"SP00726","Hyatt Inc","wholesaler","B2B",12
+"SP00727","Balistreri Group","manufacturer","C2C",12
+"SP00728","Kunze, O'Keefe and Jakubowski","wholesaler","C2B",6
+"SP00729","Russel-Cummings","retailer","C2B",6
+"SP00730","Zieme, Kutch and Homenick","distributor","C2B",19
+"SP00731","King, Becker and Turner","manufacturer","B2C",27
+"SP00732","Schowalter-Gutmann","manufacturer","B2C",10
+"SP00733","Reichert, Marvin and Lang","manufacturer","C2B",1
+"SP00734","Von, Strosin and Lind","manufacturer","C2B",3
+"SP00735","Konopelski-Koss","wholesaler","B2C",7
+"SP00736","Schneider, Corkery and O'Conner","wholesaler","B2C",4
+"SP00737","Beatty, Murray and Treutel","retailer","C2C",19
+"SP00738","Bednar, Ferry and Haley","wholesaler","B2C",4
+"SP00739","Ferry-Wilderman","retailer","C2C",16
+"SP00740","Auer-Koch","manufacturer","C2B",18
+"SP00741","Stamm-Halvorson","distributor","C2B",12
+"SP00742","Lang Inc","manufacturer","B2B",30
+"SP00743","O'Keefe Group","wholesaler","C2C",21
+"SP00744","Gislason Inc","distributor","C2C",19
+"SP00745","Hayes, Durgan and Wunsch","retailer","B2B",24
+"SP00746","Von, Harber and White","wholesaler","B2B",2
+"SP00747","Rath LLC","retailer","C2B",13
+"SP00748","McLaughlin-Gislason","retailer","B2B",2
+"SP00749","Toy-Koch","distributor","B2B",5
+"SP00750","Hammes Inc","retailer","B2B",19
+"SP00751","Stroman-Streich","distributor","C2C",1
+"SP00752","Lueilwitz Group","distributor","C2C",6
+"SP00753","Wuckert, Davis and Kilback","distributor","B2C",28
+"SP00754","Padberg-Green","wholesaler","B2B",8
+"SP00755","McKenzie, Hartmann and Leffler","manufacturer","C2C",23
+"SP00756","Schmeler-Kozey","manufacturer","C2C",3
+"SP00757","Collins-Yundt","manufacturer","C2B",20
+"SP00758","Keeling Inc","retailer","C2C",13
+"SP00759","Gleichner, Ruecker and Simonis","wholesaler","B2B",14
+"SP00760","Dach, Ruecker and Gerhold","manufacturer","B2C",13
+"SP00761","Mueller, Johns and Hammes","retailer","C2C",8
+"SP00762","Kautzer, Wolff and Kihn","wholesaler","B2B",3
+"SP00763","Bogisich-Price","retailer","C2B",10
+"SP00764","Moore Inc","distributor","C2B",18
+"SP00765","Roberts, Carter and Von","retailer","C2C",11
+"SP00766","Hettinger and Sons","retailer","B2C",3
+"SP00767","Jacobi-Bernhard","distributor","B2C",25
+"SP00768","Stehr-VonRueden","wholesaler","B2B",29
+"SP00769","Brekke and Sons","wholesaler","C2B",15
+"SP00770","Konopelski-Klocko","wholesaler","C2B",12
+"SP00771","Hansen, Mohr and Hoppe","distributor","B2C",18
+"SP00772","Aufderhar, DuBuque and Cummerata","distributor","B2C",14
+"SP00773","Paucek, Sawayn and Christiansen","retailer","C2C",7
+"SP00774","Dickens Group","retailer","C2B",9
+"SP00775","Bartoletti, Pfannerstill and Monahan","retailer","C2C",21
+"SP00776","Ullrich, Zemlak and Ruecker","retailer","C2C",10
+"SP00777","Rodriguez and Sons","manufacturer","C2C",21
+"SP00778","Smitham, Lemke and Russel","manufacturer","B2C",18
+"SP00779","Bergstrom-Okuneva","distributor","B2B",5
+"SP00780","Bartell-Schoen","manufacturer","C2B",28
+"SP00781","Huels-Schultz","retailer","C2B",10
+"SP00782","Maggio LLC","wholesaler","C2C",30
+"SP00783","Ledner-Hahn","retailer","B2B",24
+"SP00784","Volkman and Sons","retailer","C2B",23
+"SP00785","Prosacco, Yundt and Murray","wholesaler","C2C",16
+"SP00786","Stark, Little and Ankunding","wholesaler","C2B",20
+"SP00787","Marquardt, Moen and DuBuque","wholesaler","B2C",5
+"SP00788","Conn and Sons","retailer","B2B",14
+"SP00789","Hyatt, Kemmer and Price","retailer","C2B",15
+"SP00790","Pacocha LLC","retailer","C2C",29
+"SP00791","Crona Inc","retailer","B2B",29
+"SP00792","Auer Group","wholesaler","B2C",25
+"SP00793","Satterfield-Towne","wholesaler","B2B",29
+"SP00794","Bruen-Terry","retailer","B2C",19
+"SP00795","Considine and Sons","wholesaler","B2C",21
+"SP00796","Pfannerstill, Bernhard and Mertz","manufacturer","B2B",25
+"SP00797","Robel Inc","manufacturer","C2C",27
+"SP00798","Stamm, Marvin and Bradtke","manufacturer","B2B",12
+"SP00799","McDermott and Sons","distributor","C2C",22
+"SP00800","Robel-O'Kon","wholesaler","B2C",5
+"SP00801","Fay and Sons","manufacturer","B2B",3
+"SP00802","Welch LLC","distributor","C2B",2
+"SP00803","Schmidt-Gottlieb","manufacturer","B2B",18
+"SP00804","Smitham and Sons","manufacturer","B2C",28
+"SP00805","Keeling, Turner and Hermann","distributor","B2C",3
+"SP00806","Blick, Feil and Mraz","retailer","B2B",8
+"SP00807","Kunze, Reichel and Lueilwitz","manufacturer","B2B",14
+"SP00808","Crona, Leuschke and Kassulke","distributor","C2B",19
+"SP00809","Cummerata LLC","manufacturer","B2B",2
+"SP00810","Roob Group","distributor","C2B",30
+"SP00811","Schiller, Johnston and Kris","manufacturer","B2B",26
+"SP00812","McGlynn, Terry and Morissette","manufacturer","B2B",6
+"SP00813","Muller and Sons","retailer","C2C",18
+"SP00814","Schneider LLC","wholesaler","B2B",21
+"SP00815","Gibson Group","wholesaler","B2B",15
+"SP00816","Smith-Watsica","manufacturer","B2B",26
+"SP00817","Dach Inc","manufacturer","B2B",14
+"SP00818","Nicolas, Fritsch and Schroeder","distributor","B2C",26
+"SP00819","Glover LLC","distributor","B2C",11
+"SP00820","Rosenbaum, Waelchi and Jaskolski","distributor","C2C",14
+"SP00821","Shanahan and Sons","manufacturer","B2C",17
+"SP00822","Wehner-Kertzmann","manufacturer","B2C",20
+"SP00823","Hirthe, Weissnat and O'Reilly","retailer","C2B",9
+"SP00824","Bergstrom, Marvin and Rowe","wholesaler","C2C",5
+"SP00825","Bosco, Schmeler and Lesch","distributor","C2B",7
+"SP00826","Windler, Nienow and Roob","retailer","C2C",8
+"SP00827","Herman LLC","wholesaler","C2B",15
+"SP00828","Bruen LLC","distributor","B2B",9
+"SP00829","Mohr, Conn and Hayes","wholesaler","B2B",5
+"SP00830","Schimmel Inc","manufacturer","B2C",9
+"SP00831","Murazik-Collins","distributor","B2B",23
+"SP00832","Jerde-Veum","retailer","B2B",14
+"SP00833","Boyle-Legros","wholesaler","C2C",8
+"SP00834","McCullough and Sons","wholesaler","C2C",13
+"SP00835","Effertz-Harvey","wholesaler","C2B",13
+"SP00836","Reinger LLC","retailer","B2B",25
+"SP00837","Raynor-Runolfsson","wholesaler","B2C",29
+"SP00838","Hane LLC","retailer","C2C",12
+"SP00839","O'Connell Inc","manufacturer","B2B",8
+"SP00840","Pollich-Wyman","wholesaler","C2B",25
+"SP00841","Kshlerin-Nikolaus","manufacturer","C2C",6
+"SP00842","Douglas-Parisian","retailer","C2C",6
+"SP00843","Schroeder LLC","manufacturer","B2C",5
+"SP00844","Greenholt, Mertz and Wunsch","retailer","C2B",13
+"SP00845","Walker-O'Connell","retailer","B2B",15
+"SP00846","Heller Group","wholesaler","B2B",21
+"SP00847","Volkman-Toy","retailer","B2B",16
+"SP00848","Labadie, Shields and King","manufacturer","C2C",28
+"SP00849","Blanda, Luettgen and Champlin","retailer","B2C",20
+"SP00850","Monahan, VonRueden and Hills","distributor","C2B",20
+"SP00851","Upton-Fahey","retailer","C2B",13
+"SP00852","Gerhold Group","distributor","B2C",17
+"SP00853","Grant-Ferry","retailer","B2C",29
+"SP00854","Upton, Boyle and Roberts","retailer","C2C",26
+"SP00855","Gleichner, Wuckert and Marquardt","manufacturer","B2B",24
+"SP00856","Jakubowski-Senger","distributor","B2B",28
+"SP00857","Quitzon, Kling and Stracke","manufacturer","C2B",26
+"SP00858","MacGyver, Weissnat and Reilly","wholesaler","B2C",23
+"SP00859","Hudson LLC","wholesaler","C2B",16
+"SP00860","Lind-Dooley","wholesaler","C2C",8
+"SP00861","Ebert, Purdy and Berge","retailer","C2B",24
+"SP00862","Leffler-Tremblay","manufacturer","C2B",14
+"SP00863","Fadel, Carter and Kovacek","manufacturer","B2C",16
+"SP00864","Agimba","distributor","C2B",30
+"SP00865","Baumbach-O'Reilly","manufacturer","B2C",13
+"SP00866","Stoltenberg, Farrell and Wyman","distributor","C2B",2
+"SP00867","Boyer-Franecki","manufacturer","B2C",23
+"SP00868","Lubowitz-DuBuque","distributor","C2C",18
+"SP00869","Fritsch and Sons","manufacturer","C2C",28
+"SP00870","Lowe and Sons","manufacturer","C2C",28
+"SP00871","Hirthe-Dare","retailer","B2B",9
+"SP00872","Dare Inc","distributor","C2C",19
+"SP00873","Browsecat","retailer","C2B",13
+"SP00874","Rowe Inc","retailer","B2C",19
+"SP00875","Roberts, Strosin and Gutkowski","manufacturer","C2C",24
+"SP00876","Photofeed","retailer","C2C",18
+"SP00877","Kovacek-Kertzmann","wholesaler","B2C",4
+"SP00878","West, Larkin and Yundt","manufacturer","C2C",21
+"SP00879","Mertz, Cormier and Bauch","wholesaler","C2C",26
+"SP00880","Monahan, Collins and Herzog","manufacturer","C2B",13
+"SP00881","Bogan LLC","manufacturer","C2C",14
+"SP00882","Leffler-Lesch","wholesaler","B2B",5
+"SP00883","Boyer, Herman and Beier","manufacturer","B2B",11
+"SP00884","Mohr and Sons","retailer","C2C",6
+"SP00885","Bahringer, Beier and Jast","wholesaler","C2C",21
+"SP00886","Becker Group","retailer","C2C",18
+"SP00887","Dooley-Adams","wholesaler","B2B",18
+"SP00888","Renner-Dicki","manufacturer","B2C",28
+"SP00889","Crona, Hilpert and Reilly","distributor","B2B",9
+"SP00890","Reilly-Hills","distributor","B2B",12
+"SP00891","Pacocha, Lehner and Hahn","manufacturer","C2B",16
+"SP00892","Nader-Morar","distributor","C2C",4
+"SP00893","Haley-Conroy","distributor","C2C",25
+"SP00894","Wilkinson, Barrows and Leffler","manufacturer","B2C",26
+"SP00895","Nienow and Sons","wholesaler","C2C",7
+"SP00896","Kiehn Inc","retailer","C2C",19
+"SP00897","Conroy, Konopelski and Turner","retailer","B2B",25
+"SP00898","Schmeler-Pouros","manufacturer","B2B",4
+"SP00899","Mann, Davis and Weimann","manufacturer","C2C",6
+"SP00900","Lakin, Heathcote and Haley","manufacturer","B2B",7
+"SP00901","Homenick, Walsh and Nader","retailer","C2B",2
+"SP00902","Stroman Group","distributor","C2C",12
+"SP00903","Moen-Flatley","retailer","C2C",26
+"SP00904","Kozey, Maggio and Daniel","distributor","C2B",11
+"SP00905","Leannon and Sons","distributor","B2C",21
+"SP00906","Quinu","manufacturer","C2B",6
+"SP00907","Kassulke, Ondricka and Nitzsche","wholesaler","B2B",12
+"SP00908","Rowe, Klein and Jacobs","wholesaler","C2C",19
+"SP00909","Schinner Inc","distributor","C2C",25
+"SP00910","Hilpert Inc","manufacturer","C2C",30
+"SP00911","Morissette Inc","manufacturer","C2B",6
+"SP00912","Funk Group","wholesaler","C2B",2
+"SP00913","Lang, Deckow and Kozey","wholesaler","B2C",24
+"SP00914","Murphy Inc","retailer","B2B",3
+"SP00915","Kling, Greenholt and Bradtke","wholesaler","C2B",3
+"SP00916","Davis Group","manufacturer","C2C",12
+"SP00917","Fadel and Sons","wholesaler","C2C",28
+"SP00918","Schoen, Pouros and Bins","wholesaler","C2B",14
+"SP00919","Schmitt and Sons","distributor","B2C",28
+"SP00920","Kemmer and Sons","manufacturer","B2C",7
+"SP00921","McLaughlin-Rogahn","manufacturer","C2C",6
+"SP00922","McLaughlin and Sons","distributor","B2B",18
+"SP00923","McDermott, Davis and Brown","distributor","B2B",16
+"SP00924","Towne Inc","retailer","B2B",5
+"SP00925","Stoltenberg, Rowe and Bruen","retailer","B2B",20
+"SP00926","Keeling and Sons","distributor","B2B",26
+"SP00927","Streich-Connelly","retailer","C2B",19
+"SP00928","Marvin and Sons","manufacturer","C2B",13
+"SP00929","Bauch-Adams","distributor","B2C",7
+"SP00930","Fisher-Bode","retailer","B2C",26
+"SP00931","Kozey LLC","manufacturer","C2B",18
+"SP00932","Heathcote-Brakus","manufacturer","B2B",27
+"SP00933","Huels Group","manufacturer","B2C",22
+"SP00934","Larson, Kub and Bartell","wholesaler","B2B",1
+"SP00935","Powlowski Group","distributor","C2B",7
+"SP00936","Nolan-Kshlerin","retailer","C2B",11
+"SP00937","Zieme, Fritsch and Satterfield","retailer","B2B",2
+"SP00938","O'Reilly Inc","distributor","B2B",3
+"SP00939","Howe, Kshlerin and Hettinger","distributor","C2B",26
+"SP00940","Roberts-Altenwerth","retailer","C2B",19
+"SP00941","Marquardt, Bashirian and Daniel","manufacturer","C2C",7
+"SP00942","Harvey, Ritchie and Hilpert","retailer","B2B",5
+"SP00943","Leuschke Group","retailer","C2B",3
+"SP00944","Stroman-Oberbrunner","manufacturer","B2B",27
+"SP00945","Wuckert-Fay","retailer","B2B",12
+"SP00946","Jakubowski, Price and Von","distributor","C2C",1
+"SP00947","Morar Inc","retailer","C2C",5
+"SP00948","Ebert, Terry and Kuhn","wholesaler","C2C",28
+"SP00949","Adams, Marvin and Walter","distributor","C2B",18
+"SP00950","Yost and Sons","wholesaler","C2B",25
+"SP00951","Leffler-Bergnaum","distributor","C2C",5
+"SP00952","Jaskolski, Corwin and Toy","wholesaler","C2B",30
+"SP00953","Leffler, Will and Champlin","manufacturer","B2B",15
+"SP00954","Jaxworks","retailer","B2B",5
+"SP00955","Jast Group","retailer","C2C",14
+"SP00956","Nienow, McGlynn and Hills","manufacturer","B2C",1
+"SP00957","Price-Klein","wholesaler","B2B",19
+"SP00958","Stroman LLC","manufacturer","C2B",4
+"SP00959","Schoen-Hettinger","retailer","B2C",15
+"SP00960","Green, Stoltenberg and Luettgen","distributor","B2B",20
+"SP00961","Rau-Rodriguez","distributor","C2B",8
+"SP00962","Roberts, Maggio and Torp","retailer","C2C",7
+"SP00963","Ledner and Sons","manufacturer","C2C",21
+"SP00964","Lowe, Gottlieb and Nader","retailer","C2C",25
+"SP00965","Jenkins and Sons","distributor","C2C",3
+"SP00966","Bahringer, Moen and Wisoky","wholesaler","B2C",28
+"SP00967","Ziemann-Ruecker","distributor","C2B",28
+"SP00968","Bruen, Dickens and Bergnaum","manufacturer","B2B",6
+"SP00969","Bartoletti-Reynolds","retailer","B2B",24
+"SP00970","Carroll LLC","retailer","B2B",1
+"SP00971","Collier, Kunde and Murphy","distributor","B2C",23
+"SP00972","Thiel-Willms","distributor","C2B",1
+"SP00973","Maggio, Sanford and Smith","wholesaler","C2B",18
+"SP00974","Zulauf, Jones and Wilkinson","wholesaler","B2B",7
+"SP00975","Hagenes and Sons","distributor","C2C",15
+"SP00976","Schinner, Kuphal and Langosh","wholesaler","B2B",22
+"SP00977","Brakus Inc","retailer","C2C",15
+"SP00978","Hodkiewicz, Koelpin and Gerhold","manufacturer","C2C",30
+"SP00979","Dare, Jacobson and Shanahan","retailer","B2B",28
+"SP00980","Ratke LLC","retailer","C2B",10
+"SP00981","Larson, Ward and Rau","retailer","B2C",29
+"SP00982","Quitzon Group","wholesaler","B2C",2
+"SP00983","Reinger Group","wholesaler","B2B",30
+"SP00984","Rogahn-Jaskolski","wholesaler","C2B",7
+"SP00985","Stanton, Wisoky and Nikolaus","manufacturer","C2C",28
+"SP00986","O'Kon, Daugherty and Hagenes","manufacturer","B2B",14
+"SP00987","Larson LLC","retailer","B2C",26
+"SP00988","Lesch-Hoeger","retailer","C2B",22
+"SP00989","Mayert, Upton and Kuhlman","distributor","B2B",16
+"SP00990","Jaskolski, West and White","wholesaler","C2C",29
+"SP00991","Lueilwitz-Satterfield","retailer","C2C",16
+"SP00992","Romaguera LLC","manufacturer","C2B",4
+"SP00993","Ruecker-Schaefer","retailer","B2C",14
+"SP00994","Kertzmann, Jacobi and Hermann","retailer","B2C",11
+"SP00995","Feest, Greenholt and Considine","distributor","B2C",7
+"SP00996","Mayer-O'Kon","distributor","B2B",13
+"SP00997","Abernathy-Zboncak","retailer","C2B",26
+"SP00998","Schulist-Kuphal","wholesaler","C2B",4
+"SP00999","Keeling-Corkery","retailer","B2C",15
+"SP01000","Leannon LLC","distributor","C2B",2

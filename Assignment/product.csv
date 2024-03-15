@@ -1,0 +1,1001 @@
+"Product_ID","Product_Name","Product_Description","Weight","Price"
+"PR00001","Dual-Screen Desk Lamp","Ergonomic",2.11,988.12
+"PR00002","Compact Smartwatch","Ergonomic",2.87,972.18
+"PR00003","Multi-Function Keyboard","Eco-friendly",6.4,104.89
+"PR00004","Magnetic Console","Versatile use",12.79,653.31
+"PR00005","SD Nintendo","Ergonomic",19.25,232.73
+"PR00006","Noise-Cancelling External Hard Drive","Durable",12.27,161.05
+"PR00007","Touch External Hard Drive","High quality",8.74,180.86
+"PR00008","Smart Smart Glasses","Durable",15.21,900.06
+"PR00009","Slim Smart Speaker","Ergonomic",6.49,815.66
+"PR00010","Wireless VR Headset","High quality",19.69,973.03
+"PR00011","Sleek Headphones","Versatile use",19.13,354.82
+"PR00012","Eco Smartphone","Energy efficient",13.43,54.1
+"PR00013","Wireless Router","Innovative technology",3.49,525.33
+"PR00014","Retro Router","Sleek and modern",18.17,127.65
+"PR00015","Sleek Drone","Sleek and modern",5.5,34
+"PR00016","Smart eReader","Versatile use",13.56,854.56
+"PR00017","Ultra Recorder","Durable",12.57,235.73
+"PR00018","Budget VR Headset","User-friendly",17.82,191.64
+"PR00019","Slim Action Cam","High quality",13.27,340.19
+"PR00020","Multi-Function Mouse","High quality",7.98,912.2
+"PR00021","Ergonomic Action Cam","Compact design",8.09,501.14
+"PR00022","High-Resolution Earbuds","High quality",10.06,854.15
+"PR00023","Waterproof Laptop","Innovative technology",11.49,916.65
+"PR00024","SE Headphones","Innovative technology",12.2,130.71
+"PR00025","Heavy-Duty Laptop","Eco-friendly",18.99,482.89
+"PR00026","Premium VR Headset","Compact design",11.74,926.11
+"PR00027","Smart Keyboard","Innovative technology",12.21,838.22
+"PR00028","Compact Earbuds","Ergonomic",5.1,455.56
+"PR00029","Touch Camera","Eco-friendly",6.97,360.61
+"PR00030","Lite Desk Lamp","Eco-friendly",13.1,409.14
+"PR00031","Mini Keyboard","Versatile use",17.4,749.41
+"PR00032","Retro Recorder","Versatile use",16.69,648.99
+"PR00033","High-Speed Headphones","Innovative technology",16.42,949.3
+"PR00034","Budget Action Cam","Innovative technology",9.43,173.42
+"PR00035","Ergonomic Smart Glasses","Innovative technology",5.84,370.83
+"PR00036","Compact Action Cam","Sleek and modern",6.1,365.9
+"PR00037","Eco Earbuds","Eco-friendly",9.98,550.63
+"PR00038","Retro Gaming Chair","Eco-friendly",13.93,615.62
+"PR00039","High-Resolution External Hard Drive","Eco-friendly",9.47,411.4
+"PR00040","Budget Tablet","Versatile use",5.25,994.03
+"PR00041","Sleek eReader","Sleek and modern",11.58,554.81
+"PR00042","Slim Drone","Compact design",0.5,781.24
+"PR00043","HD Camera","Energy efficient",19.09,323.48
+"PR00044","Wireless Keyboard","Eco-friendly",5.45,267.36
+"PR00045","High-Resolution Laptop","Versatile use",8.05,583.9
+"PR00046","Slim External Hard Drive","Energy efficient",17.32,207.69
+"PR00047","Premium Mouse","Compact design",18.75,604.73
+"PR00048","Foldable External Hard Drive","Innovative technology",11.07,287.99
+"PR00049","Touch Recorder","Innovative technology",14.85,503.5
+"PR00050","Vintage Drone","Versatile use",7.43,313.62
+"PR00051","Retro Smartphone","High quality",12.29,724.51
+"PR00052","Slim Nintendo","Sleek and modern",15.48,723.06
+"PR00053","Retro Power Bank","Versatile use",8.15,530.6
+"PR00054","Compact Console","Sleek and modern",9.13,301.77
+"PR00055","Smart Router","Versatile use",2.14,167.71
+"PR00056","Portable Mouse","Sleek and modern",13.64,494.03
+"PR00057","Compact Camera","Versatile use",6,500.78
+"PR00058","HD Keyboard","Durable",12.41,419.71
+"PR00059","Premium Drone","Durable",11.22,114.15
+"PR00060","Dual-Screen Smartphone","Ergonomic",13.25,422.63
+"PR00061","Wireless Headphones","Versatile use",14.96,859.01
+"PR00062","Budget Smart Speaker","High quality",15.85,697.37
+"PR00063","Compact Keyboard","Compact design",8.81,697.83
+"PR00064","Pro Console","High quality",15.67,244.81
+"PR00065","Magnetic Power Bank","Compact design",19.1,250.76
+"PR00066","Advanced External Hard Drive","Sleek and modern",15.79,722.6
+"PR00067","Mini Camera","User-friendly",10.21,180.19
+"PR00068","Compact Smartphone","Versatile use",18.58,845.88
+"PR00069","AI-Powered Router","Eco-friendly",5.3,145.53
+"PR00070","High-Resolution Mouse","Innovative technology",5,139.22
+"PR00071","Budget Console","Sleek and modern",15.53,37.28
+"PR00072","Dual-Screen Smartwatch","Ergonomic",19.35,165.94
+"PR00073","Portable Camera","Sleek and modern",18.3,294.85
+"PR00074","SE Laptop","Eco-friendly",3.15,684.37
+"PR00075","Mini Laptop","High quality",15.78,493.47
+"PR00076","Rugged Headphones","Compact design",8.57,849.84
+"PR00077","Magnetic Earbuds","Sleek and modern",8.68,131.8
+"PR00078","Foldable Smartwatch","Ergonomic",1.28,322.37
+"PR00079","Rugged Action Cam","High quality",18.91,104.63
+"PR00080","Touch VR Headset","User-friendly",4.39,704.93
+"PR00081","High-Performance Power Bank","Ergonomic",8.49,163.59
+"PR00082","Advanced Mouse","Sleek and modern",18.45,836.26
+"PR00083","SD Monitor","Compact design",14.48,940.16
+"PR00084","Eco Smart Speaker","High quality",18.71,761.19
+"PR00085","Magnetic Smartwatch","Energy efficient",7.29,255.13
+"PR00086","Dual-Screen Smart Speaker","Eco-friendly",1.86,643.43
+"PR00087","Premium Laptop","Innovative technology",9.88,133.91
+"PR00088","Advanced Headphones","Versatile use",15.59,418.36
+"PR00089","Slim Laptop","Compact design",4.64,898.88
+"PR00090","Vintage Smart Glasses","Energy efficient",1.26,13.24
+"PR00091","High-Resolution VR Headset","Versatile use",8.62,377.88
+"PR00092","Portable Power Bank","Ergonomic",1.36,82.76
+"PR00093","Dual-Screen Headphones","Energy efficient",16.89,617.31
+"PR00094","Heavy-Duty Laptop","Ergonomic",18.52,896.6
+"PR00095","Premium Printer","Sleek and modern",5.07,22.55
+"PR00096","Foldable Recorder","Eco-friendly",11.32,742.67
+"PR00097","Foldable Earbuds","High quality",1.98,745.61
+"PR00098","Magnetic External Hard Drive","Innovative technology",7.4,140.91
+"PR00099","Eco Smart Speaker","Innovative technology",15.43,130.84
+"PR00100","HD Keyboard","Energy efficient",7.39,269.2
+"PR00101","Sleek Recorder","User-friendly",15.89,681.53
+"PR00102","Ergonomic Gaming Chair","Energy efficient",4.82,63.91
+"PR00103","High-Resolution Router","Energy efficient",10.26,866.63
+"PR00104","Gaming Tablet","Durable",12.34,81.68
+"PR00105","Foldable VR Headset","Durable",18.16,779.87
+"PR00106","Eco Earbuds","Versatile use",2.25,961.87
+"PR00107","Retro Desk Lamp","Durable",11.85,772.02
+"PR00108","Eco Smart Glasses","Durable",8.92,543.52
+"PR00109","High-Performance Smartphone","Ergonomic",16.16,873.11
+"PR00110","Dual-Screen Recorder","Ergonomic",17.61,282.34
+"PR00111","Heavy-Duty Router","Compact design",3.15,379.89
+"PR00112","Ultra Smart Glasses","High quality",5.24,687.89
+"PR00113","Pro Recorder","Versatile use",4.29,172.29
+"PR00114","Compact VR Headset","High quality",3.94,82.75
+"PR00115","SD Recorder","Innovative technology",5.92,102.79
+"PR00116","Budget Headphones","Innovative technology",2.58,355.63
+"PR00117","High-Speed eReader","High quality",16.74,976.88
+"PR00118","High-Speed Monitor","Innovative technology",3.88,795.13
+"PR00119","Eco Printer","Compact design",9.11,99.37
+"PR00120","Vintage Smartphone","Energy efficient",17.24,660.24
+"PR00121","Magnetic Tablet","Durable",18.03,718.03
+"PR00122","Budget Smart Speaker","Energy efficient",13.47,119.3
+"PR00123","Smart Gaming Chair","User-friendly",16.68,939.38
+"PR00124","Noise-Cancelling Nintendo","User-friendly",19.14,153.22
+"PR00125","Heavy-Duty Keyboard","Compact design",4.25,307.42
+"PR00126","Budget Headphones","Sleek and modern",2.95,957.79
+"PR00127","Dual-Screen Nintendo","Sleek and modern",19.78,883.89
+"PR00128","Portable VR Headset","Energy efficient",9.35,971.65
+"PR00129","SD Recorder","Eco-friendly",11.32,723.33
+"PR00130","Multi-Function Nintendo","User-friendly",2.39,183.84
+"PR00131","High-Resolution Smart Glasses","Compact design",3.6,726.81
+"PR00132","Waterproof Action Cam","Versatile use",3.83,51.21
+"PR00133","Portable Laptop","Versatile use",8.54,172.77
+"PR00134","Portable Recorder","Eco-friendly",2.89,453.32
+"PR00135","HD Drone","Innovative technology",5.22,717.95
+"PR00136","Rugged Camera","High quality",17.46,218.32
+"PR00137","Noise-Cancelling Laptop","Sleek and modern",6.94,65.44
+"PR00138","Rugged Nintendo","High quality",8.59,584
+"PR00139","Touch Camera","Innovative technology",11.44,458.98
+"PR00140","Smart Headphones","Eco-friendly",2,545.67
+"PR00141","Budget Mouse","Innovative technology",14.49,225.68
+"PR00142","Foldable Smartwatch","Eco-friendly",6.55,920.22
+"PR00143","Ultra Drone","Compact design",18.7,343.16
+"PR00144","Magnetic Action Cam","User-friendly",19.88,155.2
+"PR00145","Premium Router","Eco-friendly",11.52,46.13
+"PR00146","Smart Smartphone","Sleek and modern",7.36,196.45
+"PR00147","Eco Printer","Innovative technology",13.45,751.94
+"PR00148","Foldable Smartwatch","Sleek and modern",10.02,754.5
+"PR00149","Ergonomic Drone","Ergonomic",9.05,880.76
+"PR00150","Heavy-Duty Router","Compact design",8.06,440.29
+"PR00151","SD Camera","Versatile use",8.68,559.61
+"PR00152","Mini Router","Versatile use",11.65,157.12
+"PR00153","SD Smart Speaker","Energy efficient",9.67,662.65
+"PR00154","Lite Keyboard","Versatile use",1.37,882.51
+"PR00155","Wireless Monitor","Versatile use",14.72,76.52
+"PR00156","Dual-Screen Earbuds","Innovative technology",12.75,136.7
+"PR00157","Smart External Hard Drive","Eco-friendly",7.1,964.33
+"PR00158","Retro Smart Glasses","Energy efficient",9.54,735.27
+"PR00159","Mini VR Headset","Versatile use",15.3,638.69
+"PR00160","Budget Action Cam","User-friendly",4.66,684.73
+"PR00161","HD Power Bank","Ergonomic",5.3,621.96
+"PR00162","Lite Smartphone","Energy efficient",10.69,586.15
+"PR00163","Noise-Cancelling Headphones","High quality",16.04,231.46
+"PR00164","Dual-Screen Action Cam","High quality",17.84,261.96
+"PR00165","SD Recorder","Energy efficient",19.77,30.47
+"PR00166","High-Speed Smart Glasses","Durable",1.24,707
+"PR00167","Ergonomic Desk Lamp","Sleek and modern",12.1,671.78
+"PR00168","Multi-Function Monitor","Eco-friendly",18.76,567.75
+"PR00169","Pro Console","Versatile use",19.73,188.76
+"PR00170","Noise-Cancelling eReader","Ergonomic",3.08,34.58
+"PR00171","Ultra-Light Desk Lamp","Eco-friendly",14.59,238.36
+"PR00172","High-Resolution Smart Glasses","Sleek and modern",3.32,892.62
+"PR00173","Noise-Cancelling Monitor","User-friendly",5.48,995.92
+"PR00174","Pro Printer","Ergonomic",15.7,71.95
+"PR00175","AI-Powered Fitness Tracker","Durable",1.5,530.42
+"PR00176","AI-Powered Desk Lamp","Durable",3.43,162.99
+"PR00177","Vintage Desk Lamp","Eco-friendly",9.08,370.72
+"PR00178","Wireless Recorder","Sleek and modern",1.25,441.83
+"PR00179","Sleek Console","High quality",1.26,344.86
+"PR00180","SD Console","Ergonomic",3.88,749.36
+"PR00181","Smart Console","Innovative technology",19.34,448.91
+"PR00182","High-Speed Drone","User-friendly",17.68,514.68
+"PR00183","Ergonomic Printer","Versatile use",15.29,780.5
+"PR00184","Ultra-Light Camera","Energy efficient",10.87,994.26
+"PR00185","Sleek Camera","Innovative technology",15.81,389.01
+"PR00186","Magnetic VR Headset","Ergonomic",15.53,411
+"PR00187","Slim VR Headset","Versatile use",1.52,21.41
+"PR00188","Retro Smart Glasses","Eco-friendly",4.69,424.32
+"PR00189","Advanced eReader","Sleek and modern",1.36,164.89
+"PR00190","HD VR Headset","Ergonomic",16.41,148.91
+"PR00191","Noise-Cancelling Console","User-friendly",13.75,620.2
+"PR00192","Eco Nintendo","High quality",4.84,916.08
+"PR00193","Smart Drone","Eco-friendly",9.61,615.36
+"PR00194","Ultra-Light Tablet","Sleek and modern",13.21,704.25
+"PR00195","Ultra-Light Recorder","Eco-friendly",14.73,975.78
+"PR00196","AI-Powered Tablet","Durable",10.35,175.69
+"PR00197","Magnetic External Hard Drive","Energy efficient",2.42,246.83
+"PR00198","SE External Hard Drive","User-friendly",9.93,236.1
+"PR00199","Waterproof Smart Glasses","Ergonomic",6.59,923.05
+"PR00200","Foldable Recorder","High quality",8.41,276.26
+"PR00201","Heavy-Duty Drone","Durable",19.94,152.89
+"PR00202","Touch Smart Glasses","Innovative technology",18.15,262.54
+"PR00203","Ultra Console","Versatile use",3.47,145.6
+"PR00204","High-Speed Recorder","Eco-friendly",18.43,910.6
+"PR00205","Magnetic Gaming Chair","High quality",3.08,736.16
+"PR00206","Ultra Mouse","Durable",16.88,430.96
+"PR00207","Portable Smart Glasses","High quality",1.07,992.02
+"PR00208","Heavy-Duty Console","Innovative technology",5.41,665.64
+"PR00209","Ultra VR Headset","Eco-friendly",1.2,396.96
+"PR00210","Rugged Monitor","Ergonomic",0.96,960.32
+"PR00211","High-Speed Drone","User-friendly",9.49,167.11
+"PR00212","Wireless Nintendo","Ergonomic",7.31,922.45
+"PR00213","High-Resolution Earbuds","Eco-friendly",14.95,925.17
+"PR00214","Ergonomic External Hard Drive","Versatile use",0.82,535.93
+"PR00215","High-Performance eReader","Ergonomic",15.26,955.49
+"PR00216","Compact External Hard Drive","User-friendly",8.48,577.43
+"PR00217","Wireless Console","Ergonomic",7.91,88.62
+"PR00218","Touch Smart Glasses","User-friendly",15.68,163.83
+"PR00219","Vintage Console","Sleek and modern",6.52,896.21
+"PR00220","Pro Camera","High quality",13.6,696.26
+"PR00221","Advanced Tablet","Ergonomic",5.68,352.71
+"PR00222","Advanced Desk Lamp","Sleek and modern",3.05,824.82
+"PR00223","Ergonomic Router","Energy efficient",12.5,432.88
+"PR00224","Magnetic Keyboard","Innovative technology",5.95,356.1
+"PR00225","Compact Earbuds","Compact design",12.98,917.98
+"PR00226","Rugged Power Bank","Eco-friendly",7.19,769.98
+"PR00227","Mini Router","Durable",18.3,391.16
+"PR00228","Ergonomic Smartphone","Versatile use",4.1,101.46
+"PR00229","Mini Keyboard","Versatile use",11.21,528.83
+"PR00230","AI-Powered Gaming Chair","Versatile use",6.96,281.11
+"PR00231","Rugged Headphones","User-friendly",12.64,676.88
+"PR00232","Waterproof Console","Durable",19.42,31.5
+"PR00233","Ultra-Light Printer","Versatile use",5.58,827.35
+"PR00234","Solar Monitor","Durable",12.09,225.48
+"PR00235","Noise-Cancelling Router","Durable",11.24,469.99
+"PR00236","Wireless Monitor","Sleek and modern",7.29,180.69
+"PR00237","Touch eReader","Sleek and modern",13.44,561.71
+"PR00238","Advanced Tablet","Eco-friendly",19.86,919.75
+"PR00239","Rugged Recorder","Energy efficient",3.09,413.17
+"PR00240","SE eReader","Energy efficient",15.54,41.89
+"PR00241","HD Smart Speaker","Durable",12.05,951.25
+"PR00242","Compact Smartphone","Durable",13.34,360.32
+"PR00243","Compact eReader","Ergonomic",5.52,881.72
+"PR00244","Foldable Smartwatch","Compact design",9.45,470.67
+"PR00245","Noise-Cancelling External Hard Drive","Ergonomic",6.3,880.13
+"PR00246","AI-Powered Keyboard","User-friendly",10.61,592.02
+"PR00247","Rugged Earbuds","User-friendly",13.97,596.94
+"PR00248","Pro Smartwatch","Ergonomic",17.36,690.34
+"PR00249","Touch Smartwatch","Innovative technology",14.54,975.57
+"PR00250","Wireless VR Headset","Eco-friendly",17.3,926.12
+"PR00251","SE Power Bank","User-friendly",15.32,920.59
+"PR00252","Wireless Desk Lamp","User-friendly",16.78,859.43
+"PR00253","Eco Smartwatch","Innovative technology",13.37,26.38
+"PR00254","Eco Smart Speaker","Energy efficient",15.13,590.22
+"PR00255","Eco Recorder","Sleek and modern",6.92,82.5
+"PR00256","Premium Console","Ergonomic",14.32,312.08
+"PR00257","Pro Printer","Innovative technology",16.75,355.94
+"PR00258","Mini Recorder","Ergonomic",8.95,292.41
+"PR00259","Waterproof External Hard Drive","High quality",17.93,923.7
+"PR00260","Noise-Cancelling Smart Glasses","Ergonomic",15.21,115.42
+"PR00261","Slim Earbuds","Compact design",16.58,964.76
+"PR00262","Retro Mouse","Versatile use",7.52,435.71
+"PR00263","Magnetic Monitor","User-friendly",16.56,175.3
+"PR00264","SD Desk Lamp","Versatile use",6.24,682.99
+"PR00265","Ultra Desk Lamp","Versatile use",12.81,206.22
+"PR00266","Smart Smart Speaker","Eco-friendly",16.79,500.44
+"PR00267","Foldable Tablet","Eco-friendly",9.75,93.52
+"PR00268","Compact VR Headset","High quality",3.68,580
+"PR00269","Rugged Console","Versatile use",13.06,209.67
+"PR00270","Eco Router","Eco-friendly",9.39,426.25
+"PR00271","Budget External Hard Drive","Durable",13.8,91.45
+"PR00272","Premium Router","Sleek and modern",13.35,190.4
+"PR00273","Pro Printer","Ergonomic",5.41,878.42
+"PR00274","Retro Router","Ergonomic",3.21,528.23
+"PR00275","Sleek Keyboard","Energy efficient",4.11,825.61
+"PR00276","Gaming Monitor","High quality",6.93,364.96
+"PR00277","Compact Smartphone","Ergonomic",14.81,442.93
+"PR00278","SE VR Headset","Ergonomic",10.48,461.87
+"PR00279","Vintage Earbuds","Sleek and modern",3.33,564.2
+"PR00280","Budget Action Cam","Versatile use",14.02,940.21
+"PR00281","Foldable Tablet","Ergonomic",13.8,862.2
+"PR00282","Multi-Function Console","Sleek and modern",18.2,718.89
+"PR00283","Magnetic Console","Versatile use",12.13,496.56
+"PR00284","Dual-Screen Mouse","Durable",1.69,990.36
+"PR00285","Waterproof Gaming Chair","Innovative technology",11.44,624.88
+"PR00286","SD VR Headset","Eco-friendly",19.49,678.62
+"PR00287","Sleek External Hard Drive","Versatile use",1.98,254.1
+"PR00288","Retro External Hard Drive","Energy efficient",4.64,640.34
+"PR00289","Pro Nintendo","High quality",15.04,557.21
+"PR00290","Dual-Screen Action Cam","High quality",17.37,842.21
+"PR00291","AI-Powered Nintendo","Ergonomic",5.22,31.94
+"PR00292","Portable VR Headset","Compact design",6.9,64.67
+"PR00293","Touch Recorder","Energy efficient",16.39,292.76
+"PR00294","Eco Smartphone","User-friendly",4.81,663.15
+"PR00295","Smart Smart Glasses","Versatile use",7.32,554.97
+"PR00296","Mini Smartphone","Innovative technology",1.21,83.59
+"PR00297","SD Fitness Tracker","Ergonomic",19.71,954.69
+"PR00298","Magnetic Smart Speaker","Sleek and modern",6.88,730.88
+"PR00299","Lite Gaming Chair","Versatile use",15.73,722.43
+"PR00300","Wireless Fitness Tracker","Durable",19.7,554.16
+"PR00301","Vintage Drone","User-friendly",19.66,422.98
+"PR00302","SE Drone","Eco-friendly",13.73,850.43
+"PR00303","High-Performance Nintendo","Innovative technology",6.2,256.06
+"PR00304","Multi-Function Headphones","Ergonomic",0.59,390.63
+"PR00305","Advanced Monitor","Ergonomic",5.35,182.26
+"PR00306","Multi-Function Gaming Chair","Energy efficient",11.57,107.62
+"PR00307","Wireless Laptop","High quality",18.35,835.22
+"PR00308","Sleek Smart Glasses","Ergonomic",5.9,980.21
+"PR00309","Retro Monitor","Energy efficient",19.27,579.41
+"PR00310","Ultra Camera","Sleek and modern",13.73,697.67
+"PR00311","Ultra VR Headset","Durable",16.48,624
+"PR00312","HD Camera","Eco-friendly",9.7,622.19
+"PR00313","Lite Router","Versatile use",11.13,812.07
+"PR00314","HD Fitness Tracker","Sleek and modern",17.57,957.14
+"PR00315","Budget Headphones","Durable",11.29,26.43
+"PR00316","Touch Drone","Innovative technology",5.03,630.89
+"PR00317","Touch Camera","Innovative technology",4.57,851.55
+"PR00318","Wireless Gaming Chair","Versatile use",1.32,796.15
+"PR00319","Eco Smartwatch","Energy efficient",15.13,918.44
+"PR00320","Heavy-Duty Smartwatch","Innovative technology",7.14,601.58
+"PR00321","Noise-Cancelling Headphones","Eco-friendly",14.21,816.6
+"PR00322","AI-Powered Fitness Tracker","Compact design",14.2,558.92
+"PR00323","Multi-Function Action Cam","Versatile use",6.26,195.58
+"PR00324","Solar Laptop","Eco-friendly",17,388.1
+"PR00325","Gaming Keyboard","Versatile use",12.66,961.21
+"PR00326","Retro Keyboard","Ergonomic",9.2,447.23
+"PR00327","Premium Headphones","High quality",7.75,108.34
+"PR00328","Multi-Function Console","High quality",19.51,727.87
+"PR00329","Rugged Fitness Tracker","Sleek and modern",15,955.63
+"PR00330","Ultra-Light Tablet","Versatile use",9.28,419.42
+"PR00331","Gaming Mouse","Sleek and modern",5.96,366.36
+"PR00332","Portable Desk Lamp","Ergonomic",11.74,484.47
+"PR00333","Foldable eReader","Sleek and modern",3.47,360.1
+"PR00334","Foldable Smart Glasses","Ergonomic",9.19,191.54
+"PR00335","Retro Headphones","User-friendly",2.92,249.25
+"PR00336","Budget eReader","Compact design",8.79,459.37
+"PR00337","Vintage Headphones","Sleek and modern",19.74,104.32
+"PR00338","Sleek Nintendo","Ergonomic",7.19,869.12
+"PR00339","Compact Nintendo","Eco-friendly",11.15,24.93
+"PR00340","Smart Power Bank","Energy efficient",18.95,185.9
+"PR00341","Vintage Headphones","High quality",14.16,354.12
+"PR00342","High-Resolution Laptop","High quality",14.15,86.51
+"PR00343","Foldable Desk Lamp","Sleek and modern",0.74,904.69
+"PR00344","Rugged Printer","Durable",11.34,298.16
+"PR00345","High-Performance eReader","Durable",15.46,11.86
+"PR00346","High-Speed Smart Glasses","Energy efficient",19.88,713.43
+"PR00347","Touch Drone","Energy efficient",7.96,12.05
+"PR00348","Dual-Screen External Hard Drive","Durable",16.3,832.93
+"PR00349","Sleek Console","Versatile use",7.88,626.6
+"PR00350","Dual-Screen Router","Versatile use",5.28,170.73
+"PR00351","Sleek Smart Glasses","Ergonomic",17.75,782.8
+"PR00352","SD External Hard Drive","Innovative technology",2.02,272.89
+"PR00353","Vintage Smart Glasses","Ergonomic",12.57,391.19
+"PR00354","Ultra-Light Smartwatch","Ergonomic",10.18,489.17
+"PR00355","Ergonomic Headphones","Innovative technology",1.63,894.41
+"PR00356","Compact Smart Glasses","High quality",14.49,464.94
+"PR00357","Vintage VR Headset","Durable",5.51,843.52
+"PR00358","Wireless Recorder","Energy efficient",1.03,609.12
+"PR00359","Solar Smart Speaker","Ergonomic",19.23,679.76
+"PR00360","Ultra-Light Recorder","User-friendly",4.42,286.48
+"PR00361","HD Earbuds","Durable",2,199.32
+"PR00362","Ultra Action Cam","Sleek and modern",17.97,227.83
+"PR00363","Solar Action Cam","Versatile use",10.04,97.84
+"PR00364","Eco VR Headset","Eco-friendly",4.13,331.78
+"PR00365","Rugged VR Headset","Compact design",15.43,966.86
+"PR00366","Waterproof Mouse","Versatile use",2.79,558.8
+"PR00367","Gaming Nintendo","Energy efficient",2.04,112.77
+"PR00368","Budget Action Cam","Compact design",10,631.94
+"PR00369","Wireless Printer","Eco-friendly",11.26,695.64
+"PR00370","Eco Keyboard","Sleek and modern",5.1,40.24
+"PR00371","Touch Drone","Energy efficient",3.28,739.58
+"PR00372","High-Resolution Laptop","Sleek and modern",6.54,892.35
+"PR00373","High-Performance Nintendo","Eco-friendly",4.85,249.61
+"PR00374","Ergonomic Earbuds","Compact design",8.09,219.56
+"PR00375","Solar Power Bank","Compact design",17.7,318.51
+"PR00376","High-Resolution Laptop","Energy efficient",3.46,745.64
+"PR00377","Sleek Nintendo","User-friendly",1.32,62.88
+"PR00378","SE Laptop","User-friendly",7.89,365.84
+"PR00379","AI-Powered Action Cam","Compact design",17.71,165.1
+"PR00380","Heavy-Duty Gaming Chair","Innovative technology",11.37,290.34
+"PR00381","Ergonomic Action Cam","High quality",6.64,439.93
+"PR00382","Magnetic Monitor","User-friendly",8.94,689.42
+"PR00383","Premium Fitness Tracker","User-friendly",17.27,689.04
+"PR00384","SE Printer","Versatile use",4.33,62.28
+"PR00385","Mini Fitness Tracker","Ergonomic",16.95,935.59
+"PR00386","High-Speed Drone","Compact design",13.95,181.27
+"PR00387","Mini Smartwatch","Innovative technology",13.17,512.34
+"PR00388","HD Tablet","Innovative technology",9.54,458.61
+"PR00389","Sleek Router","Eco-friendly",14.39,812.49
+"PR00390","High-Performance Mouse","Compact design",19.23,391.46
+"PR00391","High-Speed Headphones","Innovative technology",15.22,339
+"PR00392","Vintage Console","Compact design",9.46,291.71
+"PR00393","Pro Smartwatch","Durable",9.23,482.82
+"PR00394","Magnetic Laptop","Energy efficient",12.43,909.9
+"PR00395","Advanced Smart Glasses","Durable",5.75,116.61
+"PR00396","Waterproof Printer","Ergonomic",16.56,659.73
+"PR00397","Foldable Monitor","Energy efficient",0.59,99.61
+"PR00398","Dual-Screen Smartphone","Sleek and modern",11.74,262.8
+"PR00399","Retro Headphones","Eco-friendly",1.05,203.83
+"PR00400","Mini VR Headset","Versatile use",5.94,746.37
+"PR00401","Lite Camera","Ergonomic",9.29,744.73
+"PR00402","Ultra Laptop","User-friendly",1.69,417.51
+"PR00403","AI-Powered Drone","Compact design",13.91,725.04
+"PR00404","SD Drone","High quality",13.21,363.16
+"PR00405","SD Laptop","Eco-friendly",16.53,148.2
+"PR00406","Wireless Desk Lamp","Sleek and modern",2.42,964.82
+"PR00407","Multi-Function Action Cam","Durable",19.39,751.3
+"PR00408","Eco Camera","High quality",13.45,80.8
+"PR00409","Portable Camera","Ergonomic",9.48,923.28
+"PR00410","HD Drone","Energy efficient",1.94,997.02
+"PR00411","Ultra-Light Router","Compact design",3.83,161.61
+"PR00412","Slim Monitor","Energy efficient",8.52,407.88
+"PR00413","Wireless Laptop","Durable",16.76,843.59
+"PR00414","Compact Desk Lamp","Energy efficient",10.98,865.77
+"PR00415","Dual-Screen Earbuds","Versatile use",11.63,938.26
+"PR00416","Ultra Nintendo","Sleek and modern",3.96,454.35
+"PR00417","Pro Smart Glasses","Innovative technology",14.22,277.81
+"PR00418","Ultra-Light Drone","User-friendly",11.91,201.83
+"PR00419","Mini VR Headset","Versatile use",3.51,409.93
+"PR00420","SE Camera","User-friendly",17.58,775.58
+"PR00421","Touch Smart Glasses","Compact design",1.13,538.35
+"PR00422","Mini Console","Versatile use",6.82,492.77
+"PR00423","Mini Action Cam","Versatile use",4.01,625.07
+"PR00424","Premium Router","High quality",16.03,577.64
+"PR00425","SE Nintendo","Innovative technology",7.72,36.89
+"PR00426","High-Speed Camera","Durable",16.81,926.62
+"PR00427","Lite Fitness Tracker","Eco-friendly",7.85,542.27
+"PR00428","Wireless Earbuds","Energy efficient",12.7,923.08
+"PR00429","Retro Gaming Chair","Durable",13.18,895.32
+"PR00430","Waterproof Smart Glasses","Sleek and modern",10,942.47
+"PR00431","Magnetic Camera","User-friendly",19.43,68.07
+"PR00432","Solar Smart Speaker","Durable",3,873.88
+"PR00433","Advanced External Hard Drive","Energy efficient",16.06,690.76
+"PR00434","Ergonomic Smartphone","Sleek and modern",3.61,686.03
+"PR00435","Eco Smartwatch","High quality",13.05,711.65
+"PR00436","High-Resolution VR Headset","Versatile use",2.35,342.2
+"PR00437","Lite Smart Glasses","Versatile use",10.67,810.33
+"PR00438","SD Smartphone","Durable",6.88,530.85
+"PR00439","Dual-Screen Desk Lamp","Energy efficient",9.81,833.26
+"PR00440","Touch Smartwatch","Compact design",9.71,956.14
+"PR00441","High-Resolution Camera","Ergonomic",8.09,351.44
+"PR00442","Smart Recorder","Compact design",11.88,849.59
+"PR00443","Wireless Gaming Chair","Durable",1.93,190.81
+"PR00444","Eco Smart Speaker","Innovative technology",8.23,787.56
+"PR00445","Heavy-Duty Tablet","Eco-friendly",19.27,226.72
+"PR00446","Retro Smart Speaker","Eco-friendly",8.2,911.18
+"PR00447","Sleek Drone","Sleek and modern",5.26,726.2
+"PR00448","Advanced Drone","User-friendly",0.73,969.54
+"PR00449","Rugged Keyboard","Innovative technology",7.2,559.14
+"PR00450","Vintage Earbuds","Sleek and modern",3.38,337.11
+"PR00451","Foldable Nintendo","Compact design",11.26,970.94
+"PR00452","Rugged Headphones","User-friendly",1.3,34.53
+"PR00453","Slim VR Headset","Innovative technology",10.83,322.72
+"PR00454","Sleek Action Cam","Sleek and modern",17.32,899.11
+"PR00455","High-Performance Earbuds","Durable",6.09,205.67
+"PR00456","Magnetic Laptop","Ergonomic",9.93,634.84
+"PR00457","Dual-Screen Monitor","Compact design",15.1,191.71
+"PR00458","Premium Laptop","Eco-friendly",15.89,779.05
+"PR00459","Lite Smart Speaker","High quality",19.37,822.49
+"PR00460","Advanced Drone","Eco-friendly",8.74,577.14
+"PR00461","Waterproof Laptop","High quality",16.76,656.2
+"PR00462","Gaming Action Cam","Compact design",16.92,14.15
+"PR00463","Slim External Hard Drive","Compact design",10.97,40.13
+"PR00464","SD Tablet","Energy efficient",12.2,898.44
+"PR00465","SD Headphones","User-friendly",6.45,570.1
+"PR00466","Dual-Screen Mouse","User-friendly",2.65,213.17
+"PR00467","Premium Monitor","Compact design",10.61,520.04
+"PR00468","Premium Monitor","Sleek and modern",18.05,762.84
+"PR00469","Portable Mouse","User-friendly",15.94,614.75
+"PR00470","Magnetic Tablet","Sleek and modern",11.17,536.45
+"PR00471","Compact Printer","High quality",0.83,411.69
+"PR00472","Multi-Function Laptop","Sleek and modern",15.57,392.87
+"PR00473","High-Speed Keyboard","Eco-friendly",10.15,739.62
+"PR00474","Lite Gaming Chair","Compact design",1.45,671.55
+"PR00475","High-Resolution Recorder","Durable",6.01,954.83
+"PR00476","SE Laptop","Compact design",15.25,604.25
+"PR00477","Gaming External Hard Drive","Energy efficient",11.98,815.41
+"PR00478","AI-Powered Desk Lamp","High quality",7.64,382.65
+"PR00479","Gaming Monitor","User-friendly",9.89,387.98
+"PR00480","Touch Headphones","Ergonomic",13.28,588.62
+"PR00481","Ultra Tablet","Innovative technology",14.9,438.07
+"PR00482","High-Speed Headphones","Versatile use",9.1,748.66
+"PR00483","Portable Earbuds","High quality",0.55,386.6
+"PR00484","Waterproof Earbuds","Versatile use",13.52,954.75
+"PR00485","Smart Power Bank","Ergonomic",1.6,886.23
+"PR00486","Multi-Function Smart Speaker","High quality",9.25,539.88
+"PR00487","Heavy-Duty Console","Energy efficient",4.99,18.84
+"PR00488","Mini Action Cam","Energy efficient",16.79,795.5
+"PR00489","Foldable Mouse","Durable",17.5,201.22
+"PR00490","Portable Nintendo","User-friendly",15.4,539.13
+"PR00491","Sleek Earbuds","High quality",14.7,810.7
+"PR00492","Mini Nintendo","User-friendly",13.8,727.66
+"PR00493","Pro Gaming Chair","Innovative technology",14.65,870.05
+"PR00494","SE Smartphone","High quality",6.94,383.83
+"PR00495","High-Resolution eReader","Versatile use",10.35,98.19
+"PR00496","Vintage Power Bank","Ergonomic",6.49,119.17
+"PR00497","Smart Router","User-friendly",10.42,138.6
+"PR00498","Dual-Screen Earbuds","Sleek and modern",17.63,861.05
+"PR00499","Foldable External Hard Drive","Ergonomic",15.49,458.5
+"PR00500","Waterproof Laptop","Versatile use",2.12,25.27
+"PR00501","High-Performance Keyboard","Energy efficient",0.83,411.19
+"PR00502","Premium Tablet","Eco-friendly",4.38,995.74
+"PR00503","Multi-Function Smartphone","User-friendly",6.4,629.89
+"PR00504","Sleek Monitor","User-friendly",18.25,15.45
+"PR00505","Budget Smartwatch","High quality",8.65,314.9
+"PR00506","Eco Monitor","User-friendly",16.62,222.59
+"PR00507","Multi-Function Camera","Eco-friendly",5.91,840.9
+"PR00508","High-Speed Headphones","High quality",13.7,79.24
+"PR00509","Advanced Power Bank","High quality",6.94,807.29
+"PR00510","Heavy-Duty Fitness Tracker","Energy efficient",18.57,505.43
+"PR00511","Solar Console","High quality",9.68,587.86
+"PR00512","Magnetic Camera","High quality",3.48,61.62
+"PR00513","Gaming Smart Glasses","Energy efficient",17.87,335.97
+"PR00514","Slim VR Headset","Energy efficient",9.4,368.43
+"PR00515","High-Performance Earbuds","Compact design",14.09,232.3
+"PR00516","Magnetic Router","Energy efficient",7.63,710.09
+"PR00517","Portable Action Cam","Sleek and modern",1.05,910.03
+"PR00518","Multi-Function Recorder","Innovative technology",7.67,47.27
+"PR00519","Waterproof Desk Lamp","Innovative technology",9.25,311.65
+"PR00520","Heavy-Duty Smartwatch","Versatile use",4.69,587.88
+"PR00521","Budget Drone","Durable",12.25,305.3
+"PR00522","Premium Nintendo","User-friendly",19.4,55.17
+"PR00523","Eco Headphones","High quality",4.3,410.7
+"PR00524","Waterproof Console","Compact design",5.15,183.99
+"PR00525","Touch Fitness Tracker","Sleek and modern",3.21,303.59
+"PR00526","Slim Smart Glasses","Sleek and modern",10.55,504.21
+"PR00527","Waterproof Mouse","Innovative technology",6.99,167.36
+"PR00528","Ultra-Light Desk Lamp","Innovative technology",17.99,760.91
+"PR00529","Solar Nintendo","Compact design",8.17,842.69
+"PR00530","Multi-Function Router","Versatile use",14.46,542.78
+"PR00531","Ultra-Light Gaming Chair","User-friendly",11.22,415.42
+"PR00532","High-Resolution Desk Lamp","High quality",10.12,375.97
+"PR00533","Noise-Cancelling Mouse","Compact design",15.39,660.16
+"PR00534","Wireless Desk Lamp","Versatile use",15.42,52.91
+"PR00535","Compact Recorder","Compact design",1.03,358.44
+"PR00536","Gaming Console","Compact design",8.86,872.71
+"PR00537","Advanced Console","Eco-friendly",18.9,706.06
+"PR00538","Waterproof Monitor","Eco-friendly",5.6,286.42
+"PR00539","AI-Powered Smartwatch","Sleek and modern",2.93,751.56
+"PR00540","Mini VR Headset","Innovative technology",0.76,573.12
+"PR00541","Foldable Mouse","Innovative technology",18.13,821.78
+"PR00542","Smart Keyboard","Energy efficient",10.87,241.86
+"PR00543","Pro Power Bank","Innovative technology",11.65,560.95
+"PR00544","Ergonomic Smartwatch","Innovative technology",9.1,753.73
+"PR00545","Wireless Printer","Versatile use",4.38,173.06
+"PR00546","Mini Printer","Ergonomic",9.28,765.79
+"PR00547","Smart Smart Glasses","Eco-friendly",8.4,784.82
+"PR00548","Pro External Hard Drive","High quality",8.24,421.46
+"PR00549","Premium Fitness Tracker","Durable",4.82,409.65
+"PR00550","High-Performance Camera","Innovative technology",9.57,685.78
+"PR00551","Gaming Earbuds","Energy efficient",10.06,151.4
+"PR00552","SD Printer","Innovative technology",18.18,931.59
+"PR00553","Budget Smart Speaker","Versatile use",7.86,640.25
+"PR00554","Ergonomic Drone","Eco-friendly",4.76,57.68
+"PR00555","Eco Recorder","Ergonomic",11.4,191.6
+"PR00556","Waterproof Printer","Compact design",3.2,607.15
+"PR00557","Compact Gaming Chair","High quality",15.18,123.31
+"PR00558","Compact eReader","Durable",2.28,199.82
+"PR00559","High-Speed Recorder","Eco-friendly",14.51,329.33
+"PR00560","Budget Mouse","Innovative technology",6.36,887.23
+"PR00561","AI-Powered Printer","High quality",5.06,903.33
+"PR00562","Touch Headphones","Sleek and modern",7.83,486.76
+"PR00563","Foldable VR Headset","Versatile use",11.35,860.1
+"PR00564","HD Desk Lamp","Versatile use",4.42,695.17
+"PR00565","Pro Tablet","Compact design",7.6,98.8
+"PR00566","Waterproof Console","Sleek and modern",8.34,926.75
+"PR00567","Ultra Smart Glasses","Innovative technology",1.84,531.91
+"PR00568","HD Printer","Compact design",13.14,817.36
+"PR00569","SD Nintendo","Durable",7.81,981.84
+"PR00570","SE Router","High quality",1.68,859.55
+"PR00571","SE Desk Lamp","Versatile use",13.74,625.46
+"PR00572","Compact Printer","Energy efficient",12.44,190.21
+"PR00573","High-Performance Fitness Tracker","Compact design",5.78,441.69
+"PR00574","Eco Action Cam","Eco-friendly",5.92,861.67
+"PR00575","Vintage Smartphone","Ergonomic",12.75,585.31
+"PR00576","Portable Fitness Tracker","High quality",19.51,365.69
+"PR00577","Noise-Cancelling Nintendo","Innovative technology",2.27,58.57
+"PR00578","Multi-Function Camera","Durable",10.4,721.08
+"PR00579","Solar Power Bank","High quality",16.88,829.43
+"PR00580","Heavy-Duty Gaming Chair","High quality",11.55,786.23
+"PR00581","Advanced Camera","Eco-friendly",13.95,968.95
+"PR00582","High-Resolution VR Headset","Compact design",17.74,388.06
+"PR00583","Foldable Earbuds","Sleek and modern",15.59,538.95
+"PR00584","Ultra Power Bank","Versatile use",19.48,56.18
+"PR00585","Premium Fitness Tracker","Versatile use",10.09,177.52
+"PR00586","Foldable Smart Glasses","Innovative technology",17.49,579.59
+"PR00587","Portable Action Cam","Sleek and modern",9.54,992.88
+"PR00588","Magnetic eReader","User-friendly",14.27,150.11
+"PR00589","Rugged Recorder","Sleek and modern",3.7,237.39
+"PR00590","Heavy-Duty Console","Eco-friendly",6.61,610.01
+"PR00591","SD Smart Glasses","Durable",1.27,614.5
+"PR00592","High-Resolution eReader","Energy efficient",16.11,91.55
+"PR00593","Touch Power Bank","Ergonomic",4.54,893.34
+"PR00594","HD Fitness Tracker","Sleek and modern",7.86,87.82
+"PR00595","Touch Mouse","Versatile use",3.51,600.81
+"PR00596","High-Performance Earbuds","Eco-friendly",3.11,689.84
+"PR00597","Ultra Smart Glasses","Eco-friendly",2.28,964.07
+"PR00598","Eco Action Cam","Energy efficient",2.23,746.63
+"PR00599","Lite eReader","Durable",11.05,466.82
+"PR00600","Pro Earbuds","High quality",19.61,85.15
+"PR00601","Slim Console","Durable",14.25,229.72
+"PR00602","Dual-Screen Desk Lamp","Durable",8.13,592.01
+"PR00603","Mini Gaming Chair","High quality",3.59,628.99
+"PR00604","Rugged Mouse","Eco-friendly",0.91,872.49
+"PR00605","Foldable Smart Speaker","Innovative technology",6.66,289.44
+"PR00606","High-Performance Smart Speaker","Sleek and modern",7.4,133.5
+"PR00607","Compact Smart Glasses","Ergonomic",13.11,34.14
+"PR00608","Lite Nintendo","Ergonomic",13.1,623.4
+"PR00609","Solar Smart Glasses","Durable",12.5,979.09
+"PR00610","Smart VR Headset","Versatile use",4.46,775.02
+"PR00611","Wireless Headphones","Compact design",6.05,739.22
+"PR00612","Sleek Desk Lamp","User-friendly",11.7,336.25
+"PR00613","Ergonomic Smart Glasses","Versatile use",12.78,909.2
+"PR00614","Gaming External Hard Drive","Compact design",11.53,962.11
+"PR00615","Foldable Camera","Innovative technology",1.45,637.53
+"PR00616","Rugged Gaming Chair","Versatile use",14.75,590.68
+"PR00617","Heavy-Duty Smartwatch","Energy efficient",1.21,745.1
+"PR00618","Magnetic Monitor","Compact design",15.24,502.05
+"PR00619","Magnetic Headphones","High quality",11.37,589.43
+"PR00620","Ergonomic Mouse","Sleek and modern",7.4,961.48
+"PR00621","Heavy-Duty External Hard Drive","Eco-friendly",13.19,231.2
+"PR00622","Smart Gaming Chair","Sleek and modern",7.52,794.45
+"PR00623","Eco Mouse","Versatile use",19.63,795.44
+"PR00624","Multi-Function Nintendo","Energy efficient",0.76,65.37
+"PR00625","Premium eReader","Sleek and modern",3.41,483.03
+"PR00626","Noise-Cancelling Smartphone","User-friendly",9.93,148.01
+"PR00627","Budget Monitor","Durable",18.13,791.66
+"PR00628","Pro eReader","User-friendly",10.9,340.96
+"PR00629","Retro Earbuds","Innovative technology",0.81,714.65
+"PR00630","Lite Fitness Tracker","Durable",7.62,863.42
+"PR00631","Eco Keyboard","Versatile use",5.96,828.32
+"PR00632","HD Tablet","High quality",7.12,386.61
+"PR00633","High-Performance Smartwatch","Compact design",10.55,679.32
+"PR00634","High-Speed eReader","Ergonomic",16.72,665.24
+"PR00635","Noise-Cancelling Earbuds","Ergonomic",2.58,469.83
+"PR00636","Sleek Tablet","Innovative technology",5.17,477.69
+"PR00637","Vintage Mouse","Eco-friendly",9.64,406.69
+"PR00638","Retro Drone","Innovative technology",1.86,142.55
+"PR00639","Slim Mouse","Compact design",14.23,459.41
+"PR00640","Retro Nintendo","Durable",19.87,104.39
+"PR00641","High-Performance Fitness Tracker","Durable",3.45,918.95
+"PR00642","Ultra Recorder","Durable",9.08,906.53
+"PR00643","Foldable VR Headset","Innovative technology",8.53,243.05
+"PR00644","Smart Console","Eco-friendly",3.07,186.3
+"PR00645","Ultra-Light Monitor","Compact design",19.14,578.3
+"PR00646","Magnetic Keyboard","Versatile use",10.62,190.54
+"PR00647","Budget Desk Lamp","Versatile use",5.01,738.75
+"PR00648","Ultra Recorder","Innovative technology",8.55,516.78
+"PR00649","Retro Smartphone","Innovative technology",17.49,733.77
+"PR00650","Lite Drone","Sleek and modern",16.53,276.19
+"PR00651","Smart Monitor","Sleek and modern",7.7,393.49
+"PR00652","Pro Headphones","Ergonomic",14.53,324.24
+"PR00653","Compact Smart Speaker","Innovative technology",7.92,126.56
+"PR00654","Waterproof Router","Sleek and modern",3.83,488.91
+"PR00655","Premium Action Cam","High quality",6.38,967.76
+"PR00656","Smart Console","Eco-friendly",6.28,482.13
+"PR00657","Gaming Gaming Chair","Sleek and modern",15.52,795.44
+"PR00658","Portable External Hard Drive","Compact design",3.98,871.23
+"PR00659","HD eReader","Eco-friendly",5.72,382.66
+"PR00660","HD Action Cam","Versatile use",1.65,373.44
+"PR00661","Solar Mouse","Versatile use",9.98,738.69
+"PR00662","AI-Powered Desk Lamp","User-friendly",9.94,749.85
+"PR00663","Pro Action Cam","High quality",3.3,476.87
+"PR00664","Dual-Screen Tablet","Ergonomic",2.32,160.27
+"PR00665","Ultra-Light Router","High quality",11.76,313.43
+"PR00666","Waterproof Action Cam","User-friendly",10.69,321.59
+"PR00667","AI-Powered Gaming Chair","Energy efficient",5.42,170.56
+"PR00668","Touch Desk Lamp","User-friendly",13.9,397.99
+"PR00669","Rugged Recorder","Energy efficient",4.74,819.78
+"PR00670","Gaming External Hard Drive","Innovative technology",12.7,863.29
+"PR00671","Sleek Earbuds","Versatile use",17.6,297.7
+"PR00672","Eco Action Cam","User-friendly",14.37,479.36
+"PR00673","Lite Smartwatch","Sleek and modern",7.2,358.14
+"PR00674","Advanced Headphones","Ergonomic",11.33,336.05
+"PR00675","Rugged Drone","Compact design",12.77,905.25
+"PR00676","Compact Smart Speaker","Eco-friendly",3.98,662.89
+"PR00677","AI-Powered Tablet","Compact design",11.42,868.62
+"PR00678","Foldable Mouse","High quality",13.53,44.45
+"PR00679","High-Resolution Keyboard","Eco-friendly",10.53,475.52
+"PR00680","Gaming Printer","Versatile use",13.89,24.37
+"PR00681","Retro Earbuds","User-friendly",11.16,316.59
+"PR00682","Lite eReader","Ergonomic",1.45,651.09
+"PR00683","Solar Laptop","Durable",2.01,492.24
+"PR00684","Waterproof Router","Ergonomic",3.35,646.42
+"PR00685","Sleek Smartwatch","User-friendly",14.65,658
+"PR00686","Eco Laptop","High quality",3.18,40.43
+"PR00687","SD Smartwatch","Ergonomic",1.79,379.68
+"PR00688","High-Speed Recorder","Sleek and modern",13.75,563.6
+"PR00689","Sleek Headphones","Durable",15.24,733.22
+"PR00690","Portable Headphones","Ergonomic",1.62,321.87
+"PR00691","HD Drone","Eco-friendly",1.96,331.17
+"PR00692","High-Performance Laptop","Durable",8.35,787.05
+"PR00693","Advanced Action Cam","Durable",1.39,433.74
+"PR00694","Gaming Headphones","Ergonomic",12.92,30.35
+"PR00695","Heavy-Duty Mouse","High quality",4.25,762.72
+"PR00696","Retro Keyboard","Energy efficient",16.27,528.54
+"PR00697","Budget eReader","High quality",9.06,707.59
+"PR00698","Noise-Cancelling Smartphone","Innovative technology",6.3,567.68
+"PR00699","SE Nintendo","Ergonomic",9.04,556.98
+"PR00700","Premium Monitor","Durable",7.56,598.19
+"PR00701","High-Resolution VR Headset","High quality",5.19,968.16
+"PR00702","Slim Fitness Tracker","Innovative technology",6.8,78.71
+"PR00703","Eco Power Bank","Compact design",16.52,802.22
+"PR00704","Ergonomic eReader","Durable",11.05,894
+"PR00705","Sleek Smart Speaker","Versatile use",10.89,939.04
+"PR00706","Ultra-Light Gaming Chair","User-friendly",1.99,674.54
+"PR00707","Rugged Smartwatch","Versatile use",17.5,721.63
+"PR00708","Advanced Fitness Tracker","Innovative technology",16.87,956.1
+"PR00709","Sleek Smart Glasses","Energy efficient",9.8,868.16
+"PR00710","HD Smart Glasses","Compact design",16.31,297.94
+"PR00711","Ultra Tablet","Versatile use",16.41,882.66
+"PR00712","Multi-Function Mouse","Compact design",18.57,41.03
+"PR00713","Magnetic Earbuds","Innovative technology",10.63,521.68
+"PR00714","AI-Powered Router","Eco-friendly",11.71,446.59
+"PR00715","Premium Desk Lamp","Eco-friendly",18.35,133.68
+"PR00716","Ultra-Light External Hard Drive","Energy efficient",17.59,932.21
+"PR00717","Rugged Keyboard","Innovative technology",7.57,579.61
+"PR00718","Lite Drone","Energy efficient",4.75,574.97
+"PR00719","Ultra Console","Versatile use",3.23,564.91
+"PR00720","Lite Smartphone","High quality",2.12,694.07
+"PR00721","SD Smart Glasses","Durable",9.01,451.73
+"PR00722","Heavy-Duty Desk Lamp","Versatile use",17.78,711.99
+"PR00723","Smart Keyboard","Energy efficient",8.47,845.67
+"PR00724","Solar Fitness Tracker","Versatile use",19.9,469.02
+"PR00725","Noise-Cancelling Printer","High quality",0.85,988.91
+"PR00726","Lite Mouse","Eco-friendly",4.54,908.11
+"PR00727","High-Resolution Smart Speaker","High quality",10.75,155.79
+"PR00728","Ultra-Light Mouse","Compact design",16.76,87.18
+"PR00729","SD Smart Glasses","Sleek and modern",18.47,603.95
+"PR00730","High-Performance Smartphone","Durable",6.91,543.18
+"PR00731","Solar Smartphone","Innovative technology",7.4,745.09
+"PR00732","Heavy-Duty Router","Innovative technology",13.78,742.27
+"PR00733","Sleek Monitor","Energy efficient",19.21,118.16
+"PR00734","Eco Smartwatch","Eco-friendly",7.28,264.43
+"PR00735","Magnetic Power Bank","Durable",15.14,488.54
+"PR00736","Retro Desk Lamp","High quality",12.81,878.26
+"PR00737","Ergonomic Smart Glasses","Sleek and modern",18.47,275.64
+"PR00738","Pro Router","Versatile use",14.77,426.06
+"PR00739","Waterproof Gaming Chair","Sleek and modern",9.61,800.55
+"PR00740","High-Resolution Monitor","High quality",18.71,653.84
+"PR00741","High-Speed Smartphone","Durable",17.49,134.9
+"PR00742","High-Speed Console","User-friendly",15.42,412.24
+"PR00743","Touch Earbuds","Versatile use",5.05,167.13
+"PR00744","Ultra Headphones","User-friendly",9.8,315.88
+"PR00745","Touch Monitor","User-friendly",16.99,704.69
+"PR00746","Smart Printer","Innovative technology",13.04,706.86
+"PR00747","Gaming Drone","High quality",7.37,735.45
+"PR00748","Portable External Hard Drive","Eco-friendly",3.99,67.97
+"PR00749","SE Keyboard","Sleek and modern",8.66,533.88
+"PR00750","Multi-Function Smart Speaker","High quality",16.5,869.04
+"PR00751","Ultra-Light Smart Glasses","Sleek and modern",2.18,97.44
+"PR00752","Budget Desk Lamp","Durable",19.33,15.09
+"PR00753","Solar Laptop","Durable",9.53,344.67
+"PR00754","SD Monitor","User-friendly",15.9,685.55
+"PR00755","Slim Smartphone","Compact design",8.85,244.51
+"PR00756","Pro Nintendo","Durable",11.75,550.99
+"PR00757","Dual-Screen Printer","Innovative technology",14.44,865.52
+"PR00758","Ultra Smart Speaker","User-friendly",13.83,800.97
+"PR00759","Touch Headphones","User-friendly",13.1,655.44
+"PR00760","Waterproof Earbuds","Sleek and modern",6.04,439.32
+"PR00761","High-Performance Camera","High quality",18.78,928.95
+"PR00762","Ultra Monitor","Durable",15.07,24.8
+"PR00763","SE Power Bank","Sleek and modern",18.69,608.63
+"PR00764","Lite eReader","Versatile use",4.9,994.34
+"PR00765","Mini Earbuds","High quality",1.46,524.5
+"PR00766","Dual-Screen Smart Speaker","Durable",2.24,521.97
+"PR00767","Foldable Smartwatch","Durable",3.07,480.53
+"PR00768","AI-Powered Monitor","Durable",2.61,775.14
+"PR00769","Ergonomic Recorder","Ergonomic",3.21,261.92
+"PR00770","HD VR Headset","High quality",9.04,288.45
+"PR00771","Gaming Headphones","Compact design",19.03,32.7
+"PR00772","Vintage Keyboard","Eco-friendly",15.39,784.98
+"PR00773","Gaming Printer","Ergonomic",4.52,296.32
+"PR00774","SE Smartwatch","Durable",8.11,216.84
+"PR00775","Dual-Screen Console","Eco-friendly",14.12,484.68
+"PR00776","Smart Fitness Tracker","Eco-friendly",14.74,613.88
+"PR00777","Foldable Monitor","Eco-friendly",1.08,197.7
+"PR00778","Lite Nintendo","Durable",1.51,898.32
+"PR00779","HD Desk Lamp","User-friendly",18.68,817.21
+"PR00780","Gaming VR Headset","Energy efficient",2.18,678.47
+"PR00781","SE Smart Speaker","Energy efficient",11.93,586.21
+"PR00782","High-Speed Monitor","Durable",7.91,224.78
+"PR00783","Ultra Camera","Sleek and modern",4.61,15.12
+"PR00784","High-Resolution eReader","Durable",6.23,24.62
+"PR00785","Multi-Function Gaming Chair","Ergonomic",4.15,300.61
+"PR00786","Ultra Printer","User-friendly",6.5,840.99
+"PR00787","Lite Fitness Tracker","Compact design",17.34,214.21
+"PR00788","Rugged Nintendo","Innovative technology",11.86,515.73
+"PR00789","High-Performance Keyboard","High quality",14.37,114.68
+"PR00790","Lite eReader","Energy efficient",13.79,274.57
+"PR00791","Ultra-Light Tablet","Compact design",2.96,74.03
+"PR00792","Ultra Drone","Durable",7.81,650.25
+"PR00793","Waterproof Smart Glasses","Ergonomic",14.78,645.67
+"PR00794","SD Power Bank","Sleek and modern",12.61,459.84
+"PR00795","Premium Keyboard","High quality",17.57,92.95
+"PR00796","Rugged VR Headset","User-friendly",19.76,726.43
+"PR00797","Rugged Printer","Durable",9.79,219.9
+"PR00798","Gaming Router","Eco-friendly",6.72,665.45
+"PR00799","Sleek Router","Energy efficient",9.52,238.52
+"PR00800","Sleek Nintendo","User-friendly",4.27,742.98
+"PR00801","Vintage Keyboard","Eco-friendly",1.12,438.22
+"PR00802","Premium Nintendo","Compact design",10.83,648.95
+"PR00803","Portable Smart Speaker","Innovative technology",5.19,138.19
+"PR00804","Mini Keyboard","Ergonomic",11.06,870.9
+"PR00805","Portable Smartwatch","Energy efficient",14,927.25
+"PR00806","Gaming Camera","User-friendly",9.73,399.91
+"PR00807","Multi-Function Laptop","Compact design",12.26,236.55
+"PR00808","SE Power Bank","Versatile use",6.15,769.1
+"PR00809","Gaming Camera","Innovative technology",15,657.11
+"PR00810","Compact Keyboard","User-friendly",7.32,869.66
+"PR00811","Advanced Desk Lamp","High quality",4.74,446.26
+"PR00812","Smart Console","High quality",6.14,443.82
+"PR00813","Retro Console","Sleek and modern",11.09,118.61
+"PR00814","Ergonomic Action Cam","Eco-friendly",14.22,718.39
+"PR00815","Ultra-Light Console","User-friendly",12.12,21.86
+"PR00816","Rugged Keyboard","Energy efficient",19.49,651.08
+"PR00817","Ultra-Light Recorder","High quality",18.04,217.55
+"PR00818","Retro Camera","Ergonomic",16.39,391.77
+"PR00819","Magnetic Router","Versatile use",16.94,554.11
+"PR00820","High-Resolution Smartwatch","Sleek and modern",6.9,213.28
+"PR00821","Noise-Cancelling Mouse","Eco-friendly",16.26,750.79
+"PR00822","Multi-Function Smartphone","Ergonomic",4.67,128.42
+"PR00823","High-Speed Console","Versatile use",15.87,598.19
+"PR00824","Dual-Screen Fitness Tracker","Compact design",11.22,97.33
+"PR00825","SD Earbuds","User-friendly",5.24,145.79
+"PR00826","Ergonomic Earbuds","User-friendly",7.12,594.1
+"PR00827","Vintage Monitor","Versatile use",1.36,708.5
+"PR00828","High-Speed Drone","Energy efficient",8.87,86.9
+"PR00829","Multi-Function Keyboard","Ergonomic",8.38,515.63
+"PR00830","Foldable Desk Lamp","Innovative technology",17.63,432.62
+"PR00831","HD Laptop","Compact design",13.93,314.99
+"PR00832","Ergonomic Smartphone","High quality",6.41,560.7
+"PR00833","Vintage Headphones","User-friendly",2.79,26.22
+"PR00834","HD Smartwatch","Innovative technology",14.93,535.93
+"PR00835","High-Speed Action Cam","Durable",1.38,274.17
+"PR00836","Ultra-Light Gaming Chair","User-friendly",16.74,188.81
+"PR00837","Waterproof External Hard Drive","Ergonomic",8.73,621.83
+"PR00838","Gaming Nintendo","Versatile use",16.96,206.52
+"PR00839","SE Recorder","Eco-friendly",11.5,861.01
+"PR00840","Mini Router","Innovative technology",2.72,42.23
+"PR00841","Ergonomic Drone","High quality",4.97,443.98
+"PR00842","Sleek Drone","Durable",7.87,681.66
+"PR00843","Ultra Fitness Tracker","Sleek and modern",3.27,209.07
+"PR00844","Ergonomic Console","Energy efficient",17.31,321.47
+"PR00845","Slim Drone","Versatile use",14.62,393.16
+"PR00846","Foldable eReader","Durable",3.65,269.96
+"PR00847","Magnetic Keyboard","Versatile use",7.17,302.35
+"PR00848","Lite Smart Glasses","Innovative technology",1.11,450.68
+"PR00849","HD Power Bank","Versatile use",12.01,694.29
+"PR00850","Premium Smartphone","Durable",0.96,174.98
+"PR00851","HD Printer","User-friendly",11.55,808.52
+"PR00852","HD Printer","High quality",7.68,315.67
+"PR00853","Eco Console","Innovative technology",5.26,725.35
+"PR00854","Touch Earbuds","Durable",10.55,686.69
+"PR00855","Multi-Function Keyboard","Ergonomic",5.99,47.55
+"PR00856","Pro VR Headset","User-friendly",17.61,913.35
+"PR00857","Ultra Keyboard","Eco-friendly",12.24,715.26
+"PR00858","Budget Headphones","Innovative technology",4.63,153.57
+"PR00859","Vintage Fitness Tracker","Innovative technology",10.64,322.46
+"PR00860","Mini Smart Speaker","Sleek and modern",4.72,667.28
+"PR00861","Touch Fitness Tracker","Ergonomic",2.89,129.66
+"PR00862","SE Headphones","Energy efficient",19.65,983.62
+"PR00863","SD Laptop","Compact design",6.51,753.83
+"PR00864","Advanced Camera","Eco-friendly",4.44,802.11
+"PR00865","Heavy-Duty Power Bank","Durable",12.09,277.69
+"PR00866","Premium Drone","Compact design",9.85,987.69
+"PR00867","Slim Earbuds","Compact design",2.19,930.45
+"PR00868","Advanced Router","Energy efficient",11.15,469.58
+"PR00869","Pro Printer","Innovative technology",19.98,71.04
+"PR00870","Slim Smartphone","Durable",8.94,386.74
+"PR00871","HD Mouse","Versatile use",10.81,449.38
+"PR00872","Retro Laptop","Durable",1.18,629.76
+"PR00873","Advanced Desk Lamp","Sleek and modern",19.93,315.2
+"PR00874","Magnetic Desk Lamp","Durable",3.42,750.7
+"PR00875","Ultra-Light Recorder","High quality",7.6,596.56
+"PR00876","Premium Desk Lamp","Eco-friendly",16.59,936.46
+"PR00877","Slim Drone","User-friendly",5.63,70.64
+"PR00878","Budget External Hard Drive","Eco-friendly",2.53,609.3
+"PR00879","Ultra-Light Earbuds","Versatile use",2.77,574.91
+"PR00880","Gaming Power Bank","High quality",7.17,501.68
+"PR00881","Solar Headphones","Versatile use",16.64,185.71
+"PR00882","Noise-Cancelling Camera","Ergonomic",19.71,678.73
+"PR00883","AI-Powered VR Headset","Durable",19.88,441.69
+"PR00884","Eco Desk Lamp","Innovative technology",14.32,971.1
+"PR00885","Mini Printer","Eco-friendly",10.27,969.79
+"PR00886","Retro eReader","User-friendly",8.56,278.42
+"PR00887","AI-Powered Laptop","Energy efficient",8.01,619.22
+"PR00888","Vintage Smart Glasses","Compact design",5.29,370.44
+"PR00889","Lite VR Headset","User-friendly",9.97,831.19
+"PR00890","Compact eReader","Eco-friendly",6.58,667.45
+"PR00891","Slim Keyboard","User-friendly",17.06,145.76
+"PR00892","HD Smart Speaker","User-friendly",11.05,529.38
+"PR00893","Ultra Smartwatch","User-friendly",15.94,796.72
+"PR00894","Rugged Drone","Ergonomic",14.37,894.11
+"PR00895","Gaming VR Headset","Innovative technology",16.48,919.28
+"PR00896","Budget Smart Speaker","Compact design",5.41,179.51
+"PR00897","Pro Earbuds","Versatile use",4.68,159.62
+"PR00898","Compact Laptop","Sleek and modern",10.36,614.84
+"PR00899","Magnetic Keyboard","High quality",2.72,342.64
+"PR00900","Budget Drone","Durable",12.22,484.18
+"PR00901","SD Router","Durable",1.32,151.7
+"PR00902","Magnetic Smart Glasses","Durable",2.21,871.73
+"PR00903","Sleek VR Headset","Eco-friendly",15.87,107.11
+"PR00904","Dual-Screen Drone","User-friendly",16.31,261.97
+"PR00905","Premium Drone","Versatile use",3.06,406.09
+"PR00906","Budget Fitness Tracker","Eco-friendly",5.91,857.01
+"PR00907","Waterproof VR Headset","Eco-friendly",11.67,810.94
+"PR00908","Touch Tablet","Innovative technology",1.65,341.06
+"PR00909","Smart Fitness Tracker","Energy efficient",14.73,241.34
+"PR00910","Mini Fitness Tracker","Energy efficient",16.33,738.67
+"PR00911","Dual-Screen eReader","Versatile use",17.86,624.4
+"PR00912","Ultra-Light Smartwatch","High quality",19.63,626.84
+"PR00913","Noise-Cancelling Headphones","Compact design",11.77,343.39
+"PR00914","AI-Powered Printer","Compact design",15.38,526.53
+"PR00915","Retro Gaming Chair","Durable",1.94,203.87
+"PR00916","High-Speed Earbuds","Versatile use",19.88,857.21
+"PR00917","Eco Camera","Ergonomic",12.67,101.67
+"PR00918","Touch Desk Lamp","Compact design",14.32,789.96
+"PR00919","Magnetic Headphones","Durable",19.27,740.61
+"PR00920","AI-Powered Fitness Tracker","Compact design",4.11,687.21
+"PR00921","Ergonomic Monitor","Compact design",16.48,703.15
+"PR00922","Mini VR Headset","Energy efficient",15.26,889.59
+"PR00923","Dual-Screen Gaming Chair","User-friendly",19.07,289.08
+"PR00924","Mini Recorder","Innovative technology",6.76,51.03
+"PR00925","Heavy-Duty Recorder","Ergonomic",3.68,677.65
+"PR00926","Pro Mouse","Energy efficient",13.27,539.86
+"PR00927","Smart Camera","Versatile use",19,293.3
+"PR00928","Gaming Mouse","High quality",17.68,603.53
+"PR00929","Advanced Power Bank","Eco-friendly",7.25,246.05
+"PR00930","Advanced Smartwatch","Ergonomic",14.4,267.21
+"PR00931","Premium Tablet","User-friendly",2.21,350.92
+"PR00932","Dual-Screen Mouse","Compact design",12.05,171.45
+"PR00933","Foldable Gaming Chair","Eco-friendly",13.92,346.7
+"PR00934","Ultra Desk Lamp","Ergonomic",3.9,610.65
+"PR00935","HD Mouse","Ergonomic",15.26,343.3
+"PR00936","Smart Smart Glasses","High quality",3.5,260.34
+"PR00937","Portable Mouse","Durable",12.82,979
+"PR00938","SE Mouse","Durable",19.22,355.66
+"PR00939","Foldable Smart Glasses","Versatile use",0.71,627.44
+"PR00940","Slim Router","Energy efficient",17.76,488.5
+"PR00941","Multi-Function Desk Lamp","Energy efficient",4.92,63.34
+"PR00942","Dual-Screen Fitness Tracker","Eco-friendly",15.44,852
+"PR00943","Ultra Laptop","Eco-friendly",16.81,280.81
+"PR00944","High-Performance Mouse","User-friendly",18.14,858.19
+"PR00945","Budget eReader","Innovative technology",4.06,635.73
+"PR00946","Mini Smart Glasses","User-friendly",17.19,564.84
+"PR00947","High-Performance Earbuds","Sleek and modern",12.87,183.78
+"PR00948","Compact Recorder","Energy efficient",8.77,947.4
+"PR00949","Ergonomic Router","Eco-friendly",0.54,204.85
+"PR00950","Eco Smart Speaker","High quality",4.8,130.33
+"PR00951","Slim Smartphone","High quality",1.61,759.44
+"PR00952","High-Resolution eReader","Eco-friendly",3.72,496.17
+"PR00953","Ergonomic Mouse","Ergonomic",3.71,965.56
+"PR00954","Wireless Keyboard","User-friendly",14.43,56.58
+"PR00955","Vintage Drone","Innovative technology",1.66,176.21
+"PR00956","Eco Headphones","Durable",17.92,460.87
+"PR00957","Sleek Keyboard","Ergonomic",9.06,521.11
+"PR00958","Portable Fitness Tracker","Versatile use",5.86,417.23
+"PR00959","Ultra-Light Desk Lamp","Versatile use",10.56,795.4
+"PR00960","Gaming Smart Glasses","High quality",12.98,61.41
+"PR00961","AI-Powered Headphones","User-friendly",13.15,661.12
+"PR00962","Retro External Hard Drive","Compact design",6.88,566.04
+"PR00963","Ultra Nintendo","Compact design",14.58,249.49
+"PR00964","Touch Tablet","Durable",16.24,476.91
+"PR00965","Wireless Fitness Tracker","Energy efficient",7.79,629.11
+"PR00966","Ultra Nintendo","Compact design",3.83,366.2
+"PR00967","Budget Nintendo","Durable",1.23,248.52
+"PR00968","Mini Drone","Ergonomic",11.2,991.06
+"PR00969","Ergonomic Smartphone","Versatile use",13.74,642.14
+"PR00970","Foldable Printer","Compact design",7.99,734.7
+"PR00971","Eco Monitor","High quality",13.14,924.44
+"PR00972","HD Keyboard","Sleek and modern",19.04,697.97
+"PR00973","Budget Drone","User-friendly",5.32,529.93
+"PR00974","Retro Action Cam","Versatile use",14.21,324.26
+"PR00975","Advanced Gaming Chair","Versatile use",9.44,250.48
+"PR00976","Portable Tablet","Versatile use",10.08,113.67
+"PR00977","Compact Earbuds","Sleek and modern",18.15,477.02
+"PR00978","Compact Smart Speaker","High quality",2.13,458.91
+"PR00979","Rugged Tablet","Energy efficient",0.84,283.81
+"PR00980","Smart Smart Speaker","Eco-friendly",2.86,37.04
+"PR00981","Eco eReader","Eco-friendly",18.42,612.68
+"PR00982","Magnetic Fitness Tracker","Eco-friendly",19.97,731.32
+"PR00983","Noise-Cancelling Earbuds","Durable",1.82,247.18
+"PR00984","High-Resolution Action Cam","Durable",7.23,674.09
+"PR00985","Waterproof Console","Innovative technology",2.48,503.08
+"PR00986","High-Performance Mouse","Sleek and modern",4.57,354.12
+"PR00987","Sleek Printer","Innovative technology",16.36,88.91
+"PR00988","High-Speed Smart Speaker","Ergonomic",9.62,429.97
+"PR00989","Heavy-Duty Laptop","User-friendly",11.69,470.03
+"PR00990","Ultra eReader","Compact design",12.26,837.46
+"PR00991","SD Drone","Energy efficient",8.25,68.09
+"PR00992","Premium Mouse","Eco-friendly",16.46,438.18
+"PR00993","Compact Camera","Durable",9.6,404.75
+"PR00994","Foldable Smartwatch","User-friendly",18.39,424.1
+"PR00995","Premium Mouse","User-friendly",17.07,747.34
+"PR00996","Solar Nintendo","Ergonomic",14.23,905.26
+"PR00997","Ultra-Light Gaming Chair","Ergonomic",12.41,946.1
+"PR00998","Slim Drone","Eco-friendly",6.85,168.88
+"PR00999","SD External Hard Drive","High quality",6.72,811.38
+"PR01000","Pro Smart Speaker","Ergonomic",12.96,455.72
