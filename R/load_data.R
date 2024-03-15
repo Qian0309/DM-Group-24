@@ -75,7 +75,7 @@ for (variable in all_files) {
 library(RSQLite)
 
 #setup the connection
-connection <- RSQLite::dbConnect(RSQLite::SQLite(),"../database/ecommerce.db")
+connection <- RSQLite::dbConnect(RSQLite::SQLite(),"./database/ecommerce.db")
 
 
 #Creating table promotion
