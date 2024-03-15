@@ -115,7 +115,10 @@ write.csv(Shipper, file_path, row.names = FALSE)
 #Dimension
 ```{r}
 Dimension <- read.csv("Dimension.csv")
+```
 
+
+```{r}
 Dimension$Dimension_ID <- sprintf("DM%05d", 1:n)
 file_path <- "/cloud/project/Assignment/data/dimension.csv"
 write.csv(Dimension, file_path, row.names = FALSE)
@@ -214,15 +217,5 @@ Append all foreign keys for the product data.
 promo_indices <- sample(nrow(promo_data), 100)
 promo_data <- promo_data[promo_indices, ]
 
-promotion_id <- promo_data[sample(1:nrow(promo_data),1000, replace= TRUE),1]
 
-new_promotion <- promo_data[sample(1:nrow(promo_data),100)]
-
-product_data <- cbind(product_data, promotion_id)
-
-# add dimension_id to product data
-dimension_id <- dimension_data$Dimension_ID
-product_data <- cbind(product_data, dimension_data$Dimension_ID)
-
-```
 
