@@ -57,8 +57,7 @@ for (variable in all_files) {
               number_of_columns," columns"))
 }
 
-# Check if the first column of each file is a primary 
-```{r checkprimary,message=FALSE,warning=FALSE,attr.source='.numberLines'}
+# Check if the first column of each file is a primary
 
 for (variable in all_files) {
   this_filepath <- paste0("data/",variable)
@@ -70,19 +69,15 @@ for (variable in all_files) {
   print(paste0(" is ",nrow(unique(this_file_contents[,1]))==number_of_rows))
 }
 
-```
 
 # Creating Database
-```{r loadsqlite,warning=FALSE,error=FALSE,message=FALSE,attr.source='.numberLines'}
 # Load the library
 library(RSQLite)
 
 #setup the connection
 connection <- RSQLite::dbConnect(RSQLite::SQLite(),"ecommerce.db")
-```
 
 
-```{r}
 #Creating table promotion
 dbExecute(connection, 
 "CREATE TABLE promotion (
@@ -92,10 +87,8 @@ dbExecute(connection,
   'end_date' DATE,
   'status' VARCHAR(50)
 ) ; " )
-```
 
 
-```{r}
 #Creating table shipper
 dbExecute(connection, 
 "CREATE TABLE shipper (
@@ -105,10 +98,8 @@ dbExecute(connection,
   'fixed_price' DOUBLE,
   'cost_per_mile' DOUBLE
 ) ; " )
-```
 
 
-```{r}
 #Creating table address
 dbExecute(connection, 
 "CREATE TABLE address (
@@ -120,9 +111,8 @@ dbExecute(connection,
   'county' VARCHAR(20),
   'post_code' VARCHAR(10)
 ) ; " )
-```
 
-```{r}
+
 #creating table dimension
 dbExecute(connection, 
 "CREATE TABLE dimension (
@@ -131,10 +121,6 @@ dbExecute(connection,
   'width' DOUBLE,
   'height' DOUBLE
 ) ; " )
-```
-
-
-```{r}
 
 #creating table buyer
 dbExecute(connection, 
@@ -146,11 +132,7 @@ dbExecute(connection,
   'address_id' VARCHAR(50) NOT NULL,
   FOREIGN KEY('address_id') REFERENCES address('address_id')
 ) ; " )
-```
 
-
-
-```{r}
 
 #creating table supplier
 dbExecute(connection, 
@@ -163,11 +145,8 @@ dbExecute(connection,
   'address_id' VARCHAR(50) NOT NULL,
   FOREIGN KEY('address_id') REFERENCES address('address_id')
 ) ; " )
-```
 
 
-
-```{r}
 
 #creating table product
 dbExecute(connection, 
@@ -184,11 +163,7 @@ dbExecute(connection,
   FOREIGN KEY('supplier_id') REFERENCES supplier('supplier_id'),
   FOREIGN KEY('dimension_id') REFERENCES dimension('dimension_id')
 ) ; " )
-```
 
-
-
-```{r}
 
 #creating table review
 dbExecute(connection, 
@@ -202,11 +177,7 @@ dbExecute(connection,
   FOREIGN KEY('product_id') REFERENCES product('product_id')
 
 ) ; " )
-```
 
-
-
-```{r}
 
 #creating table order_details
 dbExecute(connection, 
@@ -222,11 +193,7 @@ dbExecute(connection,
   FOREIGN KEY('shipper_id') REFERENCES shipper('shipper_id'),
   FOREIGN KEY('supplier_id') REFERENCES supplier('supplier_id')
 ) ; " )
-```
 
-
-
-```{r}
 
 #creating table transaction
 dbExecute(connection, 
@@ -238,11 +205,7 @@ dbExecute(connection,
   'order_id' VARCHAR(50) NOT NULL,
   FOREIGN KEY('order_id') REFERENCES order_details('order_id')
 ) ; " )
-```
 
-
-
-```{r}
 # Write to existing table - buyer
 RSQLite::dbWriteTable(connection,"promotion",promotion_data,append=TRUE,rowname=FALSE)
 RSQLite::dbWriteTable(connection,"shipper",shipper_data,append=TRUE,rowname=FALSE)
@@ -254,69 +217,3 @@ RSQLite::dbWriteTable(connection,"product",product_data,append=TRUE,rowname=FALS
 RSQLite::dbWriteTable(connection,"review",review_data,append=TRUE,rowname=FALSE)
 RSQLite::dbWriteTable(connection,"order_details",order_details_data,append=TRUE,rowname=FALSE)
 RSQLite::dbWriteTable(connection,"payment",payment_data,append=TRUE,rowname=FALSE)
-
-```
-
-```{r listtables}
-# Get a list of tables from the database that we already 
-# created
-RSQLite::dbListTables(connection)
-
-```
-
-
-```{sql connection=connection}
-SELECT * FROM promotion LIMIT 5
-```
-```{sql connection=connection}
-SELECT * FROM shipper LIMIT 5
-```
-```{sql connection=connection}
-SELECT * FROM address LIMIT 5
-```
-
-```{sql connection=connection}
-SELECT * FROM dimension LIMIT 5
-```
-
-```{sql connection=connection}
-SELECT * FROM buyer LIMIT 5
-```
-
-```{sql connection=connection}
-SELECT * FROM supplier LIMIT 5
-```
-
-```{sql connection=connection}
-SELECT * FROM product LIMIT 5
-```
-
-```{sql connection=connection}
-SELECT * FROM review LIMIT 5
-```
-
-```{sql connection=connection}
-SELECT * FROM order_details LIMIT 5
-```
-
-```{sql connection=connection}
-SELECT * FROM payment LIMIT 5
-```
-
-# Data Quality Assurance
-## Referential Integrity
-```{sql connection=connection}
-SELECT b.buyer_id, b.first_name, b.address_id, a.city, a.county
-FROM buyer b, address a
-WHERE a.address_id = b.address_id
-LIMIT 5
-```
-
-
-# Disconnect
-```{r disconnect}
-# Disconnect from the database using the connection variable that we setup 
-# before
-RSQLite::dbDisconnect(connection)
-
-```
