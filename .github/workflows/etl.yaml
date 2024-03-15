@@ -36,7 +36,7 @@ jobs:
           git add --all figures/
       - name: Commit files
         run: |
-          git commit -m "Add regression plot figure"
+          git commit -m "Add Analysis plot figure"
       - name: Push changes
         uses: ad-m/github-push-action@v0.6.0
         with:
