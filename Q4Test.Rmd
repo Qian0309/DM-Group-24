@@ -1,0 +1,80 @@
+---
+title: "Q4Test"
+output: html_document
+date: "2024-03-15"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+install.packages(c("DBI", "RSQLite", "dplyr","ggplot2"))
+
+library(DBI)
+library(RSQLite)
+library(dplyr)
+library(ggplot2)
+```
+
+```{r}
+db_conn <- dbConnect(RSQLite::SQLite(), "database/ecommerce.db")
+```
+
+```{r}
+top_5_products_sales <- dbGetQuery(db_conn, "SELECT
+    od.product_id,
+    p.product_name,
+    SUM(p.price) AS total_sales
+FROM
+    order_details od
+JOIN
+    product p ON od.product_id = p.product_id
+GROUP BY
+    od.product_id,
+    p.product_name
+ORDER BY
+    total_sales DESC
+LIMIT
+    5;
+")
+
+# Viewing the results
+print(top_5_products_sales)
+
+```
+
+```{r}
+ggplot(top_5_products_sales, aes(x = reorder(product_name, total_sales), y = total_sales, fill = product_name)) +
+  geom_col() + # geom_col is used for bar plots when you already have the data summarized
+  labs(title = "Top 5 Products by Sales", x = "Product Name", y = "Total Sales") +
+  theme_minimal() +
+  coord_flip() + # Flipping coordinates to make it easier to read long product names
+  scale_fill_discrete(name = "Product Name") + # Optional: To have a legend with product names
+  theme(legend.position = "none") # Optional: Remove the legend if you find it unnecessary
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+```{r}
+dbDisconnect(db_conn)
+```
+
+
+
+
+
+
