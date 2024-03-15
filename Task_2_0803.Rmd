@@ -3,6 +3,7 @@
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE,comment = NA)
 library(readr)
+library(dplyr)
 ```
 
 # File Prefix and Suffix
@@ -86,6 +87,49 @@ for (variable in all_files) {
 }
 
 ```
+
+# Data Quality Assurance
+## Referential Integrity Checks
+```{r}
+# PRODUCT ENTITY
+# Relationship between Product and Promotion : 1 Promotion applied on N Products
+setdiff(unique(product_data$promotion_id), unique(promotion_data$promotion_id))
+# Relationship between Product and Supplier : 1 Supplier sells N Products 
+setdiff(unique(product_data$supplier_id), unique(supplier_data$supplier_id))
+# Relationship between Product and Dimension : 1 Product has 1 Dimension
+setdiff(unique(product_data$dimension_id), unique(dimension_data$dimension_id))
+
+# BUYER ENTITY
+# Relationship between Buyer and Address : 1 Buyer has 1 Address
+setdiff(unique(buyer_data$address_id), unique(address_data$address_id))
+
+# SUPPLIER ENTITY
+# Relationship between Supplier and Address : 1 Supplier has 1 Address
+setdiff(unique(supplier_data$address_id), unique(address_data$address_id))
+
+# REVIEW ENTITY
+# Relationship between Product and Review : 1 Product has n Reviews
+setdiff(unique(product_data$review_id), unique(review_data$review_id))
+# Relationship between Buyer and Review : 1 Buyer gives n Reviews
+setdiff(unique(buyer_data$review_id), unique(review_data$review_id))
+
+# PAYMENT ENTITY
+# Relationship between Payment and Order : 1 Order has n Payments
+setdiff(unique(payment_data$order_id), unique(order_details_data$order_id))
+
+# ORDER DETAILS ENTITY
+# Relationship between Order and Buyer : 1 Buyer has n Orders
+setdiff(unique(order_details_data$buyer_id), unique(buyer_data$buyer_id))
+# Relationship between Order and Product : 1 Product present in n Orders
+setdiff(unique(order_details_data$product_id), unique(product_data$product_id))
+# Relationship between Order and Shipper : 1 Shipper satisfies n Orders
+setdiff(unique(order_details_data$shipper_id), unique(shipper_data$shipper_id))
+# Relationship between Order and Supplier : 1 Supplier has n Orders
+setdiff(unique(order_details_data$supplier_id), unique(supplier_data$supplier_id))
+
+```
+
+
 
 # Creating Database
 ```{r loadsqlite,warning=FALSE,error=FALSE,message=FALSE,attr.source='.numberLines'}
@@ -318,15 +362,9 @@ SELECT * FROM order_details LIMIT 5
 SELECT * FROM payment LIMIT 5
 ```
 
-# Data Quality Assurance
-## Referential Integrity
-```{sql connection=connection}
-SELECT b.buyer_id, b.first_name, b.address_id, a.city, a.county
-FROM buyer b, address a
-WHERE a.address_id = b.address_id
-LIMIT 5
-```
 
+
+## 
 
 # Disconnect
 ```{r disconnect}
