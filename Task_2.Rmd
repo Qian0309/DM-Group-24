@@ -18,25 +18,25 @@ project_files
 ```
 
 ```{r block2,attr.source='.numberLines'}
-suffix <- "_Data.csv"
+suffix <- ".csv"
 project_files <- gsub(suffix,"",project_files)
 project_files
 
 ```
 
-```{r products}
-# Products
-products <- read_csv("data/Product_Data.csv")
+```{r address}
+# Address
+address_data <- read_csv("data/Address.csv")
 ```
 
-```{r promotions}
-# Promotions
-promotions <- read_csv("data/Promotion_Data.csv")
+```{r buyer}
+# Buyer
+buyer_data <- read_csv("data/Buyer.csv")
 ```
 
 ```{r colnames}
-colnames(products)
-colnames(promotions)
+colnames(address_data)
+colnames(buyer_data)
 ```
 
 # Number of rows and columns in the dataset
@@ -59,7 +59,7 @@ for (variable in all_files) {
 }
 ```
 
-## Check if the first column of each file is a primary 
+# Check if the first column of each file is a primary 
 ```{r checkprimary,message=FALSE,warning=FALSE,attr.source='.numberLines'}
 
 for (variable in all_files) {
@@ -80,22 +80,60 @@ for (variable in all_files) {
 library(RSQLite)
 
 #setup the connection
-connection <- RSQLite::dbConnect(RSQLite::SQLite(),"emcommerce.db")
+connection <- RSQLite::dbConnect(RSQLite::SQLite(),"ecommerce.db")
 
-for (variable in all_files) {
-  this_filepath <- paste0("data/",variable)
-  this_file_contents <- readr::read_csv(this_filepath)
+#for (variable in all_files) {
+#  this_filepath <- paste0("data/",variable)
+#  this_file_contents <- readr::read_csv(this_filepath)
 
-  table_name <- gsub(".csv","",variable)
+#  table_name <- gsub(".csv","",variable)
   #Remove prefix and suffix 
-  table_name <- gsub("_Data","",table_name)
+#  table_name <- gsub("_Data","",table_name)
   # table_name <- variable
   
-  RSQLite::dbWriteTable(connection,table_name,this_file_contents,overwrite=TRUE)
+#  RSQLite::dbWriteTable(connection,table_name,this_file_contents,overwrite=TRUE)
   
-}
+#}
 ```
 
+
+```{r}
+dbExecute(connection, 
+"CREATE TABLE address (
+  Address_ID INT PRIMARY KEY, 
+  'House Number' INT,
+  'House Name' VARCHAR(50),
+  Street VARCHAR(50),
+  City VARCHAR(20) NOT NULL,
+  County VARCHAR(20),
+  Postcode VARCHAR(10)
+) ; " )
+```
+```{r}
+# Write to existing table - address
+RSQLite::dbWriteTable(connection,"address",address_data,append=TRUE,rowname=FALSE)
+```
+
+```{r}
+
+
+dbExecute(connection, 
+"CREATE TABLE 'buyer' (
+  'buyer_id' INT PRIMARY KEY, 
+  'first_name' VARCHAR(250) NOT NULL,
+  'last_name' VARCHAR(250),
+  'date_of_birth' DOUBLE,
+  'Address_ID' INT,
+  FOREIGN KEY('Address_ID') REFERENCES address('Address_ID')
+) ; " )
+```
+
+
+
+```{r}
+# Write to existing table - buyer
+RSQLite::dbWriteTable(connection,"buyer",buyer_data,append=TRUE,rowname=FALSE)
+```
 
 ```{r listtables}
 # Get a list of tables from the database that we already 
@@ -107,13 +145,28 @@ RSQLite::dbListTables(connection)
 
 
 
+```{r defineconnection}
+# we will use the name of this variable to 
+# set up sql output in the rmd file
+#my_connection <- RSQLite::dbConnect(RSQLite::SQLite(),"ecommerce.db")
+```
+
+
+```{sql connection=connection}
+SELECT * FROM address
+```
+```{sql connection=connection}
+SELECT * FROM buyer
+```
 
 
 
+```{r listtables}
+# Get a list of tables from the database that we already 
+# created
+RSQLite::dbListTables(connection)
 
-
-
-
+```
 
 
 # Disconnect
