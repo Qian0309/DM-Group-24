@@ -43,12 +43,12 @@ print(top_5_products_sales)
 
 ```{r}
 ggplot(top_5_products_sales, aes(x = reorder(product_name, total_sales), y = total_sales, fill = product_name)) +
-  geom_col() + # geom_col is used for bar plots when you already have the data summarized
+  geom_col() + 
   labs(title = "Top 5 Products by Sales", x = "Product Name", y = "Total Sales") +
   theme_minimal() +
-  coord_flip() + # Flipping coordinates to make it easier to read long product names
-  scale_fill_discrete(name = "Product Name") + # Optional: To have a legend with product names
-  theme(legend.position = "none") # Optional: Remove the legend if you find it unnecessary
+  coord_flip() + 
+  scale_fill_discrete(name = "Product Name") + 
+  theme(legend.position = "none") 
 
 ```
 
