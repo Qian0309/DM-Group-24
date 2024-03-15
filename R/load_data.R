@@ -15,16 +15,16 @@ project_files <- gsub(suffix,"",project_files)
 project_files
 
 
-address_data <- readr::read_csv("data/ecommerce_address_dataset.csv")
-buyer_data <- readr::read_csv("data/ecommerce_buyer_dataset.csv")
-dimension_data <- readr::read_csv("data/ecommerce_dimension_dataset.csv")
-product_data <- readr::read_csv("data/ecommerce_product_dataset.csv")
-promotion_data <- readr::read_csv("data/ecommerce_promotion_dataset.csv")
-review_data <- readr::read_csv("data/ecommerce_review_dataset.csv")
-shipper_data <- readr::read_csv("data/ecommerce_shipper_dataset.csv")
-supplier_data <- readr::read_csv("data/ecommerce_supplier_dataset.csv")
-payment_data <- readr::read_csv("data/ecommerce_payment_datatset.csv")
-order_details_data <- readr::read_csv("data/ecommerce_order_details_dataset.csv")
+address_data <- readr::read_csv("../data/ecommerce_address_dataset.csv")
+buyer_data <- readr::read_csv("../data/ecommerce_buyer_dataset.csv")
+dimension_data <- readr::read_csv("../data/ecommerce_dimension_dataset.csv")
+product_data <- readr::read_csv("../data/ecommerce_product_dataset.csv")
+promotion_data <- readr::read_csv("../data/ecommerce_promotion_dataset.csv")
+review_data <- readr::read_csv("../data/ecommerce_review_dataset.csv")
+shipper_data <- readr::read_csv("../data/ecommerce_shipper_dataset.csv")
+supplier_data <- readr::read_csv("../data/ecommerce_supplier_dataset.csv")
+payment_data <- readr::read_csv("../data/ecommerce_payment_datatset.csv")
+order_details_data <- readr::read_csv("../data/ecommerce_order_details_dataset.csv")
 
 
 all_files <- list.files("data/")
@@ -75,7 +75,7 @@ for (variable in all_files) {
 library(RSQLite)
 
 #setup the connection
-connection <- RSQLite::dbConnect(RSQLite::SQLite(),"ecommerce.db")
+connection <- RSQLite::dbConnect(RSQLite::SQLite(),"../database/ecommerce.db")
 
 
 #Creating table promotion
