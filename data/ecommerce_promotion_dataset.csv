@@ -1,0 +1,1001 @@
+promotion_id,promotion_type,start_date,end_date,status
+PM00001,Free Gift,30/12/23,04/01/24,not
+PM00002,Free Gift,13/04/23,24/04/23,not
+PM00003,Free Gift,09/10/23,25/10/23,not
+PM00004,Buy One Get One,19/10/23,31/10/23,active
+PM00005,Free Gift,25/02/23,26/03/23,not
+PM00006,Buy One Get One,09/11/23,20/11/23,not
+PM00007,Buy One Get One,03/01/23,27/01/23,active
+PM00008,Buy One Get One,05/08/23,13/08/23,not
+PM00009,Free Gift,11/01/23,12/01/23,active
+PM00010,Discount,20/02/23,15/03/23,active
+PM00011,Buy One Get One,29/09/23,02/10/23,active
+PM00012,Buy One Get One,11/01/23,25/01/23,active
+PM00013,Discount,18/08/23,17/09/23,active
+PM00014,Buy One Get One,18/12/23,28/12/23,not
+PM00015,Free Gift,11/08/23,08/09/23,not
+PM00016,Discount,11/04/23,01/05/23,not
+PM00017,Free Gift,25/05/23,17/06/23,not
+PM00018,Free Gift,13/05/23,28/05/23,active
+PM00019,Discount,25/04/23,02/05/23,not
+PM00020,Discount,01/12/23,30/12/23,not
+PM00021,Discount,31/08/23,23/09/23,not
+PM00022,Discount,06/04/23,28/04/23,not
+PM00023,Free Gift,14/11/23,09/12/23,not
+PM00024,Buy One Get One,01/04/23,17/04/23,active
+PM00025,Free Gift,30/03/23,11/04/23,not
+PM00026,Buy One Get One,23/05/23,12/06/23,active
+PM00027,Discount,03/05/23,12/05/23,active
+PM00028,Buy One Get One,18/10/23,15/11/23,not
+PM00029,Free Gift,30/01/23,02/02/23,not
+PM00030,Buy One Get One,11/06/23,30/06/23,not
+PM00031,Discount,10/03/23,23/03/23,not
+PM00032,Free Gift,10/05/23,08/06/23,not
+PM00033,Free Gift,27/07/23,04/08/23,not
+PM00034,Discount,23/01/23,17/02/23,not
+PM00035,Free Gift,04/08/23,01/09/23,not
+PM00036,Buy One Get One,04/10/23,21/10/23,active
+PM00037,Discount,02/10/23,29/10/23,active
+PM00038,Free Gift,30/07/23,03/08/23,active
+PM00039,Discount,30/07/23,09/08/23,active
+PM00040,Discount,16/07/23,02/08/23,not
+PM00041,Buy One Get One,22/06/23,02/07/23,not
+PM00042,Free Gift,27/07/23,01/08/23,not
+PM00043,Free Gift,26/12/23,06/01/24,active
+PM00044,Discount,01/02/23,10/02/23,active
+PM00045,Free Gift,17/02/23,01/03/23,not
+PM00046,Discount,28/09/23,03/10/23,active
+PM00047,Free Gift,03/06/23,27/06/23,active
+PM00048,Buy One Get One,04/02/23,06/03/23,not
+PM00049,Discount,24/02/23,28/02/23,not
+PM00050,Buy One Get One,01/06/23,29/06/23,active
+PM00051,Discount,17/01/23,19/01/23,not
+PM00052,Discount,23/11/23,24/11/23,active
+PM00053,Free Gift,29/11/23,18/12/23,active
+PM00054,Discount,05/07/23,21/07/23,not
+PM00055,Buy One Get One,26/09/23,07/10/23,active
+PM00056,Discount,20/11/23,27/11/23,active
+PM00057,Discount,07/05/23,05/06/23,not
+PM00058,Free Gift,25/01/23,21/02/23,not
+PM00059,Discount,29/01/23,22/02/23,not
+PM00060,Buy One Get One,30/06/23,05/07/23,active
+PM00061,Discount,16/01/23,18/01/23,active
+PM00062,Free Gift,18/06/23,27/06/23,active
+PM00063,Discount,28/08/23,23/09/23,active
+PM00064,Free Gift,09/01/23,30/01/23,active
+PM00065,Buy One Get One,20/10/23,17/11/23,not
+PM00066,Free Gift,06/11/23,21/11/23,not
+PM00067,Buy One Get One,02/08/23,08/08/23,active
+PM00068,Buy One Get One,26/08/23,21/09/23,active
+PM00069,Free Gift,24/08/23,21/09/23,not
+PM00070,Buy One Get One,24/01/23,30/01/23,not
+PM00071,Buy One Get One,27/09/23,20/10/23,not
+PM00072,Free Gift,07/06/23,04/07/23,active
+PM00073,Free Gift,19/04/23,23/04/23,active
+PM00074,Discount,09/07/23,31/07/23,active
+PM00075,Buy One Get One,26/04/23,11/05/23,active
+PM00076,Buy One Get One,23/10/23,29/10/23,active
+PM00077,Discount,11/08/23,07/09/23,not
+PM00078,Buy One Get One,16/06/23,11/07/23,active
+PM00079,Discount,17/08/23,20/08/23,active
+PM00080,Discount,13/03/23,03/04/23,active
+PM00081,Buy One Get One,27/08/23,25/09/23,not
+PM00082,Free Gift,27/09/23,07/10/23,not
+PM00083,Free Gift,17/11/23,22/11/23,not
+PM00084,Discount,31/05/23,25/06/23,active
+PM00085,Buy One Get One,26/01/23,01/02/23,active
+PM00086,Discount,15/02/23,15/03/23,not
+PM00087,Buy One Get One,23/01/23,24/01/23,not
+PM00088,Discount,11/08/23,14/08/23,not
+PM00089,Free Gift,10/07/23,18/07/23,active
+PM00090,Free Gift,03/12/23,05/12/23,not
+PM00091,Buy One Get One,13/09/23,27/09/23,active
+PM00092,Free Gift,08/02/23,27/02/23,active
+PM00093,Discount,23/11/23,19/12/23,not
+PM00094,Buy One Get One,14/02/23,15/02/23,active
+PM00095,Buy One Get One,30/10/23,22/11/23,active
+PM00096,Free Gift,28/11/23,01/12/23,active
+PM00097,Buy One Get One,06/04/23,11/04/23,not
+PM00098,Discount,23/06/23,17/07/23,not
+PM00099,Free Gift,12/11/23,11/12/23,not
+PM00100,Free Gift,24/03/23,20/04/23,not
+PM00101,Free Gift,11/12/23,24/12/23,active
+PM00102,Buy One Get One,17/05/23,26/05/23,active
+PM00103,Buy One Get One,19/04/23,06/05/23,active
+PM00104,Free Gift,08/06/23,23/06/23,active
+PM00105,Discount,15/06/23,29/06/23,active
+PM00106,Discount,16/10/23,02/11/23,not
+PM00107,Free Gift,02/12/23,19/12/23,not
+PM00108,Buy One Get One,12/11/23,11/12/23,active
+PM00109,Buy One Get One,13/03/23,03/04/23,not
+PM00110,Buy One Get One,13/05/23,21/05/23,active
+PM00111,Buy One Get One,15/11/23,20/11/23,active
+PM00112,Buy One Get One,21/07/23,02/08/23,active
+PM00113,Buy One Get One,14/12/23,03/01/24,not
+PM00114,Free Gift,06/02/23,26/02/23,not
+PM00115,Buy One Get One,24/03/23,29/03/23,active
+PM00116,Discount,24/05/23,17/06/23,not
+PM00117,Buy One Get One,06/01/23,31/01/23,active
+PM00118,Buy One Get One,09/09/23,27/09/23,active
+PM00119,Buy One Get One,29/06/23,07/07/23,not
+PM00120,Free Gift,19/07/23,07/08/23,not
+PM00121,Buy One Get One,30/03/23,02/04/23,not
+PM00122,Free Gift,05/04/23,10/04/23,not
+PM00123,Buy One Get One,29/10/23,06/11/23,active
+PM00124,Free Gift,11/12/23,23/12/23,active
+PM00125,Discount,21/09/23,26/09/23,not
+PM00126,Free Gift,20/06/23,13/07/23,not
+PM00127,Free Gift,01/09/23,27/09/23,not
+PM00128,Free Gift,07/10/23,04/11/23,not
+PM00129,Discount,05/01/23,30/01/23,active
+PM00130,Free Gift,22/05/23,06/06/23,active
+PM00131,Free Gift,23/12/23,16/01/24,active
+PM00132,Buy One Get One,21/12/23,31/12/23,active
+PM00133,Buy One Get One,04/01/23,26/01/23,not
+PM00134,Buy One Get One,04/02/23,26/02/23,not
+PM00135,Free Gift,26/08/23,15/09/23,not
+PM00136,Free Gift,29/07/23,07/08/23,not
+PM00137,Free Gift,23/09/23,02/10/23,active
+PM00138,Buy One Get One,12/01/23,02/02/23,active
+PM00139,Discount,08/05/23,25/05/23,active
+PM00140,Buy One Get One,16/09/23,25/09/23,active
+PM00141,Discount,09/10/23,19/10/23,active
+PM00142,Free Gift,23/07/23,16/08/23,active
+PM00143,Free Gift,17/08/23,22/08/23,not
+PM00144,Buy One Get One,14/02/23,15/03/23,not
+PM00145,Discount,21/09/23,02/10/23,active
+PM00146,Free Gift,05/12/23,21/12/23,active
+PM00147,Discount,24/12/23,07/01/24,active
+PM00148,Free Gift,01/02/23,28/02/23,not
+PM00149,Buy One Get One,15/09/23,13/10/23,active
+PM00150,Buy One Get One,25/05/23,19/06/23,active
+PM00151,Discount,01/11/23,15/11/23,active
+PM00152,Free Gift,19/07/23,01/08/23,active
+PM00153,Buy One Get One,03/11/23,18/11/23,active
+PM00154,Discount,13/10/23,27/10/23,not
+PM00155,Free Gift,30/07/23,06/08/23,not
+PM00156,Free Gift,10/03/23,20/03/23,not
+PM00157,Free Gift,15/12/23,13/01/24,not
+PM00158,Discount,15/02/23,15/03/23,active
+PM00159,Buy One Get One,12/01/23,21/01/23,active
+PM00160,Buy One Get One,08/11/23,21/11/23,not
+PM00161,Discount,01/01/23,15/01/23,active
+PM00162,Buy One Get One,16/12/23,01/01/24,active
+PM00163,Free Gift,06/05/23,11/05/23,not
+PM00164,Free Gift,21/02/23,19/03/23,active
+PM00165,Discount,07/01/23,20/01/23,active
+PM00166,Buy One Get One,16/07/23,30/07/23,not
+PM00167,Discount,19/10/23,27/10/23,not
+PM00168,Buy One Get One,13/09/23,20/09/23,active
+PM00169,Free Gift,12/09/23,15/09/23,active
+PM00170,Free Gift,18/02/23,17/03/23,active
+PM00171,Discount,10/03/23,23/03/23,not
+PM00172,Free Gift,16/06/23,11/07/23,active
+PM00173,Buy One Get One,28/11/23,12/12/23,not
+PM00174,Discount,09/07/23,22/07/23,active
+PM00175,Discount,09/08/23,08/09/23,not
+PM00176,Buy One Get One,12/07/23,06/08/23,active
+PM00177,Free Gift,30/10/23,20/11/23,not
+PM00178,Discount,22/05/23,04/06/23,active
+PM00179,Buy One Get One,12/03/23,26/03/23,not
+PM00180,Buy One Get One,10/07/23,28/07/23,active
+PM00181,Discount,11/06/23,01/07/23,not
+PM00182,Buy One Get One,26/07/23,15/08/23,not
+PM00183,Discount,10/09/23,21/09/23,active
+PM00184,Discount,20/04/23,28/04/23,active
+PM00185,Buy One Get One,13/09/23,28/09/23,not
+PM00186,Discount,01/10/23,09/10/23,active
+PM00187,Free Gift,19/11/23,04/12/23,not
+PM00188,Discount,29/12/23,30/12/23,active
+PM00189,Discount,21/02/23,14/03/23,active
+PM00190,Buy One Get One,10/07/23,28/07/23,not
+PM00191,Discount,14/06/23,23/06/23,not
+PM00192,Buy One Get One,18/01/23,30/01/23,active
+PM00193,Discount,18/06/23,05/07/23,active
+PM00194,Discount,17/11/23,30/11/23,active
+PM00195,Discount,22/10/23,07/11/23,not
+PM00196,Free Gift,28/09/23,24/10/23,active
+PM00197,Free Gift,26/06/23,25/07/23,active
+PM00198,Buy One Get One,19/12/23,20/12/23,active
+PM00199,Discount,24/12/23,22/01/24,active
+PM00200,Buy One Get One,12/11/23,03/12/23,not
+PM00201,Free Gift,12/12/23,04/01/24,not
+PM00202,Buy One Get One,18/01/23,24/01/23,not
+PM00203,Free Gift,04/02/23,06/03/23,active
+PM00204,Buy One Get One,17/07/23,03/08/23,not
+PM00205,Free Gift,23/02/23,23/03/23,not
+PM00206,Discount,20/06/23,26/06/23,active
+PM00207,Discount,09/09/23,13/09/23,active
+PM00208,Discount,14/03/23,24/03/23,not
+PM00209,Discount,05/10/23,03/11/23,active
+PM00210,Free Gift,20/01/23,04/02/23,not
+PM00211,Buy One Get One,24/06/23,17/07/23,active
+PM00212,Discount,24/04/23,26/04/23,not
+PM00213,Buy One Get One,18/06/23,16/07/23,active
+PM00214,Discount,29/01/23,05/02/23,not
+PM00215,Free Gift,24/09/23,12/10/23,not
+PM00216,Free Gift,20/01/23,29/01/23,active
+PM00217,Discount,24/08/23,25/08/23,active
+PM00218,Buy One Get One,28/06/23,09/07/23,active
+PM00219,Free Gift,11/12/23,19/12/23,active
+PM00220,Discount,26/09/23,14/10/23,not
+PM00221,Free Gift,17/03/23,31/03/23,not
+PM00222,Buy One Get One,19/11/23,27/11/23,not
+PM00223,Discount,02/04/23,10/04/23,active
+PM00224,Discount,24/09/23,01/10/23,active
+PM00225,Discount,19/01/23,08/02/23,active
+PM00226,Discount,11/01/23,29/01/23,active
+PM00227,Discount,04/03/23,12/03/23,active
+PM00228,Free Gift,22/12/23,31/12/23,not
+PM00229,Buy One Get One,04/06/23,10/06/23,not
+PM00230,Buy One Get One,15/09/23,14/10/23,not
+PM00231,Buy One Get One,09/09/23,20/09/23,active
+PM00232,Free Gift,19/08/23,04/09/23,not
+PM00233,Discount,16/08/23,12/09/23,active
+PM00234,Buy One Get One,07/11/23,17/11/23,active
+PM00235,Buy One Get One,17/02/23,22/02/23,active
+PM00236,Discount,12/09/23,06/10/23,active
+PM00237,Buy One Get One,05/06/23,04/07/23,active
+PM00238,Discount,12/10/23,01/11/23,active
+PM00239,Discount,15/07/23,24/07/23,not
+PM00240,Buy One Get One,18/06/23,21/06/23,active
+PM00241,Free Gift,22/04/23,24/04/23,not
+PM00242,Discount,05/04/23,08/04/23,active
+PM00243,Free Gift,08/09/23,09/09/23,not
+PM00244,Discount,17/04/23,14/05/23,not
+PM00245,Buy One Get One,17/05/23,25/05/23,not
+PM00246,Discount,05/12/23,03/01/24,not
+PM00247,Buy One Get One,05/06/23,01/07/23,active
+PM00248,Buy One Get One,28/09/23,01/10/23,active
+PM00249,Buy One Get One,01/03/23,07/03/23,active
+PM00250,Free Gift,22/07/23,30/07/23,active
+PM00251,Discount,09/08/23,24/08/23,active
+PM00252,Discount,17/01/23,03/02/23,not
+PM00253,Discount,10/02/23,02/03/23,not
+PM00254,Discount,25/01/23,13/02/23,active
+PM00255,Free Gift,27/08/23,14/09/23,active
+PM00256,Discount,28/11/23,01/12/23,active
+PM00257,Buy One Get One,02/10/23,25/10/23,not
+PM00258,Discount,21/02/23,09/03/23,active
+PM00259,Buy One Get One,18/07/23,16/08/23,not
+PM00260,Buy One Get One,24/09/23,05/10/23,not
+PM00261,Discount,23/05/23,28/05/23,not
+PM00262,Discount,20/07/23,01/08/23,active
+PM00263,Discount,10/12/23,13/12/23,active
+PM00264,Discount,05/12/23,11/12/23,active
+PM00265,Free Gift,19/05/23,23/05/23,active
+PM00266,Discount,02/02/23,04/03/23,not
+PM00267,Discount,15/04/23,13/05/23,active
+PM00268,Discount,06/10/23,29/10/23,active
+PM00269,Buy One Get One,05/09/23,04/10/23,active
+PM00270,Buy One Get One,17/01/23,07/02/23,not
+PM00271,Free Gift,18/05/23,28/05/23,not
+PM00272,Buy One Get One,18/01/23,07/02/23,not
+PM00273,Free Gift,12/04/23,21/04/23,not
+PM00274,Discount,11/12/23,26/12/23,not
+PM00275,Discount,12/03/23,22/03/23,not
+PM00276,Discount,25/12/23,24/01/24,not
+PM00277,Discount,21/03/23,08/04/23,active
+PM00278,Discount,11/05/23,22/05/23,active
+PM00279,Free Gift,15/08/23,12/09/23,not
+PM00280,Discount,21/01/23,08/02/23,active
+PM00281,Discount,26/08/23,22/09/23,active
+PM00282,Free Gift,14/11/23,16/11/23,active
+PM00283,Free Gift,11/06/23,02/07/23,active
+PM00284,Buy One Get One,28/01/23,02/02/23,not
+PM00285,Discount,03/06/23,08/06/23,not
+PM00286,Discount,09/05/23,29/05/23,not
+PM00287,Discount,31/03/23,26/04/23,not
+PM00288,Buy One Get One,04/10/23,27/10/23,active
+PM00289,Discount,24/12/23,12/01/24,not
+PM00290,Buy One Get One,01/05/23,16/05/23,active
+PM00291,Discount,12/06/23,10/07/23,active
+PM00292,Discount,04/04/23,28/04/23,active
+PM00293,Free Gift,12/01/23,14/01/23,active
+PM00294,Free Gift,06/09/23,16/09/23,not
+PM00295,Buy One Get One,21/05/23,11/06/23,not
+PM00296,Buy One Get One,02/11/23,22/11/23,not
+PM00297,Discount,02/02/23,08/02/23,not
+PM00298,Free Gift,01/06/23,24/06/23,active
+PM00299,Discount,09/01/23,14/01/23,active
+PM00300,Discount,08/06/23,26/06/23,active
+PM00301,Buy One Get One,18/12/23,14/01/24,active
+PM00302,Discount,13/07/23,22/07/23,not
+PM00303,Buy One Get One,14/10/23,10/11/23,not
+PM00304,Buy One Get One,01/03/23,12/03/23,active
+PM00305,Buy One Get One,01/04/23,30/04/23,active
+PM00306,Buy One Get One,09/04/23,10/04/23,active
+PM00307,Free Gift,13/08/23,20/08/23,active
+PM00308,Free Gift,21/07/23,04/08/23,not
+PM00309,Free Gift,20/06/23,28/06/23,not
+PM00310,Free Gift,27/05/23,30/05/23,not
+PM00311,Discount,27/08/23,13/09/23,active
+PM00312,Free Gift,16/06/23,29/06/23,active
+PM00313,Free Gift,06/04/23,22/04/23,not
+PM00314,Free Gift,28/08/23,25/09/23,active
+PM00315,Buy One Get One,02/11/23,30/11/23,active
+PM00316,Free Gift,12/05/23,13/05/23,not
+PM00317,Free Gift,28/06/23,03/07/23,active
+PM00318,Free Gift,12/06/23,29/06/23,not
+PM00319,Discount,17/10/23,25/10/23,active
+PM00320,Discount,18/03/23,14/04/23,not
+PM00321,Free Gift,06/11/23,25/11/23,not
+PM00322,Buy One Get One,18/08/23,22/08/23,not
+PM00323,Free Gift,19/11/23,01/12/23,active
+PM00324,Buy One Get One,11/12/23,22/12/23,active
+PM00325,Discount,01/08/23,25/08/23,not
+PM00326,Buy One Get One,05/11/23,16/11/23,not
+PM00327,Buy One Get One,13/05/23,23/05/23,active
+PM00328,Buy One Get One,18/09/23,07/10/23,active
+PM00329,Discount,16/12/23,23/12/23,not
+PM00330,Discount,12/03/23,02/04/23,not
+PM00331,Discount,25/05/23,11/06/23,not
+PM00332,Free Gift,13/09/23,27/09/23,active
+PM00333,Free Gift,08/04/23,29/04/23,not
+PM00334,Discount,17/01/23,28/01/23,active
+PM00335,Discount,08/07/23,10/07/23,active
+PM00336,Free Gift,24/09/23,07/10/23,not
+PM00337,Discount,27/09/23,24/10/23,active
+PM00338,Free Gift,26/12/23,24/01/24,active
+PM00339,Buy One Get One,10/06/23,05/07/23,not
+PM00340,Discount,11/06/23,04/07/23,active
+PM00341,Discount,18/05/23,07/06/23,not
+PM00342,Free Gift,14/08/23,18/08/23,active
+PM00343,Buy One Get One,07/02/23,10/02/23,active
+PM00344,Free Gift,24/07/23,03/08/23,not
+PM00345,Buy One Get One,25/09/23,15/10/23,not
+PM00346,Discount,18/10/23,19/10/23,not
+PM00347,Buy One Get One,14/04/23,04/05/23,active
+PM00348,Free Gift,06/07/23,25/07/23,not
+PM00349,Buy One Get One,02/02/23,09/02/23,active
+PM00350,Free Gift,26/08/23,21/09/23,not
+PM00351,Free Gift,28/04/23,26/05/23,active
+PM00352,Discount,24/09/23,01/10/23,active
+PM00353,Buy One Get One,24/11/23,01/12/23,active
+PM00354,Discount,22/03/23,27/03/23,not
+PM00355,Buy One Get One,17/09/23,27/09/23,active
+PM00356,Buy One Get One,17/03/23,13/04/23,not
+PM00357,Buy One Get One,30/10/23,15/11/23,active
+PM00358,Buy One Get One,03/07/23,25/07/23,active
+PM00359,Discount,14/01/23,10/02/23,active
+PM00360,Buy One Get One,20/02/23,13/03/23,not
+PM00361,Discount,04/06/23,25/06/23,active
+PM00362,Buy One Get One,16/03/23,13/04/23,active
+PM00363,Discount,24/08/23,08/09/23,active
+PM00364,Free Gift,02/10/23,16/10/23,active
+PM00365,Buy One Get One,04/10/23,30/10/23,not
+PM00366,Discount,18/02/23,15/03/23,active
+PM00367,Free Gift,19/09/23,20/09/23,not
+PM00368,Buy One Get One,21/11/23,26/11/23,not
+PM00369,Free Gift,29/08/23,10/09/23,active
+PM00370,Buy One Get One,04/08/23,24/08/23,not
+PM00371,Free Gift,11/09/23,18/09/23,not
+PM00372,Free Gift,24/05/23,21/06/23,not
+PM00373,Discount,29/12/23,30/12/23,active
+PM00374,Buy One Get One,17/08/23,26/08/23,not
+PM00375,Free Gift,30/11/23,15/12/23,not
+PM00376,Discount,07/05/23,29/05/23,not
+PM00377,Discount,09/07/23,01/08/23,active
+PM00378,Free Gift,10/03/23,05/04/23,active
+PM00379,Buy One Get One,30/04/23,23/05/23,not
+PM00380,Free Gift,30/01/23,26/02/23,active
+PM00381,Buy One Get One,14/11/23,07/12/23,active
+PM00382,Buy One Get One,26/04/23,05/05/23,active
+PM00383,Buy One Get One,09/03/23,29/03/23,active
+PM00384,Discount,09/03/23,21/03/23,active
+PM00385,Buy One Get One,06/04/23,16/04/23,not
+PM00386,Discount,02/04/23,05/04/23,not
+PM00387,Discount,29/06/23,08/07/23,active
+PM00388,Discount,11/03/23,07/04/23,not
+PM00389,Buy One Get One,25/10/23,05/11/23,not
+PM00390,Buy One Get One,03/10/23,10/10/23,not
+PM00391,Free Gift,08/09/23,25/09/23,active
+PM00392,Free Gift,16/03/23,20/03/23,not
+PM00393,Discount,23/10/23,19/11/23,not
+PM00394,Buy One Get One,17/08/23,26/08/23,active
+PM00395,Buy One Get One,12/08/23,27/08/23,not
+PM00396,Free Gift,27/02/23,27/03/23,not
+PM00397,Free Gift,24/03/23,21/04/23,not
+PM00398,Free Gift,26/10/23,27/10/23,not
+PM00399,Free Gift,14/09/23,05/10/23,not
+PM00400,Buy One Get One,11/06/23,22/06/23,active
+PM00401,Discount,17/03/23,18/03/23,not
+PM00402,Discount,08/03/23,07/04/23,not
+PM00403,Free Gift,31/10/23,23/11/23,not
+PM00404,Discount,20/01/23,25/01/23,not
+PM00405,Buy One Get One,13/09/23,30/09/23,not
+PM00406,Buy One Get One,31/03/23,08/04/23,active
+PM00407,Free Gift,12/05/23,29/05/23,not
+PM00408,Buy One Get One,04/01/23,08/01/23,active
+PM00409,Discount,06/08/23,29/08/23,not
+PM00410,Free Gift,05/08/23,24/08/23,not
+PM00411,Discount,10/09/23,03/10/23,active
+PM00412,Discount,22/03/23,19/04/23,not
+PM00413,Free Gift,01/08/23,17/08/23,not
+PM00414,Buy One Get One,05/02/23,07/03/23,active
+PM00415,Discount,25/05/23,06/06/23,active
+PM00416,Discount,06/09/23,27/09/23,not
+PM00417,Buy One Get One,28/02/23,22/03/23,not
+PM00418,Buy One Get One,10/03/23,01/04/23,active
+PM00419,Buy One Get One,09/08/23,12/08/23,not
+PM00420,Buy One Get One,17/05/23,24/05/23,not
+PM00421,Discount,14/10/23,24/10/23,not
+PM00422,Free Gift,17/07/23,20/07/23,not
+PM00423,Free Gift,24/10/23,14/11/23,active
+PM00424,Buy One Get One,04/02/23,24/02/23,active
+PM00425,Free Gift,14/03/23,11/04/23,not
+PM00426,Free Gift,01/11/23,20/11/23,active
+PM00427,Free Gift,08/09/23,07/10/23,not
+PM00428,Buy One Get One,23/03/23,27/03/23,active
+PM00429,Free Gift,29/11/23,25/12/23,not
+PM00430,Free Gift,30/12/23,07/01/24,active
+PM00431,Buy One Get One,24/06/23,14/07/23,not
+PM00432,Buy One Get One,03/04/23,20/04/23,active
+PM00433,Free Gift,22/08/23,17/09/23,active
+PM00434,Buy One Get One,05/11/23,20/11/23,active
+PM00435,Free Gift,29/09/23,24/10/23,not
+PM00436,Buy One Get One,23/05/23,01/06/23,not
+PM00437,Buy One Get One,13/12/23,26/12/23,not
+PM00438,Discount,30/05/23,20/06/23,not
+PM00439,Buy One Get One,16/05/23,27/05/23,not
+PM00440,Free Gift,17/11/23,16/12/23,active
+PM00441,Discount,02/08/23,16/08/23,not
+PM00442,Discount,17/07/23,22/07/23,active
+PM00443,Free Gift,18/09/23,29/09/23,active
+PM00444,Buy One Get One,09/01/23,01/02/23,not
+PM00445,Discount,14/10/23,19/10/23,not
+PM00446,Discount,08/03/23,01/04/23,active
+PM00447,Free Gift,01/02/23,23/02/23,not
+PM00448,Free Gift,05/11/23,06/11/23,not
+PM00449,Free Gift,23/01/23,14/02/23,active
+PM00450,Discount,23/03/23,25/03/23,not
+PM00451,Buy One Get One,10/11/23,14/11/23,not
+PM00452,Buy One Get One,25/04/23,22/05/23,active
+PM00453,Free Gift,08/10/23,14/10/23,not
+PM00454,Free Gift,21/10/23,26/10/23,active
+PM00455,Free Gift,30/01/23,26/02/23,not
+PM00456,Free Gift,15/06/23,14/07/23,not
+PM00457,Buy One Get One,12/05/23,31/05/23,active
+PM00458,Discount,28/07/23,09/08/23,active
+PM00459,Free Gift,11/03/23,12/03/23,active
+PM00460,Buy One Get One,03/06/23,13/06/23,active
+PM00461,Discount,08/02/23,12/02/23,active
+PM00462,Free Gift,18/12/23,28/12/23,not
+PM00463,Free Gift,06/05/23,21/05/23,not
+PM00464,Free Gift,19/08/23,16/09/23,not
+PM00465,Buy One Get One,27/11/23,01/12/23,not
+PM00466,Discount,29/05/23,24/06/23,active
+PM00467,Buy One Get One,19/12/23,27/12/23,not
+PM00468,Free Gift,25/04/23,17/05/23,active
+PM00469,Discount,24/11/23,08/12/23,active
+PM00470,Buy One Get One,17/01/23,13/02/23,not
+PM00471,Discount,16/12/23,13/01/24,not
+PM00472,Buy One Get One,30/11/23,08/12/23,not
+PM00473,Buy One Get One,15/05/23,25/05/23,not
+PM00474,Free Gift,14/07/23,20/07/23,active
+PM00475,Buy One Get One,04/08/23,08/08/23,not
+PM00476,Buy One Get One,26/07/23,06/08/23,active
+PM00477,Buy One Get One,07/10/23,23/10/23,not
+PM00478,Buy One Get One,28/03/23,04/04/23,not
+PM00479,Buy One Get One,15/02/23,23/02/23,not
+PM00480,Free Gift,27/01/23,26/02/23,active
+PM00481,Discount,18/02/23,23/02/23,not
+PM00482,Discount,16/05/23,11/06/23,not
+PM00483,Free Gift,13/08/23,27/08/23,not
+PM00484,Free Gift,08/12/23,22/12/23,active
+PM00485,Free Gift,08/04/23,28/04/23,active
+PM00486,Free Gift,18/03/23,25/03/23,active
+PM00487,Buy One Get One,30/07/23,08/08/23,active
+PM00488,Discount,05/04/23,25/04/23,not
+PM00489,Discount,20/01/23,10/02/23,active
+PM00490,Free Gift,06/06/23,18/06/23,not
+PM00491,Buy One Get One,03/07/23,14/07/23,active
+PM00492,Buy One Get One,03/09/23,20/09/23,active
+PM00493,Free Gift,17/05/23,19/05/23,not
+PM00494,Discount,27/07/23,25/08/23,active
+PM00495,Free Gift,01/08/23,09/08/23,not
+PM00496,Free Gift,13/08/23,11/09/23,active
+PM00497,Discount,12/09/23,05/10/23,not
+PM00498,Discount,18/02/23,23/02/23,not
+PM00499,Free Gift,11/02/23,04/03/23,active
+PM00500,Free Gift,19/05/23,18/06/23,active
+PM00501,Buy One Get One,06/03/23,26/03/23,active
+PM00502,Buy One Get One,20/12/23,26/12/23,not
+PM00503,Free Gift,22/07/23,14/08/23,active
+PM00504,Buy One Get One,23/04/23,26/04/23,active
+PM00505,Free Gift,14/11/23,04/12/23,not
+PM00506,Free Gift,30/08/23,26/09/23,not
+PM00507,Buy One Get One,11/08/23,25/08/23,active
+PM00508,Free Gift,14/01/23,23/01/23,not
+PM00509,Free Gift,20/08/23,17/09/23,not
+PM00510,Discount,10/12/23,07/01/24,not
+PM00511,Free Gift,06/02/23,26/02/23,not
+PM00512,Discount,27/12/23,18/01/24,not
+PM00513,Buy One Get One,03/04/23,07/04/23,active
+PM00514,Discount,18/05/23,25/05/23,not
+PM00515,Free Gift,18/02/23,09/03/23,not
+PM00516,Free Gift,21/02/23,23/03/23,not
+PM00517,Buy One Get One,30/05/23,07/06/23,not
+PM00518,Buy One Get One,21/06/23,27/06/23,active
+PM00519,Discount,12/09/23,14/09/23,not
+PM00520,Buy One Get One,24/09/23,12/10/23,not
+PM00521,Free Gift,01/10/23,23/10/23,active
+PM00522,Free Gift,07/05/23,14/05/23,not
+PM00523,Free Gift,20/05/23,23/05/23,not
+PM00524,Buy One Get One,18/07/23,17/08/23,not
+PM00525,Discount,23/06/23,26/06/23,active
+PM00526,Buy One Get One,04/12/23,17/12/23,not
+PM00527,Free Gift,10/07/23,18/07/23,not
+PM00528,Buy One Get One,01/11/23,10/11/23,active
+PM00529,Free Gift,22/11/23,22/12/23,not
+PM00530,Free Gift,30/01/23,24/02/23,not
+PM00531,Discount,17/07/23,29/07/23,not
+PM00532,Buy One Get One,19/10/23,07/11/23,not
+PM00533,Buy One Get One,30/06/23,02/07/23,not
+PM00534,Buy One Get One,06/06/23,18/06/23,active
+PM00535,Buy One Get One,20/10/23,27/10/23,active
+PM00536,Buy One Get One,08/07/23,29/07/23,not
+PM00537,Discount,01/07/23,19/07/23,not
+PM00538,Discount,02/07/23,12/07/23,active
+PM00539,Free Gift,15/02/23,06/03/23,not
+PM00540,Discount,20/02/23,10/03/23,not
+PM00541,Free Gift,01/02/23,17/02/23,not
+PM00542,Free Gift,11/06/23,26/06/23,not
+PM00543,Buy One Get One,26/07/23,10/08/23,active
+PM00544,Free Gift,23/09/23,26/09/23,not
+PM00545,Buy One Get One,21/11/23,27/11/23,not
+PM00546,Discount,18/09/23,04/10/23,not
+PM00547,Discount,02/07/23,25/07/23,not
+PM00548,Buy One Get One,29/08/23,20/09/23,not
+PM00549,Discount,02/05/23,14/05/23,not
+PM00550,Free Gift,24/04/23,09/05/23,active
+PM00551,Buy One Get One,10/05/23,30/05/23,not
+PM00552,Buy One Get One,12/09/23,13/09/23,not
+PM00553,Free Gift,14/11/23,26/11/23,active
+PM00554,Discount,19/05/23,17/06/23,active
+PM00555,Discount,16/11/23,06/12/23,active
+PM00556,Buy One Get One,11/04/23,21/04/23,not
+PM00557,Free Gift,22/03/23,28/03/23,active
+PM00558,Discount,26/08/23,14/09/23,not
+PM00559,Discount,09/04/23,17/04/23,not
+PM00560,Free Gift,04/07/23,28/07/23,active
+PM00561,Free Gift,16/12/23,07/01/24,active
+PM00562,Buy One Get One,14/10/23,03/11/23,not
+PM00563,Discount,20/02/23,04/03/23,active
+PM00564,Free Gift,14/08/23,26/08/23,not
+PM00565,Free Gift,17/01/23,12/02/23,active
+PM00566,Free Gift,25/04/23,27/04/23,active
+PM00567,Discount,25/11/23,01/12/23,active
+PM00568,Free Gift,14/11/23,24/11/23,not
+PM00569,Free Gift,02/05/23,12/05/23,not
+PM00570,Discount,06/07/23,13/07/23,not
+PM00571,Buy One Get One,05/07/23,16/07/23,active
+PM00572,Discount,27/03/23,13/04/23,not
+PM00573,Buy One Get One,01/02/23,09/02/23,not
+PM00574,Buy One Get One,12/04/23,03/05/23,active
+PM00575,Discount,14/04/23,19/04/23,not
+PM00576,Free Gift,04/05/23,19/05/23,not
+PM00577,Discount,09/05/23,26/05/23,not
+PM00578,Buy One Get One,12/03/23,27/03/23,not
+PM00579,Buy One Get One,13/12/23,26/12/23,active
+PM00580,Discount,12/03/23,29/03/23,active
+PM00581,Buy One Get One,05/02/23,22/02/23,not
+PM00582,Discount,21/11/23,12/12/23,not
+PM00583,Discount,16/03/23,15/04/23,not
+PM00584,Buy One Get One,10/10/23,14/10/23,active
+PM00585,Buy One Get One,11/02/23,13/03/23,active
+PM00586,Buy One Get One,16/03/23,07/04/23,not
+PM00587,Buy One Get One,02/02/23,04/02/23,active
+PM00588,Free Gift,16/04/23,28/04/23,not
+PM00589,Discount,01/02/23,10/02/23,not
+PM00590,Discount,06/09/23,03/10/23,active
+PM00591,Discount,09/12/23,12/12/23,not
+PM00592,Discount,26/03/23,14/04/23,active
+PM00593,Free Gift,27/10/23,29/10/23,not
+PM00594,Buy One Get One,09/07/23,02/08/23,active
+PM00595,Discount,06/04/23,10/04/23,active
+PM00596,Discount,09/02/23,08/03/23,not
+PM00597,Free Gift,20/03/23,03/04/23,not
+PM00598,Free Gift,12/08/23,20/08/23,not
+PM00599,Discount,18/07/23,04/08/23,active
+PM00600,Discount,27/09/23,18/10/23,not
+PM00601,Buy One Get One,28/12/23,27/01/24,active
+PM00602,Free Gift,31/10/23,22/11/23,active
+PM00603,Discount,30/03/23,01/04/23,not
+PM00604,Discount,16/09/23,07/10/23,not
+PM00605,Free Gift,06/10/23,29/10/23,active
+PM00606,Discount,16/03/23,09/04/23,not
+PM00607,Buy One Get One,13/11/23,18/11/23,active
+PM00608,Buy One Get One,03/05/23,06/05/23,not
+PM00609,Free Gift,17/12/23,22/12/23,active
+PM00610,Discount,14/11/23,18/11/23,active
+PM00611,Free Gift,14/07/23,27/07/23,not
+PM00612,Discount,12/09/23,09/10/23,active
+PM00613,Free Gift,07/07/23,29/07/23,active
+PM00614,Free Gift,13/12/23,29/12/23,active
+PM00615,Discount,18/02/23,03/03/23,not
+PM00616,Free Gift,11/12/23,15/12/23,not
+PM00617,Free Gift,11/10/23,26/10/23,active
+PM00618,Free Gift,24/07/23,09/08/23,not
+PM00619,Free Gift,27/10/23,06/11/23,not
+PM00620,Free Gift,21/08/23,14/09/23,not
+PM00621,Buy One Get One,03/11/23,03/12/23,not
+PM00622,Free Gift,31/01/23,23/02/23,not
+PM00623,Buy One Get One,18/08/23,03/09/23,not
+PM00624,Free Gift,29/11/23,22/12/23,active
+PM00625,Buy One Get One,16/03/23,10/04/23,active
+PM00626,Discount,04/07/23,26/07/23,not
+PM00627,Discount,15/02/23,20/02/23,active
+PM00628,Free Gift,03/11/23,24/11/23,not
+PM00629,Discount,01/03/23,20/03/23,not
+PM00630,Buy One Get One,14/11/23,26/11/23,active
+PM00631,Discount,07/11/23,08/11/23,not
+PM00632,Buy One Get One,24/04/23,20/05/23,active
+PM00633,Buy One Get One,05/10/23,27/10/23,not
+PM00634,Discount,02/09/23,21/09/23,active
+PM00635,Discount,12/01/23,07/02/23,active
+PM00636,Buy One Get One,13/02/23,20/02/23,active
+PM00637,Free Gift,22/12/23,18/01/24,active
+PM00638,Discount,13/11/23,21/11/23,not
+PM00639,Buy One Get One,08/08/23,24/08/23,not
+PM00640,Discount,26/06/23,08/07/23,not
+PM00641,Buy One Get One,21/06/23,01/07/23,not
+PM00642,Free Gift,18/11/23,15/12/23,not
+PM00643,Buy One Get One,14/06/23,22/06/23,active
+PM00644,Buy One Get One,02/10/23,22/10/23,not
+PM00645,Free Gift,18/03/23,05/04/23,not
+PM00646,Discount,13/04/23,03/05/23,not
+PM00647,Buy One Get One,04/04/23,10/04/23,active
+PM00648,Free Gift,25/02/23,04/03/23,not
+PM00649,Free Gift,24/05/23,26/05/23,not
+PM00650,Discount,18/04/23,09/05/23,not
+PM00651,Free Gift,12/04/23,29/04/23,not
+PM00652,Discount,25/02/23,24/03/23,active
+PM00653,Discount,26/01/23,22/02/23,not
+PM00654,Free Gift,22/06/23,04/07/23,active
+PM00655,Discount,21/10/23,03/11/23,active
+PM00656,Discount,10/01/23,07/02/23,not
+PM00657,Free Gift,10/01/23,28/01/23,not
+PM00658,Discount,07/02/23,07/03/23,active
+PM00659,Discount,07/08/23,06/09/23,not
+PM00660,Discount,03/11/23,15/11/23,not
+PM00661,Buy One Get One,03/08/23,10/08/23,not
+PM00662,Buy One Get One,06/11/23,16/11/23,not
+PM00663,Buy One Get One,07/12/23,14/12/23,active
+PM00664,Buy One Get One,18/11/23,17/12/23,not
+PM00665,Free Gift,03/08/23,13/08/23,not
+PM00666,Free Gift,27/05/23,04/06/23,active
+PM00667,Buy One Get One,29/11/23,11/12/23,not
+PM00668,Discount,02/02/23,16/02/23,active
+PM00669,Free Gift,21/10/23,11/11/23,not
+PM00670,Discount,05/03/23,31/03/23,not
+PM00671,Free Gift,14/06/23,03/07/23,not
+PM00672,Free Gift,18/07/23,25/07/23,not
+PM00673,Free Gift,26/01/23,19/02/23,active
+PM00674,Discount,24/06/23,03/07/23,not
+PM00675,Buy One Get One,17/08/23,25/08/23,active
+PM00676,Free Gift,20/10/23,22/10/23,active
+PM00677,Free Gift,01/02/23,27/02/23,active
+PM00678,Discount,03/05/23,01/06/23,not
+PM00679,Discount,14/02/23,23/02/23,not
+PM00680,Discount,23/10/23,02/11/23,active
+PM00681,Free Gift,31/08/23,16/09/23,active
+PM00682,Free Gift,19/12/23,26/12/23,active
+PM00683,Discount,05/02/23,28/02/23,not
+PM00684,Discount,03/07/23,30/07/23,not
+PM00685,Buy One Get One,19/02/23,23/02/23,not
+PM00686,Free Gift,09/03/23,11/03/23,not
+PM00687,Free Gift,09/02/23,07/03/23,not
+PM00688,Buy One Get One,11/10/23,26/10/23,not
+PM00689,Discount,07/12/23,08/12/23,active
+PM00690,Free Gift,06/11/23,13/11/23,not
+PM00691,Discount,24/02/23,13/03/23,not
+PM00692,Discount,01/05/23,12/05/23,not
+PM00693,Free Gift,13/06/23,17/06/23,not
+PM00694,Buy One Get One,29/10/23,02/11/23,active
+PM00695,Free Gift,17/12/23,23/12/23,not
+PM00696,Free Gift,12/01/23,01/02/23,active
+PM00697,Free Gift,11/01/23,05/02/23,not
+PM00698,Buy One Get One,04/08/23,01/09/23,active
+PM00699,Discount,30/01/23,16/02/23,active
+PM00700,Free Gift,11/09/23,26/09/23,not
+PM00701,Free Gift,04/08/23,13/08/23,active
+PM00702,Buy One Get One,30/09/23,14/10/23,active
+PM00703,Buy One Get One,15/03/23,23/03/23,not
+PM00704,Buy One Get One,06/11/23,20/11/23,active
+PM00705,Free Gift,11/03/23,07/04/23,not
+PM00706,Free Gift,21/07/23,16/08/23,active
+PM00707,Buy One Get One,30/07/23,16/08/23,active
+PM00708,Discount,12/04/23,29/04/23,not
+PM00709,Discount,08/09/23,04/10/23,not
+PM00710,Discount,18/06/23,25/06/23,not
+PM00711,Buy One Get One,02/04/23,07/04/23,not
+PM00712,Discount,04/05/23,21/05/23,not
+PM00713,Buy One Get One,17/02/23,18/03/23,not
+PM00714,Buy One Get One,25/08/23,18/09/23,active
+PM00715,Free Gift,25/11/23,16/12/23,not
+PM00716,Free Gift,12/09/23,28/09/23,not
+PM00717,Free Gift,20/09/23,11/10/23,active
+PM00718,Free Gift,28/06/23,03/07/23,not
+PM00719,Buy One Get One,04/12/23,15/12/23,active
+PM00720,Buy One Get One,10/12/23,27/12/23,active
+PM00721,Buy One Get One,24/11/23,20/12/23,active
+PM00722,Free Gift,11/07/23,03/08/23,not
+PM00723,Free Gift,12/11/23,23/11/23,active
+PM00724,Free Gift,16/01/23,08/02/23,not
+PM00725,Discount,16/02/23,20/02/23,active
+PM00726,Free Gift,02/03/23,24/03/23,active
+PM00727,Discount,14/11/23,12/12/23,not
+PM00728,Free Gift,02/06/23,20/06/23,active
+PM00729,Buy One Get One,27/07/23,13/08/23,not
+PM00730,Discount,21/11/23,06/12/23,active
+PM00731,Discount,06/10/23,08/10/23,not
+PM00732,Discount,08/03/23,09/03/23,not
+PM00733,Free Gift,11/03/23,20/03/23,not
+PM00734,Discount,11/01/23,14/01/23,not
+PM00735,Buy One Get One,23/08/23,27/08/23,not
+PM00736,Discount,13/08/23,04/09/23,not
+PM00737,Free Gift,09/07/23,31/07/23,not
+PM00738,Free Gift,24/11/23,03/12/23,active
+PM00739,Free Gift,12/03/23,06/04/23,not
+PM00740,Buy One Get One,20/03/23,31/03/23,active
+PM00741,Free Gift,09/04/23,28/04/23,active
+PM00742,Buy One Get One,07/01/23,16/01/23,active
+PM00743,Discount,13/09/23,23/09/23,not
+PM00744,Free Gift,13/01/23,29/01/23,active
+PM00745,Buy One Get One,06/12/23,18/12/23,active
+PM00746,Buy One Get One,20/07/23,02/08/23,not
+PM00747,Discount,02/09/23,26/09/23,active
+PM00748,Buy One Get One,06/09/23,28/09/23,not
+PM00749,Discount,25/12/23,22/01/24,active
+PM00750,Buy One Get One,08/08/23,21/08/23,not
+PM00751,Free Gift,14/03/23,29/03/23,active
+PM00752,Free Gift,12/08/23,04/09/23,not
+PM00753,Buy One Get One,06/09/23,10/09/23,not
+PM00754,Buy One Get One,04/09/23,12/09/23,not
+PM00755,Discount,30/07/23,29/08/23,not
+PM00756,Buy One Get One,03/02/23,13/02/23,not
+PM00757,Free Gift,08/07/23,13/07/23,active
+PM00758,Buy One Get One,03/07/23,21/07/23,active
+PM00759,Free Gift,28/11/23,12/12/23,not
+PM00760,Discount,26/11/23,02/12/23,active
+PM00761,Buy One Get One,16/01/23,10/02/23,active
+PM00762,Free Gift,08/04/23,30/04/23,active
+PM00763,Discount,15/03/23,13/04/23,not
+PM00764,Buy One Get One,31/08/23,19/09/23,not
+PM00765,Free Gift,13/07/23,06/08/23,not
+PM00766,Buy One Get One,29/05/23,17/06/23,not
+PM00767,Discount,16/05/23,03/06/23,active
+PM00768,Free Gift,16/10/23,22/10/23,active
+PM00769,Free Gift,19/12/23,27/12/23,active
+PM00770,Free Gift,26/07/23,02/08/23,active
+PM00771,Discount,10/12/23,22/12/23,not
+PM00772,Free Gift,16/01/23,20/01/23,active
+PM00773,Buy One Get One,17/09/23,29/09/23,not
+PM00774,Buy One Get One,16/06/23,03/07/23,active
+PM00775,Buy One Get One,08/04/23,18/04/23,active
+PM00776,Free Gift,14/12/23,22/12/23,active
+PM00777,Discount,30/07/23,27/08/23,not
+PM00778,Discount,31/05/23,10/06/23,active
+PM00779,Buy One Get One,27/05/23,11/06/23,active
+PM00780,Buy One Get One,23/11/23,03/12/23,not
+PM00781,Free Gift,23/07/23,21/08/23,active
+PM00782,Buy One Get One,09/11/23,20/11/23,not
+PM00783,Buy One Get One,25/06/23,13/07/23,active
+PM00784,Discount,23/01/23,12/02/23,not
+PM00785,Free Gift,19/05/23,31/05/23,active
+PM00786,Discount,15/02/23,16/03/23,active
+PM00787,Free Gift,30/03/23,28/04/23,active
+PM00788,Free Gift,30/03/23,21/04/23,active
+PM00789,Free Gift,30/09/23,02/10/23,not
+PM00790,Free Gift,05/10/23,06/10/23,not
+PM00791,Buy One Get One,24/07/23,14/08/23,not
+PM00792,Buy One Get One,08/12/23,27/12/23,active
+PM00793,Discount,08/10/23,23/10/23,active
+PM00794,Discount,12/11/23,25/11/23,not
+PM00795,Free Gift,04/08/23,10/08/23,not
+PM00796,Buy One Get One,02/05/23,05/05/23,not
+PM00797,Discount,12/04/23,08/05/23,not
+PM00798,Buy One Get One,28/09/23,09/10/23,not
+PM00799,Buy One Get One,21/08/23,15/09/23,active
+PM00800,Buy One Get One,23/05/23,27/05/23,active
+PM00801,Discount,05/02/23,15/02/23,active
+PM00802,Free Gift,25/01/23,09/02/23,active
+PM00803,Free Gift,05/01/23,08/01/23,active
+PM00804,Buy One Get One,22/03/23,26/03/23,active
+PM00805,Buy One Get One,20/02/23,26/02/23,not
+PM00806,Buy One Get One,23/12/23,07/01/24,active
+PM00807,Discount,13/09/23,05/10/23,not
+PM00808,Free Gift,29/03/23,05/04/23,active
+PM00809,Discount,16/03/23,18/03/23,not
+PM00810,Buy One Get One,15/05/23,08/06/23,active
+PM00811,Free Gift,28/09/23,18/10/23,active
+PM00812,Discount,06/08/23,23/08/23,not
+PM00813,Discount,09/12/23,22/12/23,not
+PM00814,Buy One Get One,24/09/23,18/10/23,active
+PM00815,Free Gift,17/02/23,23/02/23,not
+PM00816,Discount,08/10/23,10/10/23,active
+PM00817,Buy One Get One,18/05/23,17/06/23,active
+PM00818,Discount,11/10/23,23/10/23,not
+PM00819,Discount,14/05/23,09/06/23,active
+PM00820,Free Gift,12/01/23,07/02/23,active
+PM00821,Free Gift,27/05/23,05/06/23,active
+PM00822,Free Gift,24/08/23,02/09/23,active
+PM00823,Free Gift,21/09/23,18/10/23,active
+PM00824,Free Gift,24/02/23,08/03/23,not
+PM00825,Buy One Get One,14/12/23,02/01/24,active
+PM00826,Free Gift,19/04/23,21/04/23,not
+PM00827,Buy One Get One,31/10/23,06/11/23,not
+PM00828,Free Gift,11/09/23,09/10/23,active
+PM00829,Buy One Get One,29/11/23,10/12/23,not
+PM00830,Free Gift,25/08/23,03/09/23,not
+PM00831,Buy One Get One,30/06/23,19/07/23,not
+PM00832,Buy One Get One,24/12/23,07/01/24,active
+PM00833,Free Gift,05/12/23,29/12/23,not
+PM00834,Buy One Get One,31/01/23,12/02/23,active
+PM00835,Discount,22/07/23,23/07/23,not
+PM00836,Free Gift,18/04/23,15/05/23,not
+PM00837,Discount,22/07/23,24/07/23,active
+PM00838,Free Gift,06/06/23,24/06/23,active
+PM00839,Buy One Get One,02/02/23,09/02/23,not
+PM00840,Discount,04/06/23,02/07/23,active
+PM00841,Discount,02/06/23,07/06/23,active
+PM00842,Free Gift,24/11/23,09/12/23,active
+PM00843,Discount,14/12/23,12/01/24,active
+PM00844,Buy One Get One,25/02/23,19/03/23,active
+PM00845,Free Gift,23/10/23,13/11/23,not
+PM00846,Free Gift,04/03/23,09/03/23,not
+PM00847,Buy One Get One,30/12/23,11/01/24,active
+PM00848,Buy One Get One,13/03/23,17/03/23,active
+PM00849,Buy One Get One,23/09/23,22/10/23,active
+PM00850,Free Gift,15/01/23,19/01/23,active
+PM00851,Free Gift,25/10/23,02/11/23,not
+PM00852,Free Gift,01/06/23,26/06/23,not
+PM00853,Buy One Get One,14/04/23,15/04/23,not
+PM00854,Discount,14/12/23,09/01/24,not
+PM00855,Free Gift,09/02/23,01/03/23,not
+PM00856,Free Gift,26/05/23,11/06/23,not
+PM00857,Free Gift,16/03/23,31/03/23,not
+PM00858,Free Gift,10/05/23,24/05/23,not
+PM00859,Free Gift,08/05/23,18/05/23,not
+PM00860,Free Gift,27/05/23,24/06/23,not
+PM00861,Discount,28/08/23,13/09/23,not
+PM00862,Discount,13/07/23,27/07/23,not
+PM00863,Discount,01/05/23,30/05/23,active
+PM00864,Discount,24/10/23,06/11/23,not
+PM00865,Discount,03/08/23,11/08/23,active
+PM00866,Buy One Get One,18/09/23,15/10/23,not
+PM00867,Discount,02/05/23,20/05/23,not
+PM00868,Buy One Get One,19/09/23,13/10/23,active
+PM00869,Buy One Get One,24/04/23,09/05/23,active
+PM00870,Free Gift,28/07/23,20/08/23,not
+PM00871,Free Gift,10/10/23,12/10/23,not
+PM00872,Discount,20/05/23,10/06/23,not
+PM00873,Buy One Get One,08/04/23,03/05/23,active
+PM00874,Buy One Get One,10/05/23,05/06/23,not
+PM00875,Discount,02/12/23,28/12/23,active
+PM00876,Free Gift,23/05/23,03/06/23,active
+PM00877,Free Gift,02/03/23,03/03/23,active
+PM00878,Buy One Get One,27/04/23,19/05/23,active
+PM00879,Discount,01/06/23,14/06/23,not
+PM00880,Free Gift,17/10/23,25/10/23,active
+PM00881,Buy One Get One,26/10/23,03/11/23,active
+PM00882,Discount,17/06/23,05/07/23,active
+PM00883,Free Gift,28/02/23,07/03/23,active
+PM00884,Buy One Get One,30/01/23,23/02/23,active
+PM00885,Buy One Get One,24/05/23,06/06/23,active
+PM00886,Buy One Get One,09/11/23,24/11/23,not
+PM00887,Buy One Get One,05/03/23,13/03/23,active
+PM00888,Buy One Get One,24/06/23,20/07/23,active
+PM00889,Discount,24/07/23,09/08/23,not
+PM00890,Discount,13/12/23,27/12/23,active
+PM00891,Free Gift,29/07/23,22/08/23,not
+PM00892,Discount,21/04/23,07/05/23,active
+PM00893,Discount,27/10/23,08/11/23,active
+PM00894,Free Gift,27/04/23,13/05/23,not
+PM00895,Discount,10/09/23,21/09/23,active
+PM00896,Buy One Get One,15/08/23,20/08/23,not
+PM00897,Free Gift,10/11/23,14/11/23,active
+PM00898,Free Gift,11/09/23,07/10/23,active
+PM00899,Buy One Get One,09/02/23,06/03/23,not
+PM00900,Buy One Get One,08/08/23,22/08/23,not
+PM00901,Discount,14/11/23,22/11/23,active
+PM00902,Free Gift,29/07/23,20/08/23,active
+PM00903,Free Gift,14/04/23,29/04/23,active
+PM00904,Discount,05/10/23,04/11/23,active
+PM00905,Free Gift,09/09/23,20/09/23,active
+PM00906,Discount,12/12/23,05/01/24,not
+PM00907,Discount,15/06/23,05/07/23,active
+PM00908,Buy One Get One,19/10/23,29/10/23,active
+PM00909,Discount,15/01/23,03/02/23,not
+PM00910,Discount,26/06/23,01/07/23,active
+PM00911,Discount,04/06/23,05/06/23,not
+PM00912,Discount,13/03/23,25/03/23,active
+PM00913,Discount,09/11/23,27/11/23,not
+PM00914,Discount,27/03/23,02/04/23,not
+PM00915,Free Gift,29/12/23,17/01/24,active
+PM00916,Free Gift,22/05/23,06/06/23,not
+PM00917,Discount,24/08/23,11/09/23,active
+PM00918,Discount,13/03/23,06/04/23,not
+PM00919,Free Gift,16/09/23,26/09/23,active
+PM00920,Buy One Get One,05/03/23,06/03/23,not
+PM00921,Buy One Get One,19/06/23,15/07/23,not
+PM00922,Free Gift,19/01/23,18/02/23,not
+PM00923,Free Gift,08/06/23,07/07/23,active
+PM00924,Buy One Get One,21/06/23,21/07/23,active
+PM00925,Free Gift,01/05/23,07/05/23,active
+PM00926,Free Gift,19/04/23,27/04/23,not
+PM00927,Discount,03/06/23,30/06/23,active
+PM00928,Buy One Get One,06/06/23,27/06/23,not
+PM00929,Buy One Get One,22/10/23,16/11/23,not
+PM00930,Buy One Get One,04/07/23,13/07/23,not
+PM00931,Buy One Get One,08/09/23,26/09/23,active
+PM00932,Discount,04/01/23,19/01/23,active
+PM00933,Discount,10/01/23,18/01/23,not
+PM00934,Buy One Get One,27/07/23,18/08/23,active
+PM00935,Buy One Get One,27/07/23,26/08/23,not
+PM00936,Discount,04/02/23,26/02/23,active
+PM00937,Free Gift,25/04/23,30/04/23,active
+PM00938,Discount,30/01/23,27/02/23,active
+PM00939,Free Gift,04/10/23,22/10/23,active
+PM00940,Free Gift,07/02/23,15/02/23,active
+PM00941,Buy One Get One,05/05/23,25/05/23,active
+PM00942,Free Gift,10/09/23,30/09/23,active
+PM00943,Free Gift,27/08/23,31/08/23,not
+PM00944,Free Gift,15/02/23,24/02/23,not
+PM00945,Discount,05/02/23,16/02/23,not
+PM00946,Free Gift,23/09/23,17/10/23,not
+PM00947,Discount,20/10/23,05/11/23,not
+PM00948,Free Gift,21/06/23,01/07/23,active
+PM00949,Discount,15/07/23,19/07/23,not
+PM00950,Discount,21/12/23,22/12/23,active
+PM00951,Buy One Get One,15/05/23,26/05/23,active
+PM00952,Buy One Get One,11/01/23,13/01/23,not
+PM00953,Discount,28/04/23,06/05/23,active
+PM00954,Discount,27/08/23,18/09/23,not
+PM00955,Discount,27/12/23,19/01/24,not
+PM00956,Free Gift,26/09/23,09/10/23,active
+PM00957,Discount,09/12/23,27/12/23,not
+PM00958,Discount,23/10/23,02/11/23,active
+PM00959,Buy One Get One,06/01/23,04/02/23,active
+PM00960,Discount,05/01/23,25/01/23,active
+PM00961,Discount,23/12/23,13/01/24,active
+PM00962,Free Gift,25/06/23,14/07/23,active
+PM00963,Buy One Get One,07/07/23,11/07/23,not
+PM00964,Free Gift,12/07/23,25/07/23,not
+PM00965,Buy One Get One,23/09/23,08/10/23,active
+PM00966,Free Gift,10/05/23,13/05/23,active
+PM00967,Discount,21/12/23,17/01/24,active
+PM00968,Buy One Get One,31/12/23,18/01/24,not
+PM00969,Buy One Get One,19/08/23,23/08/23,active
+PM00970,Buy One Get One,08/08/23,26/08/23,active
+PM00971,Buy One Get One,17/07/23,29/07/23,not
+PM00972,Buy One Get One,02/03/23,19/03/23,not
+PM00973,Discount,28/09/23,09/10/23,not
+PM00974,Free Gift,04/07/23,14/07/23,not
+PM00975,Buy One Get One,02/11/23,29/11/23,active
+PM00976,Free Gift,15/03/23,30/03/23,active
+PM00977,Buy One Get One,23/07/23,12/08/23,not
+PM00978,Discount,16/05/23,01/06/23,not
+PM00979,Free Gift,16/05/23,20/05/23,active
+PM00980,Buy One Get One,15/04/23,11/05/23,not
+PM00981,Free Gift,12/05/23,26/05/23,not
+PM00982,Buy One Get One,26/04/23,02/05/23,active
+PM00983,Free Gift,28/09/23,03/10/23,not
+PM00984,Free Gift,03/12/23,05/12/23,not
+PM00985,Buy One Get One,07/08/23,27/08/23,active
+PM00986,Buy One Get One,11/06/23,24/06/23,not
+PM00987,Buy One Get One,04/06/23,26/06/23,active
+PM00988,Free Gift,13/01/23,24/01/23,not
+PM00989,Discount,25/01/23,27/01/23,not
+PM00990,Discount,30/06/23,05/07/23,active
+PM00991,Discount,30/06/23,29/07/23,active
+PM00992,Free Gift,28/04/23,01/05/23,active
+PM00993,Discount,09/10/23,03/11/23,active
+PM00994,Buy One Get One,28/10/23,02/11/23,active
+PM00995,Free Gift,18/05/23,22/05/23,not
+PM00996,Discount,18/09/23,18/10/23,not
+PM00997,Buy One Get One,19/09/23,08/10/23,not
+PM00998,Buy One Get One,29/05/23,25/06/23,not
+PM00999,Free Gift,22/03/23,06/04/23,active
+PM01000,Buy One Get One,09/10/23,14/10/23,not
