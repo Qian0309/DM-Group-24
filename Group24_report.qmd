@@ -30,6 +30,6 @@ There are 7 entities:
 
 7.Reviews: Represents the reviews made by the customer once the product is received.
 
-##Part 2: Data generation
+\[picture\]
 
-\##
+##Part 2: Data generation
