@@ -164,147 +164,105 @@ ggsave(paste0("Advanced_Data_Analysis/top5_products_reviews_plot_",
               this_filename_date,"_",
               this_filename_time,".png"))
 
-# #6) Products With Lowest Review
-# lowest_5_products_reviews <- dbGetQuery(db_conn, "SELECT
-#     p.product_id,
-#     p.product_name,
-#     ROUND(AVG(r.review_score),2) AS average_review_score
-# FROM
-#     review r
-# JOIN
-#     product p ON r.product_id = p.product_id
-# GROUP BY
-#     p.product_id,
-#     p.product_name
-# ORDER BY
-#     average_review_score ASC
-# LIMIT
-#     5;
-# ")
-# 
-# ggplot(lowest_5_products_reviews, aes(x = reorder(product_name, -average_review_score), y = average_review_score)) +
-#   geom_bar(stat = "identity", width = 0.7) +
-#   geom_text(aes(label = average_review_score), vjust = 0.2, hjust=-0.3, position=position_dodge(width=0.9),size=4) +
-#   labs(x = "Product", y = "Average Review Score") +
-#   theme_minimal() +
-#   coord_flip() +
-#   ggtitle("Products with Lowest Review Scores") +
-#   theme(plot.title = element_text(size = 10, face = "bold", hjust = 0.5), legend.position = 'none')
-# 
-# 
-# #7) Cities With Lowest Review
-# lowest_5_city_reviews <- dbGetQuery(db_conn, "SELECT
-#     a.city,
-#     ROUND(AVG(r.review_score),2) AS average_review_score
-# FROM
-#     review r
-# JOIN
-#     buyer b ON r.buyer_id = b.buyer_id
-# JOIN
-#     address a ON b.address_id = a.address_id
-# GROUP BY
-#     a.city
-# ORDER BY
-#     average_review_score ASC
-# LIMIT
-#     5;
-# ")
-# 
-# ggplot(lowest_5_city_reviews, aes(x = reorder(city, average_review_score), y = average_review_score)) +
-#   geom_bar(stat = "identity", width=0.7) +
-#   geom_text(aes(label = average_review_score), vjust = 0.2, hjust=-0.3, position=position_dodge(width=0.9),size=4) +
-#   labs(x = "City", y = "Average Review Score") +
-#   theme_minimal() +
-#   coord_flip() +
-#   ggtitle("Cities with Lowest Review Scores") +
-#   theme(plot.title = element_text(size = 10, face = "bold", hjust = 0.5), legend.position = 'none')
-# 
-# #Cities With Highest Review
-# highest_5_city_reviews <- dbGetQuery(db_conn, "SELECT
-#     a.city,
-#     ROUND(AVG(r.review_score),2) AS average_review_score
-# FROM
-#     review r
-# JOIN
-#     buyer b ON r.buyer_id = b.buyer_id
-# JOIN
-#     address a ON b.address_id = a.address_id
-# GROUP BY
-#     a.city
-# ORDER BY
-#     average_review_score DESC
-# LIMIT
-#     5;
-# ")
-# 
-# 
-# ggplot(highest_5_city_reviews, aes(x = reorder(city, -average_review_score), y = average_review_score)) +
-#   geom_bar(stat = "identity", width=0.7) +
-#   geom_text(aes(label = average_review_score), vjust = 0.2, hjust=-0.3, position=position_dodge(width=0.9),size=4) +
-#   labs(x = "City", y = "Average Review Score") +
-#   theme_minimal() +
-#   coord_flip() +
-#   ggtitle("Cities with Highest Review Scores") +
-#   theme(plot.title = element_text(size = 10, face = "bold", hjust = 0.5), legend.position = 'none')
-# 
-# 
-# #9) Estimate the CLV based on historical transactions to identify your most valuable customers.
-# customer_lifetime_value <- dbGetQuery(db_conn, "SELECT
-#     buyer_id,
-#     ROUND(SUM(p.price),2) AS total_spent,
-#     COUNT(distinct order_id) AS number_of_orders,
-#     ROUND((SUM(p.price) / COUNT(distinct order_id)),2) AS average_order_value
-# FROM
-#     order_details od
-# JOIN
-#     product p ON od.product_id = p.product_id
-# GROUP BY
-#     buyer_id
-# ORDER BY
-#     total_spent DESC;
-# ")
-# 
-# 
-# top_n_buyers <- head(customer_lifetime_value, 10) 
-# # Change 10 to the desired number of top buyers to display
-# 
-# ggplot(top_n_buyers, aes(x = reorder(buyer_id, -total_spent), y = total_spent)) +
-#   geom_bar(stat = "identity", width = 0.7) +
-#   labs(x = "Buyer ID", y = "Total Spent") +
-#   theme_minimal() +
-#   ggtitle("Top Buyers by Customer Lifetime Value") +
-#   theme(plot.title = element_text(size = 10, face = "bold", hjust = 0.5), legend.position = 'none')
-# 
-# 
-# #10) Effective of Promotions
-# effective_promotions <- dbGetQuery(db_conn, "SELECT
-#     promo.promotion_type,
-#     COUNT(*) AS number_of_sales,
-#     ROUND(SUM(prod.price),2) AS total_revenue
-# FROM
-#     order_details od
-# JOIN
-#     product prod ON od.product_id = prod.product_id
-# JOIN
-#     promotion promo ON prod.promotion_id = promo.promotion_id
-# WHERE
-#     promo.status = 'active'
-# GROUP BY
-#     promo.promotion_type
-# ORDER BY
-#     total_revenue DESC;
-# ")
-# ```
-# 
-# ggplot(effective_promotions, aes(x = reorder(promotion_type, -total_revenue), y = total_revenue)) +
-#   geom_bar(stat = "identity", width=0.7) +
-#   geom_text(aes(label = total_revenue), vjust = -0.2, hjust=0.5, position=position_dodge(width=0.9),size=4) +
-#   labs(x = "Promotion Type", y = "Total Revenue") +
-#   theme_minimal() +
-#   ggtitle("Effectiveness of Promotions") +
-#   theme(plot.title = element_text(size = 10, face = "bold", hjust = 0.5), legend.position = 'none')
-# 
-# 
+#6) Products With Lowest Review
+lowest_5_products_reviews <- dbGetQuery(db_conn, "SELECT
+    p.product_id,
+    p.product_name,
+    ROUND(AVG(r.review_score),2) AS average_review_score
+FROM
+    review r
+JOIN
+    product p ON r.product_id = p.product_id
+GROUP BY
+    p.product_id,
+    p.product_name
+ORDER BY
+    average_review_score ASC
+LIMIT
+    5;
+")
+
+ggplot(lowest_5_products_reviews, aes(x = reorder(product_name, -average_review_score), y = average_review_score)) +
+  geom_bar(stat = "identity", width = 0.7) +
+  geom_text(aes(label = average_review_score), vjust = 0.2, hjust=-0.3, position=position_dodge(width=0.9),size=4) +
+  labs(x = "Product", y = "Average Review Score") +
+  theme_minimal() +
+  coord_flip() +
+  ggtitle("Products with Lowest Review Scores") +
+  theme(plot.title = element_text(size = 10, face = "bold", hjust = 0.5), legend.position = 'none')
+
+# save image
+ggsave(paste0("Advanced_Data_Analysis/lowest5_products_reviews_plot_",
+              this_filename_date,"_",
+              this_filename_time,".png"))
+
+
+
+#9) Estimate the CLV based on historical transactions to identify your most valuable customers.
+customer_lifetime_value <- dbGetQuery(db_conn, "SELECT
+    buyer_id,
+    ROUND(SUM(p.price),2) AS total_spent,
+    COUNT(distinct order_id) AS number_of_orders,
+    ROUND((SUM(p.price) / COUNT(distinct order_id)),2) AS average_order_value
+FROM
+    order_details od
+JOIN
+    product p ON od.product_id = p.product_id
+GROUP BY
+    buyer_id
+ORDER BY
+    total_spent DESC;
+")
+
+
+top_n_buyers <- head(customer_lifetime_value, 10)
+# Change 10 to the desired number of top buyers to display
+
+ggplot(top_n_buyers, aes(x = reorder(buyer_id, -total_spent), y = total_spent)) +
+  geom_bar(stat = "identity", width = 0.7) +
+  labs(x = "Buyer ID", y = "Total Spent") +
+  theme_minimal() +
+  ggtitle("Top Buyers by Customer Lifetime Value") +
+  theme(plot.title = element_text(size = 10, face = "bold", hjust = 0.5), legend.position = 'none')
+
+# save image
+ggsave(paste0("Advanced_Data_Analysis/topn_buyers_plot_",
+              this_filename_date,"_",
+              this_filename_time,".png"))
+
+#10) Effective of Promotions
+effective_promotions <- dbGetQuery(db_conn, "SELECT
+    promo.promotion_type,
+    COUNT(*) AS number_of_sales,
+    ROUND(SUM(prod.price),2) AS total_revenue
+FROM
+    order_details od
+JOIN
+    product prod ON od.product_id = prod.product_id
+JOIN
+    promotion promo ON prod.promotion_id = promo.promotion_id
+WHERE
+    promo.status = 'active'
+GROUP BY
+    promo.promotion_type
+ORDER BY
+    total_revenue DESC;
+")
+
+
+ggplot(effective_promotions, aes(x = reorder(promotion_type, -total_revenue), y = total_revenue)) +
+  geom_bar(stat = "identity", width=0.7) +
+  geom_text(aes(label = total_revenue), vjust = -0.2, hjust=0.5, position=position_dodge(width=0.9),size=4) +
+  labs(x = "Promotion Type", y = "Total Revenue") +
+  theme_minimal() +
+  ggtitle("Effectiveness of Promotions") +
+  theme(plot.title = element_text(size = 10, face = "bold", hjust = 0.5), legend.position = 'none')
+
+# save image
+ggsave(paste0("Advanced_Data_Analysis/effective_promos_plot_",
+              this_filename_date,"_",
+              this_filename_time,".png"))
+
 # #11) Most Reviewed Products
 # most_reviewed_products <- dbGetQuery(db_conn,"SELECT
 #     p.product_name,
