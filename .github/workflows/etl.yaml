@@ -28,15 +28,18 @@ jobs:
           Rscript -e 'install.packages(c("ggplot2", "dplyr", "readr", "RSQLite"))'
       - name: Execute R script
         run: |
-          Rscript SFW_test/Analysis.R
+          Rscript Data_Validation_Import_Script.R
+      - name: Execute R script
+        run: |
+          Rscript Advanced_Data_Analysis.R
       - name: Add files
         run: |
           git config --global user.email "qian20000309@126.com"
           git config --global user.name "Qian0309"
-          git add --all SFW_test/
+          git add --all Updated_Visualisations/
       - name: Commit files
         run: |
-          git commit -m "Add plot figure"
+          git commit -m "Advanced Visualisations Added"
       - name: Push changes
         uses: ad-m/github-push-action@v0.6.0
         with:
