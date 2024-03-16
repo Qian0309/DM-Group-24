@@ -46,7 +46,7 @@ ggplot(top_5_products_sales, aes(x = reorder(product_name, total_sales), y = tot
 this_filename_date <- as.character(Sys.Date())
 # format the Sys.time() to show only hours and minutes 
 this_filename_time <- as.character(format(Sys.time(), format = "%H_%M"))
-ggsave(paste0("SFW_test/top5products_plot_",
+ggsave(paste0("SFW_test/top5_products_plot_",
               this_filename_date,"_",
               this_filename_time,".png"))
 
