@@ -69,6 +69,10 @@ ggplot(top_5_products_sales, aes(x = reorder(product_name, total_sales), y = tot
 
 
 2) Can't Read Handwriting
+```{r}
+top_5_products_sales
+```
+
 
 3) Number of days promotions are running (Not Working)
 
@@ -87,27 +91,34 @@ LIMIT
     5;;
 ")
 
-
-
 print(no_of_days_promotions)
 
 ```
 
 ```{r}
-no_of_days_promotions <- dbGetQuery(db_conn, "SELECT
-    *
-FROM
-    promotion
-ORDER BY
-    promotion_duration_days DESC
-LIMIT
-    5;;
-")
+no_of_days_promotions <- dbGetQuery(db_conn, "SELECT * FROM promotion;")
 
+no_of_days_promotions <- mutate(no_of_days_promotions,
+                         start_date = as.Date(start_date,format= "%d/%m/%Y"),
+                         end_date = as.Date(end_date,format= "%d/%m/%Y"),
+                         num_days_promotion = end_date - start_date)
+no_of_days_promotions <- no_of_days_promotions %>%
+  arrange(desc(num_days_promotion))
 
-
+no_of_days_promotions <- no_of_days_promotions %>% 
+  group_by(num_days_promotion) %>% 
+  summarise(num_promotions = n()) %>%
+  arrange((num_days_promotion))
 print(no_of_days_promotions)
 
+```
+```{r}
+ggplot(no_of_days_promotions, aes(x = num_days_promotion, y = num_promotions)) +
+  geom_col() + 
+  labs(title = "Number of Promotions running across each different duration", x = "Number of days promotion is running", y = "Number of promotions") +
+  theme_minimal() +
+  scale_fill_viridis_d() +
+  theme(legend.position = "none")
 ```
 
 4) Sales Trends
@@ -131,8 +142,34 @@ print(monthly_sales_trends)
 
 ```
 
+```{r}
+order_details <- dbGetQuery(db_conn,"SELECT * FROM order_details")
+order_details <- mutate(order_details,
+                         order_dates = as.Date(order_dates,format= "%d/%m/%Y"))
+product <- dbGetQuery(db_conn,"SELECT * FROM product")
 
 
+# Viewing the results
+sales_trend_data <- inner_join(order_details, product, 
+           by = c("product_id")) 
+
+sales_trend_data <- sales_trend_data %>%
+  group_by(order_dates) %>% 
+  summarise(total_sales = sum(price))
+
+```
+
+
+```{r}
+ggplot(sales_trend_data, aes(x = order_dates, y = total_sales)) +
+  geom_line() + 
+  labs(title = "Sales Trend", x = "Date", y = "Sales") +
+  theme_minimal() +
+  scale_fill_viridis_d() +
+  theme(legend.position = "none")
+```
+
+  
 5) Products With Highest Review
 
 ```{r}
@@ -414,8 +451,7 @@ ggplot(cities_highest_sales, aes(x = city, y = total_sales)) +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
 ```
 
-dbDisconnect(db_conn)
-```
+
 
 
 

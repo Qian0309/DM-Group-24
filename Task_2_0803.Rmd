@@ -98,8 +98,9 @@ promotion_data <- mutate(promotion_data,
 
 ```{r}
 order_details_data <- mutate(order_details_data,
-                         order_dates = as.Date(order_dates,format= "%d/%m/%Y"))
+                         order_dates = as.Date(order_dates,format= "%Y-%m-%d"))
 ```
+
 ## Referential Integrity Checks
 ```{r}
 # PRODUCT ENTITY
