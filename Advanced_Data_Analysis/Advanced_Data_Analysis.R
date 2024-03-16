@@ -7,6 +7,11 @@ library(ggplot2)
 ## Access Existing Database
 db_conn <- dbConnect(RSQLite::SQLite(), "Database/ecommerce.db")
 
+## save image in folder "Updated_Visualisations"
+this_filename_date <- as.character(Sys.Date())
+# format the Sys.time() to show only hours and minutes 
+this_filename_time <- as.character(format(Sys.time(), format = "%H_%M"))
+
 ## Visualisations
 #1) Products With Highest Sales
 top_5_products_sales <- dbGetQuery(db_conn, "SELECT
@@ -36,10 +41,8 @@ ggplot(top_5_products_sales, aes(x = reorder(product_name, total_sales), y = tot
   ggtitle("Top 5 Products by Sales") +
   theme(plot.title = element_text(size = 10, face = "bold", hjust = 0.5), legend.position = 'none')
 
-## save image in folder "Updated_Visualisations"
-this_filename_date <- as.character(Sys.Date())
-# format the Sys.time() to show only hours and minutes 
-this_filename_time <- as.character(format(Sys.time(), format = "%H_%M"))
+# Save the image
+
 ggsave(paste0("Updated_Visualisations/top5_products_sales_plot_",
               this_filename_date,"_",
               this_filename_time,".png"))
@@ -78,10 +81,7 @@ ggplot(top_5_products_promotion, aes(x = reorder(product_name, total_sales), y =
   ggtitle("Promotion Status of Top 5 products with respect to Sales") +
   theme(plot.title = element_text(size = 10, face = "bold", hjust = 0.5), legend.position = 'right') 
 
-## save image in folder "Updated_Visualisations"
-this_filename_date <- as.character(Sys.Date())
-# format the Sys.time() to show only hours and minutes 
-this_filename_time <- as.character(format(Sys.time(), format = "%H_%M"))
+# save image
 ggsave(paste0("Updated_Visualisations/top5_products_promos_plot_",
               this_filename_date,"_",
               this_filename_time,".png"))
