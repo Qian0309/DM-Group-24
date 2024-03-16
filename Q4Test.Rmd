@@ -43,6 +43,7 @@ print(top_5_products_sales)
 
 ```
 
+
 ```{r}
 ggplot(top_5_products_sales, aes(x = reorder(product_name, total_sales), y = total_sales, fill = product_name)) +
   geom_col() + 
@@ -53,6 +54,8 @@ ggplot(top_5_products_sales, aes(x = reorder(product_name, total_sales), y = tot
   scale_fill_discrete(name = "Product Name") + 
   theme(legend.position = "none") 
 ```
+
+
 2) Can't Read Handwriting
 
 3) Number of days promotions are running (Not Working)
@@ -158,6 +161,7 @@ LIMIT
 # Viewing the results
 print(lowest_5_products_reviews)
 ```
+
 ```{r}
 ggplot(lowest_5_products_reviews, aes(x = reorder(product_name, -average_review_score), y = average_review_score)) +
   geom_bar(stat = "identity", fill = "skyblue") +
@@ -370,6 +374,7 @@ print(cities_highest_sales)
 
 ```
 
+
 ```{r}
 ggplot(cities_highest_sales, aes(x = city, y = total_sales)) +
   geom_bar(stat = "identity", fill = "skyblue", width = 0.5) +
@@ -377,7 +382,6 @@ ggplot(cities_highest_sales, aes(x = city, y = total_sales)) +
   theme_minimal() +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
 ```
-
 
 dbDisconnect(db_conn)
 ```
