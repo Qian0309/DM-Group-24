@@ -99,17 +99,18 @@ dataname_list <- list("address_data", "buyer_data", "dimension_data", "order_det
 idname_list <- list("address_id", "buyer_id", "dimension_id","order_id","payment_id","product_id",
                     "promotion_id", "review_id", "shipper_id", "supplier_id")
 
-idformat_list <-  list("^AD","^BU","^DM","^OR","^PD","^PR",
-                       "^PM","^RV","^SH","^SP")
+idformat_list <-  list("AD","BU","DM","OR","PD","PR",
+                       "PM","RV","SH","SP")
 
 # Loop through each data file
 for (i in seq_along(dataname_list)) {
   # Load data file
   datatemp <- get(dataname_list[[i]])
   
-  # Get the ID column name and format for the current data file
-  id_col <- idname_list[[i]]
-  id_format <- idformat_list[[i]]
+  for (j in seq_along(idname_list)){
+     # Get the ID column name and format for the current data file
+  id_col <- idname_list[[j]]
+  id_format <- idformat_list[[j]]
   
   # Check if the ID column exists in the data frame
   if (id_col %in% colnames(datatemp)) {
@@ -118,19 +119,21 @@ for (i in seq_along(dataname_list)) {
       filter(!grepl(paste0("^", id_format), get(id_col)))
     
   } else {
-    cat("ID column ", id_col, " not found in ", dataname_list[[i]], "\n")
-  }
+    print(paste0("ID column ", id_col, " not found in ", dataname_list[[i]], "\n"))
+  } 
   
   # Print the filtered data
-    print(paste0("Checking for format for ", id_col))
+    print(paste0("Checking for format for ", id_col, " in the dataframe ", dataname_list[[i]]))
     
-    if (nrow(id_data)==0){
-    print(paste0("No rows are removed from ",dataname_list[[i]], " because of incorrect id format" ))
-    } else{
+    if (nrow(id_data)!=0){
     print(paste0(nrow(id_data), " rows are removed from ",dataname_list[[i]], " because of incorrect id format" ))
     print(paste0("THe removed data are ", id_data))
     assign(dataname_list[[i]], anti_join(datatemp, id_data, by = id_col))
-    }    
+    }   
+    id_data <-  id_data[0, ]
+    
+  }
+    
 }
 
 ```
