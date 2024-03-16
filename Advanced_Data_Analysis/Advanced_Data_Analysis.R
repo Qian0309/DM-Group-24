@@ -130,35 +130,40 @@ ggsave(paste0("Advanced_Data_Analysis/top5_products_promos_plot_",
 # #   scale_fill_viridis_d() +
 # #   ggtitle("Sales Trend") +
 # #   theme(plot.title = element_text(size = 10, face = "bold", hjust = 0.5), legend.position = 'none') 
-# 
-# #5) Products With Highest Review
-# top_5_products_reviews <- dbGetQuery(db_conn, "SELECT
-#     r.product_id,
-#     p.product_name,
-#     ROUND(AVG(r.review_score),2) AS avg_review_score
-# FROM
-#     review r
-# JOIN
-#     product p ON r.product_id = p.product_id
-# GROUP BY
-#     r.product_id,
-#     p.product_name
-# ORDER BY
-#     avg_review_score DESC
-# LIMIT
-#     5;
-# ")
-# 
-# ggplot(top_5_products_reviews, aes(x = reorder(product_name, avg_review_score), y = avg_review_score)) +
-#   geom_col(show.legend = FALSE, width=0.8) + 
-#   geom_text(aes(label = avg_review_score), vjust = 0.2, hjust=-0., position=position_dodge(width=0.9),size=4) +
-#   coord_flip() + 
-#   labs(x = "Product Name", y = "Average Review Score") +
-#   theme_minimal() +
-#   scale_fill_viridis_d() + 
-#   ggtitle("Top 5 Products by Average Review Score") +
-#   theme(plot.title = element_text(size = 10, face = "bold", hjust = 0.5), legend.position = 'none') 
-# 
+
+#5) Products With Highest Review
+top_5_products_reviews <- dbGetQuery(db_conn, "SELECT
+    r.product_id,
+    p.product_name,
+    ROUND(AVG(r.review_score),2) AS avg_review_score
+FROM
+    review r
+JOIN
+    product p ON r.product_id = p.product_id
+GROUP BY
+    r.product_id,
+    p.product_name
+ORDER BY
+    avg_review_score DESC
+LIMIT
+    5;
+")
+
+ggplot(top_5_products_reviews, aes(x = reorder(product_name, avg_review_score), y = avg_review_score)) +
+  geom_col(show.legend = FALSE, width=0.8) +
+  geom_text(aes(label = avg_review_score), vjust = 0.2, hjust=-0., position=position_dodge(width=0.9),size=4) +
+  coord_flip() +
+  labs(x = "Product Name", y = "Average Review Score") +
+  theme_minimal() +
+  scale_fill_viridis_d() +
+  ggtitle("Top 5 Products by Average Review Score") +
+  theme(plot.title = element_text(size = 10, face = "bold", hjust = 0.5), legend.position = 'none')
+
+# save image
+ggsave(paste0("Advanced_Data_Analysis/top5_products_reviews_plot_",
+              this_filename_date,"_",
+              this_filename_time,".png"))
+
 # #6) Products With Lowest Review
 # lowest_5_products_reviews <- dbGetQuery(db_conn, "SELECT
 #     p.product_id,
