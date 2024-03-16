@@ -40,7 +40,7 @@ ggplot(top_5_products_sales, aes(x = reorder(product_name, total_sales), y = tot
 this_filename_date <- as.character(Sys.Date())
 # format the Sys.time() to show only hours and minutes 
 this_filename_time <- as.character(format(Sys.time(), format = "%H_%M"))
-ggsave(paste0("Updated_Visualisations/top5_product_sales_plot_",
+ggsave(paste0("Updated_Visualisations/top5_products_sales_plot_",
               this_filename_date,"_",
               this_filename_time,".png"))
 
@@ -82,7 +82,7 @@ ggplot(top_5_products_promotion, aes(x = reorder(product_name, total_sales), y =
 this_filename_date <- as.character(Sys.Date())
 # format the Sys.time() to show only hours and minutes 
 this_filename_time <- as.character(format(Sys.time(), format = "%H_%M"))
-ggsave(paste0("Updated_Visualisations/top5_product_promos_plot_",
+ggsave(paste0("Updated_Visualisations/top5_products_promos_plot_",
               this_filename_date,"_",
               this_filename_time,".png"))
 
