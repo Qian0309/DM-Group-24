@@ -1,22 +1,27 @@
 ---
-title: "Q4Test"
+title: "Advanced_Data_Analysis"
 output: html_document
-date: "2024-03-15"
+date: "2024-03-16"
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+```
 
+```{r}
+# Load neccesary libraries
 library(DBI)
 library(RSQLite)
 library(dplyr)
 library(ggplot2)
 ```
 
+## Access Existing Database
 ```{r}
-db_conn <- dbConnect(RSQLite::SQLite(), "database/ecommerce.db")
+db_conn <- dbConnect(RSQLite::SQLite(), "Database/ecommerce.db")
 ```
 
+## Visualisations
 1) Products With Highest Sales
 ```{r}
 top_5_products_sales <- dbGetQuery(db_conn, "SELECT
@@ -412,12 +417,3 @@ ggplot(cities_highest_sales, aes(x = city, y = total_sales)) +
   ggtitle("City with Highest Sales") +
   theme(plot.title = element_text(size = 10, face = "bold", hjust = 0.5), legend.position = 'none')
 ```
-
-
-
-
-
-
-
-
-

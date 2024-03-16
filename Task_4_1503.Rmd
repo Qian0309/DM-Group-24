@@ -1,0 +1,50 @@
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,comment = NA)
+library(readr)
+library(dplyr)
+library(ggplot2)
+#install.packages("ggplot2")
+options(scipen = 999)
+```
+
+```{r dataread}
+address_data <- read.csv("data/ecommerce_address_dataset.csv")
+buyer_data <- read.csv("data/ecommerce_buyer_dataset.csv")
+dimension_data <- read.csv("data/ecommerce_dimension_dataset.csv")
+product_data <- read.csv("data/ecommerce_product_dataset.csv")
+promotion_data <- read.csv("data/ecommerce_promotion_dataset.csv")
+review_data <- read.csv("data/ecommerce_review_dataset.csv")
+shipper_data <- read.csv("data/ecommerce_shipper_dataset.csv")
+supplier_data <- read.csv("data/ecommerce_supplier_dataset.csv")
+payment_data <- read.csv("data/ecommerce_payment_datatset.csv")
+order_details_data <- read.csv("data/ecommerce_order_details_dataset.csv")
+```
+
+## Visualisation in R
+### Top 5 Products giving highest sales
+```{r}
+py_or_pr_df <- inner_join(inner_join(payment_data, order_details_data, by='order_id'),
+                          product_data, by='product_id')
+
+n_distinct(py_or_pr_df$order_id)
+n_distinct(py_or_pr_df$payment_id)
+n_distinct(py_or_pr_df$product_id)
+
+product_sales <- py_or_pr_df %>% 
+  group_by(product_id, product_name) %>% 
+  summarise(total_sales = sum(payment_amount)) %>%
+  arrange(desc(total_sales))
+
+product_sales <- product_sales[1:5,]
+
+product_sales %>%
+  ggplot(., aes(x=product_name, y=total_sales)) + 
+  geom_bar(stat="identity") +
+  ggtitle("Top 5 Products with Highest Sales") +
+  labs(x="Product", y="Sales") +
+  theme(plot.title = element_text(size = 12, face = "bold", hjust = 0.5)) + coord_flip()
+  
+```
+
+
+

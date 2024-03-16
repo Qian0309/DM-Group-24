@@ -1,0 +1,161 @@
+---
+title: "DDL_Script"
+output: html_document
+date: "2024-03-16"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+# Load neccesary libraries
+library(RSQLite)
+```
+
+# Creating Database
+```{r loadsqlite,warning=FALSE,error=FALSE,message=FALSE,attr.source='.numberLines'}
+#setup the connection
+connection <- RSQLite::dbConnect(RSQLite::SQLite(),"Database/ecommerce.db")
+```
+
+
+```{r}
+#Creating table promotion
+dbExecute(connection, 
+"CREATE TABLE promotion (
+  'promotion_id' VARCHAR(50) PRIMARY KEY, 
+  'promotion_type' VARCHAR(50),
+  'start_date' DATE,
+  'end_date' DATE,
+  'status' VARCHAR(50)
+) ; " )
+```
+
+
+```{r}
+#Creating table shipper
+dbExecute(connection, 
+"CREATE TABLE shipper (
+  'shipper_id' VARCHAR(50) PRIMARY KEY, 
+  'shipper_name' VARCHAR(50),
+  'service' VARCHAR(100),
+  'fixed_price' DOUBLE,
+  'cost_per_mile' DOUBLE
+) ; " )
+```
+
+```{r}
+#Creating table address
+dbExecute(connection, 
+"CREATE TABLE address (
+  'address_id' VARCHAR(50) PRIMARY KEY, 
+  'house_number' INT,
+  'house_name' VARCHAR(50),
+  'street' VARCHAR(50),
+  'city' VARCHAR(20) NOT NULL,
+  'county' VARCHAR(20),
+  'post_code' VARCHAR(10)
+) ; " )
+```
+
+```{r}
+#creating table dimension
+dbExecute(connection, 
+"CREATE TABLE dimension (
+  'dimension_id' VARCHAR(50) PRIMARY KEY, 
+  'length' DOUBLE,
+  'width' DOUBLE,
+  'height' DOUBLE
+) ; " )
+```
+
+```{r}
+#creating table buyer
+dbExecute(connection, 
+"CREATE TABLE 'buyer' (
+  'buyer_id' VARCHAR(50) PRIMARY KEY, 
+  'first_name' VARCHAR(250) NOT NULL,
+  'last_name' VARCHAR(250),
+  'date_of_birth' DATE,
+  'address_id' VARCHAR(50) NOT NULL,
+  FOREIGN KEY('address_id') REFERENCES address('address_id')
+) ; " )
+```
+
+```{r}
+#creating table supplier
+dbExecute(connection, 
+"CREATE TABLE 'supplier' (
+  'supplier_id' VARCHAR(50) PRIMARY KEY, 
+  'supplier_type' VARCHAR(250),
+  'contract_type' VARCHAR(250),
+  'number_of_year_of_association' INT,
+  'supplier_name' VARCHAR(50),
+  'address_id' VARCHAR(50) NOT NULL,
+  FOREIGN KEY('address_id') REFERENCES address('address_id')
+) ; " )
+```
+
+```{r}
+#creating table product
+dbExecute(connection, 
+"CREATE TABLE 'product' (
+  'product_id' VARCHAR(50) PRIMARY KEY, 
+  'product_name' VARCHAR(250),
+  'product_description' VARCHAR(250),
+  'weight' DOUBLE,
+  'price' DOUBLE,
+  'promotion_id' VARCHAR(50) NOT NULL,
+  'supplier_id' VARCHAR(50) NOT NULL,
+  'dimension_id' VARCHAR(50) NOT NULL,
+  FOREIGN KEY('promotion_id') REFERENCES promotion('promotion_id'),
+  FOREIGN KEY('supplier_id') REFERENCES supplier('supplier_id'),
+  FOREIGN KEY('dimension_id') REFERENCES dimension('dimension_id')
+) ; " )
+```
+
+```{r}
+#creating table review
+dbExecute(connection, 
+"CREATE TABLE 'review' (
+  'review_id' VARCHAR(50) PRIMARY KEY, 
+  'buyer_id' VARCHAR(250) NOT NULL,
+  'product_id' VARCHAR(250) NOT NULL,
+  'review_score' DOUBLE,
+  'review_description' VARCHAR(250),
+  FOREIGN KEY('buyer_id') REFERENCES buyer('buyer_id'),
+  FOREIGN KEY('product_id') REFERENCES product('product_id')
+
+) ; " )
+```
+
+```{r}
+#creating table order_details
+dbExecute(connection, 
+"CREATE TABLE 'order_details' (
+  'order_id' VARCHAR(50) PRIMARY KEY, 
+  'product_id' VARCHAR(50) NOT NULL,
+  'buyer_id' VARCHAR(50) NOT NULL,
+  'supplier_id' VARCHAR(50) NOT NULL,
+  'order_dates' DATE,
+  'shipper_id' VARCHAR(50) NOT NULL,
+  FOREIGN KEY('buyer_id') REFERENCES buyer('buyer_id'),
+  FOREIGN KEY('product_id') REFERENCES product('product_id'),
+  FOREIGN KEY('shipper_id') REFERENCES shipper('shipper_id'),
+  FOREIGN KEY('supplier_id') REFERENCES supplier('supplier_id')
+) ; " )
+```
+
+```{r}
+#creating table transaction
+dbExecute(connection, 
+"CREATE TABLE 'payment' (
+  'payment_id' VARCHAR(50) PRIMARY KEY, 
+  'payment_type' VARCHAR(250),
+  'payment_amount' DOUBLE,
+  'installment_number' INT,
+  'order_id' VARCHAR(50) NOT NULL,
+  FOREIGN KEY('order_id') REFERENCES order_details('order_id')
+) ; " )
+```

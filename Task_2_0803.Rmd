@@ -88,6 +88,60 @@ for (variable in all_files) {
 
 ```
 
+<<<<<<< HEAD
+# Data Quality Assurance
+# Data Integrity Checks
+```{r}
+promotion_data <- mutate(promotion_data,
+                         start_date = as.Date(start_date,format= "%d/%m/%Y"),
+                         end_date = as.Date(end_date,format= "%d/%m/%Y"))
+```
+
+```{r}
+order_details_data <- mutate(order_details_data,
+                         order_dates = as.Date(order_dates,format= "%Y-%m-%d"))
+```
+
+## Referential Integrity Checks
+```{r}
+# PRODUCT ENTITY
+# Relationship between Product and Promotion : 1 Promotion applied on N Products
+setdiff(unique(product_data$promotion_id), unique(promotion_data$promotion_id))
+# Relationship between Product and Supplier : 1 Supplier sells N Products 
+setdiff(unique(product_data$supplier_id), unique(supplier_data$supplier_id))
+# Relationship between Product and Dimension : 1 Product has 1 Dimension
+setdiff(unique(product_data$dimension_id), unique(dimension_data$dimension_id))
+
+# BUYER ENTITY
+# Relationship between Buyer and Address : 1 Buyer has 1 Address
+setdiff(unique(buyer_data$address_id), unique(address_data$address_id))
+
+# SUPPLIER ENTITY
+# Relationship between Supplier and Address : 1 Supplier has 1 Address
+setdiff(unique(supplier_data$address_id), unique(address_data$address_id))
+
+# REVIEW ENTITY
+# Relationship between Product and Review : 1 Product has n Reviews
+setdiff(unique(product_data$review_id), unique(review_data$review_id))
+# Relationship between Buyer and Review : 1 Buyer gives n Reviews
+setdiff(unique(buyer_data$review_id), unique(review_data$review_id))
+
+# PAYMENT ENTITY
+# Relationship between Payment and Order : 1 Order has n Payments
+setdiff(unique(payment_data$order_id), unique(order_details_data$order_id))
+
+# ORDER DETAILS ENTITY
+# Relationship between Order and Buyer : 1 Buyer has n Orders
+setdiff(unique(order_details_data$buyer_id), unique(buyer_data$buyer_id))
+# Relationship between Order and Product : 1 Product present in n Orders
+setdiff(unique(order_details_data$product_id), unique(product_data$product_id))
+# Relationship between Order and Shipper : 1 Shipper satisfies n Orders
+setdiff(unique(order_details_data$shipper_id), unique(shipper_data$shipper_id))
+# Relationship between Order and Supplier : 1 Supplier has n Orders
+setdiff(unique(order_details_data$supplier_id), unique(supplier_data$supplier_id))
+
+```
+=======
 # Data Quality checks
 
 ```{r checkprimary,message=FALSE,warning=FALSE,attr.source='.numberLines'}
@@ -144,6 +198,7 @@ for (i in seq_along(dataname_list)) {
 
 
 
+>>>>>>> c6bff6780168eec765c4fbb99dcb824d33627f1c
 
 
 
@@ -153,7 +208,7 @@ for (i in seq_along(dataname_list)) {
 library(RSQLite)
 
 #setup the connection
-connection <- RSQLite::dbConnect(RSQLite::SQLite(),"ecommerce.db")
+connection <- RSQLite::dbConnect(RSQLite::SQLite(),"database/ecommerce.db")
 ```
 
 
@@ -318,7 +373,7 @@ dbExecute(connection,
 
 
 ```{r}
-# Write to existing table - buyer
+# Write to existing table
 RSQLite::dbWriteTable(connection,"promotion",promotion_data,append=TRUE,rowname=FALSE)
 RSQLite::dbWriteTable(connection,"shipper",shipper_data,append=TRUE,rowname=FALSE)
 RSQLite::dbWriteTable(connection,"address",address_data,append=TRUE,rowname=FALSE)
@@ -331,6 +386,22 @@ RSQLite::dbWriteTable(connection,"order_details",order_details_data,append=TRUE,
 RSQLite::dbWriteTable(connection,"payment",payment_data,append=TRUE,rowname=FALSE)
 
 ```
+
+
+```{sql connection=connection}
+SELECT * FROM dimension
+```
+```{r}
+dbExecute(connection, 
+"INSERT INTO dimension(dimension_id,length,width,height) VALUES 
+('DM01001',12,13,14);
+")
+```
+
+```{sql connection=connection}
+SELECT * FROM dimension
+```
+
 
 ```{r listtables}
 # Get a list of tables from the database that we already 
@@ -378,15 +449,12 @@ SELECT * FROM order_details LIMIT 5
 SELECT * FROM payment LIMIT 5
 ```
 
-# Data Quality Assurance
-## Referential Integrity
-```{sql connection=connection}
-SELECT b.buyer_id, b.first_name, b.address_id, a.city, a.county
-FROM buyer b, address a
-WHERE a.address_id = b.address_id
-LIMIT 5
+
+```{r}
+promotion_data
 ```
 
+## 
 
 # Disconnect
 ```{r disconnect}

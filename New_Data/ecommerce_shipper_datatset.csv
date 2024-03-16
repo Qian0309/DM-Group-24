@@ -1,0 +1,81 @@
+shipper_id,shipper_name,service,fixed_price,cost_per_mile
+SH00001,FedEx,contract logistics,52.06,1.01
+SH00002,DHL Service Point,express delivery,92.76,1.46
+SH00003,Royal Mail,freight forwarding,18.77,1.31
+SH00004,DPD,contract logistics,64.94,1.79
+SH00005,P&O Ferries,freight forwarding,40.4,1.08
+SH00006,DHL Supply Chain,express delivery,15.79,1.3
+SH00007,Kuehne Nagel,freight forwarding,35.09,1.24
+SH00008,Evri,freight forwarding,80.22,1.66
+SH00009,FedEx,express delivery,28.43,1.17
+SH00010,TNT Express,same-day delivery,10.53,1.86
+SH00011,FedEx,freight forwarding,77.78,1.2
+SH00012,DPD,express delivery,91.11,1.96
+SH00013,CEVA Logistics,freight forwarding,96.11,1.74
+SH00014,TNT Express,contract logistics,82.19,1.73
+SH00015,DHL Supply Chain,freight forwarding,43.74,1.6
+SH00016,DB Schenker,same-day delivery,33.49,1.74
+SH00017,P&O Ferries,same-day delivery,75.26,1.48
+SH00018,DB Schenker,express delivery,88.93,1.79
+SH00019,P&O Ferries,freight forwarding,96.98,1.52
+SH00020,Yodel,same-day delivery,23.6,1.93
+SH00021,DHL Supply Chain,road haulage,76.29,1.93
+SH00022,DHL Service Point,contract logistics,36.38,1.5
+SH00023,Parcelforce Worldwide,same-day delivery,63.5,1.76
+SH00024,Yusen Logistics,same-day delivery,89.03,1.29
+SH00025,P&O Ferries,freight forwarding,63.82,1.88
+SH00026,P&O Ferries,contract logistics,24.94,1.12
+SH00027,DHL Supply Chain,express delivery,55.21,1.5
+SH00028,Yusen Logistics,express delivery,15.24,1.21
+SH00029,Parcelforce Worldwide,same-day delivery,34.91,1.35
+SH00030,P&O Ferries,freight forwarding,66.59,1.25
+SH00031,DP World,express delivery,14.29,1.15
+SH00032,Parcelforce Worldwide,road haulage,14.05,1.15
+SH00033,Evri,contract logistics,8.17,1.28
+SH00034,TNT Express,express delivery,51.96,1.32
+SH00035,DP World,contract logistics,99.36,1.86
+SH00036,TNT Express,freight forwarding,18.96,1.79
+SH00037,DB Schenker,freight forwarding,68.98,1.33
+SH00038,Evri,contract logistics,64.47,1.82
+SH00039,Yusen Logistics,freight forwarding,18.98,1.4
+SH00040,FedEx,express delivery,92.61,1.89
+SH00041,Royal Mail,road haulage,75.04,1.82
+SH00042,FedEx,road haulage,30.22,1.79
+SH00043,DHL Service Point,freight forwarding,60.95,1.77
+SH00044,Yodel,freight forwarding,85.49,1.96
+SH00045,Yusen Logistics,contract logistics,27.54,1.87
+SH00046,DHL Service Point,road haulage,19.44,1.85
+SH00047,DP World,express delivery,55.17,1.14
+SH00048,FedEx,same-day delivery,43.99,1.15
+SH00049,CEVA Logistics,same-day delivery,26.85,1.17
+SH00050,Yodel,express delivery,87.14,1.2
+SH00051,DPD,same-day delivery,24.55,1.41
+SH00052,Parcelforce Worldwide,road haulage,65.48,1.32
+SH00053,DB Schenker,road haulage,29.34,1.66
+SH00054,Hermes,road haulage,92.34,1.14
+SH00055,Hermes,freight forwarding,22.35,1.96
+SH00056,DHL Supply Chain,road haulage,62.68,1.49
+SH00057,UPS,freight forwarding,93.42,1
+SH00058,TNT Express,freight forwarding,72.24,1.88
+SH00059,DP World,same-day delivery,19.16,1.9
+SH00060,Royal Mail,freight forwarding,69.31,1.37
+SH00061,Kuehne Nagel,express delivery,86.53,1.43
+SH00062,Parcelforce Worldwide,contract logistics,44.92,1.9
+SH00063,TNT Express,contract logistics,74.99,1.78
+SH00064,Royal Mail,contract logistics,14.69,1.27
+SH00065,FedEx,same-day delivery,8.81,1.43
+SH00066,Evri,road haulage,77.24,1.26
+SH00067,DPD,express delivery,21.6,1.81
+SH00068,P&O Ferries,freight forwarding,93.14,1.27
+SH00069,DPD,contract logistics,46.99,1.37
+SH00070,DPD,same-day delivery,96.41,1.33
+SH00071,P&O Ferries,freight forwarding,40.77,1.74
+SH00072,DPD,freight forwarding,64.32,2
+SH00073,DP World,road haulage,22.15,1.24
+SH00074,Yusen Logistics,contract logistics,82.2,1.91
+SH00075,Parcelforce Worldwide,express delivery,61.05,1.02
+SH00076,DHL Service Point,contract logistics,65.99,1.28
+SH00077,Evri,contract logistics,42.84,1.15
+SH00078,TNT Express,contract logistics,55.66,1.13
+SH00079,Evri,express delivery,62.08,1.64
+SH00080,DB Schenker,contract logistics,45.03,1.25
