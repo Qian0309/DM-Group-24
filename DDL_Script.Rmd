@@ -16,7 +16,7 @@ library(RSQLite)
 # Creating Database
 ```{r loadsqlite,warning=FALSE,error=FALSE,message=FALSE,attr.source='.numberLines'}
 #setup the connection
-connection <- RSQLite::dbConnect(RSQLite::SQLite(),"database/ecommerce.db")
+connection <- RSQLite::dbConnect(RSQLite::SQLite(),"Database/ecommerce.db")
 ```
 
 
@@ -148,7 +148,6 @@ dbExecute(connection,
 ```
 
 ```{r}
-
 #creating table transaction
 dbExecute(connection, 
 "CREATE TABLE 'payment' (
