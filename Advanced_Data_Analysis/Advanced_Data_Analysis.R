@@ -43,7 +43,7 @@ ggplot(top_5_products_sales, aes(x = reorder(product_name, total_sales), y = tot
 
 # Save the image
 
-ggsave(paste0("top5_products_sales_plot_",
+ggsave(paste0("Advanced_Data_Analysis/top5_products_sales_plot_",
               this_filename_date,"_",
               this_filename_time,".png"))
 
@@ -82,7 +82,7 @@ ggplot(top_5_products_promotion, aes(x = reorder(product_name, total_sales), y =
   theme(plot.title = element_text(size = 10, face = "bold", hjust = 0.5), legend.position = 'right') 
 
 # save image
-ggsave(paste0("top5_products_promos_plot_",
+ggsave(paste0("Advanced_Data_Analysis/top5_products_promos_plot_",
               this_filename_date,"_",
               this_filename_time,".png"))
 
