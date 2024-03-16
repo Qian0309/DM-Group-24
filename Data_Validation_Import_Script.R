@@ -15,16 +15,16 @@ project_files <- gsub(suffix,"",project_files)
 project_files
 
 ## Read .csv files
-address_data <- read.csv("data/ecommerce_address_dataset.csv")
-buyer_data <- read.csv("data/ecommerce_buyer_dataset.csv")
-dimension_data <- read.csv("data/ecommerce_dimension_dataset.csv")
-product_data <- read.csv("data/ecommerce_product_dataset.csv")
-promotion_data <- read.csv("data/ecommerce_promotion_dataset.csv")
-review_data <- read.csv("data/ecommerce_review_dataset.csv")
-shipper_data <- read.csv("data/ecommerce_shipper_dataset.csv")
-supplier_data <- read.csv("data/ecommerce_supplier_dataset.csv")
-payment_data <- read.csv("data/ecommerce_payment_datatset.csv")
-order_details_data <- read.csv("data/ecommerce_order_details_dataset.csv")
+address_data <- read.csv("New_Data/ecommerce_address_dataset.csv")
+buyer_data <- read.csv("New_Data/ecommerce_buyer_dataset.csv")
+dimension_data <- read.csv("New_Data/ecommerce_dimension_dataset.csv")
+product_data <- read.csv("New_Data/ecommerce_product_dataset.csv")
+promotion_data <- read.csv("New_Data/ecommerce_promotion_dataset.csv")
+review_data <- read.csv("New_Data/ecommerce_review_dataset.csv")
+shipper_data <- read.csv("New_Data/ecommerce_shipper_dataset.csv")
+supplier_data <- read.csv("New_Data/ecommerce_supplier_dataset.csv")
+payment_data <- read.csv("New_Data/ecommerce_payment_dataset.csv")
+order_details_data <- read.csv("New_Data/ecommerce_order_details_dataset.csv")
 
 
 ## Columns present in each datafile
@@ -41,10 +41,10 @@ for (variable in all_files) {
 }
 
 ## Number of rows and columns in the dataset
-all_files <- list.files("data/")
+all_files <- list.files("New_Data/")
 
 for (variable in all_files) {
-  this_filepath <- paste0("data/",variable)
+  this_filepath <- paste0("New_Data/",variable)
   this_file_contents <- readr::read_csv(this_filepath)
   
   number_of_rows <- nrow(this_file_contents)
@@ -59,7 +59,7 @@ for (variable in all_files) {
 
 ## Check if the first column of each file is a primary 
 for (variable in all_files) {
-  this_filepath <- paste0("data/",variable)
+  this_filepath <- paste0("New_Data/",variable)
   this_file_contents <- readr::read_csv(this_filepath)
   number_of_rows <- nrow(this_file_contents)
   
@@ -122,9 +122,9 @@ for (i in seq_along(dataname_list)) {
 
 ### Referential Integrity Checks
 # PRODUCT ENTITY
-# Relationship between Product and Promotion : 1 Promotion applied on N Products
+# Relationship between Product and Promotion : 1 Promotion applied on n Products
 setdiff(unique(product_data$promotion_id), unique(promotion_data$promotion_id))
-# Relationship between Product and Supplier : 1 Supplier sells N Products 
+# Relationship between Product and Supplier : 1 Supplier sells n Products 
 setdiff(unique(product_data$supplier_id), unique(supplier_data$supplier_id))
 # Relationship between Product and Dimension : 1 Product has 1 Dimension
 setdiff(unique(product_data$dimension_id), unique(dimension_data$dimension_id))
