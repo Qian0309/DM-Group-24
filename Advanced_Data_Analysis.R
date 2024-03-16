@@ -36,6 +36,15 @@ ggplot(top_5_products_sales, aes(x = reorder(product_name, total_sales), y = tot
   ggtitle("Top 5 Products by Sales") +
   theme(plot.title = element_text(size = 10, face = "bold", hjust = 0.5), legend.position = 'none')
 
+## save image in folder "Updated_Visualisations"
+this_filename_date <- as.character(Sys.Date())
+# format the Sys.time() to show only hours and minutes 
+this_filename_time <- as.character(format(Sys.time(), format = "%H_%M"))
+ggsave(paste0("Updated_Visualisations/top5_product_sales_plot_",
+              this_filename_date,"_",
+              this_filename_time,".png"))
+
+
 #2) Promotion for top products
 promotion_data <- dbGetQuery(db_conn, "SELECT * FROM promotion;")
 top_5_products_promotion <- dbGetQuery(db_conn, "SELECT
@@ -68,6 +77,14 @@ ggplot(top_5_products_promotion, aes(x = reorder(product_name, total_sales), y =
   scale_fill_discrete(name = "Promotion Status") + 
   ggtitle("Promotion Status of Top 5 products with respect to Sales") +
   theme(plot.title = element_text(size = 10, face = "bold", hjust = 0.5), legend.position = 'right') 
+
+## save image in folder "Updated_Visualisations"
+this_filename_date <- as.character(Sys.Date())
+# format the Sys.time() to show only hours and minutes 
+this_filename_time <- as.character(format(Sys.time(), format = "%H_%M"))
+ggsave(paste0("Updated_Visualisations/top5_product_promos_plot_",
+              this_filename_date,"_",
+              this_filename_time,".png"))
 
 #3) Number of days promotions are running
 no_of_days_promotions <- mutate(promotion_data,
