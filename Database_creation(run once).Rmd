@@ -396,6 +396,38 @@ connection <- RSQLite::dbConnect(RSQLite::SQLite(),"ecommerce.db")
 ```
 
 
+```{r loadsqlite,warning=FALSE,error=FALSE,message=FALSE,attr.source='.numberLines'}
+
+# Get the list of table names in the database
+table_names <- dbListTables(connection)
+
+# Create an empty list to store data frames
+dataframes <- list()
+
+# Loop through each table and fetch its data into R data frames
+for (table_name in table_names) {
+  # Construct the SQL query to select all data from the table
+  query <- paste("SELECT * FROM", table_name)
+  
+  # Fetch the data into a data frame
+  dataframes[[table_name]] <- dbGetQuery(connection, query)
+}
+
+# Removing all the duplicates from the newly uploaded data
+for (i in seq_along(dataname_list)) {
+  # Load data file
+  datatemp <- get(dataname_list[[i]])
+  
+  # Getting the primary keys
+  id_col <- idname_list[[i]]
+  
+  # Removing the duplicates from the newly updated data
+  assign(dataname_list[[i]], anti_join(datatemp, dataframes[[i]], by = id_col))
+}
+
+
+```
+
 
 
 ```{r}
@@ -572,6 +604,7 @@ RSQLite::dbWriteTable(connection,"order_details",order_details_data,append=TRUE,
 RSQLite::dbWriteTable(connection,"payment",payment_data,append=TRUE,rowname=FALSE)
 
 ```
+
 
 ```{r listtables}
 # Get a list of tables from the database that we already 
