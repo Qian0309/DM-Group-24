@@ -158,7 +158,13 @@ LIMIT
 # Viewing the results
 print(lowest_5_products_reviews)
 ```
-
+```{r}
+ggplot(lowest_5_products_reviews, aes(x = reorder(product_name, -average_review_score), y = average_review_score)) +
+  geom_bar(stat = "identity", fill = "skyblue") +
+  labs(title = "Products with Lowest Review Scores", x = "Product", y = "Average Review Score") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+```
 
 
 7) Cities With Lowest Review
@@ -188,6 +194,15 @@ print(lowest_5_city_reviews)
 ```
 
 
+```{r}
+ggplot(lowest_5_city_reviews, aes(x = reorder(city, average_review_score), y = average_review_score)) +
+  geom_bar(stat = "identity", fill = "skyblue") +
+  labs(title = "Cities with Lowest Review Scores", x = "City", y = "Average Review Score") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+```
+
 8) Cities With Highest Review
 
 ```{r}
@@ -214,6 +229,14 @@ print(highest_5_city_reviews)
 
 ```
 
+```{r}
+ggplot(highest_5_city_reviews, aes(x = reorder(city, -average_review_score), y = average_review_score)) +
+  geom_bar(stat = "identity", fill = "skyblue") +
+  labs(title = "Cities with Highest Review Scores", x = "City", y = "Average Review Score") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+```
 
 9) Estimate the CLV based on historical transactions to identify your most valuable customers.
 
@@ -238,6 +261,17 @@ print(customer_lifetime_value)
 
 ```
 
+```{r}
+top_n_buyers <- head(customer_lifetime_value, 10)  
+# Change 10 to the desired number of top buyers to display
+
+ggplot(top_n_buyers, aes(x = reorder(buyer_id, -total_spent), y = total_spent)) +
+  geom_bar(stat = "identity", fill = "skyblue") +
+  labs(title = "Top Buyers by Customer Lifetime Value", x = "Buyer ID", y = "Total Spent") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+```
 
 
 10) Effective of Promotions
@@ -266,8 +300,16 @@ print(effective_promotions)
 
 ```
 
+```{r}
+ggplot(effective_promotions, aes(x = reorder(promotion_type, -total_revenue), y = total_revenue)) +
+  geom_bar(stat = "identity", fill = "skyblue") +
+  labs(title = "Effectiveness of Promotions", x = "Promotion Type", y = "Total Revenue") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
 
-10) Most Reviewed Products
+```
+
+11) Most Reviewed Products
 
 ```{r}
 most_reviewed_products <- dbGetQuery(db_conn,"SELECT
@@ -290,7 +332,15 @@ print(most_reviewed_products)
 
 ```
 
-11) Cities With Highest Sales.
+
+```{r}
+ggplot(most_reviewed_products, aes(x = reorder(product_name, -review_count), y = review_count)) +
+  geom_bar(stat = "identity", fill = "skyblue") +
+  labs(title = "Most Reviewed Products", x = "Product Name", y = "Number of Reviews") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+```
+12) Cities With Highest Sales.
 ```{r}
 
 cities_highest_sales <- dbGetQuery(db_conn,"SELECT
@@ -324,10 +374,6 @@ ggplot(cities_highest_sales, aes(x = city, y = total_sales)) +
   theme_minimal() +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
 ```
-
-
-
-
 
 
 dbDisconnect(db_conn)
