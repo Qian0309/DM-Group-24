@@ -9,6 +9,7 @@ editor_options:
 knitr::opts_chunk$set(echo = TRUE,comment = NA)
 library(readr)
 library(dplyr)
+library(anytime)
 ```
 
 # File Prefix and Suffix
@@ -29,16 +30,16 @@ project_files
 ```
 
 ```{r dataread}
-address_data <- read.csv("data/ecommerce_address_dataset.csv")
-buyer_data <- read.csv("data/ecommerce_buyer_dataset.csv")
-dimension_data <- read.csv("data/ecommerce_dimension_dataset.csv")
-product_data <- read.csv("data/ecommerce_product_dataset.csv")
-promotion_data <- read.csv("data/ecommerce_promotion_dataset.csv")
-review_data <- read.csv("data/ecommerce_review_dataset.csv")
-shipper_data <- read.csv("data/ecommerce_shipper_dataset.csv")
-supplier_data <- read.csv("data/ecommerce_supplier_dataset.csv")
+address_data <- read.csv("data/ecommerce_address_datatset.csv")
+buyer_data <- read.csv("data/ecommerce_buyer_datatset.csv")
+dimension_data <- read.csv("data/ecommerce_dimension_datatset.csv")
+product_data <- read.csv("data/ecommerce_product_datatset.csv")
+promotion_data <- read.csv("data/ecommerce_promotion_datatset.csv")
+review_data <- read.csv("data/ecommerce_review_datatset.csv")
+shipper_data <- read.csv("data/ecommerce_shipper_datatset.csv")
+supplier_data <- read.csv("data/ecommerce_supplier_datatset.csv")
 payment_data <- read.csv("data/ecommerce_payment_datatset.csv")
-order_details_data <- read.csv("data/ecommerce_order_details_dataset.csv")
+order_details_data <- read.csv("data/ecommerce_order_details_datatset.csv")
 ```
 
 
@@ -152,6 +153,14 @@ for (i in seq_along(dataname_list)) {
 negative_data <- address_data %>% 
   filter(house_number < 0)
 
+# Print the filtered data
+print(paste0("Checking for incorrect data in the address "))
+    
+if (nrow(negative_data)!=0){
+print(paste0(nrow(negative_data), " rows are removed from address because of incorrect data" ))
+  print(paste0("The removed data are ", negative_data))
+}
+
 # Removing it from the address data
 address_data <- anti_join(address_data, negative_data, by = "address_id")
 
@@ -165,7 +174,28 @@ supplier_data <- anti_join(supplier_data, negative_data, by = "address_id")
 
 ```{r checkprimary,message=FALSE,warning=FALSE,attr.source='.numberLines'}
 
-str(buyer_data)
+# Convert character dates to Date data type
+buyer_data$date_of_birth <- anydate(buyer_data$date_of_birth)
+
+# Filter for dates later than the current date
+current_date <- Sys.Date()
+negative_data <- buyer_data[buyer_data$date_of_birth > current_date, ]
+
+# Print the filtered data
+print(paste0("Checking for incorrect data in the buyer "))
+    
+if (nrow(negative_data)!=0){
+print(paste0(nrow(negative_data), " rows are removed from buyer because of incorrect data" ))
+  print(paste0("The removed data are ", negative_data))
+}
+
+# Removing it from the buyer data
+buyer_data <- anti_join(buyer_data, negative_data, by = "buyer_id")
+
+# Removing the same from the other tables having address as a foreign key
+order_details_data <- anti_join(order_details_data, negative_data, by = "buyer_id")
+review_data <- anti_join(review_data, negative_data, by = "buyer_id")
+
 
 ```
 
@@ -179,6 +209,16 @@ negative_data <- dimension_data %>%
            width < 0 | width > 150 |
            height < 0 | height > 150)
 
+
+
+# Print the filtered data
+print(paste0("Checking for incorrect data in the dimension"))
+    
+if (nrow(negative_data)!=0){
+print(paste0(nrow(negative_data), " rows are removed from dimension because of incorrect data" ))
+  print(paste0("The removed data are ", negative_data))
+}
+
 # Removing it from all tables containing dimension id
 dimension_data <- anti_join(dimension_data, negative_data, by = "dimension_id")
 product_data <- anti_join(product_data, negative_data, by = "dimension_id")
@@ -189,6 +229,26 @@ product_data <- anti_join(product_data, negative_data, by = "dimension_id")
 
 ```{r checkprimary,message=FALSE,warning=FALSE,attr.source='.numberLines'}
 
+# Convert character dates to Date data type
+order_details_data$order_dates <- anydate(order_details_data$order_dates)
+
+# Filter for dates later than the current date
+current_date <- Sys.Date()
+negative_data <- order_details_data[order_details_data$order_dates > current_date, ]
+
+# Print the filtered data
+print(paste0("Checking for incorrect data in the order details "))
+    
+if (nrow(negative_data)!=0){
+print(paste0(nrow(negative_data), " rows are removed from order because of incorrect data" ))
+  print(paste0("The removed data are ", negative_data))
+}
+
+# Removing it from the order data
+order_details_data <- anti_join(order_details_data, negative_data, by = "order_id")
+
+# Removing the same from the other tables having address as a foreign key
+payment_data <- anti_join(payment_data, negative_data, by = "order_id")
 
 
 ```
@@ -200,6 +260,14 @@ product_data <- anti_join(product_data, negative_data, by = "dimension_id")
 # Getting the negative payment data
 negative_data <- payment_data %>% 
   filter(payment_amount < 0 | installment_number < 0 )
+
+# Print the filtered data
+print(paste0("Checking for incorrect data in the payment details"))
+    
+if (nrow(negative_data)!=0){
+print(paste0(nrow(negative_data), " rows are removed from payment data because of incorrect data" ))
+  print(paste0("The removed data are ", negative_data))
+}
 
 # Removing it from all tables containing payment id
 payment_data <- anti_join(payment_data, negative_data, by = "payment_id")
@@ -215,6 +283,14 @@ payment_data <- anti_join(payment_data, negative_data, by = "payment_id")
 negative_data <- product_data %>% 
   filter(price < 0 | weight < 0 | weight > 100)
 
+# Print the filtered data
+print(paste0("Checking for incorrect data in the product data"))
+    
+if (nrow(negative_data)!=0){
+print(paste0(nrow(negative_data), " rows are removed from product data because of incorrect data" ))
+  print(paste0("The removed data are ", negative_data))
+}
+
 # Removing it from all tables containing product id
 product_data <- anti_join(product_data, negative_data, by = "product_id")
 
@@ -224,6 +300,24 @@ product_data <- anti_join(product_data, negative_data, by = "product_id")
 
 ```{r checkprimary,message=FALSE,warning=FALSE,attr.source='.numberLines'}
 
+# Convert character dates to Date data type
+promotion_data$start_date <- anydate(promotion_data$start_date)
+promotion_data$end_date <- anydate(promotion_data$end_date)
+
+# Filter for end dates before start dates
+negative_data <- promotion_data[promotion_data$start_date > promotion_data$end_date, ]
+
+# Print the filtered data
+print(paste0("Checking for incorrect data in the promotion details "))
+    
+if (nrow(negative_data)!=0){
+print(paste0(nrow(negative_data), " rows are removed from promotion because of incorrect data" ))
+  print(paste0("The removed data are ", negative_data))
+}
+
+# Removing it from all tables containing product id
+promotion_data <- anti_join(promotion_data, negative_data, by = "promotion_id")
+product_data <- anti_join(product_data, negative_data, by = "promotion_id")
 
 ```
 
@@ -234,6 +328,14 @@ product_data <- anti_join(product_data, negative_data, by = "product_id")
 # Getting the negative and out of limits review data
 negative_data <- review_data %>% 
   filter(review_score < 0 | review_score >10 )
+
+# Print the filtered data
+print(paste0("Checking for incorrect data in the review data"))
+    
+if (nrow(negative_data)!=0){
+print(paste0(nrow(negative_data), " rows are removed from review data because of incorrect data" ))
+  print(paste0("The removed data are ", negative_data))
+}
 
 # Removing it from all tables containing review id
 review_data <- anti_join(review_data, negative_data, by = "review_id")
@@ -248,6 +350,14 @@ review_data <- anti_join(review_data, negative_data, by = "review_id")
 negative_data <- shipper_data %>% 
   filter(fixed_price < 0 | cost_per_mile < 0 )
 
+# Print the filtered data
+print(paste0("Checking for incorrect data in the shipper data"))
+    
+if (nrow(negative_data)!=0){
+print(paste0(nrow(negative_data), " rows are removed from shipper data because of incorrect data" ))
+  print(paste0("The removed data are ", negative_data))
+}
+
 # Removing it from all tables containing shipper id
 shipper_data <- anti_join(shipper_data, negative_data, by = "shipper_id")
 
@@ -261,6 +371,14 @@ shipper_data <- anti_join(shipper_data, negative_data, by = "shipper_id")
 # Getting the negative and out of limits supplier data
 negative_data <- supplier_data %>% 
   filter(number_of_year_of_association < 0 )
+
+# Print the filtered data
+print(paste0("Checking for incorrect data in the supplier data"))
+    
+if (nrow(negative_data)!=0){
+print(paste0(nrow(negative_data), " rows are removed from supplier data because of incorrect data" ))
+  print(paste0("The removed data are ", negative_data))
+}
 
 # Removing it from all tables containing shipper id
 supplier_data <- anti_join(supplier_data, negative_data, by = "supplier_id")
