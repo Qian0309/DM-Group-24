@@ -18,19 +18,6 @@ library(ggplot2)
 db_conn <- dbConnect(RSQLite::SQLite(), "database/ecommerce.db")
 ```
 
-```{r}
-top_5_products_sales <- dbGetQuery(db_conn, "SELECT
-    *
-FROM
-    promotion
-LIMIT
-    5;
-")
-
-print(top_5_products_sales)
-```
-
-
 1) Products With Highest Sales
 ```{r}
 top_5_products_sales <- dbGetQuery(db_conn, "SELECT
@@ -49,56 +36,63 @@ ORDER BY
 LIMIT
     5;
 ")
-
-# Viewing the results
-print(top_5_products_sales)
-
 ```
 
 
 ```{r}
 ggplot(top_5_products_sales, aes(x = reorder(product_name, total_sales), y = total_sales, fill = product_name)) +
   geom_col() + 
-  labs(title = "Top 5 Products by Sales", x = "Product Name", y = "Total Sales") +
+  labs(x = "Product Name", y = "Total Sales") +
   theme_minimal() +
   scale_fill_viridis_d() +
   coord_flip() + 
-  scale_fill_discrete(name = "Product Name") + 
+  ggtitle("Top 5 Products by Sales") +
   theme(legend.position = "none") 
 ```
 
 
-2) Can't Read Handwriting
+2) Promotion for top products
 ```{r}
-top_5_products_sales
-```
-
-
-3) Number of days promotions are running (Not Working)
-
-```{r}
-no_of_days_promotions <- dbGetQuery(db_conn, "SELECT
-    promotion_id,
-    promotion_type,
-    start_date,
-    end_date,
-    julianday(end_date) - julianday(start_date) AS promotion_duration_days
+promotion_data <- dbGetQuery(db_conn, "SELECT * FROM promotion;")
+top_5_products_promotion <- dbGetQuery(db_conn, "SELECT
+    od.product_id,
+    p.product_name,
+    p.promotion_id,
+    pm.status,
+    SUM(p.price) AS total_sales
 FROM
-    promotion
+    order_details od
+JOIN
+    product p ON od.product_id = p.product_id
+JOIN 
+    promotion pm ON p.promotion_id = pm.promotion_id
+GROUP BY
+    od.product_id,
+    p.product_name
 ORDER BY
-    promotion_duration_days DESC
+    total_sales DESC
 LIMIT
-    5;;
+    5;
 ")
 
-print(no_of_days_promotions)
+print(top_5_products_promotion)
 
 ```
 
 ```{r}
-no_of_days_promotions <- dbGetQuery(db_conn, "SELECT * FROM promotion;")
+ggplot(top_5_products_promotion, aes(x = reorder(product_name, total_sales), y = total_sales, fill = status)) +
+  geom_col() + 
+  labs(title = "Top 5 Products by Sales", x = "Product Name", y = "Total Sales") +
+  theme_minimal() +
+  scale_fill_viridis_d() +
+  coord_flip() + 
+  scale_fill_discrete(name = "Promotion Status") + 
+  theme(legend.position = "right") 
+```
 
-no_of_days_promotions <- mutate(no_of_days_promotions,
+3) Number of days promotions are running (Not Working)
+```{r}
+no_of_days_promotions <- mutate(promotion_data,
                          start_date = as.Date(start_date,format= "%d/%m/%Y"),
                          end_date = as.Date(end_date,format= "%d/%m/%Y"),
                          num_days_promotion = end_date - start_date)
@@ -123,29 +117,9 @@ ggplot(no_of_days_promotions, aes(x = num_days_promotion, y = num_promotions)) +
 
 4) Sales Trends
 ```{r}
-monthly_sales_trends <- dbGetQuery(db_conn,"SELECT
-    strftime('%Y-%m', order_dates) AS month,
-    COUNT(*) AS number_of_orders,
-    SUM(p.price) AS total_sales
-FROM
-    order_details od
-JOIN
-    product p ON od.product_id = p.product_id
-GROUP BY
-    month
-ORDER BY
-    month ASC;
-")
-
-# Viewing the results
-print(monthly_sales_trends)
-
-```
-
-```{r}
 order_details <- dbGetQuery(db_conn,"SELECT * FROM order_details")
 order_details <- mutate(order_details,
-                         order_dates = as.Date(order_dates,format= "%d/%m/%Y"))
+                        order_dates = as.Date(order_dates,format= "%d/%m/%Y"))
 product <- dbGetQuery(db_conn,"SELECT * FROM product")
 
 
@@ -158,8 +132,6 @@ sales_trend_data <- sales_trend_data %>%
   summarise(total_sales = sum(price))
 
 ```
-
-
 ```{r}
 ggplot(sales_trend_data, aes(x = order_dates, y = total_sales)) +
   geom_line() + 
@@ -168,10 +140,7 @@ ggplot(sales_trend_data, aes(x = order_dates, y = total_sales)) +
   scale_fill_viridis_d() +
   theme(legend.position = "none")
 ```
-
-  
 5) Products With Highest Review
-
 ```{r}
 top_5_products_reviews <- dbGetQuery(db_conn, "SELECT
     r.product_id,
