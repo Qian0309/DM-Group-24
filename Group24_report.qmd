@@ -7,11 +7,9 @@ number_sections: yes
 header-includes: \usepackage{hyperref}
 ---
 
-Group 24
+## Introduction
 
-##Introduction
-
-##Part 1: Data Design and Implementation
+## Part 1: Data Design and Implementation
 
 In this report, we assume that the E-commerce platform mainly sells IT products in the United Kingdom and does not have an international shipment policy.
 Furthermore, company policy is that product only has one promotion during a year, “Product_ID” is identified based on “Supplier_ID”, which means supplier only has one “Product_ID” for one product.
@@ -35,4 +33,18 @@ There are 7 entities:
 
 \[picture\]
 
-##Part 2: Data generation
+## Part 2: Data generation
+
+## Part 3:
+
+
+```{r}
+unique(address_data$county)
+```
+
+
+## Part 4:
+
+
+
+
