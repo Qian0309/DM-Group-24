@@ -1,0 +1,397 @@
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,comment = NA)
+library(readr)
+library(dplyr)
+```
+
+# File Prefix and Suffix
+```{r readr,attr.source='.numberLines'}
+# read files from 'data' folder
+project_files <- list.files("data/")
+project_files
+
+```
+
+```{r block2,attr.source='.numberLines'}
+prefix <- "ecommerce_"
+suffix <- "_dataset.csv"
+project_files <- gsub(prefix,"",project_files)
+project_files <- gsub(suffix,"",project_files)
+project_files
+
+```
+
+```{r dataread}
+address_data <- read.csv("data/ecommerce_address_dataset.csv")
+buyer_data <- read.csv("data/ecommerce_buyer_dataset.csv")
+dimension_data <- read.csv("data/ecommerce_dimension_dataset.csv")
+product_data <- read.csv("data/ecommerce_product_dataset.csv")
+promotion_data <- read.csv("data/ecommerce_promotion_dataset.csv")
+review_data <- read.csv("data/ecommerce_review_dataset.csv")
+shipper_data <- read.csv("data/ecommerce_shipper_dataset.csv")
+supplier_data <- read.csv("data/ecommerce_supplier_dataset.csv")
+payment_data <- read.csv("data/ecommerce_payment_datatset.csv")
+order_details_data <- read.csv("data/ecommerce_order_details_dataset.csv")
+```
+
+
+
+```{r loop,message=FALSE,warning=FALSE}
+
+all_files <- list.files("data/")
+
+for (variable in all_files) {
+  print(paste0("The file : ",variable, " has the following columns : "))
+  this_filepath <- paste0("data/",variable)
+  this_file_contents <- readr::read_csv(this_filepath)
+  
+  column_names <- colnames(this_file_contents)
+  
+  print(paste0(column_names))
+}
+```
+
+# Number of rows and columns in the dataset
+```{r loop,message=FALSE,warning=FALSE,attr.source='.numberLines'}
+
+all_files <- list.files("data/")
+
+for (variable in all_files) {
+  this_filepath <- paste0("data/",variable)
+  this_file_contents <- readr::read_csv(this_filepath)
+  
+  number_of_rows <- nrow(this_file_contents)
+  number_of_columns <- ncol(this_file_contents)
+  
+  print(paste0("The file: ",variable,
+              " has : ",
+              format(number_of_rows,big.mark = ","),
+              " rows and ",
+              number_of_columns," columns"))
+}
+```
+
+# Check if the first column of each file is a primary 
+```{r checkprimary,message=FALSE,warning=FALSE,attr.source='.numberLines'}
+
+for (variable in all_files) {
+  this_filepath <- paste0("data/",variable)
+  this_file_contents <- readr::read_csv(this_filepath)
+  number_of_rows <- nrow(this_file_contents)
+  
+  print(paste0("Checking for: ",variable))
+  
+  print(paste0(" is ",nrow(unique(this_file_contents[,1]))==number_of_rows))
+}
+
+```
+
+# Data Quality checks
+
+```{r checkprimary,message=FALSE,warning=FALSE,attr.source='.numberLines'}
+
+
+dataname_list <- list("address_data", "buyer_data", "dimension_data", "order_details_data", "payment_data",
+                 "product_data", "promotion_data", "review_data", "shipper_data", "supplier_data")
+
+idname_list <- list("address_id", "buyer_id", "dimension_id","order_id","payment_id","product_id",
+                    "promotion_id", "review_id", "shipper_id", "supplier_id")
+
+idformat_list <-  list("AD","BU","DM","OR","PD","PR",
+                       "PM","RV","SH","SP")
+
+# Loop through each data file
+for (i in seq_along(dataname_list)) {
+  # Load data file
+  datatemp <- get(dataname_list[[i]])
+  
+  for (j in seq_along(idname_list)){
+     # Get the ID column name and format for the current data file
+  id_col <- idname_list[[j]]
+  id_format <- idformat_list[[j]]
+  
+  # Check if the ID column exists in the data frame
+  if (id_col %in% colnames(datatemp)) {
+    # Filter rows where the ID column does not match the specified format
+    id_data <- datatemp %>%
+      filter(!grepl(paste0("^", id_format), get(id_col)))
+    
+  } else {
+    print(paste0("ID column ", id_col, " not found in ", dataname_list[[i]], "\n"))
+  } 
+  
+  # Print the filtered data
+    print(paste0("Checking for format for ", id_col, " in the dataframe ", dataname_list[[i]]))
+    
+    if (nrow(id_data)!=0){
+    print(paste0(nrow(id_data), " rows are removed from ",dataname_list[[i]], " because of incorrect id format" ))
+    print(paste0("THe removed data are ", id_data))
+    assign(dataname_list[[i]], anti_join(datatemp, id_data, by = id_col))
+    }   
+    id_data <-  id_data[0, ]
+    
+  }
+    
+}
+
+```
+
+
+
+
+
+
+
+
+
+
+# Creating Database
+```{r loadsqlite,warning=FALSE,error=FALSE,message=FALSE,attr.source='.numberLines'}
+# Load the library
+library(RSQLite)
+
+#setup the connection
+connection <- RSQLite::dbConnect(RSQLite::SQLite(),"ecommerce.db")
+```
+
+
+```{r}
+#Creating table promotion
+dbExecute(connection, 
+"CREATE TABLE promotion (
+  'promotion_id' VARCHAR(50) PRIMARY KEY, 
+  'promotion_type' VARCHAR(50),
+  'start_date' DATE,
+  'end_date' DATE,
+  'status' VARCHAR(50)
+) ; " )
+```
+
+
+```{r}
+#Creating table shipper
+dbExecute(connection, 
+"CREATE TABLE shipper (
+  'shipper_id' VARCHAR(50) PRIMARY KEY, 
+  'shipper_name' VARCHAR(50),
+  'service' VARCHAR(100),
+  'fixed_price' DOUBLE,
+  'cost_per_mile' DOUBLE
+) ; " )
+```
+
+
+```{r}
+#Creating table address
+dbExecute(connection, 
+"CREATE TABLE address (
+  'address_id' VARCHAR(50) PRIMARY KEY, 
+  'house_number' INT,
+  'house_name' VARCHAR(50),
+  'street' VARCHAR(50),
+  'city' VARCHAR(20) NOT NULL,
+  'county' VARCHAR(20),
+  'post_code' VARCHAR(10)
+) ; " )
+```
+
+```{r}
+#creating table dimension
+dbExecute(connection, 
+"CREATE TABLE dimension (
+  'dimension_id' VARCHAR(50) PRIMARY KEY, 
+  'length' DOUBLE,
+  'width' DOUBLE,
+  'height' DOUBLE
+) ; " )
+```
+
+
+```{r}
+
+#creating table buyer
+dbExecute(connection, 
+"CREATE TABLE 'buyer' (
+  'buyer_id' VARCHAR(50) PRIMARY KEY, 
+  'first_name' VARCHAR(250) NOT NULL,
+  'last_name' VARCHAR(250),
+  'date_of_birth' DATE,
+  'address_id' VARCHAR(50) NOT NULL,
+  FOREIGN KEY('address_id') REFERENCES address('address_id')
+) ; " )
+```
+
+
+
+```{r}
+
+#creating table supplier
+dbExecute(connection, 
+"CREATE TABLE 'supplier' (
+  'supplier_id' VARCHAR(50) PRIMARY KEY, 
+  'supplier_type' VARCHAR(250),
+  'contract_type' VARCHAR(250),
+  'number_of_year_of_association' INT,
+  'supplier_name' VARCHAR(50),
+  'address_id' VARCHAR(50) NOT NULL,
+  FOREIGN KEY('address_id') REFERENCES address('address_id')
+) ; " )
+```
+
+
+
+```{r}
+
+#creating table product
+dbExecute(connection, 
+"CREATE TABLE 'product' (
+  'product_id' VARCHAR(50) PRIMARY KEY, 
+  'product_name' VARCHAR(250),
+  'product_description' VARCHAR(250),
+  'weight' DOUBLE,
+  'price' DOUBLE,
+  'promotion_id' VARCHAR(50) NOT NULL,
+  'supplier_id' VARCHAR(50) NOT NULL,
+  'dimension_id' VARCHAR(50) NOT NULL,
+  FOREIGN KEY('promotion_id') REFERENCES promotion('promotion_id'),
+  FOREIGN KEY('supplier_id') REFERENCES supplier('supplier_id'),
+  FOREIGN KEY('dimension_id') REFERENCES dimension('dimension_id')
+) ; " )
+```
+
+
+
+```{r}
+
+#creating table review
+dbExecute(connection, 
+"CREATE TABLE 'review' (
+  'review_id' VARCHAR(50) PRIMARY KEY, 
+  'buyer_id' VARCHAR(250) NOT NULL,
+  'product_id' VARCHAR(250) NOT NULL,
+  'review_score' DOUBLE,
+  'review_description' VARCHAR(250),
+  FOREIGN KEY('buyer_id') REFERENCES buyer('buyer_id'),
+  FOREIGN KEY('product_id') REFERENCES product('product_id')
+
+) ; " )
+```
+
+
+
+```{r}
+
+#creating table order_details
+dbExecute(connection, 
+"CREATE TABLE 'order_details' (
+  'order_id' VARCHAR(50) PRIMARY KEY, 
+  'product_id' VARCHAR(50) NOT NULL,
+  'buyer_id' VARCHAR(50) NOT NULL,
+  'supplier_id' VARCHAR(50) NOT NULL,
+  'order_dates' DATE,
+  'shipper_id' VARCHAR(50) NOT NULL,
+  FOREIGN KEY('buyer_id') REFERENCES buyer('buyer_id'),
+  FOREIGN KEY('product_id') REFERENCES product('product_id'),
+  FOREIGN KEY('shipper_id') REFERENCES shipper('shipper_id'),
+  FOREIGN KEY('supplier_id') REFERENCES supplier('supplier_id')
+) ; " )
+```
+
+
+
+```{r}
+
+#creating table transaction
+dbExecute(connection, 
+"CREATE TABLE 'payment' (
+  'payment_id' VARCHAR(50) PRIMARY KEY, 
+  'payment_type' VARCHAR(250),
+  'payment_amount' DOUBLE,
+  'installment_number' INT,
+  'order_id' VARCHAR(50) NOT NULL,
+  FOREIGN KEY('order_id') REFERENCES order_details('order_id')
+) ; " )
+```
+
+
+
+```{r}
+# Write to existing table - buyer
+RSQLite::dbWriteTable(connection,"promotion",promotion_data,append=TRUE,rowname=FALSE)
+RSQLite::dbWriteTable(connection,"shipper",shipper_data,append=TRUE,rowname=FALSE)
+RSQLite::dbWriteTable(connection,"address",address_data,append=TRUE,rowname=FALSE)
+RSQLite::dbWriteTable(connection,"dimension",dimension_data,append=TRUE,rowname=FALSE)
+RSQLite::dbWriteTable(connection,"buyer",buyer_data,append=TRUE,rowname=FALSE)
+RSQLite::dbWriteTable(connection,"supplier",supplier_data,append=TRUE,rowname=FALSE)
+RSQLite::dbWriteTable(connection,"product",product_data,append=TRUE,rowname=FALSE)
+RSQLite::dbWriteTable(connection,"review",review_data,append=TRUE,rowname=FALSE)
+RSQLite::dbWriteTable(connection,"order_details",order_details_data,append=TRUE,rowname=FALSE)
+RSQLite::dbWriteTable(connection,"payment",payment_data,append=TRUE,rowname=FALSE)
+
+```
+
+```{r listtables}
+# Get a list of tables from the database that we already 
+# created
+RSQLite::dbListTables(connection)
+
+```
+
+
+```{sql connection=connection}
+SELECT * FROM promotion LIMIT 5
+```
+```{sql connection=connection}
+SELECT * FROM shipper LIMIT 5
+```
+```{sql connection=connection}
+SELECT * FROM address LIMIT 5
+```
+
+```{sql connection=connection}
+SELECT * FROM dimension LIMIT 5
+```
+
+```{sql connection=connection}
+SELECT * FROM buyer LIMIT 5
+```
+
+```{sql connection=connection}
+SELECT * FROM supplier LIMIT 5
+```
+
+```{sql connection=connection}
+SELECT * FROM product LIMIT 5
+```
+
+```{sql connection=connection}
+SELECT * FROM review LIMIT 5
+```
+
+```{sql connection=connection}
+SELECT * FROM order_details LIMIT 5
+```
+
+```{sql connection=connection}
+SELECT * FROM payment LIMIT 5
+```
+
+# Data Quality Assurance
+## Referential Integrity
+```{sql connection=connection}
+SELECT b.buyer_id, b.first_name, b.address_id, a.city, a.county
+FROM buyer b, address a
+WHERE a.address_id = b.address_id
+LIMIT 5
+```
+
+
+# Disconnect
+```{r disconnect}
+# Disconnect from the database using the connection variable that we setup 
+# before
+RSQLite::dbDisconnect(connection)
+
+```
