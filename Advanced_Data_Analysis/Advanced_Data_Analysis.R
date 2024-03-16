@@ -47,45 +47,45 @@ ggsave(paste0("Advanced_Data_Analysis/top5_products_sales_plot_",
               this_filename_date,"_",
               this_filename_time,".png"))
 
-# 
-# #2) Promotion for top products
-# promotion_data <- dbGetQuery(db_conn, "SELECT * FROM promotion;")
-# top_5_products_promotion <- dbGetQuery(db_conn, "SELECT
-#     od.product_id,
-#     p.product_name,
-#     p.promotion_id,
-#     pm.status,
-#     ROUND(SUM(p.price),2) AS total_sales
-# FROM
-#     order_details od
-# JOIN
-#     product p ON od.product_id = p.product_id
-# JOIN 
-#     promotion pm ON p.promotion_id = pm.promotion_id
-# GROUP BY
-#     od.product_id,
-#     p.product_name
-# ORDER BY
-#     total_sales DESC
-# LIMIT
-#     5;
-# ")
-# 
-# ggplot(top_5_products_promotion, aes(x = reorder(product_name, total_sales), y = total_sales, fill = status)) +
-#   geom_col(width = 0.8) + 
-#   labs(title = "Top 5 Products by Sales", x = "Product Name", y = "Total Sales") +
-#   theme_minimal() +
-#   scale_fill_viridis_d() +
-#   coord_flip() + 
-#   scale_fill_discrete(name = "Promotion Status") + 
-#   ggtitle("Promotion Status of Top 5 products with respect to Sales") +
-#   theme(plot.title = element_text(size = 10, face = "bold", hjust = 0.5), legend.position = 'right') 
-# 
-# # save image
-# ggsave(paste0("Advanced_Data_Analysis/top5_products_promos_plot_",
-#               this_filename_date,"_",
-#               this_filename_time,".png"))
-# 
+
+#2) Promotion for top products
+promotion_data <- dbGetQuery(db_conn, "SELECT * FROM promotion;")
+top_5_products_promotion <- dbGetQuery(db_conn, "SELECT
+    od.product_id,
+    p.product_name,
+    p.promotion_id,
+    pm.status,
+    ROUND(SUM(p.price),2) AS total_sales
+FROM
+    order_details od
+JOIN
+    product p ON od.product_id = p.product_id
+JOIN
+    promotion pm ON p.promotion_id = pm.promotion_id
+GROUP BY
+    od.product_id,
+    p.product_name
+ORDER BY
+    total_sales DESC
+LIMIT
+    5;
+")
+
+ggplot(top_5_products_promotion, aes(x = reorder(product_name, total_sales), y = total_sales, fill = status)) +
+  geom_col(width = 0.8) +
+  labs(title = "Top 5 Products by Sales", x = "Product Name", y = "Total Sales") +
+  theme_minimal() +
+  scale_fill_viridis_d() +
+  coord_flip() +
+  scale_fill_discrete(name = "Promotion Status") +
+  ggtitle("Promotion Status of Top 5 products with respect to Sales") +
+  theme(plot.title = element_text(size = 10, face = "bold", hjust = 0.5), legend.position = 'right')
+
+# save image
+ggsave(paste0("Advanced_Data_Analysis/top5_products_promos_plot_",
+              this_filename_date,"_",
+              this_filename_time,".png"))
+
 # #3) Number of days promotions are running
 # # no_of_days_promotions <- mutate(promotion_data,
 # #                          start_date = as.Date(start_date,format= "%d/%m/%Y"),
