@@ -6,7 +6,7 @@ date: "2024-03-15"
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
-install.packages(c("DBI", "RSQLite", "dplyr","ggplot2"))
+#install.packages(c("DBI", "RSQLite", "dplyr","ggplot2"))
 
 library(DBI)
 library(RSQLite)
@@ -16,6 +16,18 @@ library(ggplot2)
 
 ```{r}
 db_conn <- dbConnect(RSQLite::SQLite(), "database/ecommerce.db")
+```
+
+```{r}
+top_5_products_sales <- dbGetQuery(db_conn, "SELECT
+    *
+FROM
+    promotion
+LIMIT
+    5;
+")
+
+print(top_5_products_sales)
 ```
 
 
@@ -74,6 +86,25 @@ ORDER BY
 LIMIT
     5;;
 ")
+
+
+
+print(no_of_days_promotions)
+
+```
+
+```{r}
+no_of_days_promotions <- dbGetQuery(db_conn, "SELECT
+    *
+FROM
+    promotion
+ORDER BY
+    promotion_duration_days DESC
+LIMIT
+    5;;
+")
+
+
 
 print(no_of_days_promotions)
 

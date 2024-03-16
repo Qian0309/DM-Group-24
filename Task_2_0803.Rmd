@@ -89,6 +89,17 @@ for (variable in all_files) {
 ```
 
 # Data Quality Assurance
+# Data Integrity Checks
+```{r}
+promotion_data <- mutate(promotion_data,
+                         start_date = as.Date(start_date,format= "%d/%m/%Y"),
+                         end_date = as.Date(end_date,format= "%d/%m/%Y"))
+```
+
+```{r}
+order_details_data <- mutate(order_details_data,
+                         order_dates = as.Date(order_dates,format= "%d/%m/%Y"))
+```
 ## Referential Integrity Checks
 ```{r}
 # PRODUCT ENTITY
@@ -137,7 +148,7 @@ setdiff(unique(order_details_data$supplier_id), unique(supplier_data$supplier_id
 library(RSQLite)
 
 #setup the connection
-connection <- RSQLite::dbConnect(RSQLite::SQLite(),"ecommerce.db")
+connection <- RSQLite::dbConnect(RSQLite::SQLite(),"database/ecommerce.db")
 ```
 
 
@@ -302,7 +313,7 @@ dbExecute(connection,
 
 
 ```{r}
-# Write to existing table - buyer
+# Write to existing table
 RSQLite::dbWriteTable(connection,"promotion",promotion_data,append=TRUE,rowname=FALSE)
 RSQLite::dbWriteTable(connection,"shipper",shipper_data,append=TRUE,rowname=FALSE)
 RSQLite::dbWriteTable(connection,"address",address_data,append=TRUE,rowname=FALSE)
@@ -379,6 +390,9 @@ SELECT * FROM payment LIMIT 5
 ```
 
 
+```{r}
+promotion_data
+```
 
 ## 
 
