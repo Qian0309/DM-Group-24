@@ -6,10 +6,15 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<<<<<<< HEAD
 <meta name="author" content="Group 24">
 <meta name="dcterms.date" content="2001-07-01">
 
 <title>Reoirt</title>
+=======
+
+<title>group24_report</title>
+>>>>>>> c6bff6780168eec765c4fbb99dcb824d33627f1c
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,6 +27,43 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+<<<<<<< HEAD
+=======
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+>>>>>>> c6bff6780168eec765c4fbb99dcb824d33627f1c
 </style>
 
 
@@ -35,17 +77,26 @@ ul.task-list li input[type="checkbox"] {
 <script src="Group24_report_files/libs/bootstrap/bootstrap.min.js"></script>
 <link href="Group24_report_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="Group24_report_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<<<<<<< HEAD
 </head><body class="fullcontent">\usepackage{hyperref}
 
 
 
 
 
+=======
+
+
+</head>
+
+<body class="fullcontent">
+>>>>>>> c6bff6780168eec765c4fbb99dcb824d33627f1c
 
 <div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
 
 <main class="content" id="quarto-document-content">
 
+<<<<<<< HEAD
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">Reoirt</h1>
@@ -91,6 +142,219 @@ ul.task-list li input[type="checkbox"] {
 <p>7.Reviews: Represents the reviews made by the customer once the product is received.</p>
 <p>[picture]</p>
 <p>##Part 2: Data generation</p>
+=======
+
+
+
+<section id="project-introduction" class="level1">
+<h1>Project Introduction</h1>
+</section>
+<section id="part-1-database-design-and-implementation" class="level1">
+<h1>Part 1: Database Design and Implementation</h1>
+<section id="task-1.1-e-r-diagram-design-and-relationship-sets" class="level2">
+<h2 class="anchored" data-anchor-id="task-1.1-e-r-diagram-design-and-relationship-sets">Task 1.1: E-R Diagram Design and Relationship Sets</h2>
+<p>In this report, we assume that the E-commerce platform primarily sells IT products within the United Kingdom and lacks an international shipment policy. Additionally, the company’s policy dictates that only be promoted once a year. Each “Product_ID” is determined by its “Supplier_ID,” indicating that a supplier can only assign one “Product_ID” to each product. Furthermore, the E-commerce company collects payments and distributes them to suppliers later. There are 7 entities:</p>
+<p>Buyer: Represents the customers who create an account to place orders on the online shopping platform.</p>
+<p>Supplier: Represents the sellers who create an account to sell products on the platform</p>
+<p>Product: Represents the set of products available for purchase on the platform.</p>
+<p>Transaction: Represents product orders placed by customers.</p>
+<p>Promotion: Represents product promotions to attract willing customers.</p>
+<p>Shipper: Represents shipper information.</p>
+<p>Reviews: Represents the reviews made by the customer once the product is received.</p>
+<p><img src="Figures\Screenshots\ERD\ERD.png" class="img-fluid"></p>
+<p>In our e-commerce platform, we’ve conceptualised 12 relationship sets to effectively model and manage the data structure underlying our E-commerce operations. These sets illustrate how different entities within our ecosystem interact and connect with one another, providing a comprehensive overview for stakeholders. Below is a detailed summary of these critical relationships:</p>
+<ol type="1">
+<li></li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Figures\Screenshots\relationship_set\buyer_address(1_1).png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<p>Buyer and Address (1:1): This diagram shows one-to-one relationship between buyers and addresses, it also indicates that each buyer has one address, and each address is associated with one buyer.</p>
+<ol start="2" type="1">
+<li></li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Figures\Screenshots\relationship_set\buyer_order(1_n).png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<p>Buyer and Order Details (1:N): This shows a one-to-many relationship, indicating a buyer can place multiple orders, with each ‘order detail’ linked to a single ‘buyer’.</p>
+<ol start="3" type="1">
+<li></li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Figures\Screenshots\relationship_set\buyer_review(1_n).png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<p>Buyer and Reviews (1:N): Shows a one-to-many relationship, meaning a buyer can submit multiple reviews, with each review associated with that buyer.</p>
+<ol start="4" type="1">
+<li></li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Figures\Screenshots\relationship_set\order_payment(1_n).png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<p>Order Details and Payment (1:N): It shows a one-to-many relationship, meaning each order detail can involve multiple transactions, with each transaction corresponding to a specific order detail.</p>
+<ol start="5" type="1">
+<li></li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Figures\Screenshots\relationship_set\product_dimension(1_1).png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<p>Product to Dimension (1:1): Represents a one-to-one relationship, indicating each product has a unique set of dimensions, with each set of dimensions tied to a single product.</p>
+<ol start="6" type="1">
+<li></li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Figures\Screenshots\relationship_set\product_order(1_n).png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<p>Product to Order Details (1:N): Represents a one-to-many relationship between product and order details. meaning that one product can be present in many order details, Conversely, each order detail is associated with only one product, indicating a specific product is selected for each order.</p>
+<ol start="7" type="1">
+<li></li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Figures\Screenshots\relationship_set\Product_Promotion(n_1).png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<p>Product to Promotion (N:1): Represents a many-to-one relationship indicating that multiple products can be part of the same promotion. Conversely, each promotion can apply to multiple products.</p>
+<ol start="8" type="1">
+<li></li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Figures\Screenshots\relationship_set\Product_Review(1_n).png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<p>Product to Review (1:N): Represents a one-to-many relationship, showing that each product can have multiple reviews written about it, Conversely, xeach review is associated with one product, indicating that customers’ feedback is specific to a particular product</p>
+<ol start="9" type="1">
+<li></li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Figures\Screenshots\relationship_set\shipper_order(1_n).png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<p>Supplier and Order Details (1:N): Illustrates a one-to-many relationship, showing that a single supplier can be connected to multiple order details, with each order detail relating to only one supplier.</p>
+<ol start="10" type="1">
+<li></li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Figures\Screenshots\relationship_set\supplier_address(1_1).png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<p>Supplier and Address (1:1): This represents a one-to-one relationship, where each supplier is tied to a single address, and each address is linked to a specific supplier</p>
+<ol start="11" type="1">
+<li></li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Figures\Screenshots\relationship_set\supplier_order(1_n).png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<p>Supplier and Order Details (1:N): Illustrates a one-to-many relationship, showing that a single supplier can be connected to multiple order details, with each order detail relating to only one supplier.</p>
+<ol start="12" type="1">
+<li></li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Figures\Screenshots\relationship_set\supplier_product(1_n).png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<p>Supplier and Product (1:N): Shows a one-to-many relationship, indicating that a supplier sells many products. One supplier can be linked to multiple ‘product’ entities.</p>
+</section>
+<section id="task-1.2-sql-database-schema-creation" class="level2">
+<h2 class="anchored" data-anchor-id="task-1.2-sql-database-schema-creation">Task 1.2: SQL Database Schema Creation</h2>
+</section>
+</section>
+<section id="part-2-data-generation-and-management" class="level1">
+<h1>Part 2: Data Generation and Management</h1>
+<section id="task-2.1-synthetic-data-generation" class="level2">
+<h2 class="anchored" data-anchor-id="task-2.1-synthetic-data-generation">Task 2.1: Synthetic Data Generation</h2>
+</section>
+<section id="task-2.2-data-import-and-quality-assurance" class="level2">
+<h2 class="anchored" data-anchor-id="task-2.2-data-import-and-quality-assurance">Task 2.2: Data Import and Quality Assurance</h2>
+</section>
+</section>
+<section id="part-3-data-pipeline-generation" class="level1">
+<h1>Part 3: Data Pipeline Generation</h1>
+<section id="task-3.1-github-repository-and-workflow-setup" class="level2">
+<h2 class="anchored" data-anchor-id="task-3.1-github-repository-and-workflow-setup">Task 3.1: GitHub Repository and Workflow Setup</h2>
+</section>
+<section id="task-3.2-github-actions-for-continuous-integration" class="level2">
+<h2 class="anchored" data-anchor-id="task-3.2-github-actions-for-continuous-integration">Task 3.2: GitHub Actions for Continuous Integration</h2>
+</section>
+</section>
+<section id="part-4-data-analysis-and-reporting-with-quarto-in-r" class="level1">
+<h1>Part 4: Data Analysis and Reporting with Quarto in R</h1>
+<section id="task-4.1-advanced-data-analysis-in-r" class="level2">
+<h2 class="anchored" data-anchor-id="task-4.1-advanced-data-analysis-in-r">Task 4.1: Advanced Data Analysis in R</h2>
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>db_conn <span class="ot">&lt;-</span> <span class="fu">dbConnect</span>(RSQLite<span class="sc">::</span><span class="fu">SQLite</span>(), <span class="st">"database/ecommerce.db"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+</section>
+<section id="products-with-highest-sales" class="level1">
+<h1>1) Products With Highest Sales</h1>
+<section id="task-4.2-comprehensive-reporting-with-quarto" class="level2">
+<h2 class="anchored" data-anchor-id="task-4.2-comprehensive-reporting-with-quarto">Task 4.2: Comprehensive Reporting with Quarto</h2>
+<blockquote class="blockquote">
+<blockquote class="blockquote">
+<blockquote class="blockquote">
+<blockquote class="blockquote">
+<blockquote class="blockquote">
+<blockquote class="blockquote">
+<blockquote class="blockquote">
+<p>c9443ba49a4d93dcd1b3bcb9fbdf013ac0bbd0df</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>top_5_products_sales <span class="ot">&lt;-</span> <span class="fu">dbGetQuery</span>(db_conn, <span class="st">"SELECT</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="st">    od.product_id,</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="st">    p.product_name,</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="st">    SUM(p.price) AS total_sales</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="st">FROM</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="st">    order_details od</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="st">JOIN</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="st">    product p ON od.product_id = p.product_id</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="st">GROUP BY</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="st">    od.product_id,</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="st">    p.product_name</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="st">ORDER BY</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="st">    total_sales DESC</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="st">LIMIT</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="st">    5;</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="st">"</span>)</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Viewing the results</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(top_5_products_sales)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  product_id           product_name total_sales
+1    PR00118        Lite Action Cam     4702.92
+2    PR00778  AI-Powered VR Headset     3945.76
+3    PR00633     Heavy-Duty Printer     3792.04
+4    PR00380             Eco Tablet     3683.64
+5    PR00141 Ultra-Light Action Cam     3230.60</code></pre>
+</div>
+</div>
+</section>
+</section>
+>>>>>>> c6bff6780168eec765c4fbb99dcb824d33627f1c
 
 </main>
 <!-- /main column -->
