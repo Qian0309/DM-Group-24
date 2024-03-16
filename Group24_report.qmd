@@ -4,50 +4,148 @@ editor:
     wrap: sentence
 ---
 
-## Introduction
 
-## Part 1: Data Design and Implementation
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
 
-In this report, we assume that the E-commerce platform mainly sells IT products in the United Kingdom and does not have an international shipment policy.
-Furthermore, company policy is that product only has one promotion during a year, “Product_ID” is identified based on “Supplier_ID”, which means supplier only has one “Product_ID” for one product.
-Also, money collected by e-commerce company is distributed later to supplier.
+install.packages("DBI")
+install.packages("RSQLite")
+install.packages("dplyr")
+install.packages("ggplot2")
 
-There are 7 entities:
-
-1.Buyer: Represents the customers who create an account to place orders on the online shopping platform.
-
-2.Supplier: Represents the sellers who create an account to sell products on the platform
-
-3.Product: Represents the set of products available for purchase on the platform.
-
-4.Transaction: Represents product orders placed by customers.
-
-5.Promotion: Represents product promotions to attract willing customers.
-
-6.Shipper: Represents Shipper information.
-
-7.Reviews: Represents the reviews made by the customer once the product is received.
-
-\[picture\]
-
-## Part 2: Data generation
-
-## Part 3:
-
-
-```{r}
-unique(address_data$county)
+library(DBI)
+library(RSQLite)
+library(dplyr)
+library(ggplot2)
 ```
 
+# Project Introduction
 
-## Part 4:
+# Part 1: Database Design and Implementation
 
+## Task 1.1: E-R Diagram Design and Relationship Sets
+
+In this report, we assume that the E-commerce platform primarily sells IT products within the United Kingdom and lacks an international shipment policy. Additionally, the company’s policy dictates that only be promoted once a year. Each "Product_ID" is determined by its "Supplier_ID," indicating that a supplier can only assign one "Product_ID" to each product. Furthermore, the E-commerce company collects payments and distributes them to suppliers later. There are 7 entities: 
+
+Buyer: Represents the customers who create an account to place orders on the online shopping platform. 
+
+Supplier: Represents the sellers who create an account to sell products on the platform 
+
+Product: Represents the set of products available for purchase on the platform. 
+
+Transaction: Represents product orders placed by customers. 
+
+Promotion: Represents product promotions to attract willing customers. 
+
+Shipper: Represents shipper information. 
+
+Reviews: Represents the reviews made by the customer once the product is received. 
+
+
+![](Figures\Screenshots\ERD\ERD.png)
+
+In our e-commerce platform, we've conceptualised 12 relationship sets to effectively model and manage the data structure underlying our E-commerce operations. These sets illustrate how different entities within our ecosystem interact and connect with one another, providing a comprehensive overview for stakeholders. Below is a detailed summary of these critical relationships: 
+
+1) 
+
+![](Figures\Screenshots\relationship_set\buyer_address(1_1).png){fig-align="center"}
+
+Buyer and Address (1:1): This diagram shows one-to-one relationship between buyers and addresses, it also indicates that each buyer has one address, and each address is associated with one buyer. 
+
+2) 
+
+![](Figures\Screenshots\relationship_set\buyer_order(1_n).png){fig-align="center"}
+
+Buyer and Order Details (1:N): This shows a one-to-many relationship, indicating a buyer can place multiple orders, with each 'order detail' linked to a single 'buyer'. 
+
+3)
+
+![](Figures\Screenshots\relationship_set\buyer_review(1_n).png){fig-align="center"}
+
+Buyer and Reviews (1:N): Shows a one-to-many relationship, meaning a buyer can submit multiple reviews, with each review associated with that buyer. 
+
+4)
+
+![](Figures\Screenshots\relationship_set\order_payment(1_n).png){fig-align="center"}
+
+Order Details and Payment (1:N): It shows a one-to-many relationship, meaning each order detail can involve multiple transactions, with each transaction corresponding to a specific order detail. 
+
+5)
+
+![](Figures\Screenshots\relationship_set\product_dimension(1_1).png){fig-align="center"}
+
+Product to Dimension (1:1): Represents a one-to-one relationship, indicating each product has a unique set of dimensions, with each set of dimensions tied to a single product. 
+
+6) 
+
+![](Figures\Screenshots\relationship_set\product_order(1_n).png){fig-align="center"}
+
+Product to Order Details (1:N): Represents a one-to-many relationship between product and order details. meaning that one product can be present in many order details, Conversely, each order detail is associated with only one product, indicating a specific product is selected for each order. 
+
+7)
+
+![](Figures\Screenshots\relationship_set\Product_Promotion(n_1).png){fig-align="center"}
+
+Product to Promotion (N:1): Represents a many-to-one relationship indicating that multiple products can be part of the same promotion. Conversely, each promotion can apply to multiple products. 
+
+8)
+
+![](Figures\Screenshots\relationship_set\Product_Review(1_n).png){fig-align="center"}
+
+Product to Review (1:N): Represents a one-to-many relationship, showing that each product can have multiple reviews written about it, Conversely, xeach review is associated with one product, indicating that customers’ feedback is specific to a particular product 
+
+9)
+
+![](Figures\Screenshots\relationship_set\shipper_order(1_n).png){fig-align="center"}
+
+Supplier and Order Details (1:N): Illustrates a one-to-many relationship, showing that a single supplier can be connected to multiple order details, with each order detail relating to only one supplier. 
+
+10)
+
+![](Figures\Screenshots\relationship_set\supplier_address(1_1).png){fig-align="center"}
+
+Supplier and Address (1:1): This represents a one-to-one relationship, where each supplier is tied to a single address, and each address is linked to a specific supplier
+
+11)
+
+![](Figures\Screenshots\relationship_set\supplier_order(1_n).png){fig-align="center"}
+
+Supplier and Order Details (1:N): Illustrates a one-to-many relationship, showing that a single supplier can be connected to multiple order details, with each order detail relating to only one supplier. 
+
+12)
+
+![](Figures\Screenshots\relationship_set\supplier_product(1_n).png){fig-align="center"}
+
+Supplier and Product (1:N): Shows a one-to-many relationship, indicating that a supplier sells many products. One supplier can be linked to multiple 'product' entities. 
+
+## Task 1.2: SQL Database Schema Creation
+
+# Part 2: Data Generation and Management
+
+## Task 2.1: Synthetic Data Generation
+
+## Task 2.2: Data Import and Quality Assurance
+
+# Part 3: Data Pipeline Generation 
+
+## Task 3.1: GitHub Repository and Workflow Setup
+
+## Task 3.2: GitHub Actions for Continuous Integration
+
+# Part 4: Data Analysis and Reporting with Quarto in R
+
+## Task 4.1: Advanced Data Analysis in R
+
+<<<<<<< HEAD
 ```{r}
 db_conn <- dbConnect(RSQLite::SQLite(), "database/ecommerce.db")
 ```
 
 
 1) Products With Highest Sales
+=======
+## Task 4.2: Comprehensive Reporting with Quarto
+>>>>>>> c9443ba49a4d93dcd1b3bcb9fbdf013ac0bbd0df
 
 ```{r}
 top_5_products_sales <- dbGetQuery(db_conn, "SELECT
