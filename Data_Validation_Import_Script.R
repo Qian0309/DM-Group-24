@@ -122,9 +122,9 @@ for (i in seq_along(dataname_list)) {
 
 ### Referential Integrity Checks
 # PRODUCT ENTITY
-# Relationship between Product and Promotion : 1 Promotion applied on N Products
+# Relationship between Product and Promotion : 1 Promotion applied on n Products
 setdiff(unique(product_data$promotion_id), unique(promotion_data$promotion_id))
-# Relationship between Product and Supplier : 1 Supplier sells N Products 
+# Relationship between Product and Supplier : 1 Supplier sells n Products 
 setdiff(unique(product_data$supplier_id), unique(supplier_data$supplier_id))
 # Relationship between Product and Dimension : 1 Product has 1 Dimension
 setdiff(unique(product_data$dimension_id), unique(dimension_data$dimension_id))
