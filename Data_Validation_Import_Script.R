@@ -23,7 +23,7 @@ promotion_data <- read.csv("New_Data/ecommerce_promotion_dataset.csv")
 review_data <- read.csv("New_Data/ecommerce_review_dataset.csv")
 shipper_data <- read.csv("New_Data/ecommerce_shipper_dataset.csv")
 supplier_data <- read.csv("New_Data/ecommerce_supplier_dataset.csv")
-payment_data <- read.csv("New_Data/ecommerce_payment_datatset.csv")
+payment_data <- read.csv("New_Data/ecommerce_payment_dataset.csv")
 order_details_data <- read.csv("New_Data/ecommerce_order_details_dataset.csv")
 
 
