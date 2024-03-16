@@ -316,6 +316,22 @@ RSQLite::dbWriteTable(connection,"payment",payment_data,append=TRUE,rowname=FALS
 
 ```
 
+
+```{sql connection=connection}
+SELECT * FROM dimension
+```
+```{r}
+dbExecute(connection, 
+"INSERT INTO dimension(dimension_id,length,width,height) VALUES 
+('DM01001',12,13,14);
+")
+```
+
+```{sql connection=connection}
+SELECT * FROM dimension
+```
+
+
 ```{r listtables}
 # Get a list of tables from the database that we already 
 # created
