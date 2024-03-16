@@ -4,44 +4,63 @@ editor:
     wrap: sentence
 ---
 
-## Introduction
+# Project Introduction
 
-## Part 1: Data Design and Implementation
+# Part 1: Database Design and Implementation
 
-In this report, we assume that the E-commerce platform mainly sells IT products in the United Kingdom and does not have an international shipment policy.
-Furthermore, company policy is that product only has one promotion during a year, “Product_ID” is identified based on “Supplier_ID”, which means supplier only has one “Product_ID” for one product.
-Also, money collected by e-commerce company is distributed later to supplier.
+## Task 1.1: E-R Diagram Design and Relationship Sets
 
-There are 7 entities:
-
-1.Buyer: Represents the customers who create an account to place orders on the online shopping platform.
-
-2.Supplier: Represents the sellers who create an account to sell products on the platform
-
-3.Product: Represents the set of products available for purchase on the platform.
-
-4.Transaction: Represents product orders placed by customers.
-
-5.Promotion: Represents product promotions to attract willing customers.
-
-6.Shipper: Represents Shipper information.
-
-7.Reviews: Represents the reviews made by the customer once the product is received.
 
 \[picture\]
 
-## Part 2: Data generation
+![](Figures\Screenshots\ERD\ERD.png)
 
-## Part 3:
+12 relationship sets
+
+![](Figures\Screenshots\relationship_set\buyer_address(1_1).png){fig-align="center"}
+
+![](Figures\Screenshots\relationship_set\buyer_order(1_n).png){fig-align="center"}
+
+![](Figures\Screenshots\relationship_set\buyer_review(1_n).png){fig-align="center"}
+
+![](Figures\Screenshots\relationship_set\order_payment(1_n).png){fig-align="center"}
+
+![](Figures\Screenshots\relationship_set\product_dimension(1_1).png){fig-align="center"}
+
+![](Figures\Screenshots\relationship_set\product_order(1_n).png){fig-align="center"}
 
 
-```{r}
-unique(address_data$county)
-```
+![](Figures\Screenshots\relationship_set\Product_Promotion(n_1).png){fig-align="center"}
 
+![](Figures\Screenshots\relationship_set\Product_Review(1_n).png){fig-align="center"}
 
-## Part 4:
+![](Figures\Screenshots\relationship_set\shipper_order(1_n).png){fig-align="center"}
 
+![](Figures\Screenshots\relationship_set\supplier_address(1_1).png){fig-align="center"}
+
+![](Figures\Screenshots\relationship_set\supplier_order(1_n).png){fig-align="center"}
+
+![](Figures\Screenshots\relationship_set\supplier_product(1_n).png){fig-align="center"}
+
+## Task 1.2: SQL Database Schema Creation
+
+# Part 2: Data Generation and Management
+
+## Task 2.1: Synthetic Data Generation
+
+## Task 2.2: Data Import and Quality Assurance
+
+# Part 3: Data Pipeline Generation 
+
+## Task 3.1: GitHub Repository and Workflow Setup
+
+## Task 3.2: GitHub Actions for Continuous Integration
+
+# Part 4: Data Analysis and Reporting with Quarto in R
+
+## Task 4.1: Advanced Data Analysis in R
+
+## Task 4.2: Comprehensive Reporting with Quarto
 
 
 
