@@ -87,49 +87,49 @@ ggsave(paste0("Advanced_Data_Analysis/top5_products_promos_plot_",
               this_filename_time,".png"))
 
 #3) Number of days promotions are running
-no_of_days_promotions <- mutate(promotion_data,
-                         start_date = as.Date(start_date,format= "%d/%m/%Y"),
-                         end_date = as.Date(end_date,format= "%d/%m/%Y"),
-                         num_days_promotion = end_date - start_date) %>%
-  filter(status == 'active')
-no_of_days_promotions <- no_of_days_promotions %>%
-  arrange(desc(num_days_promotion))
-
-no_of_days_promotions <- no_of_days_promotions %>% 
-  group_by(num_days_promotion) %>% 
-  summarise(num_promotions = n()) %>%
-  arrange((num_days_promotion))
-
-ggplot(no_of_days_promotions, aes(x = num_days_promotion, y = num_promotions)) +
-  geom_col(colors='') + 
-  labs(x = "Number of days promotion is running", y = "Number of promotions") +
-  theme_minimal() +
-  scale_fill_viridis_d() +
-  ggtitle("Number of Promotions running across each different duration") +
-  theme(plot.title = element_text(size = 10, face = "bold", hjust = 0.5), legend.position = 'none') 
+# no_of_days_promotions <- mutate(promotion_data,
+#                          start_date = as.Date(start_date,format= "%d/%m/%Y"),
+#                          end_date = as.Date(end_date,format= "%d/%m/%Y"),
+#                          num_days_promotion = end_date - start_date) %>%
+#   filter(status == 'active')
+# no_of_days_promotions <- no_of_days_promotions %>%
+#   arrange(desc(num_days_promotion))
+# 
+# no_of_days_promotions <- no_of_days_promotions %>% 
+#   group_by(num_days_promotion) %>% 
+#   summarise(num_promotions = n()) %>%
+#   arrange((num_days_promotion))
+# 
+# ggplot(no_of_days_promotions, aes(x = num_days_promotion, y = num_promotions)) +
+#   geom_col(colors='') + 
+#   labs(x = "Number of days promotion is running", y = "Number of promotions") +
+#   theme_minimal() +
+#   scale_fill_viridis_d() +
+#   ggtitle("Number of Promotions running across each different duration") +
+#   theme(plot.title = element_text(size = 10, face = "bold", hjust = 0.5), legend.position = 'none') 
 
 #4) Sales Trends
-order_details <- dbGetQuery(db_conn,"SELECT * FROM order_details")
-order_details <- mutate(order_details,
-                        order_dates = as.Date(order_dates,format= "%d/%m/%Y"))
-product <- dbGetQuery(db_conn,"SELECT * FROM product")
+# order_details <- dbGetQuery(db_conn,"SELECT * FROM order_details")
+# order_details <- mutate(order_details,
+#                         order_dates = as.Date(order_dates,format= "%d/%m/%Y"))
+# product <- dbGetQuery(db_conn,"SELECT * FROM product")
 
 
 # Viewing the results
-sales_trend_data <- inner_join(order_details, product, 
-           by = c("product_id")) 
-
-sales_trend_data <- sales_trend_data %>%
-  group_by(order_dates) %>% 
-  summarise(total_sales = sum(price))
-
-ggplot(sales_trend_data, aes(x = order_dates, y = total_sales)) +
-  geom_line() + 
-  labs(x = "Date", y = "Sales") +
-  theme_minimal() +
-  scale_fill_viridis_d() +
-  ggtitle("Sales Trend") +
-  theme(plot.title = element_text(size = 10, face = "bold", hjust = 0.5), legend.position = 'none') 
+# sales_trend_data <- inner_join(order_details, product, 
+#            by = c("product_id")) 
+# 
+# sales_trend_data <- sales_trend_data %>%
+#   group_by(order_dates) %>% 
+#   summarise(total_sales = sum(price))
+# 
+# ggplot(sales_trend_data, aes(x = order_dates, y = total_sales)) +
+#   geom_line() + 
+#   labs(x = "Date", y = "Sales") +
+#   theme_minimal() +
+#   scale_fill_viridis_d() +
+#   ggtitle("Sales Trend") +
+#   theme(plot.title = element_text(size = 10, face = "bold", hjust = 0.5), legend.position = 'none') 
 
 #5) Products With Highest Review
 top_5_products_reviews <- dbGetQuery(db_conn, "SELECT
