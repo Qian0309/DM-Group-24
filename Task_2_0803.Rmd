@@ -100,7 +100,7 @@ connection <- RSQLite::dbConnect(RSQLite::SQLite(),"ecommerce.db")
 ```{r}
 #Creating table promotion
 dbExecute(connection, 
-"CREATE TABLE promotion (
+"DROP TABLE IF EXISTS promotiont; CREATE TABLE promotion (
   'promotion_id' VARCHAR(50) PRIMARY KEY, 
   'promotion_type' VARCHAR(50),
   'start_date' DATE,

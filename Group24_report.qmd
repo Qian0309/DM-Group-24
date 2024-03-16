@@ -42,6 +42,34 @@ unique(address_data$county)
 
 ## Part 4:
 
+```{r}
+db_conn <- dbConnect(RSQLite::SQLite(), "database/ecommerce.db")
+```
 
+
+1) Products With Highest Sales
+
+```{r}
+top_5_products_sales <- dbGetQuery(db_conn, "SELECT
+    od.product_id,
+    p.product_name,
+    SUM(p.price) AS total_sales
+FROM
+    order_details od
+JOIN
+    product p ON od.product_id = p.product_id
+GROUP BY
+    od.product_id,
+    p.product_name
+ORDER BY
+    total_sales DESC
+LIMIT
+    5;
+")
+
+# Viewing the results
+print(top_5_products_sales)
+
+```
 
 
