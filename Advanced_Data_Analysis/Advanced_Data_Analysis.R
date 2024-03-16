@@ -36,7 +36,7 @@ ggplot(top_5_products_sales, aes(x = reorder(product_name, total_sales), y = tot
   geom_text(aes(label = total_sales), vjust = 0.2, hjust=-0.1, position=position_dodge(width=0.9),size=3) +
   labs(x = "Product Name", y = "Total Sales") +
   theme_minimal() +
-  scale_fill_viridis_d() +
+  #scale_fill_viridis_d() +
   coord_flip() + 
   ggtitle("Top 5 Products by Sales") +
   theme(plot.title = element_text(size = 10, face = "bold", hjust = 0.5), legend.position = 'none')
@@ -75,7 +75,7 @@ ggplot(top_5_products_promotion, aes(x = reorder(product_name, total_sales), y =
   geom_col(width = 0.8) + 
   labs(title = "Top 5 Products by Sales", x = "Product Name", y = "Total Sales") +
   theme_minimal() +
-  scale_fill_viridis_d() +
+  #scale_fill_viridis_d() +
   coord_flip() + 
   scale_fill_discrete(name = "Promotion Status") + 
   ggtitle("Promotion Status of Top 5 products with respect to Sales") +
@@ -155,7 +155,7 @@ ggplot(top_5_products_reviews, aes(x = reorder(product_name, avg_review_score), 
   coord_flip() + 
   labs(x = "Product Name", y = "Average Review Score") +
   theme_minimal() +
-  scale_fill_viridis_d() + 
+  #scale_fill_viridis_d() + 
   ggtitle("Top 5 Products by Average Review Score") +
   theme(plot.title = element_text(size = 10, face = "bold", hjust = 0.5), legend.position = 'none') 
 
@@ -289,7 +289,6 @@ GROUP BY
 ORDER BY
     total_revenue DESC;
 ")
-```
 
 ggplot(effective_promotions, aes(x = reorder(promotion_type, -total_revenue), y = total_revenue)) +
   geom_bar(stat = "identity", width=0.7) +
