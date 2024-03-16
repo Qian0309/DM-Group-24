@@ -263,62 +263,71 @@ ggsave(paste0("Advanced_Data_Analysis/effective_promos_plot_",
               this_filename_date,"_",
               this_filename_time,".png"))
 
-# #11) Most Reviewed Products
-# most_reviewed_products <- dbGetQuery(db_conn,"SELECT
-#     p.product_name,
-#     COUNT(*) AS review_count,
-#     ROUND(AVG(r.review_score),2) AS avg_review_score
-# FROM
-#     review r
-# JOIN
-#     product p ON r.product_id = p.product_id
-# GROUP BY
-#     p.product_name
-# ORDER BY
-#     review_count DESC
-# LIMIT 10;
-# ")
-# 
-# 
-# ggplot(most_reviewed_products, aes(x = reorder(product_name, -review_count), y = review_count)) +
-#   geom_bar(stat = "identity", width=0.7) +
-#   geom_text(aes(label = review_count), vjust = -0.2, hjust=0.5, position=position_dodge(width=0.9),size=4) +
-#   labs(x = "Product Name", y = "Number of Reviews") +
-#   theme_minimal() +
-#   theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
-#   ggtitle("Most Reviewed Products") +
-#   theme(plot.title = element_text(size = 10, face = "bold", hjust = 0.5), legend.position = 'none')
-# 
-# #The high number of reviews for Touch Desk Lamp and Ultra-Light Smart Speaker indicates 
-# #strong customer engagement with these products. More customers are actively providing feedback 
-# #for these products, which can be valuable for understanding product satisfaction and areas for improvement.
-# 
-# 
-# #12) Cities With Highest Sales.
-# cities_highest_sales <- dbGetQuery(db_conn,"SELECT
-#     a.city,
-#     ROUND(SUM(p.price),2) AS total_sales
-# FROM
-#     order_details od
-# JOIN
-#     product p ON od.product_id = p.product_id
-# JOIN
-#     buyer b ON od.buyer_id = b.buyer_id
-# JOIN
-#     address a ON b.address_id = a.address_id
-# GROUP BY
-#     a.city
-# ORDER BY
-#     total_sales DESC
-# LIMIT
-#     5;
-# ")
-# 
-# ggplot(cities_highest_sales, aes(x = city, y = total_sales)) +
-#   geom_bar(stat = "identity", width = 0.5) +
-#   geom_text(aes(label = total_sales), vjust = -0.3, hjust=0.5, position=position_dodge(width=0.9),size=3) +
-#   labs(x = "City", y = "Total Sales") +
-#   theme_minimal() +
-#   ggtitle("City with Highest Sales") +
-#   theme(plot.title = element_text(size = 10, face = "bold", hjust = 0.5), legend.position = 'none')
-# 
+#11) Most Reviewed Products
+most_reviewed_products <- dbGetQuery(db_conn,"SELECT
+    p.product_name,
+    COUNT(*) AS review_count,
+    ROUND(AVG(r.review_score),2) AS avg_review_score
+FROM
+    review r
+JOIN
+    product p ON r.product_id = p.product_id
+GROUP BY
+    p.product_name
+ORDER BY
+    review_count DESC
+LIMIT 10;
+")
+
+
+ggplot(most_reviewed_products, aes(x = reorder(product_name, -review_count), y = review_count)) +
+  geom_bar(stat = "identity", width=0.7) +
+  geom_text(aes(label = review_count), vjust = -0.2, hjust=0.5, position=position_dodge(width=0.9),size=4) +
+  labs(x = "Product Name", y = "Number of Reviews") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  ggtitle("Most Reviewed Products") +
+  theme(plot.title = element_text(size = 10, face = "bold", hjust = 0.5), legend.position = 'none')
+
+#The high number of reviews for Touch Desk Lamp and Ultra-Light Smart Speaker indicates
+#strong customer engagement with these products. More customers are actively providing feedback
+#for these products, which can be valuable for understanding product satisfaction and areas for improvement.
+
+# save image
+ggsave(paste0("Advanced_Data_Analysis/most_reviewed_products_plot_",
+              this_filename_date,"_",
+              this_filename_time,".png"))
+
+
+#12) Cities With Highest Sales.
+cities_highest_sales <- dbGetQuery(db_conn,"SELECT
+    a.city,
+    ROUND(SUM(p.price),2) AS total_sales
+FROM
+    order_details od
+JOIN
+    product p ON od.product_id = p.product_id
+JOIN
+    buyer b ON od.buyer_id = b.buyer_id
+JOIN
+    address a ON b.address_id = a.address_id
+GROUP BY
+    a.city
+ORDER BY
+    total_sales DESC
+LIMIT
+    5;
+")
+
+ggplot(cities_highest_sales, aes(x = city, y = total_sales)) +
+  geom_bar(stat = "identity", width = 0.5) +
+  geom_text(aes(label = total_sales), vjust = -0.3, hjust=0.5, position=position_dodge(width=0.9),size=3) +
+  labs(x = "City", y = "Total Sales") +
+  theme_minimal() +
+  ggtitle("City with Highest Sales") +
+  theme(plot.title = element_text(size = 10, face = "bold", hjust = 0.5), legend.position = 'none')
+
+# save image
+ggsave(paste0("Advanced_Data_Analysis/highest_sales_5cities_plot_",
+              this_filename_date,"_",
+              this_filename_time,".png"))
