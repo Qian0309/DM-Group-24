@@ -1,3 +1,8 @@
+---
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
 
 
 ```{r setup, include=FALSE}
@@ -90,6 +95,7 @@ for (variable in all_files) {
 
 # Data Quality checks
 
+## Id format checks for all primary and foregin keys
 ```{r checkprimary,message=FALSE,warning=FALSE,attr.source='.numberLines'}
 
 
@@ -138,13 +144,128 @@ for (i in seq_along(dataname_list)) {
 
 ```
 
+## Data checks for the address 
+
+```{r checkprimary,message=FALSE,warning=FALSE,attr.source='.numberLines'}
+
+# Getting the negative house number data
+negative_data <- address_data %>% 
+  filter(house_number < 0)
+
+# Removing it from the address data
+address_data <- anti_join(address_data, negative_data, by = "address_id")
+
+# Removing the same from the other tables having address as a foreign key
+buyer_data <- anti_join(buyer_data, negative_data, by = "address_id")
+supplier_data <- anti_join(supplier_data, negative_data, by = "address_id")
+  
+```
+
+## Data checks for the buyer 
+
+```{r checkprimary,message=FALSE,warning=FALSE,attr.source='.numberLines'}
+
+str(buyer_data)
+
+```
+
+## Data checks for the dimension 
+
+```{r checkprimary,message=FALSE,warning=FALSE,attr.source='.numberLines'}
+
+# Getting the negative and over the upper limit dimensions data
+negative_data <- dimension_data %>% 
+  filter(length < 0 | length > 150 |
+           width < 0 | width > 150 |
+           height < 0 | height > 150)
+
+# Removing it from all tables containing dimension id
+dimension_data <- anti_join(dimension_data, negative_data, by = "dimension_id")
+product_data <- anti_join(product_data, negative_data, by = "dimension_id")
+
+```
+
+## Data checks for the order details 
+
+```{r checkprimary,message=FALSE,warning=FALSE,attr.source='.numberLines'}
 
 
 
+```
+
+## Data checks for the payment data 
+
+```{r checkprimary,message=FALSE,warning=FALSE,attr.source='.numberLines'}
+
+# Getting the negative payment data
+negative_data <- payment_data %>% 
+  filter(payment_amount < 0 | installment_number < 0 )
+
+# Removing it from all tables containing payment id
+payment_data <- anti_join(payment_data, negative_data, by = "payment_id")
 
 
+```
+
+## Data checks for the product data 
+
+```{r checkprimary,message=FALSE,warning=FALSE,attr.source='.numberLines'}
+
+# Getting the negative and out of limits product data
+negative_data <- product_data %>% 
+  filter(price < 0 | weight < 0 | weight > 100)
+
+# Removing it from all tables containing product id
+product_data <- anti_join(product_data, negative_data, by = "product_id")
+
+```
+
+## Data checks for the promotion data 
+
+```{r checkprimary,message=FALSE,warning=FALSE,attr.source='.numberLines'}
 
 
+```
+
+## Data checks for the review data 
+
+```{r checkprimary,message=FALSE,warning=FALSE,attr.source='.numberLines'}
+
+# Getting the negative and out of limits review data
+negative_data <- review_data %>% 
+  filter(review_score < 0 | review_score >10 )
+
+# Removing it from all tables containing review id
+review_data <- anti_join(review_data, negative_data, by = "review_id")
+
+```
+
+## Data checks for the shipper data 
+
+```{r checkprimary,message=FALSE,warning=FALSE,attr.source='.numberLines'}
+
+# Getting the negative and out of limits shipper data
+negative_data <- shipper_data %>% 
+  filter(fixed_price < 0 | cost_per_mile < 0 )
+
+# Removing it from all tables containing shipper id
+shipper_data <- anti_join(shipper_data, negative_data, by = "shipper_id")
+
+
+```
+
+## Data checks for the supplier data 
+
+```{r checkprimary,message=FALSE,warning=FALSE,attr.source='.numberLines'}
+
+# Getting the negative and out of limits supplier data
+negative_data <- supplier_data %>% 
+  filter(number_of_year_of_association < 0 )
+
+# Removing it from all tables containing shipper id
+supplier_data <- anti_join(supplier_data, negative_data, by = "supplier_id")
+
+```
 
 
 # Creating Database
@@ -155,6 +276,8 @@ library(RSQLite)
 #setup the connection
 connection <- RSQLite::dbConnect(RSQLite::SQLite(),"ecommerce.db")
 ```
+
+
 
 
 ```{r}
