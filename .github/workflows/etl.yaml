@@ -31,12 +31,12 @@ jobs:
           Rscript Data_Validation_Import_Script.R
       - name: Execute R script
         run: |
-          Rscript Advanced_Data_Analysis.R
+          Rscript Advanced_Data_Analysis/Advanced_Data_Analysis.R
       - name: Add files
         run: |
           git config --global user.email "qian20000309@126.com"
           git config --global user.name "Qian0309"
-          git add --all Updated_Visualisations/
+          git add --all Advanced_Data_Analysis/
       - name: Commit files
         run: |
           git commit -m "Advanced Visualisations Added"
