@@ -1,7 +1,10 @@
 ---
-editor: 
-  markdown: 
-    wrap: sentence
+title: "Reoirt"
+author: "Group 24"
+date: "Week 7"
+output: pdf_document
+number_sections: yes
+header-includes: \usepackage{hyperref}
 ---
 
 

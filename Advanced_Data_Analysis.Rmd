@@ -1,22 +1,27 @@
 ---
-title: "Q4Test"
+title: "Advanced_Data_Analysis"
 output: html_document
-date: "2024-03-15"
+date: "2024-03-16"
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+```
 
+```{r}
+# Load neccesary libraries
 library(DBI)
 library(RSQLite)
 library(dplyr)
 library(ggplot2)
 ```
 
+## Access Existing Database
 ```{r}
-db_conn <- dbConnect(RSQLite::SQLite(), "database/ecommerce.db")
+db_conn <- dbConnect(RSQLite::SQLite(), "Database/ecommerce.db")
 ```
 
+## Visualisations
 1) Products With Highest Sales
 ```{r}
 top_5_products_sales <- dbGetQuery(db_conn, "SELECT
@@ -44,7 +49,6 @@ ggplot(top_5_products_sales, aes(x = reorder(product_name, total_sales), y = tot
   geom_text(aes(label = total_sales), vjust = 0.2, hjust=-0.1, position=position_dodge(width=0.9),size=3) +
   labs(x = "Product Name", y = "Total Sales") +
   theme_minimal() +
-  scale_fill_viridis_d() +
   coord_flip() + 
   ggtitle("Top 5 Products by Sales") +
   theme(plot.title = element_text(size = 10, face = "bold", hjust = 0.5), legend.position = 'none')
@@ -79,7 +83,7 @@ ggplot(top_5_products_promotion, aes(x = reorder(product_name, total_sales), y =
   geom_col(width = 0.8) + 
   labs(title = "Top 5 Products by Sales", x = "Product Name", y = "Total Sales") +
   theme_minimal() +
-  scale_fill_viridis_d() +
+  #scale_fill_viridis_d() +
   coord_flip() + 
   scale_fill_discrete(name = "Promotion Status") + 
   ggtitle("Promotion Status of Top 5 products with respect to Sales") +
@@ -107,7 +111,7 @@ ggplot(no_of_days_promotions, aes(x = num_days_promotion, y = num_promotions)) +
   geom_col(colors='') + 
   labs(x = "Number of days promotion is running", y = "Number of promotions") +
   theme_minimal() +
-  scale_fill_viridis_d() +
+  #scale_fill_viridis_d() +
   ggtitle("Number of Promotions running across each different duration") +
   theme(plot.title = element_text(size = 10, face = "bold", hjust = 0.5), legend.position = 'none') 
 ```
@@ -136,7 +140,7 @@ ggplot(sales_trend_data, aes(x = order_dates, y = total_sales)) +
   geom_line() + 
   labs(x = "Date", y = "Sales") +
   theme_minimal() +
-  scale_fill_viridis_d() +
+  #scale_fill_viridis_d() +
   ggtitle("Sales Trend") +
   theme(plot.title = element_text(size = 10, face = "bold", hjust = 0.5), legend.position = 'none') 
 ```
@@ -167,7 +171,7 @@ ggplot(top_5_products_reviews, aes(x = reorder(product_name, avg_review_score), 
   coord_flip() + 
   labs(x = "Product Name", y = "Average Review Score") +
   theme_minimal() +
-  scale_fill_viridis_d() + 
+  #scale_fill_viridis_d() + 
   ggtitle("Top 5 Products by Average Review Score") +
   theme(plot.title = element_text(size = 10, face = "bold", hjust = 0.5), legend.position = 'none') 
 
@@ -412,12 +416,3 @@ ggplot(cities_highest_sales, aes(x = city, y = total_sales)) +
   ggtitle("City with Highest Sales") +
   theme(plot.title = element_text(size = 10, face = "bold", hjust = 0.5), legend.position = 'none')
 ```
-
-
-
-
-
-
-
-
-
