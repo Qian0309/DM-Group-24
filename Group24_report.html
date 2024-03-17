@@ -208,12 +208,748 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="task-1.2-sql-database-schema-creation" class="level2">
 <h2 class="anchored" data-anchor-id="task-1.2-sql-database-schema-creation">Task 1.2: SQL Database Schema Creation</h2>
+<p>Translating the E-R diagram into a functional SQL database schema, defining tables with appropriate data types, constraints, primary and foreign keys. keys.</p>
+<section id="table-description-for-promotions" class="level3">
+<h3 class="anchored" data-anchor-id="table-description-for-promotions">Table Description for Promotions</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the table data</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>promotion_table <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">Field Name</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"promotion_id"</span>, <span class="st">"promotion_type"</span>, <span class="st">"start_date"</span>, <span class="st">"end_date"</span>, <span class="st">"status"</span>),</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">Data Type</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"VARCHAR(50)"</span>, <span class="st">"VARCHAR(50)"</span>, <span class="st">"DATE"</span>, <span class="st">"DATE"</span>, <span class="st">"VARCHAR(50)"</span>),</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">Constraints</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"PRIMARY KEY"</span>, <span class="st">""</span>, <span class="st">""</span>, <span class="st">""</span>, <span class="st">""</span>),</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">Description</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"Unique identifier for promotion"</span>, <span class="st">"Type of promotion"</span>, <span class="st">"Promotion start date"</span>, <span class="st">"Promotion end date"</span>, <span class="st">"Status of the promotion"</span>)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Create the table</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(promotion_table, <span class="at">caption =</span> <span class="st">"Table Description for Promotions"</span>, <span class="at">align =</span> <span class="st">'l'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="table table-sm table-striped small">
+<caption>Table Description for Promotions</caption>
+<colgroup>
+<col style="width: 21%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 45%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Field.Name</th>
+<th style="text-align: left;">Data.Type</th>
+<th style="text-align: left;">Constraints</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">promotion_id</td>
+<td style="text-align: left;">VARCHAR(50)</td>
+<td style="text-align: left;">PRIMARY KEY</td>
+<td style="text-align: left;">Unique identifier for promotion</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">promotion_type</td>
+<td style="text-align: left;">VARCHAR(50)</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Type of promotion</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">start_date</td>
+<td style="text-align: left;">DATE</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Promotion start date</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">end_date</td>
+<td style="text-align: left;">DATE</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Promotion end date</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">status</td>
+<td style="text-align: left;">VARCHAR(50)</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Status of the promotion</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>Indexing in databases, such as on the promotion_id field of a Promotion table, speeds up data retrieval by maintaining a separate, efficient data structure (like a B-tree) that maps keys to their respective rows in the table. This automatic indexing on primary keys as the first column allows for quick searches, insertions, and ensures uniqueness, enhancing query performance significantly. Indexing foreign key columns as the second key is crucial for enhancing the performance of join operations between tables</p>
+<p>For other columns without explicit indexing, queries that search or filter by these fields may perform a full table scan, which is slower.</p>
+</section>
+<section id="table-description-for-shippers" class="level3">
+<h3 class="anchored" data-anchor-id="table-description-for-shippers">Table Description for Shippers</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the table data for the shipper table</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>shipper_table <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">Field Name</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"shipper_id"</span>, <span class="st">"shipper_name"</span>, <span class="st">"service"</span>, <span class="st">"fixed_price"</span>, <span class="st">"cost_per_mile"</span>),</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">Data Type</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"VARCHAR(50)"</span>, <span class="st">"VARCHAR(50)"</span>, <span class="st">"VARCHAR(100)"</span>, <span class="st">"DOUBLE"</span>, <span class="st">"DOUBLE"</span>),</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">Constraints</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"PRIMARY KEY"</span>, <span class="st">""</span>, <span class="st">""</span>, <span class="st">""</span>, <span class="st">""</span>),</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">Description</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"Unique identifier for the shipper"</span>, </span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>                    <span class="st">"Name of the shipper"</span>, </span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>                    <span class="st">"Type of service offered by the shipper"</span>, </span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>                    <span class="st">"Fixed price for the service"</span>, </span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>                    <span class="st">"Cost per mile for the service"</span>)</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Create the table</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(shipper_table, <span class="at">caption =</span> <span class="st">"Table Description for Shippers"</span>, <span class="at">align =</span> <span class="st">'l'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="table table-sm table-striped small">
+<caption>Table Description for Shippers</caption>
+<colgroup>
+<col style="width: 17%">
+<col style="width: 16%">
+<col style="width: 15%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Field.Name</th>
+<th style="text-align: left;">Data.Type</th>
+<th style="text-align: left;">Constraints</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">shipper_id</td>
+<td style="text-align: left;">VARCHAR(50)</td>
+<td style="text-align: left;">PRIMARY KEY</td>
+<td style="text-align: left;">Unique identifier for the shipper</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">shipper_name</td>
+<td style="text-align: left;">VARCHAR(50)</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Name of the shipper</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">service</td>
+<td style="text-align: left;">VARCHAR(100)</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Type of service offered by the shipper</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">fixed_price</td>
+<td style="text-align: left;">DOUBLE</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Fixed price for the service</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">cost_per_mile</td>
+<td style="text-align: left;">DOUBLE</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Cost per mile for the service</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="table-description-for-address" class="level3">
+<h3 class="anchored" data-anchor-id="table-description-for-address">Table Description for Address</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>address_table <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">Field Name</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"address_id"</span>, <span class="st">"house_number"</span>, <span class="st">"house_name"</span>, <span class="st">"street"</span>, <span class="st">"city"</span>, <span class="st">"county"</span>, <span class="st">"post_code"</span>),</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">Data Type</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"VARCHAR(50)"</span>, <span class="st">"INT"</span>, <span class="st">"VARCHAR(50)"</span>, <span class="st">"VARCHAR(50)"</span>, <span class="st">"VARCHAR(20)"</span>, <span class="st">"VARCHAR(20)"</span>, <span class="st">"VARCHAR(10)"</span>),</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">Constraints</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"PRIMARY KEY"</span>, <span class="st">""</span>, <span class="st">""</span>, <span class="st">""</span>, <span class="st">"NOT NULL"</span>, <span class="st">""</span>, <span class="st">""</span>),</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">Description</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"Unique identifier for the address"</span>, </span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>                    <span class="st">"Number of the house"</span>, </span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>                    <span class="st">"Name of the house if applicable"</span>, </span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>                    <span class="st">"Street name"</span>, </span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>                    <span class="st">"City name"</span>, </span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>                    <span class="st">"County name"</span>, </span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>                    <span class="st">"Postal code of the address"</span>)</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Create the table</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(address_table, <span class="at">caption =</span> <span class="st">"Table Description for Addresses"</span>, <span class="at">align =</span> <span class="st">'l'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="table table-sm table-striped small">
+<caption>Table Description for Addresses</caption>
+<colgroup>
+<col style="width: 18%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 47%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Field.Name</th>
+<th style="text-align: left;">Data.Type</th>
+<th style="text-align: left;">Constraints</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">address_id</td>
+<td style="text-align: left;">VARCHAR(50)</td>
+<td style="text-align: left;">PRIMARY KEY</td>
+<td style="text-align: left;">Unique identifier for the address</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">house_number</td>
+<td style="text-align: left;">INT</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Number of the house</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">house_name</td>
+<td style="text-align: left;">VARCHAR(50)</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Name of the house if applicable</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">street</td>
+<td style="text-align: left;">VARCHAR(50)</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Street name</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">city</td>
+<td style="text-align: left;">VARCHAR(20)</td>
+<td style="text-align: left;">NOT NULL</td>
+<td style="text-align: left;">City name</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">county</td>
+<td style="text-align: left;">VARCHAR(20)</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">County name</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">post_code</td>
+<td style="text-align: left;">VARCHAR(10)</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Postal code of the address</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="table-description-for-dimensions" class="level3">
+<h3 class="anchored" data-anchor-id="table-description-for-dimensions">Table Description for Dimensions</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the table data for the dimension table</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>dimension_table <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">Field Name</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"dimension_id"</span>, <span class="st">"length"</span>, <span class="st">"width"</span>, <span class="st">"height"</span>),</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">Data Type</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"VARCHAR(50)"</span>, <span class="st">"DOUBLE"</span>, <span class="st">"DOUBLE"</span>, <span class="st">"DOUBLE"</span>),</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">Constraints</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"PRIMARY KEY"</span>, <span class="st">""</span>, <span class="st">""</span>, <span class="st">""</span>),</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">Description</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"Unique identifier for the dimension record"</span>, </span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>                    <span class="st">"Length measurement"</span>, </span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>                    <span class="st">"Width measurement"</span>, </span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>                    <span class="st">"Height measurement"</span>)</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Create the table</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(dimension_table, <span class="at">caption =</span> <span class="st">"Table Description for Dimensions"</span>, <span class="at">align =</span> <span class="st">'l'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="table table-sm table-striped small">
+<caption>Table Description for Dimensions</caption>
+<colgroup>
+<col style="width: 16%">
+<col style="width: 15%">
+<col style="width: 15%">
+<col style="width: 53%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Field.Name</th>
+<th style="text-align: left;">Data.Type</th>
+<th style="text-align: left;">Constraints</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">dimension_id</td>
+<td style="text-align: left;">VARCHAR(50)</td>
+<td style="text-align: left;">PRIMARY KEY</td>
+<td style="text-align: left;">Unique identifier for the dimension record</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">length</td>
+<td style="text-align: left;">DOUBLE</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Length measurement</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">width</td>
+<td style="text-align: left;">DOUBLE</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Width measurement</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">height</td>
+<td style="text-align: left;">DOUBLE</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Height measurement</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="table-description-for-buyers" class="level3">
+<h3 class="anchored" data-anchor-id="table-description-for-buyers">Table Description for Buyers</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>buyer_table <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">Field Name</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"buyer_id"</span>, <span class="st">"first_name"</span>, <span class="st">"last_name"</span>, <span class="st">"date_of_birth"</span>, <span class="st">"address_id"</span>),</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">Data Type</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"VARCHAR(50)"</span>, <span class="st">"VARCHAR(250)"</span>, <span class="st">"VARCHAR(250)"</span>, <span class="st">"DATE"</span>, <span class="st">"VARCHAR(50)"</span>),</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">Constraints</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"PRIMARY KEY"</span>, <span class="st">"NOT NULL"</span>, <span class="st">""</span>, <span class="st">""</span>, <span class="st">"NOT NULL, FOREIGN KEY references address(address_id)"</span>),</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">Description</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"Unique identifier for the buyer"</span>, </span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>                    <span class="st">"First name of the buyer. Mandatory field."</span>, </span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>                    <span class="st">"Last name of the buyer"</span>, </span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>                    <span class="st">"Date of birth of the buyer"</span>, </span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>                    <span class="st">"Reference to the buyer's address, must exist in the `address` table. This field is mandatory and establishes a foreign key relationship with the `address` table."</span>)</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Create the table</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(buyer_table, <span class="at">caption =</span> <span class="st">"Table Description for Buyers"</span>, <span class="at">align =</span> <span class="st">'l'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="table table-sm table-striped small">
+<caption>Table Description for Buyers</caption>
+<colgroup>
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 21%">
+<col style="width: 66%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Field.Name</th>
+<th style="text-align: left;">Data.Type</th>
+<th style="text-align: left;">Constraints</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">buyer_id</td>
+<td style="text-align: left;">VARCHAR(50)</td>
+<td style="text-align: left;">PRIMARY KEY</td>
+<td style="text-align: left;">Unique identifier for the buyer</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">first_name</td>
+<td style="text-align: left;">VARCHAR(250)</td>
+<td style="text-align: left;">NOT NULL</td>
+<td style="text-align: left;">First name of the buyer. Mandatory field.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">last_name</td>
+<td style="text-align: left;">VARCHAR(250)</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Last name of the buyer</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">date_of_birth</td>
+<td style="text-align: left;">DATE</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Date of birth of the buyer</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">address_id</td>
+<td style="text-align: left;">VARCHAR(50)</td>
+<td style="text-align: left;">NOT NULL, FOREIGN KEY references address(address_id)</td>
+<td style="text-align: left;">Reference to the buyer’s address, must exist in the <code>address</code> table. This field is mandatory and establishes a foreign key relationship with the <code>address</code> table.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="table-description-for-suppliers" class="level3">
+<h3 class="anchored" data-anchor-id="table-description-for-suppliers">Table Description for Suppliers</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load the knitr package for kable()</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>supplier_table <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">Field Name</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"supplier_id"</span>, <span class="st">"supplier_type"</span>, <span class="st">"contract_type"</span>, <span class="st">"number_of_year_of_association"</span>, <span class="st">"supplier_name"</span>, <span class="st">"address_id"</span>),</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">Data Type</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"VARCHAR(50)"</span>, <span class="st">"VARCHAR(250)"</span>, <span class="st">"VARCHAR(250)"</span>, <span class="st">"INT"</span>, <span class="st">"VARCHAR(50)"</span>, <span class="st">"VARCHAR(50)"</span>),</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">Constraints</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"PRIMARY KEY"</span>, <span class="st">""</span>, <span class="st">""</span>, <span class="st">""</span>, <span class="st">""</span>, <span class="st">"NOT NULL, FOREIGN KEY references address(address_id)"</span>),</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">Description</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"Unique identifier for the supplier"</span>, </span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>                    <span class="st">"Type of supplier (e.g., goods, services)"</span>, </span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>                    <span class="st">"Type of contract with the supplier"</span>, </span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>                    <span class="st">"Number of years the supplier has been associated with"</span>, </span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>                    <span class="st">"Name of the supplier"</span>, </span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>                    <span class="st">"Reference to the supplier's address, must exist in the `address` table. This field is mandatory and establishes a foreign key relationship with the `address` table."</span>)</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Create the table</span></span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(supplier_table, <span class="at">caption =</span> <span class="st">"Table Description for Suppliers"</span>, <span class="at">align =</span> <span class="st">'l'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="table table-sm table-striped small">
+<caption>Table Description for Suppliers</caption>
+<colgroup>
+<col style="width: 11%">
+<col style="width: 4%">
+<col style="width: 20%">
+<col style="width: 63%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Field.Name</th>
+<th style="text-align: left;">Data.Type</th>
+<th style="text-align: left;">Constraints</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">supplier_id</td>
+<td style="text-align: left;">VARCHAR(50)</td>
+<td style="text-align: left;">PRIMARY KEY</td>
+<td style="text-align: left;">Unique identifier for the supplier</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">supplier_type</td>
+<td style="text-align: left;">VARCHAR(250)</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Type of supplier (e.g., goods, services)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">contract_type</td>
+<td style="text-align: left;">VARCHAR(250)</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Type of contract with the supplier</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">number_of_year_of_association</td>
+<td style="text-align: left;">INT</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Number of years the supplier has been associated with</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">supplier_name</td>
+<td style="text-align: left;">VARCHAR(50)</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Name of the supplier</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">address_id</td>
+<td style="text-align: left;">VARCHAR(50)</td>
+<td style="text-align: left;">NOT NULL, FOREIGN KEY references address(address_id)</td>
+<td style="text-align: left;">Reference to the supplier’s address, must exist in the <code>address</code> table. This field is mandatory and establishes a foreign key relationship with the <code>address</code> table.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="table-description-for-products" class="level3">
+<h3 class="anchored" data-anchor-id="table-description-for-products">Table Description for Products</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>product_table <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">Field Name</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"product_id"</span>, <span class="st">"product_name"</span>, <span class="st">"product_description"</span>, <span class="st">"weight"</span>, <span class="st">"price"</span>, <span class="st">"promotion_id"</span>, <span class="st">"supplier_id"</span>, <span class="st">"dimension_id"</span>),</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">Data Type</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"VARCHAR(50)"</span>, <span class="st">"VARCHAR(250)"</span>, <span class="st">"VARCHAR(250)"</span>, <span class="st">"DOUBLE"</span>, <span class="st">"DOUBLE"</span>, <span class="st">"VARCHAR(50)"</span>, <span class="st">"VARCHAR(50)"</span>, <span class="st">"VARCHAR(50)"</span>),</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">Constraints</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"PRIMARY KEY"</span>, <span class="st">""</span>, <span class="st">""</span>, <span class="st">""</span>, <span class="st">""</span>, <span class="st">"NOT NULL, FOREIGN KEY references promotion(promotion_id)"</span>, <span class="st">"NOT NULL, FOREIGN KEY references supplier(supplier_id)"</span>, <span class="st">"NOT NULL, FOREIGN KEY references dimension(dimension_id)"</span>),</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">Description</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"Unique identifier for the product"</span>, </span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>                    <span class="st">"Name of the product"</span>, </span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>                    <span class="st">"Description of the product"</span>, </span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>                    <span class="st">"Weight of the product"</span>, </span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>                    <span class="st">"Price of the product"</span>, </span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>                    <span class="st">"Associated promotion ID, linking to the promotion table"</span>, </span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>                    <span class="st">"Associated supplier ID, linking to the supplier table"</span>, </span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>                    <span class="st">"Associated dimension ID, linking to the dimension table"</span>)</span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(product_table, <span class="at">caption =</span> <span class="st">"Table Description for Products"</span>, <span class="at">align =</span> <span class="st">'l'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="table table-sm table-striped small">
+<caption>Table Description for Products</caption>
+<colgroup>
+<col style="width: 13%">
+<col style="width: 8%">
+<col style="width: 39%">
+<col style="width: 38%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Field.Name</th>
+<th style="text-align: left;">Data.Type</th>
+<th style="text-align: left;">Constraints</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">product_id</td>
+<td style="text-align: left;">VARCHAR(50)</td>
+<td style="text-align: left;">PRIMARY KEY</td>
+<td style="text-align: left;">Unique identifier for the product</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">product_name</td>
+<td style="text-align: left;">VARCHAR(250)</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Name of the product</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">product_description</td>
+<td style="text-align: left;">VARCHAR(250)</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Description of the product</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">weight</td>
+<td style="text-align: left;">DOUBLE</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Weight of the product</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">price</td>
+<td style="text-align: left;">DOUBLE</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Price of the product</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">promotion_id</td>
+<td style="text-align: left;">VARCHAR(50)</td>
+<td style="text-align: left;">NOT NULL, FOREIGN KEY references promotion(promotion_id)</td>
+<td style="text-align: left;">Associated promotion ID, linking to the promotion table</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">supplier_id</td>
+<td style="text-align: left;">VARCHAR(50)</td>
+<td style="text-align: left;">NOT NULL, FOREIGN KEY references supplier(supplier_id)</td>
+<td style="text-align: left;">Associated supplier ID, linking to the supplier table</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">dimension_id</td>
+<td style="text-align: left;">VARCHAR(50)</td>
+<td style="text-align: left;">NOT NULL, FOREIGN KEY references dimension(dimension_id)</td>
+<td style="text-align: left;">Associated dimension ID, linking to the dimension table</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="table-description-for-reviews" class="level3">
+<h3 class="anchored" data-anchor-id="table-description-for-reviews">Table Description for Reviews</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>review_table <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">Field Name</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"review_id"</span>, <span class="st">"buyer_id"</span>, <span class="st">"product_id"</span>, <span class="st">"review_score"</span>, <span class="st">"review_description"</span>),</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">Data Type</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"VARCHAR(50)"</span>, <span class="st">"VARCHAR(250)"</span>, <span class="st">"VARCHAR(250)"</span>, <span class="st">"DOUBLE"</span>, <span class="st">"VARCHAR(250)"</span>),</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">Constraints</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"PRIMARY KEY"</span>, <span class="st">"NOT NULL, FOREIGN KEY references buyer(buyer_id)"</span>, <span class="st">"NOT NULL, FOREIGN KEY references product(product_id)"</span>, <span class="st">""</span>, <span class="st">""</span>),</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">Description</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"Unique identifier for the review"</span>, </span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>                    <span class="st">"Associated buyer ID, linking to the buyer table"</span>, </span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>                    <span class="st">"Associated product ID, linking to the product table"</span>, </span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>                    <span class="st">"Numerical score of the review"</span>, </span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>                    <span class="st">"Textual description of the review"</span>)</span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(review_table, <span class="at">caption =</span> <span class="st">"Table Description for Reviews"</span>, <span class="at">align =</span> <span class="st">'l'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="table table-sm table-striped small">
+<caption>Table Description for Reviews</caption>
+<colgroup>
+<col style="width: 13%">
+<col style="width: 9%">
+<col style="width: 38%">
+<col style="width: 37%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Field.Name</th>
+<th style="text-align: left;">Data.Type</th>
+<th style="text-align: left;">Constraints</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">review_id</td>
+<td style="text-align: left;">VARCHAR(50)</td>
+<td style="text-align: left;">PRIMARY KEY</td>
+<td style="text-align: left;">Unique identifier for the review</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">buyer_id</td>
+<td style="text-align: left;">VARCHAR(250)</td>
+<td style="text-align: left;">NOT NULL, FOREIGN KEY references buyer(buyer_id)</td>
+<td style="text-align: left;">Associated buyer ID, linking to the buyer table</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">product_id</td>
+<td style="text-align: left;">VARCHAR(250)</td>
+<td style="text-align: left;">NOT NULL, FOREIGN KEY references product(product_id)</td>
+<td style="text-align: left;">Associated product ID, linking to the product table</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">review_score</td>
+<td style="text-align: left;">DOUBLE</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Numerical score of the review</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">review_description</td>
+<td style="text-align: left;">VARCHAR(250)</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Textual description of the review</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="table-description-for-order-details" class="level3">
+<h3 class="anchored" data-anchor-id="table-description-for-order-details">Table Description for Order Details</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the table data for the order_details table, including foreign key details within the table</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>order_details_table <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">Field Name</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"order_id"</span>, <span class="st">"product_id"</span>, <span class="st">"buyer_id"</span>, <span class="st">"supplier_id"</span>, <span class="st">"order_dates"</span>, <span class="st">"shipper_id"</span>),</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">Data Type</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"VARCHAR(50)"</span>, <span class="st">"VARCHAR(50)"</span>, <span class="st">"VARCHAR(50)"</span>, <span class="st">"VARCHAR(50)"</span>, <span class="st">"DATE"</span>, <span class="st">"VARCHAR(50)"</span>),</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">Constraints</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"PRIMARY KEY"</span>, <span class="st">"NOT NULL, FOREIGN KEY references product(product_id)"</span>, <span class="st">"NOT NULL, FOREIGN KEY references buyer(buyer_id)"</span>, <span class="st">"NOT NULL, FOREIGN KEY references supplier(supplier_id)"</span>, <span class="st">""</span>, <span class="st">"NOT NULL, FOREIGN KEY references shipper(shipper_id)"</span>),</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">Description</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"Unique identifier for the order"</span>, </span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>                    <span class="st">"Associated product ID, linking to the product table"</span>, </span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>                    <span class="st">"Associated buyer ID, linking to the buyer table"</span>, </span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>                    <span class="st">"Associated supplier ID, linking to the supplier table"</span>, </span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>                    <span class="st">"Date of the order"</span>, </span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>                    <span class="st">"Associated shipper ID, linking to the shipper table"</span>)</span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(order_details_table, <span class="at">caption =</span> <span class="st">"Table Description for Order Details"</span>, <span class="at">align =</span> <span class="st">'l'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="table table-sm table-striped small">
+<caption>Table Description for Order Details</caption>
+<colgroup>
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 41%">
+<col style="width: 40%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Field.Name</th>
+<th style="text-align: left;">Data.Type</th>
+<th style="text-align: left;">Constraints</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">order_id</td>
+<td style="text-align: left;">VARCHAR(50)</td>
+<td style="text-align: left;">PRIMARY KEY</td>
+<td style="text-align: left;">Unique identifier for the order</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">product_id</td>
+<td style="text-align: left;">VARCHAR(50)</td>
+<td style="text-align: left;">NOT NULL, FOREIGN KEY references product(product_id)</td>
+<td style="text-align: left;">Associated product ID, linking to the product table</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">buyer_id</td>
+<td style="text-align: left;">VARCHAR(50)</td>
+<td style="text-align: left;">NOT NULL, FOREIGN KEY references buyer(buyer_id)</td>
+<td style="text-align: left;">Associated buyer ID, linking to the buyer table</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">supplier_id</td>
+<td style="text-align: left;">VARCHAR(50)</td>
+<td style="text-align: left;">NOT NULL, FOREIGN KEY references supplier(supplier_id)</td>
+<td style="text-align: left;">Associated supplier ID, linking to the supplier table</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">order_dates</td>
+<td style="text-align: left;">DATE</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Date of the order</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">shipper_id</td>
+<td style="text-align: left;">VARCHAR(50)</td>
+<td style="text-align: left;">NOT NULL, FOREIGN KEY references shipper(shipper_id)</td>
+<td style="text-align: left;">Associated shipper ID, linking to the shipper table</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="table-description-for-transactions" class="level3">
+<h3 class="anchored" data-anchor-id="table-description-for-transactions">Table Description for Transactions</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>payment_table <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">Field Name</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"payment_id"</span>, <span class="st">"payment_type"</span>, <span class="st">"payment_amount"</span>, <span class="st">"installment_number"</span>, <span class="st">"order_id"</span>),</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">Data Type</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"VARCHAR(50)"</span>, <span class="st">"VARCHAR(250)"</span>, <span class="st">"DOUBLE"</span>, <span class="st">"INT"</span>, <span class="st">"VARCHAR(50)"</span>),</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">Constraints</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"PRIMARY KEY"</span>, <span class="st">""</span>, <span class="st">""</span>, <span class="st">""</span>, <span class="st">"NOT NULL, FOREIGN KEY references order_details(order_id)"</span>),</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">Description</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"Unique identifier for the payment"</span>, </span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>                    <span class="st">"Type of payment (e.g., credit card, PayPal)"</span>, </span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>                    <span class="st">"Total amount of the payment"</span>, </span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>                    <span class="st">"If applicable, the number of the installment"</span>, </span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>                    <span class="st">"Associated order ID, linking to the order_details table"</span>)</span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(payment_table, <span class="at">caption =</span> <span class="st">"Table Description for Payments"</span>, <span class="at">align =</span> <span class="st">'l'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="table table-sm table-striped small">
+<caption>Table Description for Payments</caption>
+<colgroup>
+<col style="width: 13%">
+<col style="width: 8%">
+<col style="width: 39%">
+<col style="width: 38%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Field.Name</th>
+<th style="text-align: left;">Data.Type</th>
+<th style="text-align: left;">Constraints</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">payment_id</td>
+<td style="text-align: left;">VARCHAR(50)</td>
+<td style="text-align: left;">PRIMARY KEY</td>
+<td style="text-align: left;">Unique identifier for the payment</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">payment_type</td>
+<td style="text-align: left;">VARCHAR(250)</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Type of payment (e.g., credit card, PayPal)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">payment_amount</td>
+<td style="text-align: left;">DOUBLE</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Total amount of the payment</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">installment_number</td>
+<td style="text-align: left;">INT</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">If applicable, the number of the installment</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">order_id</td>
+<td style="text-align: left;">VARCHAR(50)</td>
+<td style="text-align: left;">NOT NULL, FOREIGN KEY references order_details(order_id)</td>
+<td style="text-align: left;">Associated order ID, linking to the order_details table</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
 </section>
 </section>
 <section id="part-2-data-generation-and-management" class="level1">
 <h1>Part 2: Data Generation and Management</h1>
 <section id="task-2.1-synthetic-data-generation" class="level2">
 <h2 class="anchored" data-anchor-id="task-2.1-synthetic-data-generation">Task 2.1: Synthetic Data Generation</h2>
+<p>In the process of synthetic data generation, we use a combination of R, Mockaroo, and Excel to simulate a dataset that closely mimics real-world scenarios. Our dataset consisted of 10 distinct entities that represent all the components in our system.</p>
+<p>Mockaroo: For several entities we use Mockaroo to create data such as addresses, emails, and names.</p>
+<p>R studios: We use R scripts to simulate the data distributions, especially in product, promotion, all the ID’s, and time attributes, we wanted to make sure that the synthetic data reflects realistic variability and complexity.</p>
+<p>Excel: After we imported the data from R and mockaroo, we combined the foreign keys. We use ‘Randbwteen’ features to ensure that the inter-entity relationships are accurately represented.</p>
 </section>
 <section id="task-2.2-data-import-and-quality-assurance" class="level2">
 <h2 class="anchored" data-anchor-id="task-2.2-data-import-and-quality-assurance">Task 2.2: Data Import and Quality Assurance</h2>
@@ -223,60 +959,55 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h1>Part 3: Data Pipeline Generation</h1>
 <section id="task-3.1-github-repository-and-workflow-setup" class="level2">
 <h2 class="anchored" data-anchor-id="task-3.1-github-repository-and-workflow-setup">Task 3.1: GitHub Repository and Workflow Setup</h2>
+<p>To allow group members to collaborate on the project simultaneously we have adopted the use of a remote repository (an online storage system for our project’s history) on GitHub. This online platform serves as a centralised storage for our project’s history, enabling efficient management and version control.</p>
+<p>(IMAGE)</p>
+<p>Integrating our project with Posit Cloud, we used the HTTPS clone URL from GitHub to establish a connection between our local and remote repositories directly within Posit Cloud. This integration streamlined our workflow by providing a centralised platform for development, enabling efficient access and management of the project’s codebase.</p>
+<p>(IMAGE)</p>
+<p>To streamline our project management and enhance version control among team members, we utilised commit, push, and pull operations effectively. By committing changes before pushing, we enabled team members to save the state of our project at specific points following any modifications made in our local repositories. This process not only enables detailed tracking of who made specific changes and why, but also ensures that each contribution is reviewed before being shared with the team.</p>
+<p>Pushing these commits to the remote repository then publishes each member’s contributions, ensuring everyone is working on the most updated version. Regularly pulling updates from the remote repository is crucial for keeping our local copies current, significantly reducing the likelihood of merge conflicts between the local and remote version after changes are made.</p>
+<p>These practices have collectively created a robust collaborative environment, significantly boosting our productivity and streamlining the project’s progression.</p>
 </section>
 <section id="task-3.2-github-actions-for-continuous-integration" class="level2">
 <h2 class="anchored" data-anchor-id="task-3.2-github-actions-for-continuous-integration">Task 3.2: GitHub Actions for Continuous Integration</h2>
+<p>GitHub Workflows automate processes within a repository using YAML files. We started by creating a <code>.github/workflows/</code> directory to house our workflow files. Then, we added a file named “ETL workflow for group24” within this directory to outline our specific automated tasks, focusing on the Extract, Transform, Load (ETL) processes crucial to our project’s data handling needs, enhancing efficiency.</p>
+<p>The workflow is summarised on the following page</p>
+<p>{IMAGE}</p>
+<p>Next, we add the following code.</p>
+<p>(CODE)</p>
+<p>(IMAGE)</p>
+<p>In this phase of configuring our GitHub Workflow, we set the trigger condition to activate on every push event to the repository. This configuration ensures that any time changes are pushed or a pull request is merged, the workflow initiates automatically. Following a thorough review of the code to confirm its accuracy and completeness, we commit and push these updates to our GitHub repository.</p>
+<p>With this action, the workflow file under GitHub Actions is now operational, and it automatically executes the predefined tasks each time a change is made to the repository, without manual intervention.</p>
 </section>
 </section>
 <section id="part-4-data-analysis-and-reporting-with-quarto-in-r" class="level1">
 <h1>Part 4: Data Analysis and Reporting with Quarto in R</h1>
 <section id="task-4.1-advanced-data-analysis-in-r" class="level2">
 <h2 class="anchored" data-anchor-id="task-4.1-advanced-data-analysis-in-r">Task 4.1: Advanced Data Analysis in R</h2>
-<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>db_conn <span class="ot">&lt;-</span> <span class="fu">dbConnect</span>(RSQLite<span class="sc">::</span><span class="fu">SQLite</span>(), <span class="st">"database/ecommerce.db"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>db_conn <span class="ot">&lt;-</span> <span class="fu">dbConnect</span>(RSQLite<span class="sc">::</span><span class="fu">SQLite</span>(), <span class="st">"database/ecommerce.db"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section>
-</section>
-<section id="products-with-highest-sales" class="level1">
-<h1>1) Products With Highest Sales</h1>
-<section id="task-4.2-comprehensive-reporting-with-quarto" class="level2">
-<h2 class="anchored" data-anchor-id="task-4.2-comprehensive-reporting-with-quarto">Task 4.2: Comprehensive Reporting with Quarto</h2>
-<blockquote class="blockquote">
-<blockquote class="blockquote">
-<blockquote class="blockquote">
-<blockquote class="blockquote">
-<blockquote class="blockquote">
-<blockquote class="blockquote">
-<blockquote class="blockquote">
-<p>c9443ba49a4d93dcd1b3bcb9fbdf013ac0bbd0df</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
+<section id="products-with-highest-sales" class="level3">
+<h3 class="anchored" data-anchor-id="products-with-highest-sales">1) Products With Highest Sales</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>top_5_products_sales <span class="ot">&lt;-</span> <span class="fu">dbGetQuery</span>(db_conn, <span class="st">"SELECT</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="st">    od.product_id,</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="st">    p.product_name,</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="st">    SUM(p.price) AS total_sales</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="st">FROM</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="st">    order_details od</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="st">JOIN</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="st">    product p ON od.product_id = p.product_id</span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="st">GROUP BY</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="st">    od.product_id,</span></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="st">    p.product_name</span></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="st">ORDER BY</span></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="st">    total_sales DESC</span></span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="st">LIMIT</span></span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="st">    5;</span></span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="st">"</span>)</span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Viewing the results</span></span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(top_5_products_sales)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>top_5_products_sales <span class="ot">&lt;-</span> <span class="fu">dbGetQuery</span>(db_conn, <span class="st">"SELECT</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="st">    od.product_id,</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="st">    p.product_name,</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="st">    SUM(p.price) AS total_sales</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="st">FROM</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="st">    order_details od</span></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="st">JOIN</span></span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a><span class="st">    product p ON od.product_id = p.product_id</span></span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a><span class="st">GROUP BY</span></span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a><span class="st">    od.product_id,</span></span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a><span class="st">    p.product_name</span></span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a><span class="st">ORDER BY</span></span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a><span class="st">    total_sales DESC</span></span>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a><span class="st">LIMIT</span></span>
+<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a><span class="st">    5;</span></span>
+<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a><span class="st">"</span>)</span>
+<span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-18"><a href="#cb12-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Viewing the results</span></span>
+<span id="cb12-19"><a href="#cb12-19" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(top_5_products_sales)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  product_id           product_name total_sales
 1    PR00118        Lite Action Cam     4702.92
@@ -286,6 +1017,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 5    PR00141 Ultra-Light Action Cam     3230.60</code></pre>
 </div>
 </div>
+</section>
+</section>
+<section id="task-4.2-comprehensive-reporting-with-quarto" class="level2">
+<h2 class="anchored" data-anchor-id="task-4.2-comprehensive-reporting-with-quarto">Task 4.2: Comprehensive Reporting with Quarto</h2>
 </section>
 </section>
 

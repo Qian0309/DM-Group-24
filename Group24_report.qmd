@@ -12,8 +12,11 @@ install.packages("DBI")
 install.packages("RSQLite")
 install.packages("dplyr")
 install.packages("ggplot2")
+install.packages("knitr")
+
 
 library(DBI)
+library(knitr)
 library(RSQLite)
 library(dplyr)
 library(ggplot2)
@@ -120,9 +123,222 @@ Supplier and Product (1:N): Shows a one-to-many relationship, indicating that a 
 
 ## Task 1.2: SQL Database Schema Creation
 
+Translating the E-R diagram into a functional SQL database schema, defining tables with appropriate data types, constraints, primary and foreign keys.
+keys. 
+
+### Table Description for Promotions
+
+```{r}
+# Define the table data
+promotion_table <- data.frame(
+  `Field Name` = c("promotion_id", "promotion_type", "start_date", "end_date", "status"),
+  `Data Type` = c("VARCHAR(50)", "VARCHAR(50)", "DATE", "DATE", "VARCHAR(50)"),
+  `Constraints` = c("PRIMARY KEY", "", "", "", ""),
+  `Description` = c("Unique identifier for promotion", "Type of promotion", "Promotion start date", "Promotion end date", "Status of the promotion")
+)
+
+# Create the table
+kable(promotion_table, caption = "Table Description for Promotions", align = 'l')
+```
+
+Indexing in databases, such as on the promotion_id field of a Promotion table, speeds up data retrieval by maintaining a separate, efficient data structure (like a B-tree) that maps keys to their respective rows in the table. This automatic indexing on primary keys as the first column allows for quick searches, insertions, and ensures uniqueness, enhancing query performance significantly. Indexing foreign key columns as the second key is crucial for enhancing the performance of join operations between tables
+
+For other columns without explicit indexing, queries that search or filter by these fields may perform a full table scan, which is slower. 
+
+### Table Description for Shippers
+
+```{r}
+# Define the table data for the shipper table
+shipper_table <- data.frame(
+  `Field Name` = c("shipper_id", "shipper_name", "service", "fixed_price", "cost_per_mile"),
+  `Data Type` = c("VARCHAR(50)", "VARCHAR(50)", "VARCHAR(100)", "DOUBLE", "DOUBLE"),
+  `Constraints` = c("PRIMARY KEY", "", "", "", ""),
+  `Description` = c("Unique identifier for the shipper", 
+                    "Name of the shipper", 
+                    "Type of service offered by the shipper", 
+                    "Fixed price for the service", 
+                    "Cost per mile for the service")
+)
+
+# Create the table
+kable(shipper_table, caption = "Table Description for Shippers", align = 'l')
+```
+
+### Table Description for Address
+
+
+```{r}
+
+address_table <- data.frame(
+  `Field Name` = c("address_id", "house_number", "house_name", "street", "city", "county", "post_code"),
+  `Data Type` = c("VARCHAR(50)", "INT", "VARCHAR(50)", "VARCHAR(50)", "VARCHAR(20)", "VARCHAR(20)", "VARCHAR(10)"),
+  `Constraints` = c("PRIMARY KEY", "", "", "", "NOT NULL", "", ""),
+  `Description` = c("Unique identifier for the address", 
+                    "Number of the house", 
+                    "Name of the house if applicable", 
+                    "Street name", 
+                    "City name", 
+                    "County name", 
+                    "Postal code of the address")
+)
+
+# Create the table
+kable(address_table, caption = "Table Description for Addresses", align = 'l')
+
+```
+
+### Table Description for Dimensions
+
+```{r}
+# Define the table data for the dimension table
+dimension_table <- data.frame(
+  `Field Name` = c("dimension_id", "length", "width", "height"),
+  `Data Type` = c("VARCHAR(50)", "DOUBLE", "DOUBLE", "DOUBLE"),
+  `Constraints` = c("PRIMARY KEY", "", "", ""),
+  `Description` = c("Unique identifier for the dimension record", 
+                    "Length measurement", 
+                    "Width measurement", 
+                    "Height measurement")
+)
+
+# Create the table
+kable(dimension_table, caption = "Table Description for Dimensions", align = 'l')
+
+```
+
+
+
+### Table Description for Buyers
+
+```{r}
+buyer_table <- data.frame(
+  `Field Name` = c("buyer_id", "first_name", "last_name", "date_of_birth", "address_id"),
+  `Data Type` = c("VARCHAR(50)", "VARCHAR(250)", "VARCHAR(250)", "DATE", "VARCHAR(50)"),
+  `Constraints` = c("PRIMARY KEY", "NOT NULL", "", "", "NOT NULL, FOREIGN KEY references address(address_id)"),
+  `Description` = c("Unique identifier for the buyer", 
+                    "First name of the buyer. Mandatory field.", 
+                    "Last name of the buyer", 
+                    "Date of birth of the buyer", 
+                    "Reference to the buyer's address, must exist in the `address` table. This field is mandatory and establishes a foreign key relationship with the `address` table.")
+)
+
+# Create the table
+kable(buyer_table, caption = "Table Description for Buyers", align = 'l')
+
+```
+
+### Table Description for Suppliers
+
+```{r}
+# Load the knitr package for kable()
+
+supplier_table <- data.frame(
+  `Field Name` = c("supplier_id", "supplier_type", "contract_type", "number_of_year_of_association", "supplier_name", "address_id"),
+  `Data Type` = c("VARCHAR(50)", "VARCHAR(250)", "VARCHAR(250)", "INT", "VARCHAR(50)", "VARCHAR(50)"),
+  `Constraints` = c("PRIMARY KEY", "", "", "", "", "NOT NULL, FOREIGN KEY references address(address_id)"),
+  `Description` = c("Unique identifier for the supplier", 
+                    "Type of supplier (e.g., goods, services)", 
+                    "Type of contract with the supplier", 
+                    "Number of years the supplier has been associated with", 
+                    "Name of the supplier", 
+                    "Reference to the supplier's address, must exist in the `address` table. This field is mandatory and establishes a foreign key relationship with the `address` table.")
+)
+
+# Create the table
+kable(supplier_table, caption = "Table Description for Suppliers", align = 'l')
+
+```
+
+### Table Description for Products
+
+```{r}
+product_table <- data.frame(
+  `Field Name` = c("product_id", "product_name", "product_description", "weight", "price", "promotion_id", "supplier_id", "dimension_id"),
+  `Data Type` = c("VARCHAR(50)", "VARCHAR(250)", "VARCHAR(250)", "DOUBLE", "DOUBLE", "VARCHAR(50)", "VARCHAR(50)", "VARCHAR(50)"),
+  `Constraints` = c("PRIMARY KEY", "", "", "", "", "NOT NULL, FOREIGN KEY references promotion(promotion_id)", "NOT NULL, FOREIGN KEY references supplier(supplier_id)", "NOT NULL, FOREIGN KEY references dimension(dimension_id)"),
+  `Description` = c("Unique identifier for the product", 
+                    "Name of the product", 
+                    "Description of the product", 
+                    "Weight of the product", 
+                    "Price of the product", 
+                    "Associated promotion ID, linking to the promotion table", 
+                    "Associated supplier ID, linking to the supplier table", 
+                    "Associated dimension ID, linking to the dimension table")
+)
+
+kable(product_table, caption = "Table Description for Products", align = 'l')
+
+```
+### Table Description for Reviews
+```{r}
+review_table <- data.frame(
+  `Field Name` = c("review_id", "buyer_id", "product_id", "review_score", "review_description"),
+  `Data Type` = c("VARCHAR(50)", "VARCHAR(250)", "VARCHAR(250)", "DOUBLE", "VARCHAR(250)"),
+  `Constraints` = c("PRIMARY KEY", "NOT NULL, FOREIGN KEY references buyer(buyer_id)", "NOT NULL, FOREIGN KEY references product(product_id)", "", ""),
+  `Description` = c("Unique identifier for the review", 
+                    "Associated buyer ID, linking to the buyer table", 
+                    "Associated product ID, linking to the product table", 
+                    "Numerical score of the review", 
+                    "Textual description of the review")
+)
+
+kable(review_table, caption = "Table Description for Reviews", align = 'l')
+```
+### Table Description for Order Details
+
+```{r}
+# Define the table data for the order_details table, including foreign key details within the table
+order_details_table <- data.frame(
+  `Field Name` = c("order_id", "product_id", "buyer_id", "supplier_id", "order_dates", "shipper_id"),
+  `Data Type` = c("VARCHAR(50)", "VARCHAR(50)", "VARCHAR(50)", "VARCHAR(50)", "DATE", "VARCHAR(50)"),
+  `Constraints` = c("PRIMARY KEY", "NOT NULL, FOREIGN KEY references product(product_id)", "NOT NULL, FOREIGN KEY references buyer(buyer_id)", "NOT NULL, FOREIGN KEY references supplier(supplier_id)", "", "NOT NULL, FOREIGN KEY references shipper(shipper_id)"),
+  `Description` = c("Unique identifier for the order", 
+                    "Associated product ID, linking to the product table", 
+                    "Associated buyer ID, linking to the buyer table", 
+                    "Associated supplier ID, linking to the supplier table", 
+                    "Date of the order", 
+                    "Associated shipper ID, linking to the shipper table")
+)
+
+kable(order_details_table, caption = "Table Description for Order Details", align = 'l')
+
+```
+
+### Table Description for Transactions
+
+```{r}
+payment_table <- data.frame(
+  `Field Name` = c("payment_id", "payment_type", "payment_amount", "installment_number", "order_id"),
+  `Data Type` = c("VARCHAR(50)", "VARCHAR(250)", "DOUBLE", "INT", "VARCHAR(50)"),
+  `Constraints` = c("PRIMARY KEY", "", "", "", "NOT NULL, FOREIGN KEY references order_details(order_id)"),
+  `Description` = c("Unique identifier for the payment", 
+                    "Type of payment (e.g., credit card, PayPal)", 
+                    "Total amount of the payment", 
+                    "If applicable, the number of the installment", 
+                    "Associated order ID, linking to the order_details table")
+)
+kable(payment_table, caption = "Table Description for Payments", align = 'l')
+```
+
+
+
+
+
+
+
+
+
 # Part 2: Data Generation and Management
 
+
 ## Task 2.1: Synthetic Data Generation
+In the process of synthetic data generation, we use a combination of R, Mockaroo, and Excel to simulate a dataset that closely mimics real-world scenarios. Our dataset consisted of 10 distinct entities that represent all the components in our system. 
+
+Mockaroo: For several entities we use Mockaroo to create data such as addresses, emails, and names. 
+
+R studios: We use R scripts to simulate the data distributions, especially in product, promotion, all the ID’s, and time attributes, we wanted to make sure that the synthetic data reflects realistic variability and complexity. 
+
+Excel: After we imported the data from R and mockaroo, we combined the foreign keys. We use ‘Randbwteen’ features to ensure that the inter-entity relationships are accurately represented. 
 
 ## Task 2.2: Data Import and Quality Assurance
 
@@ -130,23 +346,51 @@ Supplier and Product (1:N): Shows a one-to-many relationship, indicating that a 
 
 ## Task 3.1: GitHub Repository and Workflow Setup
 
+To allow group members to collaborate on the project simultaneously we have adopted the use of a remote repository (an online storage system for our project’s history) on GitHub. This online platform serves as a centralised storage for our project's history, enabling efficient management and version control.  
+
+(IMAGE)
+
+Integrating our project with Posit Cloud, we used the HTTPS clone URL from GitHub to establish a connection between our local and remote repositories directly within Posit Cloud. This integration streamlined our workflow by providing a centralised platform for development, enabling efficient access and management of the project's codebase.
+
+(IMAGE)
+
+To streamline our project management and enhance version control among team members, we utilised commit, push, and pull operations effectively. By committing changes before pushing, we enabled team members to save the state of our project at specific points following any modifications made in our local repositories. This process not only enables detailed tracking of who made specific changes and why, but also ensures that each contribution is reviewed before being shared with the team.  
+
+Pushing these commits to the remote repository then publishes each member's contributions, ensuring everyone is working on the most updated version. Regularly pulling updates from the remote repository is crucial for keeping our local copies current, significantly reducing the likelihood of merge conflicts between the local and remote version after changes are made. 
+
+These practices have collectively created a robust collaborative environment, significantly boosting our productivity and streamlining the project's progression.
+
+
+
 ## Task 3.2: GitHub Actions for Continuous Integration
 
+GitHub Workflows automate processes within a repository using YAML files. We started by creating a `.github/workflows/` directory to house our workflow files. Then, we added a file named "ETL workflow for group24" within this directory to outline our specific automated tasks, focusing on the Extract, Transform, Load (ETL) processes crucial to our project's data handling needs, enhancing efficiency. 
+
+The workflow is summarised on the following page 
+
+{IMAGE}
+
+Next, we add the following code.
+
+(CODE)
+
+(IMAGE)
+
+In this phase of configuring our GitHub Workflow, we set the trigger condition to activate on every push event to the repository. This configuration ensures that any time changes are pushed or a pull request is merged, the workflow initiates automatically. Following a thorough review of the code to confirm its accuracy and completeness, we commit and push these updates to our GitHub repository.  
+
+With this action, the workflow file under GitHub Actions is now operational, and it automatically executes the predefined tasks each time a change is made to the repository, without manual intervention.  
+
+ 
 # Part 4: Data Analysis and Reporting with Quarto in R
 
 ## Task 4.1: Advanced Data Analysis in R
 
-<<<<<<< HEAD
+
 ```{r}
 db_conn <- dbConnect(RSQLite::SQLite(), "database/ecommerce.db")
 ```
 
-
-1) Products With Highest Sales
-=======
-## Task 4.2: Comprehensive Reporting with Quarto
->>>>>>> c9443ba49a4d93dcd1b3bcb9fbdf013ac0bbd0df
-
+### 1) Products With Highest Sales
 ```{r}
 top_5_products_sales <- dbGetQuery(db_conn, "SELECT
     od.product_id,
@@ -169,5 +413,10 @@ LIMIT
 print(top_5_products_sales)
 
 ```
+
+
+## Task 4.2: Comprehensive Reporting with Quarto
+
+
 
 
