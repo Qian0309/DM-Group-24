@@ -93,8 +93,8 @@ ggplot(top_5_products_promotion, aes(x = reorder(product_name, total_sales), y =
 3) Number of days promotions are running
 ```{r}
 no_of_days_promotions <- mutate(promotion_data,
-                         start_date = as.Date(start_date,format= "%d/%m/%Y"),
-                         end_date = as.Date(end_date,format= "%d/%m/%Y"),
+                         start_date = as.Date(start_date,format= "%Y-%m-%d"),
+                         end_date = as.Date(end_date,format= "%Y-%m-%d"),
                          num_days_promotion = end_date - start_date) %>%
   filter(status == 'active')
 no_of_days_promotions <- no_of_days_promotions %>%
@@ -120,7 +120,7 @@ ggplot(no_of_days_promotions, aes(x = num_days_promotion, y = num_promotions)) +
 ```{r}
 order_details <- dbGetQuery(db_conn,"SELECT * FROM order_details")
 order_details <- mutate(order_details,
-                        order_dates = as.Date(order_dates,format= "%d/%m/%Y"))
+                        order_dates = as.Date(order_dates,format= "%Y-%m-%d"))
 product <- dbGetQuery(db_conn,"SELECT * FROM product")
 
 

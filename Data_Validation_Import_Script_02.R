@@ -5,9 +5,6 @@ library(dplyr)
 library(anytime)
 library(DBI)
 library(ggplot2)
-library(gridExtra)
-library(ggpubr)
-library(vtable)
 
 ## File Prefix and Suffix
 # read files from 'data' folder
@@ -505,14 +502,12 @@ dataname_list <- list("address_table", "buyer_table", "dimension_table", "paymen
 for (i in seq_along(dataname_list)) {
   # Load data file
   print(paste0("Summary Statistics of : ",dataname_list[[i]]))
-  st(get(dataname_list[[i]]))
+  print(paste0(summary(get(dataname_list[[i]]))))
 }
 
-
-
 ### Distribution of Total Payment Amount across orders
-total_payment_table <- dbGetQuery(db_conn,
-"SELECT
+payment_table <- dbGetQuery(db_conn,
+                            "SELECT
     p.order_id,
     ROUND(SUM(p.payment_amount),2) AS total_payment_amount
 FROM
@@ -521,7 +516,9 @@ GROUP BY
     p.order_id;
 ")
 
-histogram_plot <- ggplot(total_payment_table, aes(total_payment_amount)) +
+
+# Plot
+histogram_plot <- ggplot(payment_table, aes(total_payment_amount)) +
   geom_histogram(aes(y = after_stat(density)), binwidth=50) +
   geom_density() +
   ggtitle("Histogram visualising Distribution of 'Payment Amount' attribute") +
@@ -530,19 +527,24 @@ histogram_plot <- ggplot(total_payment_table, aes(total_payment_amount)) +
 histogram_plot
 
 ### Product table : Distribution of Weight and Price of products
-histogram_plot_list = list()
-for (col in colnames(product_table %>% select(where(is.numeric)))){
-  histogram_plot <- ggplot(product_table, aes_string(x=col)) +
-    geom_histogram(aes(y = after_stat(density))) +
-    geom_density() +
-    ggtitle(col) +
-    labs(x=" ", y="Density") +
-    theme(plot.title = element_text(size = 10, face = "bold", hjust = 0.5))
-  histogram_plot_list[[col]] = histogram_plot
-}
-grid.arrange(grobs=histogram_plot_list, ncol=2, top=text_grob("Distribution of Price and Weight of Products", size=14, face="bold"))
+histogram_plot <- ggplot(product_table, aes(weight)) +
+  geom_histogram(aes(y = after_stat(density))) +
+  geom_density() +
+  ggtitle("Histogram visualising Distribution of 'Weight' of Products") +
+  labs(x="Payment Amount", y="Density") +
+  theme(plot.title = element_text(size = 10, face = "bold", hjust = 0.5))
+histogram_plot
+
+histogram_plot <- ggplot(product_table, aes(price)) +
+  geom_histogram(aes(y = after_stat(density))) +
+  geom_density() +
+  ggtitle("Histogram visualising Distribution of 'Price' attribute") +
+  labs(x="Price", y="Density") +
+  theme(plot.title = element_text(size = 10, face = "bold", hjust = 0.5))
+histogram_plot
 
 ### Distribution of Review Score across products
+# Plot
 histogram_plot <- ggplot(review_table, aes(review_score)) +
   geom_histogram(aes(y = after_stat(density)), bins=20) +
   geom_density() +
@@ -552,23 +554,28 @@ histogram_plot <- ggplot(review_table, aes(review_score)) +
 histogram_plot
 
 ### Distribution of Fixed Cost and Cost per mile of Shippers
-histogram_plot_list = list()
-for (col in colnames(shipper_table %>% select(where(is.numeric)))){
-  histogram_plot <- ggplot(shipper_table, aes_string(x=col)) +
-    geom_histogram(aes(y = after_stat(density))) +
-    geom_density() +
-    ggtitle(col) +
-    labs(x=" ", y="Density") +
-    theme(plot.title = element_text(size = 10, face = "bold", hjust = 0.5))
-  histogram_plot_list[[col]] = histogram_plot
-}
-grid.arrange(grobs=histogram_plot_list, ncol=2, top=text_grob("Distribution of Fixed-Cost and Cost-per-mile of Shippers", size=14, face="bold"))
+histogram_plot <- ggplot(shipper_table, aes(fixed_price)) +
+  geom_histogram(aes(y = after_stat(density)), bins=20) +
+  geom_density() +
+  ggtitle("Histogram visualising Distribution of 'Fixed Cost' attribute") +
+  labs(x="Fixed Cost", y="Density") +
+  theme(plot.title = element_text(size = 10, face = "bold", hjust = 0.5))
+histogram_plot
+
+histogram_plot <- ggplot(shipper_table, aes(cost_per_mile)) +
+  geom_histogram(aes(y = after_stat(density)), bins=20) +
+  geom_density() +
+  ggtitle("Histogram visualising Distribution of 'Cost per mile' attribute") +
+  labs(x="Cost per mile", y="Density") +
+  theme(plot.title = element_text(size = 10, face = "bold", hjust = 0.5))
+histogram_plot
 
 ### Distribution of Number of Years of association with Suppliers
+# Plot
 histogram_plot <- ggplot(supplier_table, aes(number_of_year_of_association)) +
   geom_histogram(aes(y = after_stat(density)), bins=50) +
   geom_density() +
   ggtitle("Histogram visualising Distribution of 'Number of Years of Association' attribute") +
-  labs(x="Review Score", y="Density") +
+  labs(x="Number of Years of Association", y="Density") +
   theme(plot.title = element_text(size = 10, face = "bold", hjust = 0.5))
 histogram_plot

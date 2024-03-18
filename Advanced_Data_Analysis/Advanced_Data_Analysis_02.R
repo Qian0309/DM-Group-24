@@ -85,8 +85,8 @@ ggsave(paste0("Advanced_Data_Analysis/top5_products_promos_plot_",
 
 #3) Number of days promotions are running
 no_of_days_promotions <- mutate(promotion_data,
-                         start_date = as.Date(start_date,format= "%d/%m/%Y"),
-                         end_date = as.Date(end_date,format= "%d/%m/%Y"),
+                         start_date = as.Date(start_date,format= "%Y-%m-%d"),
+                         end_date = as.Date(end_date,format= "%Y-%m-%d"),
                          num_days_promotion = end_date - start_date) %>%
   filter(status == 'active')
 no_of_days_promotions <- no_of_days_promotions %>%
@@ -113,7 +113,7 @@ ggsave(paste0("Advanced_Data_Analysis/distribution_promo_durations_",
 #4) Sales Trends
 order_details <- dbGetQuery(db_conn,"SELECT * FROM order_details")
 order_details <- mutate(order_details,
-                        order_dates = as.Date(order_dates,format= "%d/%m/%Y"))
+                        order_dates = as.Date(order_dates,format= "%Y-%m-%d"))
 product <- dbGetQuery(db_conn,"SELECT * FROM product")
 
 
