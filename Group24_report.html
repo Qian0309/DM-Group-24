@@ -113,12 +113,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="project-introduction" class="level1">
 <h1>Project Introduction</h1>
+<p>In our comprehensive project, we are aimed at creating a e-commerce database, focusing on IT products within the United Kingdom. Our project is divided into four pivotal stages, each contributing to the development and understanding of our e-commerce platform.</p>
 </section>
 <section id="part-1-database-design-and-implementation" class="level1">
 <h1>Part 1: Database Design and Implementation</h1>
-<section id="task-1.1-entity-relationship-e-r-diagram-design-and-relationship-sets" class="level2">
-<h2 class="anchored" data-anchor-id="task-1.1-entity-relationship-e-r-diagram-design-and-relationship-sets">Task 1.1: Entity-Relationship (E-R) Diagram Design and Relationship Sets</h2>
-<p>In this report, we assume that the E-commerce platform primarily sells IT products within the United Kingdom and lacks an international shipment policy. Additionally, the company’s policy dictates that only be promoted once a year. Each “Product_ID” is determined by its “Supplier_ID,” indicating that a supplier can only assign one “Product_ID” to each product. Furthermore, the E-commerce company collects payments and distributes them to suppliers later. There are 7 entities:</p>
+<section id="task-1.1-e-r-diagram-design-and-relationship-sets" class="level2">
+<h2 class="anchored" data-anchor-id="task-1.1-e-r-diagram-design-and-relationship-sets">Task 1.1: E-R Diagram Design and Relationship Sets</h2>
+<p>In this report, we assume that the E-commerce platform primarily sells IT products within the UK and lacks an international shipment policy. Additionally, the company’s policy dictates that only be promoted once a year. Each “Product_ID” is determined by its “Supplier_ID,” indicating that a supplier can only assign one “Product_ID” to each product. Furthermore, the E-commerce company collects payments and distributes them to suppliers later. There are 7 entities:</p>
 <ol type="1">
 <li><p>Buyer: Represents the customers who create an account to place orders on the online shopping platform.</p></li>
 <li><p>Supplier: Represents the sellers who create an account to sell products on the platform</p></li>
@@ -129,10 +130,46 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p>Reviews: Represents the reviews made by the customer once the product is received.</p></li>
 </ol>
 <p>The Entity-Relationship (E-R) diagram for our e-commerce database before normalization is shown below:</p>
-<p><img src="Figures\Screenshots\ERD\ERD_before_normalization.png" class="img-fluid"></p>
-<p>The E-R diagram after normalizing our schema up to at least 3NF is shown below.</p>
-<p><img src="Figures\Screenshots\ERD\ERD_after_normalization.png" class="img-fluid"></p>
-<p>In our e-commerce platform, we’ve conceptualised 12 relationship sets to effectively model and manage the data structure underlying our E-commerce operations. These sets illustrate how different entities within our ecosystem interact and connect with one another, providing a comprehensive overview for stakeholders. Below is a detailed summary of these critical relationships:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Figures\Screenshots\ERD\ERD_before_normalization.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+</section>
+<section id="task-1.2-sql-database-schema-creation" class="level2">
+<h2 class="anchored" data-anchor-id="task-1.2-sql-database-schema-creation">Task 1.2: SQL Database Schema Creation</h2>
+<p>(Anushya: A paragraph to explain normalization up to 3NF)</p>
+<section id="conceputual-schema-of-the-database-after-normalisation" class="level3">
+<h3 class="anchored" data-anchor-id="conceputual-schema-of-the-database-after-normalisation">Conceputual Schema of the Database after Normalisation</h3>
+<p><del>The E-R diagram after normalization is shown below.</del></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Figures\Screenshots\ERD\ERD_after_normalization.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+</section>
+<section id="logical-schema-of-the-database-after-normalisation" class="level3">
+<h3 class="anchored" data-anchor-id="logical-schema-of-the-database-after-normalisation">Logical Schema of the Database after Normalisation</h3>
+<ul>
+<li><p>product(product _id, product _name, product _description, weight, price, promotion_id, dimension_id , supplier_id)</p></li>
+<li><p>promotion(promotion_id, promotion_type, start_date, end_date, status)</p></li>
+<li><p>buyer(buyer_id, first_name, last_name, date_of_birth, address_id)</p></li>
+</ul>
+<p>*supplier(Supplier_ID, Supplier_Name, Supplier_Type, Contract_Type, Number_of_year_of_association, address_id)</p>
+<ul>
+<li>review(review_id, review_score, review_description, product_id, buyer_id)</li>
+</ul>
+<p>*payment(payment_id, payment_type, payment_amount, installment_number, order_id)</p>
+<ul>
+<li><p>shipper(Shipper_ID, Shipper_Name, Service, Fixed Price, Cost_per_mile)</p></li>
+<li><p>order_details(order_id, product_id, buyer_id, supplier_id, order_dates, shipper_id)</p></li>
+<li><p>address(address_id, house_number, house_name, street, city, county, post_code)</p></li>
+<li><p>dimension(Dimension_ID, Length, Width, Height)</p></li>
+</ul>
+</section>
+<section id="relationship-sets-after-normalization" class="level3">
+<h3 class="anchored" data-anchor-id="relationship-sets-after-normalization">Relationship Sets after Normalization</h3>
+<p>We’ve conceptualised 12 relationship sets to effectively model and manage the data structure underlying our E-commerce operations. (consider to drop: <del>These sets illustrate how different entities within our ecosystem interact and connect with one another, providing a comprehensive overview for stakeholders.</del>) Below is a detailed summary of these critical relationships:</p>
 <ol type="1">
 <li>Buyer and Address (1:1):</li>
 </ol>
@@ -141,7 +178,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><img src="Figures\Screenshots\relationship_set\buyer_address(1_1).png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
 </figure>
 </div>
-<p>This diagram shows one-to-one relationship between buyers and addresses, it also indicates that each buyer has one address, and each address is associated with one buyer.</p>
+<p><del>This diagram shows one-to-one relationship between buyers and addresses,</del> it also indicates that each buyer has one address, and each address is associated with one buyer.</p>
 <ol start="2" type="1">
 <li>Buyer and Order Details (1:N):</li>
 </ol>
@@ -150,7 +187,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><img src="Figures\Screenshots\relationship_set\buyer_order(1_n).png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
 </figure>
 </div>
-<p>This shows a one-to-many relationship, indicating a buyer can place multiple orders, with each ‘order detail’ linked to a single ‘buyer’.</p>
+<p><del>This shows a one-to-many relationship,</del> indicating a buyer can place multiple orders, with each ‘order detail’ linked to a single ‘buyer’.</p>
 <ol start="3" type="1">
 <li>Buyer and Reviews (1:N):</li>
 </ol>
@@ -159,7 +196,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><img src="Figures\Screenshots\relationship_set\buyer_review(1_n).png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
 </figure>
 </div>
-<p>This shows a one-to-many relationship, meaning a buyer can submit multiple reviews, with each review associated with that buyer.</p>
+<p><del>This shows a one-to-many relationship,</del> meaning a buyer can submit multiple reviews, with each review associated with that buyer.</p>
 <ol start="4" type="1">
 <li>Order Details and Payment (1:N):</li>
 </ol>
@@ -168,7 +205,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><img src="Figures\Screenshots\relationship_set\order_payment(1_n).png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
 </figure>
 </div>
-<p>It shows a one-to-many relationship, meaning each order detail can involve multiple transactions, with each transaction corresponding to a specific order detail.</p>
+<p><del>It shows a one-to-many relationship,</del> meaning each order detail can involve multiple transactions, with each transaction corresponding to a specific order detail.</p>
 <ol start="5" type="1">
 <li>Product to Dimension (1:1):</li>
 </ol>
@@ -177,7 +214,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><img src="Figures\Screenshots\relationship_set\product_dimension(1_1).png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
 </figure>
 </div>
-<p>This represents a one-to-one relationship, indicating each product has a unique set of dimensions, with each set of dimensions tied to a single product.</p>
+<p><del>This represents a one-to-one relationship,</del> indicating each product has a unique set of dimensions, with each set of dimensions tied to a single product.</p>
 <ol start="6" type="1">
 <li>Product to Order Details (1:N):</li>
 </ol>
@@ -186,7 +223,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><img src="Figures\Screenshots\relationship_set\product_order(1_n).png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
 </figure>
 </div>
-<p>This represents a one-to-many relationship between product and order details. meaning that one product can be present in many order details, Conversely, each order detail is associated with only one product, indicating a specific product is selected for each order.</p>
+<p><del>This represents a one-to-many relationship between product and order details.</del> meaning that one product can be present in many order details, Conversely, each order detail is associated with only one product, indicating a specific product is selected for each order.</p>
 <ol start="7" type="1">
 <li>Product to Promotion (N:1):</li>
 </ol>
@@ -195,7 +232,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><img src="Figures\Screenshots\relationship_set\Product_Promotion(n_1).png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
 </figure>
 </div>
-<p>This represents a many-to-one relationship indicating that multiple products can be part of the same promotion. Conversely, each promotion can apply to multiple products.</p>
+<p><del>This represents a many-to-one relationship</del> indicating that multiple products can be part of the same promotion. Conversely, each promotion can apply to multiple products.</p>
 <ol start="8" type="1">
 <li>Product to Review (1:N):</li>
 </ol>
@@ -204,7 +241,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><img src="Figures\Screenshots\relationship_set\Product_Review(1_n).png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
 </figure>
 </div>
-<p>Represents a one-to-many relationship, showing that each product can have multiple reviews written about it, Conversely, xeach review is associated with one product, indicating that customers’ feedback is specific to a particular product</p>
+<p><del>Represents a one-to-many relationship,</del> showing that each product can have multiple reviews written about it, Conversely, each review is associated with one product, indicating that customers’ feedback is specific to a particular product</p>
 <ol start="9" type="1">
 <li>Supplier and Order Details (1:N):</li>
 </ol>
@@ -213,7 +250,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><img src="Figures\Screenshots\relationship_set\shipper_order(1_n).png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
 </figure>
 </div>
-<p>This illustrates a one-to-many relationship, showing that a single supplier can be connected to multiple order details, with each order detail relating to only one supplier.</p>
+<p><del>This illustrates a one-to-many relationship,</del> showing that a single supplier can be connected to multiple order details, with each order detail relating to only one supplier.</p>
 <ol start="10" type="1">
 <li>Supplier and Address (1:1):</li>
 </ol>
@@ -222,7 +259,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><img src="Figures\Screenshots\relationship_set\supplier_address(1_1).png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
 </figure>
 </div>
-<p>This represents a one-to-one relationship, where each supplier is tied to a single address, and each address is linked to a specific supplier</p>
+<p><del>This represents a one-to-one relationship,</del> where each supplier is tied to a single address, and each address is linked to a specific supplier</p>
 <ol start="11" type="1">
 <li>Supplier and Order Details (1:N):</li>
 </ol>
@@ -231,7 +268,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><img src="Figures\Screenshots\relationship_set\supplier_order(1_n).png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
 </figure>
 </div>
-<p>This illustrates a one-to-many relationship, showing that a single supplier can be connected to multiple order details, with each order detail relating to only one supplier.</p>
+<p><del>This illustrates a one-to-many relationship,</del> showing that a single supplier can be connected to multiple order details, with each order detail relating to only one supplier.</p>
 <ol start="12" type="1">
 <li>Supplier and Product (1:N):</li>
 </ol>
@@ -240,13 +277,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><img src="Figures\Screenshots\relationship_set\supplier_product(1_n).png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
 </figure>
 </div>
-<p>This shows a one-to-many relationship, indicating that a supplier sells many products. One supplier can be linked to multiple ‘product’ entities.</p>
+<p><del>This shows a one-to-many relationship,</del> indicating that a supplier sells many products. One supplier can be linked to multiple ‘product’ entities.</p>
 </section>
-<section id="task-1.2-sql-database-schema-creation" class="level2">
-<h2 class="anchored" data-anchor-id="task-1.2-sql-database-schema-creation">Task 1.2: SQL Database Schema Creation</h2>
-<p>Translating the E-R diagram into a functional SQL database schema, defining tables with appropriate data types, constraints, primary and foreign keys. keys.</p>
-<section id="table-description-for-promotions" class="level3">
-<h3 class="anchored" data-anchor-id="table-description-for-promotions">Table Description for Promotions</h3>
+<section id="physical-schema-of-the-database" class="level3">
+<h3 class="anchored" data-anchor-id="physical-schema-of-the-database">Physical Schema of the Database</h3>
+<p>Now, we can Translate the E-R diagram into a functional SQL database schema (normalized to up to 3NF), define tables with appropriate data types, constraints, primary and foreign keys.</p>
+<section id="table-description-for-promotions" class="level4">
+<h4 class="anchored" data-anchor-id="table-description-for-promotions">Table Description for Promotions</h4>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the table data</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>promotion_table <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
@@ -313,8 +350,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Indexing in databases, such as on the promotion_id field of a Promotion table, speeds up data retrieval by maintaining a separate, efficient data structure (like a B-tree) that maps keys to their respective rows in the table. This automatic indexing on primary keys as the first column allows for quick searches, insertions, and ensures uniqueness, enhancing query performance significantly. Indexing foreign key columns as the second key is crucial for enhancing the performance of join operations between tables</p>
 <p>For other columns without explicit indexing, queries that search or filter by these fields may perform a full table scan, which is slower.</p>
 </section>
-<section id="table-description-for-shippers" class="level3">
-<h3 class="anchored" data-anchor-id="table-description-for-shippers">Table Description for Shippers</h3>
+<section id="table-description-for-shippers" class="level4">
+<h4 class="anchored" data-anchor-id="table-description-for-shippers">Table Description for Shippers</h4>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the table data for the shipper table</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>shipper_table <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
@@ -383,8 +420,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="table-description-for-address" class="level3">
-<h3 class="anchored" data-anchor-id="table-description-for-address">Table Description for Address</h3>
+<section id="table-description-for-address" class="level4">
+<h4 class="anchored" data-anchor-id="table-description-for-address">Table Description for Address</h4>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>address_table <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">Field Name</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"address_id"</span>, <span class="st">"house_number"</span>, <span class="st">"house_name"</span>, <span class="st">"street"</span>, <span class="st">"city"</span>, <span class="st">"county"</span>, <span class="st">"post_code"</span>),</span>
@@ -466,8 +503,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="table-description-for-dimensions" class="level3">
-<h3 class="anchored" data-anchor-id="table-description-for-dimensions">Table Description for Dimensions</h3>
+<section id="table-description-for-dimensions" class="level4">
+<h4 class="anchored" data-anchor-id="table-description-for-dimensions">Table Description for Dimensions</h4>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the table data for the dimension table</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>dimension_table <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
@@ -529,8 +566,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="table-description-for-buyers" class="level3">
-<h3 class="anchored" data-anchor-id="table-description-for-buyers">Table Description for Buyers</h3>
+<section id="table-description-for-buyers" class="level4">
+<h4 class="anchored" data-anchor-id="table-description-for-buyers">Table Description for Buyers</h4>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>buyer_table <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">Field Name</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"buyer_id"</span>, <span class="st">"first_name"</span>, <span class="st">"last_name"</span>, <span class="st">"date_of_birth"</span>, <span class="st">"address_id"</span>),</span>
@@ -598,8 +635,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="table-description-for-suppliers" class="level3">
-<h3 class="anchored" data-anchor-id="table-description-for-suppliers">Table Description for Suppliers</h3>
+<section id="table-description-for-suppliers" class="level4">
+<h4 class="anchored" data-anchor-id="table-description-for-suppliers">Table Description for Suppliers</h4>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load the knitr package for kable()</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -676,8 +713,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="table-description-for-products" class="level3">
-<h3 class="anchored" data-anchor-id="table-description-for-products">Table Description for Products</h3>
+<section id="table-description-for-products" class="level4">
+<h4 class="anchored" data-anchor-id="table-description-for-products">Table Description for Products</h4>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>product_table <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">Field Name</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"product_id"</span>, <span class="st">"product_name"</span>, <span class="st">"product_description"</span>, <span class="st">"weight"</span>, <span class="st">"price"</span>, <span class="st">"promotion_id"</span>, <span class="st">"supplier_id"</span>, <span class="st">"dimension_id"</span>),</span>
@@ -765,8 +802,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="table-description-for-reviews" class="level3">
-<h3 class="anchored" data-anchor-id="table-description-for-reviews">Table Description for Reviews</h3>
+<section id="table-description-for-reviews" class="level4">
+<h4 class="anchored" data-anchor-id="table-description-for-reviews">Table Description for Reviews</h4>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>review_table <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">Field Name</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"review_id"</span>, <span class="st">"buyer_id"</span>, <span class="st">"product_id"</span>, <span class="st">"review_score"</span>, <span class="st">"review_description"</span>),</span>
@@ -833,8 +870,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="table-description-for-order-details" class="level3">
-<h3 class="anchored" data-anchor-id="table-description-for-order-details">Table Description for Order Details</h3>
+<section id="table-description-for-order-details" class="level4">
+<h4 class="anchored" data-anchor-id="table-description-for-order-details">Table Description for Order Details</h4>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the table data for the order_details table, including foreign key details within the table</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>order_details_table <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
@@ -909,8 +946,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="table-description-for-payments" class="level3">
-<h3 class="anchored" data-anchor-id="table-description-for-payments">Table Description for Payments</h3>
+<section id="table-description-for-payments" class="level4">
+<h4 class="anchored" data-anchor-id="table-description-for-payments">Table Description for Payments</h4>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>payment_table <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">Field Name</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"payment_id"</span>, <span class="st">"payment_type"</span>, <span class="st">"payment_amount"</span>, <span class="st">"installment_number"</span>, <span class="st">"order_id"</span>),</span>
@@ -978,13 +1015,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 </section>
 </section>
+</section>
 <section id="part-2-data-generation-and-management" class="level1">
 <h1>Part 2: Data Generation and Management</h1>
 <section id="task-2.1-synthetic-data-generation" class="level2">
 <h2 class="anchored" data-anchor-id="task-2.1-synthetic-data-generation">Task 2.1: Synthetic Data Generation</h2>
-<p>In the process of synthetic data generation, we use a combination of R, Mockaroo, and Excel to simulate a dataset that closely mimics real-world scenarios. Our dataset consisted of 10 distinct entities that represent all the components in our system.</p>
+<p>In the process of synthetic data generation, we use a combination of R, Mockaroo, and Excel to simulate a dataset that closely mimics real-world scenarios. Our dataset consists of 10 distinct entities that represent all the components in our system.</p>
 <p>Mockaroo: For several entities we use Mockaroo to create data such as addresses, emails, and names.</p>
-<p>R studios: We use R scripts to simulate the data distributions, especially in product, promotion, all the ID’s, and time attributes, we wanted to make sure that the synthetic data reflects realistic variability and complexity.</p>
+<p>R studios: We use R scripts to simulate the data distributions, especially in product, promotion, all the ID’s, and date related attributes, we wanted to make sure that the synthetic data reflects realistic variability and complexity.</p>
 <p>Excel: After we imported the data from R and mockaroo, we combined the foreign keys. We use ‘Randbwteen’ features to ensure that the inter-entity relationships are accurately represented.</p>
 </section>
 <section id="task-2.2-data-import-and-quality-assurance" class="level2">
@@ -992,38 +1030,38 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>The synthetic data, generated in .csv format, is imported. The data undergoes various integrity and validation checks, detailed below:</p>
 <section id="data-integrity" class="level3">
 <h3 class="anchored" data-anchor-id="data-integrity">Data Integrity:</h3>
-<section id="primary-key-fields" class="level4">
-<h4 class="anchored" data-anchor-id="primary-key-fields">Primary Key fields:</h4>
+<ol type="1">
+<li>Primary Key fields:</li>
+</ol>
 <p>No NA/NULL values are allowed in the primary key attributes of any entities. The primary key ID must follow the format specified in Section 2.1.</p>
-</section>
-<section id="date-fields" class="level4">
-<h4 class="anchored" data-anchor-id="date-fields">Date fields:</h4>
+<ol start="2" type="1">
+<li>Date fields:</li>
+</ol>
 <p>No future dates should appear in any date field. This includes the Date of Birth of buyers, Promotion start and end dates, and Order dates.</p>
-</section>
-<section id="product-entity" class="level4">
-<h4 class="anchored" data-anchor-id="product-entity">Product entity:</h4>
+<ol start="3" type="1">
+<li>Product entity:</li>
+</ol>
 <p>The weight of the product must not exceed 100 pounds</p>
-</section>
-<section id="promotion-entity" class="level4">
-<h4 class="anchored" data-anchor-id="promotion-entity">Promotion entity:</h4>
+<ol start="4" type="1">
+<li>Promotion entity:</li>
+</ol>
 <p>The end date of a promotion must be later than its start date.</p>
-</section>
-<section id="review-entity" class="level4">
-<h4 class="anchored" data-anchor-id="review-entity">Review entity:</h4>
+<ol start="5" type="1">
+<li>Review entity:</li>
+</ol>
 <p>Review scores must not exceed 10.</p>
-</section>
-<section id="address-entity" class="level4">
-<h4 class="anchored" data-anchor-id="address-entity">Address entity:</h4>
+<ol start="6" type="1">
+<li>Address entity:</li>
+</ol>
 <p>Length of postcode should be only 5 or 6 characters in accordance with postcode of UK residents.</p>
-</section>
-<section id="dimension-entity" class="level4">
-<h4 class="anchored" data-anchor-id="dimension-entity">Dimension entity:</h4>
+<ol start="7" type="1">
+<li>Dimension entity:</li>
+</ol>
 <p>The Length, Width, and Height of a product must not exceed 150 cm.</p>
-</section>
-<section id="non-negativity" class="level4">
-<h4 class="anchored" data-anchor-id="non-negativity">Non-Negativity:</h4>
+<ol start="8" type="1">
+<li>Non-Negativity:</li>
+</ol>
 <p>ll numeric attributes of float or integer type must not have negative values. This includes Weight, Price, Years of Association, Review Score, Payment Value, Installment Number, Fixed Price, Cost per Mile, Length, Width, Height, and House Number.</p>
-</section>
 </section>
 <section id="referential-integrity" class="level3">
 <h3 class="anchored" data-anchor-id="referential-integrity">Referential Integrity :</h3>
@@ -1052,38 +1090,42 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>(CODE)</p>
 <p>(IMAGE)</p>
 <p>In this phase of configuring our GitHub Workflow, we set the trigger condition to activate on every push event to the repository. This configuration ensures that any time changes are pushed or a pull request is merged, the workflow initiates automatically. Following a thorough review of the code to confirm its accuracy and completeness, we commit and push these updates to our GitHub repository.</p>
-<p>In the workflow of our project, we automate the data quality check, data ingestion into the database, and basic data analysis in the R script “Data_Validation_Import_Script.R”, and the advanced data analysis in the R script “Advanced_Data_Analysis.R”. Whenever new data files are added to the data folder in the local repository, the push request triggers actions including the validation of new data, updating the database with the cleaned new data, and automatically saving the visualizations produced by the advanced data analysis into the folder “Advanced_Data_Analysis”.</p>
+<p>In the workflow of our project, we automate the data quality check, data ingestion into the database, and basic data analysis in the R script “Data_Validation_Import_Script.R”, and the advanced data analysis in the R script “Advanced_Data_Analysis.R”. Everytime new data files are added to the data folder in the local repository, the push request triggers actions including the validation of new data, updating the database with the cleaned new data, and automatically saving the visualizations produced by the advanced data analysis into the folder “Advanced_Data_Analysis”.</p>
 <p>With this action, the workflow file under GitHub Actions is now operational, and it automatically executes the predefined tasks each time a change is made to the repository, without manual intervention.</p>
 </section>
 </section>
-<section id="part-4-data-analysis-and-reporting-with-quarto-in-r" class="level1">
-<h1>Part 4: Data Analysis and Reporting with Quarto in R</h1>
-<section id="task-4.1-advanced-data-analysis-in-r" class="level2">
-<h2 class="anchored" data-anchor-id="task-4.1-advanced-data-analysis-in-r">Task 4.1: Advanced Data Analysis in R</h2>
-</section>
-<section id="task-4.2-comprehensive-reporting-with-quarto" class="level2">
-<h2 class="anchored" data-anchor-id="task-4.2-comprehensive-reporting-with-quarto">Task 4.2: Comprehensive Reporting with Quarto</h2>
-<p>Product with Highest Sales:</p>
+<section id="part-4-advanced-data-analysis-and-reporting-with-quarto-in-r" class="level1">
+<h1>Part 4: Advanced Data Analysis and Reporting with Quarto in R</h1>
+<p><strong>Product with Highest Sales:</strong></p>
+<p>[Code]</p>
 <p>Revealing the top 5 products by sales offers insights into customer preferences and product performance. It highlights the most popular products, indicating their demand and popularity in the market, and shows what the company should focus on selling to maximise revenue.</p>
-<p>Cities With Highest Sales:</p>
+<p><strong>Cities With Highest Sales:</strong></p>
+<p>[Code]</p>
 <p>Analysing sales per city reveals the geographical distribution of product demand. Understanding where products sell best helps in targeting marketing efforts and optimising distribution strategies towards these cities. It helps in assessing market penetration and identifying areas for expansion.</p>
-<p>Promotion for Top Products:</p>
+<p><strong>Promotion for Top Products:</strong></p>
+<p>[Code]</p>
 <p>Evaluating promotion status for the top 5 products provides insights into marketing effectiveness. Correlating sales with promotion status helps allocate resources of time and money efficiently towards marketing strategies and maximise sales outcomes.</p>
-<p>Number of Days Promotions are Running:</p>
+<p><strong>Number of Days Promotions are Running:</strong></p>
+<p>[Code]</p>
 <p>Analysing the duration of active promotions helps measure their impact on sales and customer engagement. Understanding promotion duration assists in optimizing promotional activities for maximum effectiveness.</p>
-<p>Sales Trends:</p>
+<p><strong>Sales Trends:</strong></p>
+<p>[Code]</p>
 <p>Analysing sales trends over time identifies patterns, peak sales periods, and seasonal impacts. This informs inventory management, timing of promotions or campaigns, and strategic decision-making.</p>
-<p>Products With Highest and Lowest Reviews:</p>
+<p><strong>Products With Highest and Lowest Reviews:</strong></p>
+<p>[Code]</p>
 <p>Examining top and lowest reviewed products provides insights into customer preferences and areas for improvement. This feedback guides product development and enhances customer satisfaction.</p>
-<p>Cities With Highest and Lowest Reviews:</p>
+<p><strong>Cities With Highest and Lowest Reviews:</strong></p>
+<p>[Code]</p>
 <p>Identifying geographic variations in customer satisfaction helps tailor regional marketing approaches and improve customer experience in low satisfaction areas. Addressing low satisfaction areas helps in targeting marketing efforts to improve customer perception and loyalty.</p>
-<p>Customer Lifetime Value (CLV):</p>
+<p><strong>Customer Lifetime Value (CLV):</strong></p>
+<p>[Code]</p>
 <p>Calculating CLV helps identify top-valuable customers for targeted marketing and loyalty programs. Understanding customer value informs engagement strategies and maximixes profitability. Can guide engagement strategies, enhancing customer relationships and loyalty.</p>
-<p>Effectiveness of Promotions:</p>
+<p><strong>Effectiveness of Promotions:</strong></p>
+<p>[Code]</p>
 <p>Evaluating promotion performance by sales and revenue enhances campaign initiatives and resource allocation. Optimizing promotional activities maximixes return on investment.</p>
-<p>Most Reviewed Products:</p>
+<p><strong>Most Reviewed Products:</strong></p>
+<p>[Code]</p>
 <p>Identifying the most reviewed products highlights customer engagement and product visibility. Products with many reviews often have better market presence and credibility, impacting brand reputation and customer trust.</p>
-</section>
 </section>
 
 </main>

@@ -30,7 +30,7 @@ In our comprehensive project, we are aimed at creating a e-commerce database, fo
 
 # Part 1: Database Design and Implementation
 
-## Task 1.1: Entity-Relationship (E-R) Diagram Design and Relationship Sets
+## Task 1.1: E-R Diagram Design and Relationship Sets
 
 In this report, we assume that the E-commerce platform primarily sells IT products within the UK and lacks an international shipment policy. Additionally, the company’s policy dictates that only be promoted once a year. Each "Product_ID" is determined by its "Supplier_ID," indicating that a supplier can only assign one "Product_ID" to each product. Furthermore, the E-commerce company collects payments and distributes them to suppliers later. There are 7 entities:
 
@@ -50,92 +50,121 @@ In this report, we assume that the E-commerce platform primarily sells IT produc
 
 The Entity-Relationship (E-R) diagram for our e-commerce database before normalization is shown below:
 
-![](Figures\Screenshots\ERD\ERD_before_normalization.png)
+![](Figures\Screenshots\ERD\ERD_before_normalization.png){fig-align="center"}
 
-The E-R diagram after normalizing our schema up to at least 3NF is shown below.
+## Task 1.2: SQL Database Schema Creation
 
-![](Figures\Screenshots\ERD\ERD_after_normalization.png)
+(Anushya: A paragraph to explain normalization up to 3NF)
 
+### Conceputual Schema of the Database after Normalisation
 
-In our e-commerce platform, we've conceptualised 12 relationship sets to effectively model and manage the data structure underlying our E-commerce operations. These sets illustrate how different entities within our ecosystem interact and connect with one another, providing a comprehensive overview for stakeholders. Below is a detailed summary of these critical relationships:
+~~The E-R diagram after normalization is shown below.~~
+
+![](Figures\Screenshots\ERD\ERD_after_normalization.png){fig-align="center"}
+
+### Logical Schema of the Database after Normalisation
+
+* product(product _id, product _name, product _description, weight, price, promotion_id, dimension_id , supplier_id) 
+
+* promotion(promotion_id, promotion_type, start_date, end_date, status) 
+
+* buyer(buyer_id, first_name, last_name, date_of_birth, address_id) 
+
+*supplier(Supplier_ID, Supplier_Name, Supplier_Type, Contract_Type, Number_of_year_of_association, address_id) 
+
+* review(review_id, review_score, review_description, product_id, buyer_id) 
+
+*payment(payment_id, payment_type, payment_amount, installment_number, order_id) 
+
+* shipper(Shipper_ID, Shipper_Name, Service, Fixed Price, Cost_per_mile) 
+
+* order_details(order_id, product_id, buyer_id, supplier_id, order_dates, shipper_id) 
+
+* address(address_id, house_number, house_name, street, city, county, post_code) 
+
+* dimension(Dimension_ID, Length, Width, Height) 
+
+### Relationship Sets after Normalization
+
+We've conceptualised 12 relationship sets to effectively model and manage the data structure underlying our E-commerce operations. (consider to drop: ~~These sets illustrate how different entities within our ecosystem interact and connect with one another, providing a comprehensive overview for stakeholders.~~) Below is a detailed summary of these critical relationships:
 
 1)  Buyer and Address (1:1):
 
 ![](Figures\Screenshots\relationship_set\buyer_address(1_1).png){fig-align="center"}
 
-This diagram shows one-to-one relationship between buyers and addresses, it also indicates that each buyer has one address, and each address is associated with one buyer.
+~~This diagram shows one-to-one relationship between buyers and addresses,~~ it also indicates that each buyer has one address, and each address is associated with one buyer.
 
 2)  Buyer and Order Details (1:N):
 
 ![](Figures\Screenshots\relationship_set\buyer_order(1_n).png){fig-align="center"}
 
-This shows a one-to-many relationship, indicating a buyer can place multiple orders, with each 'order detail' linked to a single 'buyer'.
+~~This shows a one-to-many relationship,~~ indicating a buyer can place multiple orders, with each 'order detail' linked to a single 'buyer'.
 
 3)  Buyer and Reviews (1:N):
 
 ![](Figures\Screenshots\relationship_set\buyer_review(1_n).png){fig-align="center"}
 
-This shows a one-to-many relationship, meaning a buyer can submit multiple reviews, with each review associated with that buyer.
+~~This shows a one-to-many relationship,~~ meaning a buyer can submit multiple reviews, with each review associated with that buyer.
 
 4)  Order Details and Payment (1:N):
 
 ![](Figures\Screenshots\relationship_set\order_payment(1_n).png){fig-align="center"}
 
-It shows a one-to-many relationship, meaning each order detail can involve multiple transactions, with each transaction corresponding to a specific order detail.
+~~It shows a one-to-many relationship,~~ meaning each order detail can involve multiple transactions, with each transaction corresponding to a specific order detail.
 
 5)  Product to Dimension (1:1):
 
 ![](Figures\Screenshots\relationship_set\product_dimension(1_1).png){fig-align="center"}
 
-This represents a one-to-one relationship, indicating each product has a unique set of dimensions, with each set of dimensions tied to a single product.
+~~This represents a one-to-one relationship,~~ indicating each product has a unique set of dimensions, with each set of dimensions tied to a single product.
 
 6)  Product to Order Details (1:N):
 
 ![](Figures\Screenshots\relationship_set\product_order(1_n).png){fig-align="center"}
 
-This represents a one-to-many relationship between product and order details. meaning that one product can be present in many order details, Conversely, each order detail is associated with only one product, indicating a specific product is selected for each order.
+~~This represents a one-to-many relationship between product and order details.~~ meaning that one product can be present in many order details, Conversely, each order detail is associated with only one product, indicating a specific product is selected for each order.
 
 7)  Product to Promotion (N:1):
 
 ![](Figures\Screenshots\relationship_set\Product_Promotion(n_1).png){fig-align="center"}
 
-This represents a many-to-one relationship indicating that multiple products can be part of the same promotion. Conversely, each promotion can apply to multiple products.
+~~This represents a many-to-one relationship~~ indicating that multiple products can be part of the same promotion. Conversely, each promotion can apply to multiple products.
 
 8)  Product to Review (1:N):
 
 ![](Figures\Screenshots\relationship_set\Product_Review(1_n).png){fig-align="center"}
 
-Represents a one-to-many relationship, showing that each product can have multiple reviews written about it, Conversely, xeach review is associated with one product, indicating that customers’ feedback is specific to a particular product
+~~Represents a one-to-many relationship,~~ showing that each product can have multiple reviews written about it, Conversely, each review is associated with one product, indicating that customers’ feedback is specific to a particular product
 
 9)  Supplier and Order Details (1:N):
 
 ![](Figures\Screenshots\relationship_set\shipper_order(1_n).png){fig-align="center"}
 
-This illustrates a one-to-many relationship, showing that a single supplier can be connected to multiple order details, with each order detail relating to only one supplier.
+~~This illustrates a one-to-many relationship,~~ showing that a single supplier can be connected to multiple order details, with each order detail relating to only one supplier.
 
 10) Supplier and Address (1:1):
 
 ![](Figures\Screenshots\relationship_set\supplier_address(1_1).png){fig-align="center"}
 
-This represents a one-to-one relationship, where each supplier is tied to a single address, and each address is linked to a specific supplier
+~~This represents a one-to-one relationship,~~ where each supplier is tied to a single address, and each address is linked to a specific supplier
 
 11) Supplier and Order Details (1:N):
 
 ![](Figures\Screenshots\relationship_set\supplier_order(1_n).png){fig-align="center"}
 
-This illustrates a one-to-many relationship, showing that a single supplier can be connected to multiple order details, with each order detail relating to only one supplier.
+~~This illustrates a one-to-many relationship,~~ showing that a single supplier can be connected to multiple order details, with each order detail relating to only one supplier.
 
 12) Supplier and Product (1:N):
 
 ![](Figures\Screenshots\relationship_set\supplier_product(1_n).png){fig-align="center"}
 
-This shows a one-to-many relationship, indicating that a supplier sells many products. One supplier can be linked to multiple 'product' entities.
+~~This shows a one-to-many relationship,~~ indicating that a supplier sells many products. One supplier can be linked to multiple 'product' entities.
 
-## Task 1.2: SQL Database Schema Creation
+### Physical Schema of the Database
 
-Translating the E-R diagram into a functional SQL database schema, defining tables with appropriate data types, constraints, primary and foreign keys. keys.
+Now, we can Translate the E-R diagram into a functional SQL database schema (normalized to up to 3NF), define tables with appropriate data types, constraints, primary and foreign keys.
 
-### Table Description for Promotions
+#### Table Description for Promotions
 
 ```{r}
 # Define the table data
@@ -154,7 +183,7 @@ Indexing in databases, such as on the promotion_id field of a Promotion table, s
 
 For other columns without explicit indexing, queries that search or filter by these fields may perform a full table scan, which is slower.
 
-### Table Description for Shippers
+#### Table Description for Shippers
 
 ```{r}
 # Define the table data for the shipper table
@@ -173,7 +202,7 @@ shipper_table <- data.frame(
 kable(shipper_table, caption = "Table Description for Shippers", align = 'l')
 ```
 
-### Table Description for Address
+#### Table Description for Address
 
 ```{r}
 
@@ -195,7 +224,7 @@ kable(address_table, caption = "Table Description for Addresses", align = 'l')
 
 ```
 
-### Table Description for Dimensions
+#### Table Description for Dimensions
 
 ```{r}
 # Define the table data for the dimension table
@@ -214,7 +243,7 @@ kable(dimension_table, caption = "Table Description for Dimensions", align = 'l'
 
 ```
 
-### Table Description for Buyers
+#### Table Description for Buyers
 
 ```{r}
 buyer_table <- data.frame(
@@ -233,7 +262,7 @@ kable(buyer_table, caption = "Table Description for Buyers", align = 'l')
 
 ```
 
-### Table Description for Suppliers
+#### Table Description for Suppliers
 
 ```{r}
 # Load the knitr package for kable()
@@ -255,7 +284,7 @@ kable(supplier_table, caption = "Table Description for Suppliers", align = 'l')
 
 ```
 
-### Table Description for Products
+#### Table Description for Products
 
 ```{r}
 product_table <- data.frame(
@@ -276,7 +305,7 @@ kable(product_table, caption = "Table Description for Products", align = 'l')
 
 ```
 
-### Table Description for Reviews
+#### Table Description for Reviews
 
 ```{r}
 review_table <- data.frame(
@@ -293,7 +322,7 @@ review_table <- data.frame(
 kable(review_table, caption = "Table Description for Reviews", align = 'l')
 ```
 
-### Table Description for Order Details
+#### Table Description for Order Details
 
 ```{r}
 # Define the table data for the order_details table, including foreign key details within the table
@@ -313,7 +342,7 @@ kable(order_details_table, caption = "Table Description for Order Details", alig
 
 ```
 
-### Table Description for Payments
+#### Table Description for Payments
 
 ```{r}
 payment_table <- data.frame(
@@ -333,11 +362,11 @@ kable(payment_table, caption = "Table Description for Payments", align = 'l')
 
 ## Task 2.1: Synthetic Data Generation
 
-In the process of synthetic data generation, we use a combination of R, Mockaroo, and Excel to simulate a dataset that closely mimics real-world scenarios. Our dataset consisted of 10 distinct entities that represent all the components in our system.
+In the process of synthetic data generation, we use a combination of R, Mockaroo, and Excel to simulate a dataset that closely mimics real-world scenarios. Our dataset consists of 10 distinct entities that represent all the components in our system.
 
 Mockaroo: For several entities we use Mockaroo to create data such as addresses, emails, and names.
 
-R studios: We use R scripts to simulate the data distributions, especially in product, promotion, all the ID’s, and time attributes, we wanted to make sure that the synthetic data reflects realistic variability and complexity.
+R studios: We use R scripts to simulate the data distributions, especially in product, promotion, all the ID’s, and date related attributes, we wanted to make sure that the synthetic data reflects realistic variability and complexity.
 
 Excel: After we imported the data from R and mockaroo, we combined the foreign keys. We use ‘Randbwteen’ features to ensure that the inter-entity relationships are accurately represented.
 
@@ -347,35 +376,35 @@ The synthetic data, generated in .csv format, is imported. The data undergoes va
 
 ### Data Integrity:
 
-#### Primary Key fields:
+1) Primary Key fields:
 
 No NA/NULL values are allowed in the primary key attributes of any entities. The primary key ID must follow the format specified in Section 2.1.
 
-#### Date fields:
+2) Date fields:
 
 No future dates should appear in any date field. This includes the Date of Birth of buyers, Promotion start and end dates, and Order dates.
 
-#### Product entity:
+3) Product entity:
 
 The weight of the product must not exceed 100 pounds
 
-#### Promotion entity:
+4) Promotion entity:
 
 The end date of a promotion must be later than its start date.
 
-#### Review entity:
+5) Review entity:
 
 Review scores must not exceed 10.
 
-#### Address entity:
+6) Address entity:
 
 Length of postcode should be only 5 or 6 characters in accordance with postcode of UK residents.
 
-#### Dimension entity:
+7) Dimension entity:
 
 The Length, Width, and Height of a product must not exceed 150 cm.
 
-#### Non-Negativity:
+8) Non-Negativity:
 
 ll numeric attributes of float or integer type must not have negative values. This includes Weight, Price, Years of Association, Review Score, Payment Value, Installment Number, Fixed Price, Cost per Mile, Length, Width, Height, and House Number.
 
@@ -417,52 +446,68 @@ Next, we add the following code.
 
 In this phase of configuring our GitHub Workflow, we set the trigger condition to activate on every push event to the repository. This configuration ensures that any time changes are pushed or a pull request is merged, the workflow initiates automatically. Following a thorough review of the code to confirm its accuracy and completeness, we commit and push these updates to our GitHub repository.
 
-In the workflow of our project, we automate the data quality check, data ingestion into the database, and basic data analysis in the R script "Data_Validation_Import_Script.R", and the advanced data analysis in the R script "Advanced_Data_Analysis.R". Whenever new data files are added to the data folder in the local repository, the push request triggers actions including the validation of new data, updating the database with the cleaned new data, and automatically saving the visualizations produced by the advanced data analysis into the folder "Advanced_Data_Analysis".
+In the workflow of our project, we automate the data quality check, data ingestion into the database, and basic data analysis in the R script "Data_Validation_Import_Script.R", and the advanced data analysis in the R script "Advanced_Data_Analysis.R". Everytime new data files are added to the data folder in the local repository, the push request triggers actions including the validation of new data, updating the database with the cleaned new data, and automatically saving the visualizations produced by the advanced data analysis into the folder "Advanced_Data_Analysis".
 
 With this action, the workflow file under GitHub Actions is now operational, and it automatically executes the predefined tasks each time a change is made to the repository, without manual intervention.
 
-# Part 4: Data Analysis and Reporting with Quarto in R
+# Part 4: Advanced Data Analysis and Reporting with Quarto in R
 
-## Task 4.1: Advanced Data Analysis in R
+**Product with Highest Sales:**
 
-## Task 4.2: Comprehensive Reporting with Quarto
-
-Product with Highest Sales:
+\[Code\]
 
 Revealing the top 5 products by sales offers insights into customer preferences and product performance. It highlights the most popular products, indicating their demand and popularity in the market, and shows what the company should focus on selling to maximise revenue.
 
-Cities With Highest Sales:
+**Cities With Highest Sales:**
+
+\[Code\]
 
 Analysing sales per city reveals the geographical distribution of product demand. Understanding where products sell best helps in targeting marketing efforts and optimising distribution strategies towards these cities. It helps in assessing market penetration and identifying areas for expansion.
 
-Promotion for Top Products:
+**Promotion for Top Products:**
+
+\[Code\]
 
 Evaluating promotion status for the top 5 products provides insights into marketing effectiveness. Correlating sales with promotion status helps allocate resources of time and money efficiently towards marketing strategies and maximise sales outcomes.
 
-Number of Days Promotions are Running:
+**Number of Days Promotions are Running:**
+
+\[Code\]
 
 Analysing the duration of active promotions helps measure their impact on sales and customer engagement. Understanding promotion duration assists in optimizing promotional activities for maximum effectiveness.
 
-Sales Trends:
+**Sales Trends:**
+
+\[Code\]
 
 Analysing sales trends over time identifies patterns, peak sales periods, and seasonal impacts. This informs inventory management, timing of promotions or campaigns, and strategic decision-making.
 
-Products With Highest and Lowest Reviews:
+**Products With Highest and Lowest Reviews:**
+
+\[Code\]
 
 Examining top and lowest reviewed products provides insights into customer preferences and areas for improvement. This feedback guides product development and enhances customer satisfaction.
 
-Cities With Highest and Lowest Reviews:
+**Cities With Highest and Lowest Reviews:**
+
+\[Code\]
 
 Identifying geographic variations in customer satisfaction helps tailor regional marketing approaches and improve customer experience in low satisfaction areas. Addressing low satisfaction areas helps in targeting marketing efforts to improve customer perception and loyalty.
 
-Customer Lifetime Value (CLV):
+**Customer Lifetime Value (CLV):**
+
+\[Code\]
 
 Calculating CLV helps identify top-valuable customers for targeted marketing and loyalty programs. Understanding customer value informs engagement strategies and maximixes profitability. Can guide engagement strategies, enhancing customer relationships and loyalty.
 
-Effectiveness of Promotions:
+**Effectiveness of Promotions:**
+
+\[Code\]
 
 Evaluating promotion performance by sales and revenue enhances campaign initiatives and resource allocation. Optimizing promotional activities maximixes return on investment.
 
-Most Reviewed Products:
+**Most Reviewed Products:**
+
+\[Code\]
 
 Identifying the most reviewed products highlights customer engagement and product visibility. Products with many reviews often have better market presence and credibility, impacting brand reputation and customer trust.
