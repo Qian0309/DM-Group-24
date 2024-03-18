@@ -4,7 +4,6 @@ library(readr)
 library(dplyr)
 library(anytime)
 library(ggplot2)
-library(DBI)
 
 ## File Prefix and Suffix
 # read files from 'data' folder
@@ -579,3 +578,8 @@ histogram_plot <- ggplot(supplier_table, aes(number_of_year_of_association)) +
   labs(x="Number of Years of Association", y="Density") +
   theme(plot.title = element_text(size = 10, face = "bold", hjust = 0.5))
 histogram_plot
+
+# Disconnect
+# Disconnect from the database using the connection variable that we setup 
+# before
+RSQLite::dbDisconnect(connection)

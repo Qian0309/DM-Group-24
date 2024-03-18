@@ -2,7 +2,6 @@
 library(RSQLite)
 library(dplyr)
 library(ggplot2)
-library(DBI)
 
 ## Access Existing Database
 db_conn <- dbConnect(RSQLite::SQLite(), "Database/ecommerce.db")
@@ -125,7 +124,6 @@ sales_trend_data <- sales_trend_data %>%
   group_by(order_dates) %>% 
   summarise(total_sales = sum(price))
 
-print(sales_trend_data)
 
 ggplot(sales_trend_data, aes(x = order_dates, y = total_sales)) +
   geom_line() + 
@@ -331,3 +329,9 @@ ggplot(cities_highest_sales, aes(x = city, y = total_sales)) +
 ggsave(paste0("Advanced_Data_Analysis/highest_sales_5cities_plot_",
               this_filename_date,"_",
               this_filename_time,".png"))
+
+
+# Disconnect
+# Disconnect from the database using the connection variable that we setup 
+# before
+RSQLite::dbDisconnect(db_conn)
