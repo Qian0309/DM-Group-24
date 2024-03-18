@@ -54,7 +54,9 @@ The Entity-Relationship (E-R) diagram for our e-commerce database before normali
 
 ## Task 1.2: SQL Database Schema Creation
 
-The Conceptual Schema explained in Section 1.1 is 
+The Conceptual Schema explained in Section 1.1 is converted into Logical Schema after normalising using the below steps,
+
+1NF : Multi-valued attributes include 'Buyer_Address' in Buyer entity, 'Supplier_Address' in Supplier entity and 'Dimensions' in Product entity that must be normalised. To do the same, a separate Address table is created that stores Address information with attributes that inlcude address_id, house_number, house_name, street, city, county and post_code. The Address entity is then referenced to Buyer and Supplier entities using referential keys, i.e., address_id would be a foreign key in Supplier and Buyer entity. 
 
 ### Conceputual Schema of the Database after Normalisation
 
