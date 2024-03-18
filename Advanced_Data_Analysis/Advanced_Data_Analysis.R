@@ -191,7 +191,7 @@ LIMIT
 
 ggplot(lowest_5_products_reviews, aes(x = reorder(product_name, -average_review_score), y = average_review_score)) +
   geom_bar(stat = "identity", width = 0.7) +
-  geom_text(aes(label = average_review_score), vjust = 0.2, hjust=-0.3, position=position_dodge(width=0.9),size=4) +
+  geom_text(aes(label = average_review_score), vjust = 0.2, hjust=-0.3, position=position_dodge(width=0.9),size=3) +
   labs(x = "Product", y = "Average Review Score") +
   theme_minimal() +
   coord_flip() +
