@@ -26,11 +26,13 @@ library(ggplot2)
 
 # Project Introduction
 
+In our comprehensive project, we are aimed at creating a e-commerce database, focusing on IT products within the United Kingdom. Our project is divided into four pivotal stages, each contributing to the development and understanding of our e-commerce platform. 
+
 # Part 1: Database Design and Implementation
 
 ## Task 1.1: Entity-Relationship (E-R) Diagram Design and Relationship Sets
 
-In this report, we assume that the E-commerce platform primarily sells IT products within the United Kingdom and lacks an international shipment policy. Additionally, the company’s policy dictates that only be promoted once a year. Each "Product_ID" is determined by its "Supplier_ID," indicating that a supplier can only assign one "Product_ID" to each product. Furthermore, the E-commerce company collects payments and distributes them to suppliers later. There are 7 entities:
+In this report, we assume that the E-commerce platform primarily sells IT products within the UK and lacks an international shipment policy. Additionally, the company’s policy dictates that only be promoted once a year. Each "Product_ID" is determined by its "Supplier_ID," indicating that a supplier can only assign one "Product_ID" to each product. Furthermore, the E-commerce company collects payments and distributes them to suppliers later. There are 7 entities:
 
 1)  Buyer: Represents the customers who create an account to place orders on the online shopping platform.
 
