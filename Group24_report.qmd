@@ -406,7 +406,7 @@ The Length, Width, and Height of a product must not exceed 150 cm.
 
 8) Non-Negativity:
 
-ll numeric attributes of float or integer type must not have negative values. This includes Weight, Price, Years of Association, Review Score, Payment Value, Installment Number, Fixed Price, Cost per Mile, Length, Width, Height, and House Number.
+All numeric attributes of float or integer type must not have negative values. This includes Weight, Price, Years of Association, Review Score, Payment Value, Installment Number, Fixed Price, Cost per Mile, Length, Width, Height, and House Number.
 
 ### Referential Integrity :
 
