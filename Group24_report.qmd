@@ -8,14 +8,11 @@ number_sections: yes
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 
-install.packages("DBI")
 install.packages("RSQLite")
 install.packages("dplyr")
 install.packages("ggplot2")
 install.packages("knitr")
 
-
-library(DBI)
 library(knitr)
 library(RSQLite)
 library(dplyr)
@@ -455,14 +452,6 @@ In the workflow of our project, we automate the data quality check, data ingesti
 With this action, the workflow file under GitHub Actions is now operational, and it automatically executes the predefined tasks each time a change is made to the repository, without manual intervention.
 
 # Part 4: Advanced Data Analysis and Reporting with Quarto in R
-
-```{r}
-# Importing necessary libraries
-library(RSQLite)
-library(dplyr)
-library(ggplot2)
-```
-
 
 ```{r}
 ## Access Existing Database
