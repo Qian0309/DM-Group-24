@@ -54,7 +54,7 @@ The Entity-Relationship (E-R) diagram for our e-commerce database before normali
 
 ## Task 1.2: SQL Database Schema Creation
 
-(Anushya: A paragraph to explain normalization up to 3NF)
+The Conceptual Schema explained in Section 1.1 is 
 
 ### Conceputual Schema of the Database after Normalisation
 
