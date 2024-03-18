@@ -429,7 +429,7 @@ if(length(setdiff(unique(order_details_data$supplier_id),
   to_remove_ids <- setdiff(unique(order_details_data$supplier_id),
                   unique(supplier_data$supplier_id))
   print(paste0("ID(s) removed : ", to_remove_ids))
-  order_details_data <- order_details_data %>% filter(!supplier_data %in% to_remove_ids)
+  order_details_data <- order_details_data %>% filter(!supplier_id %in% to_remove_ids)
   
 }
 
