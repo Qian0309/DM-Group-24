@@ -1,10 +1,8 @@
 ---
-title: "Report"
+title: "IB9HP0 Data Management"
 author: "Group 24"
-date: "Week 7"
 output: pdf_document
 number_sections: yes
-header-includes: \usepackage{hyperref}
 ---
 
 ```{r setup, include=FALSE}
