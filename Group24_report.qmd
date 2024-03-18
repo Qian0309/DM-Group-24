@@ -417,39 +417,36 @@ Referential integrity checks are conducted for all relationships discussed in Se
 
 ## Task 3.1: GitHub Repository and Workflow Setup
 
+![](Figures\Screenshots\GitHub_related\GitHub_Repo.png){fig-align="center"}
+
 To allow group members to collaborate on the project simultaneously we have adopted the use of a remote repository (an online storage system for our project’s history) on GitHub. This online platform serves as a centralised storage for our project's history, enabling efficient management and version control.
 
-(IMAGE)
-
+![](Figures\Screenshots\GitHub_related\repo_url.png){fig-align="center"}
 Integrating our project with Posit Cloud, we used the HTTPS clone URL from GitHub to establish a connection between our local and remote repositories directly within Posit Cloud. This integration streamlined our workflow by providing a centralised platform for development, enabling efficient access and management of the project's codebase.
 
-(IMAGE)
-
+![](Figures\Screenshots\GitHub_related\commit_push_pull.png){fig-align="center"}
 To streamline our project management and enhance version control among team members, we utilised commit, push, and pull operations effectively. By committing changes before pushing, we enabled team members to save the state of our project at specific points following any modifications made in our local repositories. This process not only enables detailed tracking of who made specific changes and why, but also ensures that each contribution is reviewed before being shared with the team.
 
 Pushing these commits to the remote repository then publishes each member's contributions, ensuring everyone is working on the most updated version. Regularly pulling updates from the remote repository is crucial for keeping our local copies current, significantly reducing the likelihood of merge conflicts between the local and remote version after changes are made.
 
+![](Figures\Screenshots\GitHub_related\working_log.png){fig-align="center"}
 These practices have collectively created a robust collaborative environment, significantly boosting our productivity and streamlining the project's progression.
 
 ## Task 3.2: GitHub Actions for Continuous Integration
 
 GitHub Workflows automate processes within a repository using YAML files. We started by creating a `.github/workflows/` directory to house our workflow files. Then, we added a file named "ETL workflow for group24" within this directory to outline our specific automated tasks, focusing on the Extract, Transform, Load (ETL) processes crucial to our project's data handling needs, enhancing efficiency.
 
-The workflow is summarised on the following page
+The workflow of our project is shown in the screenshot below
 
-{IMAGE}
-
-Next, we add the following code.
-
-(CODE)
-
-(IMAGE)
+![](Figures\Screenshots\GitHub_related\workflow.png){fig-align="center"}
 
 In this phase of configuring our GitHub Workflow, we set the trigger condition to activate on every push event to the repository. This configuration ensures that any time changes are pushed or a pull request is merged, the workflow initiates automatically. Following a thorough review of the code to confirm its accuracy and completeness, we commit and push these updates to our GitHub repository.
 
+![](Figures\Screenshots\GitHub_related\workflow_yaml_file.png){fig-align="center"}
 In the workflow of our project, we automate the data quality check, data ingestion into the database, and basic data analysis in the R script "Data_Validation_Import_Script.R", and the advanced data analysis in the R script "Advanced_Data_Analysis.R". Everytime new data files are added to the data folder in the local repository, the push request triggers actions including the validation of new data, updating the database with the cleaned new data, and automatically saving the visualizations produced by the advanced data analysis into the folder "Advanced_Data_Analysis".
 
-With this action, the workflow file under GitHub Actions is now operational, and it automatically executes the predefined tasks each time a change is made to the repository, without manual intervention.
+![](Figures\Screenshots\GitHub_related\Actions.png){fig-align="center"}
+There are a peek of some jobs that have been automatically triggered by the push request to be carried out in Actions, the workflow file under GitHub Actions is now operational, and it automatically executes the predefined tasks each time a change is made to the repository, without manual intervention.
 
 # Part 4: Advanced Data Analysis and Reporting with Quarto in R
 
