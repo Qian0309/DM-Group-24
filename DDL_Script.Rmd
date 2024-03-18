@@ -148,7 +148,7 @@ dbExecute(connection,
 ```
 
 ```{r}
-#creating table transaction
+#creating table payment
 dbExecute(connection, 
 "CREATE TABLE 'payment' (
   'payment_id' VARCHAR(50) PRIMARY KEY, 

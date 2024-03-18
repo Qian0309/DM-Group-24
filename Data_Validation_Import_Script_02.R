@@ -1,10 +1,3 @@
----
-title: "Data_Validation_Import_Script"
-output: html_document
-date: "2024-03-16"
----
-
-```{r}
 # Load neccesary libraries
 library(RSQLite)
 library(readr)
@@ -15,27 +8,16 @@ library(ggplot2)
 library(gridExtra)
 library(ggpubr)
 library(vtable)
-```
 
 ## File Prefix and Suffix
-```{r readr,attr.source='.numberLines'}
 # read files from 'data' folder
 project_files <- list.files("New_Data/")
-project_files
-
-```
-
-```{r block2,attr.source='.numberLines'}
 prefix <- "ecommerce_"
 suffix <- "_dataset.csv"
 project_files <- gsub(prefix,"",project_files)
 project_files <- gsub(suffix,"",project_files)
-project_files
-
-```
 
 ## Read .csv files
-```{r dataread}
 address_data <- read.csv("New_Data/ecommerce_address_dataset.csv")
 buyer_data <- read.csv("New_Data/ecommerce_buyer_dataset.csv")
 dimension_data <- read.csv("New_Data/ecommerce_dimension_dataset.csv")
@@ -46,12 +28,9 @@ shipper_data <- read.csv("New_Data/ecommerce_shipper_dataset.csv")
 supplier_data <- read.csv("New_Data/ecommerce_supplier_dataset.csv")
 payment_data <- read.csv("New_Data/ecommerce_payment_dataset.csv")
 order_details_data <- read.csv("New_Data/ecommerce_order_details_dataset.csv")
-```
 
 
 ## Columns present in each datafile
-```{r loop,message=FALSE,warning=FALSE}
-
 all_files <- list.files("New_Data/")
 
 for (variable in all_files) {
@@ -63,11 +42,8 @@ for (variable in all_files) {
   
   print(paste0(column_names))
 }
-```
 
 ## Number of rows and columns in the dataset
-```{r loop,message=FALSE,warning=FALSE,attr.source='.numberLines'}
-
 all_files <- list.files("New_Data/")
 
 for (variable in all_files) {
@@ -83,11 +59,8 @@ for (variable in all_files) {
               " rows and ",
               number_of_columns," columns"))
 }
-```
 
 ## Check if the first column of each file is a primary 
-```{r checkprimary,message=FALSE,warning=FALSE,attr.source='.numberLines'}
-
 for (variable in all_files) {
   this_filepath <- paste0("New_Data/",variable)
   this_file_contents <- readr::read_csv(this_filepath)
@@ -98,12 +71,9 @@ for (variable in all_files) {
   print(paste0(" is ",nrow(unique(this_file_contents[,1]))==number_of_rows))
 }
 
-```
-
 ## Data Quality Assurance
 ### Data Integrity Checks
 ## Id format checks for all primary keys
-```{r checkprimary,message=FALSE,warning=FALSE,attr.source='.numberLines'}
 dataname_list <- list("address_data", "buyer_data", "dimension_data", "order_details_data", "payment_data",
                  "product_data", "promotion_data", "review_data", "shipper_data", "supplier_data")
 
@@ -143,11 +113,9 @@ for (i in seq_along(dataname_list)) {
     }   
     id_data <-  id_data[0, ]
 }
-```
 
 ## Data checks for the address 
 # Getting the negative house number data
-```{r}
 negative_data <- address_data %>% 
   filter(house_number < 0)
 
@@ -166,10 +134,8 @@ address_data <- anti_join(address_data, negative_data, by = "address_id")
 # Removing the same from the other tables having address as a foreign key
 buyer_data <- anti_join(buyer_data, negative_data, by = "address_id")
 supplier_data <- anti_join(supplier_data, negative_data, by = "address_id")
-```
 
 ## Data checks for the buyer 
-```{r checkprimary,message=FALSE,warning=FALSE,attr.source='.numberLines'}
 # Convert character dates to Date data type
 buyer_data$date_of_birth <- anydate(buyer_data$date_of_birth)
 
@@ -192,12 +158,7 @@ buyer_data <- anti_join(buyer_data, negative_data, by = "buyer_id")
 order_details_data <- anti_join(order_details_data, negative_data, by = "buyer_id")
 review_data <- anti_join(review_data, negative_data, by = "buyer_id")
 
-
-```
-
 ## Data checks for the dimension 
-```{r checkprimary,message=FALSE,warning=FALSE,attr.source='.numberLines'}
-
 # Getting the negative and over the upper limit dimensions data
 negative_data <- dimension_data %>% 
   filter(length < 0 | length > 150 |
@@ -218,11 +179,7 @@ print(paste0(nrow(negative_data), " rows are removed from dimension because of i
 dimension_data <- anti_join(dimension_data, negative_data, by = "dimension_id")
 product_data <- anti_join(product_data, negative_data, by = "dimension_id")
 
-```
-
 ## Data checks for the order details 
-```{r checkprimary,message=FALSE,warning=FALSE,attr.source='.numberLines'}
-
 # Convert character dates to Date data type
 order_details_data$order_dates <- anydate(order_details_data$order_dates)
 
@@ -244,12 +201,7 @@ order_details_data <- anti_join(order_details_data, negative_data, by = "order_i
 # Removing the same from the other tables having address as a foreign key
 payment_data <- anti_join(payment_data, negative_data, by = "order_id")
 
-
-```
-
 ## Data checks for the payment data 
-```{r checkprimary,message=FALSE,warning=FALSE,attr.source='.numberLines'}
-
 # Getting the negative payment data
 negative_data <- payment_data %>% 
   filter(payment_amount < 0 | installment_number < 0 )
@@ -265,12 +217,7 @@ print(paste0(nrow(negative_data), " rows are removed from payment data because o
 # Removing it from all tables containing payment id
 payment_data <- anti_join(payment_data, negative_data, by = "payment_id")
 
-
-```
-
 ## Data checks for the product data 
-```{r checkprimary,message=FALSE,warning=FALSE,attr.source='.numberLines'}
-
 # Getting the negative and out of limits product data
 negative_data <- product_data %>% 
   filter(price < 0 | weight < 0 | weight > 100)
@@ -286,11 +233,7 @@ print(paste0(nrow(negative_data), " rows are removed from product data because o
 # Removing it from all tables containing product id
 product_data <- anti_join(product_data, negative_data, by = "product_id")
 
-```
-
 ## Data checks for the promotion data 
-```{r checkprimary,message=FALSE,warning=FALSE,attr.source='.numberLines'}
-
 # Convert character dates to Date data type
 promotion_data$start_date <- anydate(promotion_data$start_date)
 promotion_data$end_date <- anydate(promotion_data$end_date)
@@ -310,11 +253,7 @@ print(paste0(nrow(negative_data), " rows are removed from promotion because of i
 promotion_data <- anti_join(promotion_data, negative_data, by = "promotion_id")
 product_data <- anti_join(product_data, negative_data, by = "promotion_id")
 
-```
-
 ## Data checks for the review data 
-```{r checkprimary,message=FALSE,warning=FALSE,attr.source='.numberLines'}
-
 # Getting the negative and out of limits review data
 negative_data <- review_data %>% 
   filter(review_score < 0 | review_score >10 )
@@ -330,11 +269,7 @@ print(paste0(nrow(negative_data), " rows are removed from review data because of
 # Removing it from all tables containing review id
 review_data <- anti_join(review_data, negative_data, by = "review_id")
 
-```
-
 ## Data checks for the shipper data 
-```{r checkprimary,message=FALSE,warning=FALSE,attr.source='.numberLines'}
-
 # Getting the negative and out of limits shipper data
 negative_data <- shipper_data %>% 
   filter(fixed_price < 0 | cost_per_mile < 0 )
@@ -350,12 +285,7 @@ print(paste0(nrow(negative_data), " rows are removed from shipper data because o
 # Removing it from all tables containing shipper id
 shipper_data <- anti_join(shipper_data, negative_data, by = "shipper_id")
 
-
-```
-
 ## Data checks for the supplier data 
-```{r checkprimary,message=FALSE,warning=FALSE,attr.source='.numberLines'}
-
 # Getting the negative and out of limits supplier data
 negative_data <- supplier_data %>% 
   filter(number_of_year_of_association < 0 )
@@ -371,10 +301,7 @@ print(paste0(nrow(negative_data), " rows are removed from supplier data because 
 # Removing it from all tables containing shipper id
 supplier_data <- anti_join(supplier_data, negative_data, by = "supplier_id")
 
-```
-
 ### Referential Integrity Checks
-```{r}
 print("Referential Integrity Checks")
 
 # PRODUCT ENTITY
@@ -510,17 +437,11 @@ if(length(setdiff(unique(order_details_data$supplier_id),
   
 }
 
-```
-
 ## Access Existing Database
-```{r}
 connection <- dbConnect(RSQLite::SQLite(), "Database/ecommerce.db")
-```
 
 
 ## Checking for duplicates
-```{r loadsqlite,warning=FALSE,error=FALSE,message=FALSE,attr.source='.numberLines'}
-
 # Get the list of table names in the database
 table_names <- dbListTables(connection)
 
@@ -548,13 +469,7 @@ for (i in seq_along(dataname_list)) {
   assign(dataname_list[[i]], anti_join(datatemp, dataframes[[i]], by = id_col))
 }
 
-
-```
-
-
-
 ## Writing data to Existing Database tables
-```{r}
 # Write to existing table
 RSQLite::dbWriteTable(connection,"promotion",promotion_data,append=TRUE,rowname=FALSE)
 RSQLite::dbWriteTable(connection,"shipper",shipper_data,append=TRUE,rowname=FALSE)
@@ -567,17 +482,11 @@ RSQLite::dbWriteTable(connection,"review",review_data,append=TRUE,rowname=FALSE)
 RSQLite::dbWriteTable(connection,"order_details",order_details_data,append=TRUE,rowname=FALSE)
 RSQLite::dbWriteTable(connection,"payment",payment_data,append=TRUE,rowname=FALSE)
 
-```
-
-
 ## Access Existing Database
-```{r}
 db_conn <- dbConnect(RSQLite::SQLite(), "Database/ecommerce.db")
-```
 
 
 ## Basic Data Analysis
-```{r}
 address_table <- dbGetQuery(db_conn,"SELECT * FROM address")
 buyer_table <- dbGetQuery(db_conn,"SELECT * FROM buyer")
 dimension_table <- dbGetQuery(db_conn,"SELECT * FROM dimension")
@@ -599,14 +508,10 @@ for (i in seq_along(dataname_list)) {
   st(get(dataname_list[[i]]))
 }
 
-```
-
 
 
 ### Distribution of Total Payment Amount across orders
-```{r}
-
-payment_table <- dbGetQuery(db_conn,
+total_payment_table <- dbGetQuery(db_conn,
 "SELECT
     p.order_id,
     ROUND(SUM(p.payment_amount),2) AS total_payment_amount
@@ -616,9 +521,7 @@ GROUP BY
     p.order_id;
 ")
 
-
-# Plot
-histogram_plot <- ggplot(payment_table, aes(total_payment_amount)) +
+histogram_plot <- ggplot(total_payment_table, aes(total_payment_amount)) +
   geom_histogram(aes(y = after_stat(density)), binwidth=50) +
   geom_density() +
   ggtitle("Histogram visualising Distribution of 'Payment Amount' attribute") +
@@ -626,19 +529,7 @@ histogram_plot <- ggplot(payment_table, aes(total_payment_amount)) +
   theme(plot.title = element_text(size = 10, face = "bold", hjust = 0.5))
 histogram_plot
 
-```
-
 ### Product table : Distribution of Weight and Price of products
-```{r}
-
-product_table <- dbGetQuery(db_conn,
-"SELECT
-    *
-FROM
-    product
-")
-
-
 histogram_plot_list = list()
 for (col in colnames(product_table %>% select(where(is.numeric)))){
   histogram_plot <- ggplot(product_table, aes_string(x=col)) +
@@ -651,20 +542,7 @@ for (col in colnames(product_table %>% select(where(is.numeric)))){
 }
 grid.arrange(grobs=histogram_plot_list, ncol=2, top=text_grob("Distribution of Price and Weight of Products", size=14, face="bold"))
 
-```
-
 ### Distribution of Review Score across products
-```{r}
-
-review_table <- dbGetQuery(db_conn,
-"SELECT
-    *
-FROM
-    review
-")
-
-
-# Plot
 histogram_plot <- ggplot(review_table, aes(review_score)) +
   geom_histogram(aes(y = after_stat(density)), bins=20) +
   geom_density() +
@@ -673,19 +551,7 @@ histogram_plot <- ggplot(review_table, aes(review_score)) +
   theme(plot.title = element_text(size = 10, face = "bold", hjust = 0.5))
 histogram_plot
 
-```
-
 ### Distribution of Fixed Cost and Cost per mile of Shippers
-```{r}
-
-shipper_table <- dbGetQuery(db_conn,
-"SELECT
-    *
-FROM
-    shipper
-")
-
-
 histogram_plot_list = list()
 for (col in colnames(shipper_table %>% select(where(is.numeric)))){
   histogram_plot <- ggplot(shipper_table, aes_string(x=col)) +
@@ -698,20 +564,7 @@ for (col in colnames(shipper_table %>% select(where(is.numeric)))){
 }
 grid.arrange(grobs=histogram_plot_list, ncol=2, top=text_grob("Distribution of Fixed-Cost and Cost-per-mile of Shippers", size=14, face="bold"))
 
-```
-
 ### Distribution of Number of Years of association with Suppliers
-```{r}
-
-supplier_table <- dbGetQuery(db_conn,
-"SELECT
-    *
-FROM
-    supplier
-")
-
-
-# Plot
 histogram_plot <- ggplot(supplier_table, aes(number_of_year_of_association)) +
   geom_histogram(aes(y = after_stat(density)), bins=50) +
   geom_density() +
@@ -719,5 +572,3 @@ histogram_plot <- ggplot(supplier_table, aes(number_of_year_of_association)) +
   labs(x="Review Score", y="Density") +
   theme(plot.title = element_text(size = 10, face = "bold", hjust = 0.5))
 histogram_plot
-
-```
