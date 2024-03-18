@@ -26,10 +26,10 @@ jobs:
         if: steps.cache.outputs.cache-hit != 'true'
         run: |
           Rscript -e 'install.packages(c("ggplot2", "dplyr", "readr", "RSQLite", "anytime"))'
-      - name: Execute R script
+      - name: Execute Validation R script
         run: |
           Rscript Data_Validation_Import_Script.R
-      - name: Execute R script
+      - name: Execute Analysis R script
         run: |
           Rscript Advanced_Data_Analysis/Advanced_Data_Analysis.R
       - name: Add files
