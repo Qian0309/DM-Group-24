@@ -28,10 +28,10 @@ jobs:
           Rscript -e 'install.packages(c("ggplot2", "dplyr", "readr", "RSQLite", "anytime"))'
       - name: Execute R script
         run: |
-          Rscript Data_Validation_Import_Script.R
+          Rscript Data_Validation_Import_Script_02.R
       - name: Execute R script
         run: |
-          Rscript Advanced_Data_Analysis/Advanced_Data_Analysis.R
+          Rscript Advanced_Data_Analysis/Advanced_Data_Analysis_02.R
       - name: Add files
         run: |
           git config --global user.email "qian20000309@126.com"
