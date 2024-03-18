@@ -56,7 +56,11 @@ The Entity-Relationship (E-R) diagram for our e-commerce database before normali
 
 The Conceptual Schema explained in Section 1.1 is converted into Logical Schema after normalising using the below steps,
 
-1NF : Multi-valued attributes include 'Buyer_Address' in Buyer entity, 'Supplier_Address' in Supplier entity and 'Dimensions' in Product entity that must be normalised. To do the same, a separate Address table is created that stores Address information with attributes that inlcude address_id, house_number, house_name, street, city, county and post_code. The Address entity is then referenced to Buyer and Supplier entities using referential keys, i.e., address_id would be a foreign key in Supplier and Buyer entity. 
+1NF : Multi-valued attributes include 'Buyer_Address' in Buyer entity, 'Supplier_Address' in Supplier entity and 'Dimensions' in Product entity that must be normalised. To do the same, a separate Address table is created that stores Address information with attributes that inlcude address_id, house_number, house_name, street, city, county and post_code. The Address entity is then referenced to Buyer and Supplier entities using referential keys, i.e., address_id would be a foreign key in Supplier and Buyer entities with 1:1 cardinality. Dimension is created as a separate entity and referenced to Product table with 1:1 cardinality. 
+
+2NF : Product and Buyer has a M:N relationship and hence violates 2NF having Functional Dependencies were many Products can bought by single Buyer and the vice versa creating duplicate entries of primary key attribute in each table. To overcome this, a relationship table called 'order_details' is created with product_id and buyer_id being compositely stored as primary key with 'order_id' primary key of order_details table.
+
+3NF : The Logical Schema is designed to include only attributes that are directly dependent on primary key of their respective table with no transitive dependencies. 
 
 ### Conceputual Schema of the Database after Normalisation
 
@@ -454,10 +458,47 @@ With this action, the workflow file under GitHub Actions is now operational, and
 
 # Part 4: Advanced Data Analysis and Reporting with Quarto in R
 
+```{r}
+# Importing necessary libraries
+library(RSQLite)
+library(dplyr)
+library(ggplot2)
+```
+
+
+```{r}
+## Access Existing Database
+db_conn <- dbConnect(RSQLite::SQLite(), "Database/ecommerce.db")
+```
+
 **Product with Highest Sales:**
+```{r}
+top_5_products_sales <- dbGetQuery(db_conn, "SELECT
+    od.product_id,
+    p.product_name,
+    ROUND(SUM(p.price),2) AS total_sales
+FROM
+    order_details od
+JOIN
+    product p ON od.product_id = p.product_id
+GROUP BY
+    od.product_id,
+    p.product_name
+ORDER BY
+    total_sales DESC
+LIMIT
+    5;
+")
 
-\[Code\]
-
+ggplot(top_5_products_sales, aes(x = reorder(product_name, total_sales), y = total_sales)) +
+  geom_col(width = 0.8) + 
+  geom_text(aes(label = total_sales), vjust = 0.2, hjust=-0.1, position=position_dodge(width=0.9),size=3) +
+  labs(x = "Product Name", y = "Total Sales") +
+  theme_minimal() +
+  coord_flip() + 
+  ggtitle("Top 5 Products by Sales") +
+  theme(plot.title = element_text(size = 10, face = "bold", hjust = 0.5), legend.position = 'none')
+```
 Revealing the top 5 products by sales offers insights into customer preferences and product performance. It highlights the most popular products, indicating their demand and popularity in the market, and shows what the company should focus on selling to maximise revenue.
 
 **Cities With Highest Sales:**
