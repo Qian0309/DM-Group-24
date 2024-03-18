@@ -89,6 +89,18 @@ ggplot(top_5_products_promotion, aes(x = reorder(product_name, total_sales), y =
   ggtitle("Promotion Status of Top 5 products with respect to Sales") +
   theme(plot.title = element_text(size = 10, face = "bold", hjust = 0.5), legend.position = 'right') 
 ```
+```{r}
+promotion_data
+```
+
+```{r}
+promotion_data <- mutate(promotion_data,
+                         start_date = as.Date(start_date,format= "%Y-%m-%d"),
+                         end_date = as.Date(end_date,format= "%Y-%m-%d"),
+                         num_days_promotion = end_date - start_date)
+promotion_data
+```
+
 
 3) Number of days promotions are running
 ```{r}

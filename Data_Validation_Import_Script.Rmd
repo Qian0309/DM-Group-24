@@ -548,6 +548,9 @@ for (i in seq_along(dataname_list)) {
 
 ```
 
+```{r}
+promotion_data
+```
 
 
 ## Writing data to Existing Database tables
@@ -597,6 +600,11 @@ for (i in seq_along(dataname_list)) {
 }
 
 ```
+
+```{r}
+promotion_t
+```
+
 
 ### Distribution of Total Payment Amount across orders
 ```{r}

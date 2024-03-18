@@ -3,8 +3,8 @@ library(RSQLite)
 library(readr)
 library(dplyr)
 library(anytime)
-library(DBI)
 library(ggplot2)
+library(DBI)
 
 ## File Prefix and Suffix
 # read files from 'data' folder
