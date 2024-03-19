@@ -43,23 +43,21 @@ In this report, we assume that the E-commerce platform primarily sells IT produc
 
 7)  Reviews: Represents the reviews made by the customer once the product is received.
 
-The Entity-Relationship (E-R) diagram for our e-commerce database before normalization is shown below:
+The Entity-Relationship (E-R) diagram for our e-commerce database before normalisation is shown below:
 
 ![](Figures\Screenshots\ERD\ERD_before_normalization.png){fig-align="center"}
 
 ## Task 1.2: SQL Database Schema Creation
 
-The Conceptual Schema explained in Section 1.1 is converted into Logical Schema after normalising using the below steps,
+The conceptual schema outlined in Section 1.1 is converted into a logical schema after normalisation, using the following steps:
 
-1NF : Multi-valued attributes include 'Buyer_Address' in Buyer entity, 'Supplier_Address' in Supplier entity and 'Dimensions' in Product entity that must be normalised. To do the same, a separate Address table is created that stores Address information with attributes that inlcude address_id, house_number, house_name, street, city, county and post_code. The Address entity is then referenced to Buyer and Supplier entities using referential keys, i.e., address_id would be a foreign key in Supplier and Buyer entities with 1:1 cardinality. Dimension is created as a separate entity and referenced to Product table with 1:1 cardinality. 
+1NF: Multi-valued attributes include 'Buyer_Address' in the Buyer entity, 'Supplier_Address' in the Supplier entity, and 'Dimensions' in the Product entity that must be normalized. To address this, a separate Address table is created that stores address information with attributes that include address_id, house_number, house_name, street, city, county, and post_code. The Address entity is then linked to the Buyer and Supplier entities using referential keys; i.e., address_id serves as a foreign key in both Supplier and Buyer entities with a 1:1 cardinality. Similarly, dimensions are created as a separate entity and linked to the Product table with a 1:1 cardinality.
 
-2NF : Product and Buyer has a M:N relationship and hence violates 2NF having Functional Dependencies were many Products can bought by single Buyer and the vice versa creating duplicate entries of primary key attribute in each table. To overcome this, a relationship table called 'order_details' is created with product_id and buyer_id being compositely stored as primary key with 'order_id' primary key of order_details table.
+2NF: The Product and Buyer entities have an M:N relationship, which violates 2NF due to functional dependencies where many products can be bought by a single buyer and vice versa, creating duplicate entries of the primary key attribute in each table. To resolve this, a relationship table called 'order_details' is created, with product_id and buyer_id compositely stored as a primary key, and 'order_id' as the primary key of the order_details table.
 
-3NF : The Logical Schema is designed to include only attributes that are directly dependent on primary key of their respective table with no transitive dependencies. 
+3NF: The Logical Schema is designed to include only attributes that are directly dependent on the primary key of their respective table, with no transitive dependencies.
 
-### Conceputual Schema of the Database after Normalisation
-
-~~The E-R diagram after normalization is shown below.~~
+### Conceputual E-R Diaram of the Database after Normalisation
 
 ![](Figures\Screenshots\ERD\ERD_after_normalization.png){fig-align="center"}
 
@@ -85,85 +83,85 @@ The Conceptual Schema explained in Section 1.1 is converted into Logical Schema 
 
 * dimension(Dimension_ID, Length, Width, Height) 
 
-### Relationship Sets after Normalization
+### Relationship Sets after Normalisation
 
-We've conceptualised 12 relationship sets to effectively model and manage the data structure underlying our E-commerce operations. (consider to drop: ~~These sets illustrate how different entities within our ecosystem interact and connect with one another, providing a comprehensive overview for stakeholders.~~) Below is a detailed summary of these critical relationships:
+We've conceptualised 12 relationship sets to illustrate how different entities within our e-commerce database interact and connect with one another.
 
 1)  Buyer and Address (1:1):
 
 ![](Figures\Screenshots\relationship_set\buyer_address(1_1).png){fig-align="center"}
 
-~~This diagram shows one-to-one relationship between buyers and addresses,~~ it also indicates that each buyer has one address, and each address is associated with one buyer.
+Indicates that each buyer has one address, and each address is associated with one buyer.
 
 2)  Buyer and Order Details (1:N):
 
 ![](Figures\Screenshots\relationship_set\buyer_order(1_n).png){fig-align="center"}
 
-~~This shows a one-to-many relationship,~~ indicating a buyer can place multiple orders, with each 'order detail' linked to a single 'buyer'.
+Indicating a buyer can place multiple orders, with each 'order detail' linked to a single 'buyer'.
 
 3)  Buyer and Reviews (1:N):
 
 ![](Figures\Screenshots\relationship_set\buyer_review(1_n).png){fig-align="center"}
 
-~~This shows a one-to-many relationship,~~ meaning a buyer can submit multiple reviews, with each review associated with that buyer.
+Meaning a buyer can submit multiple reviews, with each review associated with that buyer.
 
 4)  Order Details and Payment (1:N):
 
 ![](Figures\Screenshots\relationship_set\order_payment(1_n).png){fig-align="center"}
 
-~~It shows a one-to-many relationship,~~ meaning each order detail can involve multiple transactions, with each transaction corresponding to a specific order detail.
+Meaning each order detail can involve multiple transactions, with each transaction corresponding to a specific order detail.
 
 5)  Product to Dimension (1:1):
 
 ![](Figures\Screenshots\relationship_set\product_dimension(1_1).png){fig-align="center"}
 
-~~This represents a one-to-one relationship,~~ indicating each product has a unique set of dimensions, with each set of dimensions tied to a single product.
+Indicating each product has a unique set of dimensions, with each set of dimensions tied to a single product.
 
 6)  Product to Order Details (1:N):
 
 ![](Figures\Screenshots\relationship_set\product_order(1_n).png){fig-align="center"}
 
-~~This represents a one-to-many relationship between product and order details.~~ meaning that one product can be present in many order details, Conversely, each order detail is associated with only one product, indicating a specific product is selected for each order.
+Meaning that one product can be present in many order details. Conversely, each order detail is associated with only one product, indicating a specific product is selected for each order.
 
 7)  Product to Promotion (N:1):
 
 ![](Figures\Screenshots\relationship_set\Product_Promotion(n_1).png){fig-align="center"}
 
-~~This represents a many-to-one relationship~~ indicating that multiple products can be part of the same promotion. Conversely, each promotion can apply to multiple products.
+Indicating that multiple products can be part of the same promotion. Conversely, each promotion can apply to multiple products.
 
 8)  Product to Review (1:N):
 
 ![](Figures\Screenshots\relationship_set\Product_Review(1_n).png){fig-align="center"}
 
-~~Represents a one-to-many relationship,~~ showing that each product can have multiple reviews written about it, Conversely, each review is associated with one product, indicating that customers’ feedback is specific to a particular product
+Showing that each product can have multiple reviews written about it. Conversely, each review is associated with one product, indicating that customers’ feedback is specific to a particular product
 
 9)  Supplier and Order Details (1:N):
 
 ![](Figures\Screenshots\relationship_set\shipper_order(1_n).png){fig-align="center"}
 
-~~This illustrates a one-to-many relationship,~~ showing that a single supplier can be connected to multiple order details, with each order detail relating to only one supplier.
+Showing that a single supplier can be connected to multiple order details, with each order detail relating to only one supplier.
 
 10) Supplier and Address (1:1):
 
 ![](Figures\Screenshots\relationship_set\supplier_address(1_1).png){fig-align="center"}
 
-~~This represents a one-to-one relationship,~~ where each supplier is tied to a single address, and each address is linked to a specific supplier
+Each supplier is tied to a single address, and each address is linked to a specific supplier
 
 11) Supplier and Order Details (1:N):
 
 ![](Figures\Screenshots\relationship_set\supplier_order(1_n).png){fig-align="center"}
 
-~~This illustrates a one-to-many relationship,~~ showing that a single supplier can be connected to multiple order details, with each order detail relating to only one supplier.
+Showing that a single supplier can be connected to multiple order details, with each order detail relating to only one supplier.
 
 12) Supplier and Product (1:N):
 
 ![](Figures\Screenshots\relationship_set\supplier_product(1_n).png){fig-align="center"}
 
-~~This shows a one-to-many relationship,~~ indicating that a supplier sells many products. One supplier can be linked to multiple 'product' entities.
+Indicating that a supplier sells many products. One supplier can be linked to multiple 'product' entities.
 
 ### Physical Schema of the Database
 
-Now, we can Translate the E-R diagram into a functional SQL database schema (normalized to up to 3NF), define tables with appropriate data types, constraints, primary and foreign keys.
+Now, we can translate the E-R diagram into a functional SQL database schema (normalised to up to 3NF), define tables with appropriate data types, constraints, primary and foreign keys.
 
 #### Table Description for Promotions
 
@@ -419,7 +417,7 @@ Referential integrity checks are conducted for all relationships discussed in Se
 
 ![](Figures\Screenshots\GitHub_related\GitHub_Repo.png){fig-align="center"}
 
-To allow group members to collaborate on the project simultaneously we have adopted the use of a remote repository (an online storage system for our project’s history) on GitHub. This online platform serves as a centralised storage for our project's history, enabling efficient management and version control.
+To allow group members to collaborate on the project simultaneously we have adopted the use of a remote repository on GitHub. This online platform serves as a centralised storage for our project's history, enabling efficient management and version control.
 
 ![](Figures\Screenshots\GitHub_related\repo_url.png){fig-align="center"}
 Integrating our project with Posit Cloud, we used the HTTPS clone URL from GitHub to establish a connection between our local and remote repositories directly within Posit Cloud. This integration streamlined our workflow by providing a centralised platform for development, enabling efficient access and management of the project's codebase.
@@ -672,8 +670,6 @@ ggplot(lowest_5_products_reviews, aes(x = reorder(product_name, -average_review_
   theme(plot.title = element_text(size = 10, face = "bold", hjust = 0.5), legend.position = 'none')
 ```
 
-
-
 Examining top and lowest reviewed products provides insights into customer preferences and areas for improvement. This feedback guides product development and enhances customer satisfaction.
 
 
@@ -769,6 +765,9 @@ ggplot(most_reviewed_products, aes(x = reorder(product_name, -review_count), y =
   theme(plot.title = element_text(size = 10, face = "bold", hjust = 0.5), legend.position = 'none')
 ```
 
-
-
 Identifying the most reviewed products highlights customer engagement and product visibility. Products with many reviews often have better market presence and credibility, impacting brand reputation and customer trust.
+
+
+# Conclusion
+
+To conclude, this project not only demonstrated technical prowess in data management but also set a benchmark for future e-commerce database projects, emphasising the importance of a well-structured and analytically driven database design in the digital commerce landscape. Through four distinct stages, the project encapsulated the essence of database design, normalisation, data generation, and advanced data analysis to generate insights for thr company.
