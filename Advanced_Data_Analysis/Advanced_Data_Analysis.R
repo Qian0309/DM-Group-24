@@ -6,7 +6,7 @@ library(ggplot2)
 ## Access Existing Database
 db_conn <- dbConnect(RSQLite::SQLite(), "Database/ecommerce.db")
 
-## save image in folder "Updated_Visualisations"
+## save image in folder "Advanced_Data_Analysis"
 this_filename_date <- as.character(Sys.Date())
 # format the Sys.time() to show only hours and minutes 
 this_filename_time <- as.character(format(Sys.time(), format = "%H_%M"))
