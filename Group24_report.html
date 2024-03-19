@@ -148,13 +148,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p>product(product _id, product _name, product _description, weight, price, promotion_id, dimension_id , supplier_id)</p></li>
 <li><p>promotion(promotion_id, promotion_type, start_date, end_date, status)</p></li>
 <li><p>buyer(buyer_id, first_name, last_name, date_of_birth, address_id)</p></li>
-</ul>
-<p>*supplier(Supplier_ID, Supplier_Name, Supplier_Type, Contract_Type, Number_of_year_of_association, address_id)</p>
-<ul>
-<li>review(review_id, review_score, review_description, product_id, buyer_id)</li>
-</ul>
-<p>*payment(payment_id, payment_type, payment_amount, installment_number, order_id)</p>
-<ul>
+<li><p>supplier(Supplier_ID, Supplier_Name, Supplier_Type, Contract_Type, Number_of_year_of_association, address_id)</p></li>
+<li><p>review(review_id, review_score, review_description, product_id, buyer_id)</p></li>
+<li><p>payment(payment_id, payment_type, payment_amount, installment_number, order_id)</p></li>
 <li><p>shipper(Shipper_ID, Shipper_Name, Service, Fixed Price, Cost_per_mile)</p></li>
 <li><p>order_details(order_id, product_id, buyer_id, supplier_id, order_dates, shipper_id)</p></li>
 <li><p>address(address_id, house_number, house_name, street, city, county, post_code)</p></li>
@@ -172,7 +168,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><img src="Figures\Screenshots\relationship_set\buyer_address(1_1).png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
 </figure>
 </div>
-<p>Indicates that each buyer has one address, and each address is associated with one buyer.</p>
+<p>Indicating that each buyer has one address, and each address is associated with one buyer.</p>
 <ol start="2" type="1">
 <li>Buyer and Order Details (1:N):</li>
 </ol>
@@ -1015,9 +1011,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="task-2.1-synthetic-data-generation" class="level2">
 <h2 class="anchored" data-anchor-id="task-2.1-synthetic-data-generation">Task 2.1: Synthetic Data Generation</h2>
 <p>In the process of synthetic data generation, we use a combination of R, Mockaroo, and Excel to simulate a dataset that closely mimics real-world scenarios. Our dataset consists of 10 distinct entities that represent all the components in our system.</p>
-<p>Mockaroo: For several entities we use Mockaroo to create data such as addresses, emails, and names.</p>
-<p>R studios: We use R scripts to simulate the data distributions, especially in product, promotion, all the ID’s, and date related attributes, we wanted to make sure that the synthetic data reflects realistic variability and complexity.</p>
-<p>Excel: After we imported the data from R and mockaroo, we combined the foreign keys. We use ‘Randbwteen’ features to ensure that the inter-entity relationships are accurately represented.</p>
+<ul>
+<li><p>Mockaroo: For several entities we use Mockaroo to create data such as addresses, emails, and names.</p></li>
+<li><p>R studios: We use R scripts to simulate the data distributions, especially in product, promotion, all the ID’s, and date related attributes, we wanted to make sure that the synthetic data reflects realistic variability and complexity.</p></li>
+<li><p>Excel: After we imported the data from R and mockaroo, we combined the foreign keys. We use ‘Randbwteen’ features to ensure that the inter-entity relationships are accurately represented.</p></li>
+</ul>
 </section>
 <section id="task-2.2-data-import-and-quality-assurance" class="level2">
 <h2 class="anchored" data-anchor-id="task-2.2-data-import-and-quality-assurance">Task 2.2: Data Import and Quality Assurance</h2>
@@ -1031,7 +1029,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ol start="2" type="1">
 <li>Date fields:</li>
 </ol>
-<p>No future dates should appear in any date field. This includes the Date of Birth of buyers, Promotion start and end dates, and Order dates.</p>
+<p>No future dates should appear in any date field. This includes the Date of Birth of buyers and Order dates.</p>
 <ol start="3" type="1">
 <li>Product entity:</li>
 </ol>

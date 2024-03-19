@@ -69,11 +69,11 @@ The conceptual schema outlined in Section 1.1 is converted into a logical schema
 
 * buyer(buyer_id, first_name, last_name, date_of_birth, address_id) 
 
-*supplier(Supplier_ID, Supplier_Name, Supplier_Type, Contract_Type, Number_of_year_of_association, address_id) 
+* supplier(Supplier_ID, Supplier_Name, Supplier_Type, Contract_Type, Number_of_year_of_association, address_id) 
 
 * review(review_id, review_score, review_description, product_id, buyer_id) 
 
-*payment(payment_id, payment_type, payment_amount, installment_number, order_id) 
+* payment(payment_id, payment_type, payment_amount, installment_number, order_id) 
 
 * shipper(Shipper_ID, Shipper_Name, Service, Fixed Price, Cost_per_mile) 
 
@@ -91,7 +91,7 @@ We've conceptualised 12 relationship sets to illustrate how different entities w
 
 ![](Figures\Screenshots\relationship_set\buyer_address(1_1).png){fig-align="center"}
 
-Indicates that each buyer has one address, and each address is associated with one buyer.
+Indicating that each buyer has one address, and each address is associated with one buyer.
 
 2)  Buyer and Order Details (1:N):
 
@@ -363,11 +363,11 @@ kable(payment_table, caption = "Table Description for Payments", align = 'l')
 
 In the process of synthetic data generation, we use a combination of R, Mockaroo, and Excel to simulate a dataset that closely mimics real-world scenarios. Our dataset consists of 10 distinct entities that represent all the components in our system.
 
-Mockaroo: For several entities we use Mockaroo to create data such as addresses, emails, and names.
+* Mockaroo: For several entities we use Mockaroo to create data such as addresses, emails, and names.
 
-R studios: We use R scripts to simulate the data distributions, especially in product, promotion, all the ID’s, and date related attributes, we wanted to make sure that the synthetic data reflects realistic variability and complexity.
+* R studios: We use R scripts to simulate the data distributions, especially in product, promotion, all the ID’s, and date related attributes, we wanted to make sure that the synthetic data reflects realistic variability and complexity.
 
-Excel: After we imported the data from R and mockaroo, we combined the foreign keys. We use ‘Randbwteen’ features to ensure that the inter-entity relationships are accurately represented.
+* Excel: After we imported the data from R and mockaroo, we combined the foreign keys. We use ‘Randbwteen’ features to ensure that the inter-entity relationships are accurately represented.
 
 ## Task 2.2: Data Import and Quality Assurance
 
@@ -381,7 +381,7 @@ No NA/NULL values are allowed in the primary key attributes of any entities. The
 
 2) Date fields:
 
-No future dates should appear in any date field. This includes the Date of Birth of buyers, Promotion start and end dates, and Order dates.
+No future dates should appear in any date field. This includes the Date of Birth of buyers and Order dates.
 
 3) Product entity:
 
