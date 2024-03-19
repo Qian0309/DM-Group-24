@@ -23,9 +23,9 @@ library(ggplot2)
 
 In this project, we developed a UK-based e-commerce database for IT products, without international shipping. The project unfolds in four stages, each enhancing our platform's development and comprehension.
 
-# 1: Database Design and Implementation
+# Section 1: Database Design and Implementation
 
-## 1.1: E-R Diagram Design and Relationship Sets
+## Section 1.1: E-R Diagram Design and Relationship Sets
 
 The platform adheres to an annual promotion policy and uses a "Product_ID" system based on "Supplier_ID," limiting suppliers to a unique ID per product. It also handles payment collection and subsequent distribution to suppliers. It involves 7 entities.
 
@@ -47,7 +47,7 @@ The E-R diagram below illustrates the e-commerce database pre-normalisation.
 
 ![](Figures\Screenshots\ERD\ERD_before_normalization.png){fig-align="center"}
 
-## 1.2: SQL Database Schema Creation
+## Section 1.2: SQL Database Schema Creation
 
 The conceptual schema outlined in Section 1.1 is converted into a logical schema after normalisation, using the following steps:
 
@@ -63,60 +63,25 @@ The conceptual schema outlined in Section 1.1 is converted into a logical schema
 
 ### Logical Schema of the Database after Normalisation
 
-```{r}
-product_table <- data.frame(
-  `product` = c("product_id", "product_name", "product_description", "weight", "price", "promotion_id", "supplier_id", "dimension_id")
-)
-kable(product_table, caption = "Logical Schema for Products", align = 'l')
+* product(product _id, product _name, product _description, weight, price, promotion_id, dimension_id , supplier_id) 
 
+* promotion(promotion_id, promotion_type, start_date, end_date, status) 
 
-promotion_table <- data.frame(
-  `Promotion` = c("promotion_id", "promotion_type", "start_date", "end_date", "status")
-)
-kable(promotion_table, caption = "Logical Schema for Promotion", align = 'l')
+* buyer(buyer_id, first_name, last_name, date_of_birth, address_id) 
 
-buyer_table <- data.frame(
-  `Buyer` = c("buyer_id", "first_name", "last_name", "date_of_birth", "address_id")
-)
-kable(buyer_table, caption = "Logical Schema for Buyer", align = 'l')
+* supplier(Supplier_ID, Supplier_Name, Supplier_Type, Contract_Type, Number_of_year_of_association, address_id) 
 
-supplier_table <- data.frame(
-  `Supplier` = c("Supplier_ID", "Supplier_Name", "Supplier_Type", "Contract_Type", "Number_of_year_of_association", "address_id")
-)
-kable(supplier_table, caption = "Logical Schema for Supplier", align = 'l')
+* review(review_id, review_score, review_description, product_id, buyer_id) 
 
-review_table <- data.frame(
-  `Review` = c("review_id", "review_score", "review_description", "product_id", "buyer_id")
-)
-kable(review_table, caption = "Logical Schema for Review", align = 'l')
+* payment(payment_id, payment_type, payment_amount, installment_number, order_id) 
 
-payment_table <- data.frame(
-  `Payment` = c("payment_id", "payment_type", "payment_amount", "installment_number", "order_id")
-)
-kable(payment_table, caption = "Logical Schema for Payment", align = 'l')
+* shipper(Shipper_ID, Shipper_Name, Service, Fixed Price, Cost_per_mile) 
 
-shipper_table <- data.frame(
-  `Shipper` = c("Shipper_ID", "Shipper_Name", "Service", "Fixed Price", "Cost_per_mile")
-)
-kable(shipper_table, caption = "Logical Schema for Shipper", align = 'l')
+* order_details(order_id, product_id, buyer_id, supplier_id, order_dates, shipper_id) 
 
-order_details_table <- data.frame(
-  `Order Details` = c("order_id", "product_id", "buyer_id", "supplier_id", "order_dates", "shipper_id")
-)
-kable(order_details_table, caption = "Logical Schema for Order Details", align = 'l')
+* address(address_id, house_number, house_name, street, city, county, post_code) 
 
-address_table <- data.frame(
-  `Address` = c("address_id", "house_number", "house_name", "street", "city", "county", "post_code")
-)
-kable(address_table, caption = "Logical Schema for Address", align = 'l')
-
-dimension_table <- data.frame(
-  `Dimension` = c("Dimension_ID", "Length", "Width", "Height")
-)
-kable(dimension_table, caption = "Logical Schema for Dimension", align = 'l')
-
-```
-
+* dimension(Dimension_ID, Length, Width, Height) 
 
 ### Relationship Sets after Normalisation
 
@@ -392,9 +357,9 @@ payment_table <- data.frame(
 kable(payment_table, caption = "Table Description for Payments", align = 'l')
 ```
 
-# 2: Data Generation and Management
+# Section 2: Data Generation and Management
 
-## 2.1: Synthetic Data Generation
+## Section 2.1: Synthetic Data Generation
 
 We synthesised data with R, Mockaroo, and Excel to simulate a dataset that closely mimics real-world scenarios.
 
@@ -406,7 +371,7 @@ We synthesised data with R, Mockaroo, and Excel to simulate a dataset that close
 
 We produced four data splits for ingestion validation, incorporating flawed entries in the final two to test our validation protocols.
 
-## 2.2: Data Import and Quality Assurance
+## Section 2.2: Data Import and Quality Assurance
 
 The synthetic data, generated in .csv format, is imported. The data undergoes various integrity and validation checks, detailed below:
 
@@ -448,9 +413,9 @@ All numeric attributes of float or integer type must not have negative values. T
 
 Referential integrity checks are conducted for all relationships discussed in Section 1.1. For example, in the Product to Review (1:N) relationship, the Review entity's Product_ID, serving as a foreign key, indicates a specific product's review in the E-commerce system. Referential integrity ensures no review is entered for a product not present in the system. To validate, unique Product_ID keys from the Review table are compared with those from the Product table; the difference should be NULL or 0. A non-zero value indicates the presence of a Product_ID in the Review table that doesn't match any in the Product table, violating referential integrity. Such records are removed from the Review table.
 
-# 3: Data Pipeline Generation
+# Section 3: Data Pipeline Generation
 
-## 3.1: GitHub Repository and Workflow Setup
+## Section 3.1: GitHub Repository and Workflow Setup
 
 ![](Figures\Screenshots\GitHub_related\GitHub_Repo.png){fig-align="center"}
 To allow group members to collaborate on the project simultaneously we have adopted the use of a remote repository on GitHub. This online platform serves as a centralised storage for our project's history, enabling efficient management and version control.
@@ -465,7 +430,7 @@ Pushing these commits to the remote repository then publishes each member's cont
 
 ![](Figures\Screenshots\GitHub_related\working_log.png){fig-align="center"}
 
-## 3.2: GitHub Actions for Continuous Integration
+## Section 3.2: GitHub Actions for Continuous Integration
 
 GitHub Workflows automate processes within a repository using YAML files. We started by creating a `.github/workflows/` directory to house our workflow files. Then, we added a file named "ETL workflow for group24" within this directory to outline our specific automated tasks, focusing on the Extract, Transform, Load (ETL) processes crucial to our project's data handling needs, enhancing efficiency.
 
@@ -486,15 +451,15 @@ As shown in the screenshot above, there are some data did not pass the validatio
 We use a GitHub remote repository to enable simultaneous team collaboration, providing a centralised project history for effective management and version control.
 
 
-# 4: Advanced Data Analysis and Reporting with Quarto in R
+# Section 4: Advanced Data Analysis and Reporting with Quarto in R
 
 ```{r}
 ## Access Existing Database
 db_conn <- dbConnect(RSQLite::SQLite(), "Database/ecommerce.db")
 ```
 
-** Top 5 Products with Highest Sales:**
-```{r}
+**Top 5 Products with Highest Sales:**
+```{r fig.height = 3, fig.width=9}
 top_5_products_sales <- dbGetQuery(db_conn, "SELECT
     od.product_id,
     p.product_name,
@@ -514,7 +479,7 @@ LIMIT
 
 ggplot(top_5_products_sales, aes(x = reorder(product_name, total_sales), y = total_sales)) +
   geom_col(width = 0.8) + 
-  geom_text(aes(label = total_sales), vjust = 0.2, hjust=-0.1, position=position_dodge(width=0.9),size=3) +
+  geom_text(aes(label = (total_sales)), vjust = 0.3, hjust=-0.1, position=position_dodge(width=0.9),size=3) +
   labs(x = "Product Name", y = "Total Sales") +
   theme_minimal() +
   coord_flip() + 
@@ -808,4 +773,7 @@ Showcases customer interaction and market visibility, with highly reviewed produ
 
 In summary, this project showcased a technical blueprint for data management and set a standard for future e-commerce databases by highlighting the critical role of structured and data-driven design. It encompassed four key phases—design and normalisation, synthetic data creation, workflow management and in-depth analysis—providing valuable insights for e-commerce systems.
 
-The final set of files can be found here: https://github.com/Qian0309/DM-Group-24
+
+# Appendix
+
+1. See our GitHub repository via this link: https://github.com/Qian0309/DM-Group-24
