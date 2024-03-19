@@ -113,7 +113,7 @@ for (i in seq_along(dataname_list)) {
 ## Data checks for the address 
 # Getting the negative house number data
 negative_data <- address_data %>% 
-  filter(house_number < 0)
+  filter(house_number < 0 | nchar(post_code) > 9 | nchar(post_code) < 5)
 
 
 # Print the filtered data
