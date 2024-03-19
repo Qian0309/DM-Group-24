@@ -131,11 +131,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="task-1.2-sql-database-schema-creation" class="level2">
 <h2 class="anchored" data-anchor-id="task-1.2-sql-database-schema-creation">Task 1.2: SQL Database Schema Creation</h2>
 <p>The conceptual schema outlined in Section 1.1 is converted into a logical schema after normalisation, using the following steps:</p>
-<p>1NF: Multi-valued attributes include ‘Buyer_Address’ in the Buyer entity, ‘Supplier_Address’ in the Supplier entity, and ‘Dimensions’ in the Product entity that must be normalized. To address this, a separate Address table is created that stores address information with attributes that include address_id, house_number, house_name, street, city, county, and post_code. The Address entity is then linked to the Buyer and Supplier entities using referential keys; i.e., address_id serves as a foreign key in both Supplier and Buyer entities with a 1:1 cardinality. Similarly, dimensions are created as a separate entity and linked to the Product table with a 1:1 cardinality.</p>
-<p>2NF: The Product and Buyer entities have an M:N relationship, which violates 2NF due to functional dependencies where many products can be bought by a single buyer and vice versa, creating duplicate entries of the primary key attribute in each table. To resolve this, a relationship table called ‘order_details’ is created, with product_id and buyer_id compositely stored as a primary key, and ‘order_id’ as the primary key of the order_details table.</p>
-<p>3NF: The Logical Schema is designed to include only attributes that are directly dependent on the primary key of their respective table, with no transitive dependencies.</p>
-<section id="conceputual-e-r-diaram-of-the-database-after-normalisation" class="level3">
-<h3 class="anchored" data-anchor-id="conceputual-e-r-diaram-of-the-database-after-normalisation">Conceputual E-R Diaram of the Database after Normalisation</h3>
+<ul>
+<li><p>1NF: Multi-valued attributes include ‘Buyer_Address’ in the Buyer entity, ‘Supplier_Address’ in the Supplier entity, and ‘Dimensions’ in the Product entity that must be normalized. To address this, a separate Address table is created that stores address information with attributes that include address_id, house_number, house_name, street, city, county, and post_code. The Address entity is then linked to the Buyer and Supplier entities using referential keys; i.e., address_id serves as a foreign key in both Supplier and Buyer entities with a 1:1 cardinality. Similarly, dimensions are created as a separate entity and linked to the Product table with a 1:1 cardinality.</p></li>
+<li><p>2NF: The Product and Buyer entities have an M:N relationship, which violates 2NF due to functional dependencies where many products can be bought by a single buyer and vice versa, creating duplicate entries of the primary key attribute in each table. To resolve this, a relationship table called ‘order_details’ is created, with product_id and buyer_id compositely stored as a primary key, and ‘order_id’ as the primary key of the order_details table.</p></li>
+<li><p>3NF: The Logical Schema is designed to include only attributes that are directly dependent on the primary key of their respective table, with no transitive dependencies.</p></li>
+</ul>
+<section id="conceputual-e-r-diagram-of-the-database-after-normalisation" class="level3">
+<h3 class="anchored" data-anchor-id="conceputual-e-r-diagram-of-the-database-after-normalisation">Conceputual E-R Diagram of the Database after Normalisation</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="Figures\Screenshots\ERD\ERD_after_normalization.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
@@ -1016,6 +1018,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p>R studios: We use R scripts to simulate the data distributions, especially in product, promotion, all the ID’s, and date related attributes, we wanted to make sure that the synthetic data reflects realistic variability and complexity.</p></li>
 <li><p>Excel: After we imported the data from R and mockaroo, we combined the foreign keys. We use ‘Randbwteen’ features to ensure that the inter-entity relationships are accurately represented.</p></li>
 </ul>
+<p>For the purpose of validating multiple ingestions, four splits of data are generated. There are entries of bad data in the last two splits to check the validation tests.</p>
 </section>
 <section id="task-2.2-data-import-and-quality-assurance" class="level2">
 <h2 class="anchored" data-anchor-id="task-2.2-data-import-and-quality-assurance">Task 2.2: Data Import and Quality Assurance</h2>
@@ -1087,6 +1090,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>In this phase of configuring our GitHub Workflow, we set the trigger condition to activate on every push event to the repository. This configuration ensures that any time changes are pushed or a pull request is merged, the workflow initiates automatically. Following a thorough review of the code to confirm its accuracy and completeness, we commit and push these updates to our GitHub repository.</p>
 <p><img src="Figures\Screenshots\GitHub_related\workflow_yaml_file.png" class="img-fluid quarto-figure quarto-figure-center"> In the workflow of our project, we automate the data quality check, data ingestion into the database, and basic data analysis in the R script “Data_Validation_Import_Script.R”, and the advanced data analysis in the R script “Advanced_Data_Analysis.R”. Everytime new data files are added to the data folder in the local repository, the push request triggers actions including the validation of new data, updating the database with the cleaned new data, and automatically saving the visualizations produced by the advanced data analysis into the folder “Advanced_Data_Analysis”.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Figures\Screenshots\GitHub_related\bad_data_detected.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<p>As shown in the screenshot above, there are some data did not pass the validation checks and are excluded from ingestions.</p>
 <p><img src="Figures\Screenshots\GitHub_related\Actions.png" class="img-fluid quarto-figure quarto-figure-center"> There are a peek of some jobs that have been automatically triggered by the push request to be carried out in Actions, the workflow file under GitHub Actions is now operational, and it automatically executes the predefined tasks each time a change is made to the repository, without manual intervention.</p>
 </section>
 </section>
@@ -1465,7 +1474,7 @@ Defaulting to continuous.</code></pre>
 </section>
 <section id="conclusion" class="level1">
 <h1>Conclusion</h1>
-<p>To conclude, this project not only demonstrated technical prowess in data management but also set a benchmark for future e-commerce database projects, emphasising the importance of a well-structured and analytically driven database design in the digital commerce landscape. Through four distinct stages, the project encapsulated the essence of database design, normalisation, data generation, and advanced data analysis to generate insights for thr company.</p>
+<p>To conclude, this project not only demonstrated technical prowess in data management but also set a benchmark for future e-commerce database projects, emphasising the importance of a well-structured and analytically driven database design in the digital commerce landscape. Through four distinct stages, the project encapsulated the essence of database design, normalization, data generation, and advanced data analysis to generate insights for the e-commerce system.</p>
 </section>
 
 </main>
